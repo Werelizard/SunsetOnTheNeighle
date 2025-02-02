@@ -1,0 +1,58 @@
+﻿l_english:
+ SOTN_Advisors:0 "Political Advisors"
+
+ # Vizier Mechanic GUI and related
+ SOTN_VizierAdvisor_Empty_tt:0 "You currently do not have a §YVizier§!."
+ SOTN_VizierAdvisor_empty_DelayedTooltip_tt:0 "§RViziers cannot be assigned or removed manually.§!"
+
+ SOTN_VizierAdvisor_ShaaDoof_DelayedTooltip_tt:0 "§YBorn§!: August 7th, 938\n\n§YBiography§!: few ponies can atteset as to having had an life as eventful as Shaa Doof. Born Nefersu Shara Doof, Shaa Doof served as a police officer, as a journalist, as a secreterary, as an ambassador and as a politician. Careful by nature and pragmatic by necessity, he has been instrumental in keeping the kingdom together, from the great famine of 996 to the Storm King's onslaught. Though now in his latter years he remains nonethless a beacon of stability, a guiding light for all, king included, even as increasingly louder voices call out for his resignation in the face of an ever pressing need for change and reform.\n\n§YPortait by§!: BlakaSmoko\n\n§RViziers cannot be assigned or removed manually.§!\n"
+ SOTN_VizierShaaDoof_VizierAdvisor_tt:0 "§YShaa Doof§!\nStability: §G+10.00%§!\nPolitical Power Gain: §R-10%§!\nWeekly Balance of Power Change: §Y-1.0%§!"
+
+ #Political Unrest 
+ SOTN_IncreaseStateUnrest_small_tt:0 "£SOTN_unrest_text_icon §YLocal Unrest§! will §Rincrease§! by a small amount."
+ SOTN_IncreaseStateUnrest_medium_tt:0 "£SOTN_unrest_text_icon §YLocal Unrest§! will §Rincrease§! by a sizable amount."
+ SOTN_IncreaseStateUnrest_large_tt:0 "£SOTN_unrest_text_icon §YLocal Unrest§! will §Rincrease§! by a large amount."
+ SOTN_DecreaseStateUnrest_small_tt:0 "£SOTN_unrest_text_icon §YLocal Unrest§! will §Gdecrease§! by a small amount."
+ SOTN_DecreaseStateUnrest_medium_tt:0 "£SOTN_unrest_text_icon §YLocal Unrest§! will §Gdecrease§! by a sizable amount."
+ SOTN_DecreaseStateUnrest_large_tt:0 "£SOTN_unrest_text_icon §YLocal Unrest§! will §Gdecrease§! by a large amount."
+
+ #Vizier-King Balance of Power
+ SOTN_VizierPharaoh_BOP:0 "Administrative Dualism"
+ SOTN_BOP_Vizier_side:0 "Vizierial Government"
+ SOTN_BOP_King_side:0 "Royal Government"
+ SOTN_VizierPharaoh_Mid:0 "Equilibrium"
+ SOTN_VizierPharaoh_Vizier_Low:0 "Growing Vizierial Influence"
+ SOTN_VizierPharaoh_Vizier_medium:0 "Vizier in Control of Ministries"
+ SOTN_VizierPharaoh_Vizier_high:0 "Absolute Vizierial Control"
+ SOTN_VizierPharaoh_King_Low:0 "Growing Royal Influence"
+ SOTN_VizierPharaoh_King_mid:0 "King in Control of Ministries"
+ SOTN_VizierPharaoh_King_high:0 "Absolute Royal Control"
+
+ # Royal Diet
+ SOTN_RoyalDiet_AddHarmonyLoyalty_tt:0 "Up to §G[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §PHarmonist§! seats will now support the crown."
+ SOTN_RoyalDiet_LowerHarmonyLoyalty_tt:0 "Up to §R[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §PHarmonist§! seats will join the opposition!"
+ SOTN_RoyalDiet_AddNeutralLoyalty_tt:0 "Up to §G[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §LLoyalist§! seats will now support the crown."
+ SOTN_RoyalDiet_LowerNeutralLoyalty_tt:0 "Up to §R[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §LLoyalist§! seats will join the opposition!"
+ SOTN_RoyalDiet_AddSocialistLoyalty_tt:0 "Up to §G[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §tSocialist§! seats will now support the crown."
+ SOTN_RoyalDiet_LowerSocialistLoyalty_tt:0 "Up to §R[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §tSocialist§! seats will join the opposition!"
+ SOTN_RoyalDiet_AddSuprLoyalty_tt:0 "Up to §G[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §UNationalist§! seats will now support the crown."
+ SOTN_RoyalDiet_LowerSuprLoyalty_tt:0 "Up to §R[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §UNationalist§! seats will join the opposition!"
+ SOTN_RoyalDiet_AddIndependentLoyalty_tt:0 "Up to §G[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §gIndependent§! seats will now support the crown."
+ SOTN_RoyalDiet_LowerIndependentLoyalty_tt:0 "Up to §R[?SOTN_LoyaltyChangeDisplay_tempvar]§! more §gIndependent§! seats will join the opposition!"
+
+ SOTN_RoyalDiet_TransferHarmonyNeutral_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §PHarmonists§! will join the §LLoyalists§!"
+ SOTN_RoyalDiet_TransferNeutralHarmony_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §LLoyalists§! will join the §PHarmonists§!"
+ SOTN_RoyalDiet_TransferHarmonyInd_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §PHarmonists§! will join the §gIndependents§!"
+ SOTN_RoyalDiet_TransferIndHarmony_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §gIndependents§! will join the §PHamonists§!"
+ SOTN_RoyalDiet_TransferIndNeutral_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §gIndependents§! will join the §LLoyalists§!"
+ SOTN_RoyalDiet_TransferNeutralInd_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §LLoyalists§! will join the §gIndependents§!"
+ SOTN_RoyalDiet_TransferNeutralSoc_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §LLoyalists§! will join the §tSocialists§!"
+ SOTN_RoyalDiet_TransferNeutralSupr_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §LLoyalists§! will join the §UNationalists§!"
+ SOTN_RoyalDiet_TransferSocNeutral_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §tSocialists§! will join the §LLoyalists§!"
+ SOTN_RoyalDiet_TransferSuprNeutral_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §UNationalists§! will join the §LLoyalists§!"
+ SOTN_RoyalDiet_TransferSocInd_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §tSocialists§! will join the §gIndependents§!"
+ SOTN_RoyalDiet_TransferSupind_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §UNationalists§! will join the §gIndependents§!"
+ SOTN_RoyalDiet_TransferIndSoc_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §gIndependents§! will join the §tSocialists§!"
+ SOTN_RoyalDiet_TransferIndSup_tt:0 "Up to §Y[?SOTN_SeatChange_tempvar]§! seats from the §gIndependents§! will join the §UNationalists§!"
+
+ SOTN_UpdateReformProgress_tt:0 "Modify §YReform Progress§! by [?SOTN_ReformProgress_tempvar|+%%]"

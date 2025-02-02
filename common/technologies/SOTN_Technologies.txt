@@ -1,0 +1,8 @@
+technologies = {
+	SOTN_MaredjayTech = {
+		allow = { always = no }
+	    enable_subunits = {
+			SOTN_MaredjayUnit
+	    }
+    }
+}

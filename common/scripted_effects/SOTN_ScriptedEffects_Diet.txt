@@ -1,0 +1,601 @@
+#
+# ROYAL DIET EFFECTS
+#
+
+SOTN_RoyalDiet_Setup_effect = { #Initial Setup for loyalty and base seats
+	# Total Seats Array (0 dem, 1 neutral, 2 socialist/fascist, 3 independents)
+	# Max total seasts: 210
+	add_to_array = {
+		array = SOTN_DietSeats_array
+		value = 85
+	}
+	add_to_array = {
+		array = SOTN_DietSeats_array
+		value = 50
+	}
+	add_to_array = {
+		array = SOTN_DietSeats_array
+		value = 20
+	}
+	add_to_array = {
+		array = SOTN_DietSeats_array
+		value = 55
+	}
+	# Loyal seats. I.e., how many among the seats are loyal at the start. Same order as above.
+	# 0-100
+	add_to_array = {
+		array = SOTN_DietLoyalty_array
+		value = 40
+	}
+	add_to_array = {
+		array = SOTN_DietLoyalty_array
+		value = 30
+	}
+	add_to_array = {
+		array = SOTN_DietLoyalty_array
+		value = 10
+	}
+	add_to_array = {
+		array = SOTN_DietLoyalty_array
+		value = 10
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+SOTN_RoyalDiet_ChangeHarmonyLoyalty_effect = { #Requires a prior setup of SOTN_LoyaltyChange_tempvar
+	add_to_variable = {
+		SOTN_DietLoyalty_array^0 = SOTN_LoyaltyChange_tempvar
+	}
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^0
+		min = 0
+		max = SOTN_DietSeats_array^0
+	}
+	if = {
+		limit = {
+			check_variable = {
+				SOTN_LoyaltyChange_tempvar > 0
+			}
+		}
+		custom_effect_tooltip = SOTN_RoyalDiet_AddHarmonyLoyalty_tt
+	}
+	else = {
+		custom_effect_tooltip = SOTN_RoyalDiet_LowerHarmonyLoyalty_tt
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+SOTN_RoyalDiet_ChangeNeutralLoyalty_effect = { #Requires a prior setup of SOTN_LoyaltyChange_tempvar
+	add_to_variable = {
+		SOTN_DietLoyalty_array^1 = SOTN_LoyaltyChange_tempvar
+	}
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^1
+		min = 0
+		max = SOTN_DietSeats_array^1
+	}
+	if = {
+		limit = {
+			check_variable = {
+				SOTN_LoyaltyChange_tempvar > 0
+			}
+		}
+		custom_effect_tooltip = SOTN_RoyalDiet_AddNeutralLoyalty_tt
+	}
+	else = {
+		custom_effect_tooltip = SOTN_RoyalDiet_LowerNeutralLoyalty_tt
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+SOTN_RoyalDiet_ChangePopulistLoyalty_effect = { #Requires a prior setup of SOTN_LoyaltyChange_tempvar
+	add_to_variable = {
+		SOTN_DietLoyalty_array^2 = SOTN_LoyaltyChange_tempvar
+	}
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^2
+		min = 0
+		max = SOTN_DietSeats_array^2
+	}
+	if = {
+		limit = {
+			has_country_flag = SOTN_SocialistsInGovernment_flag
+		}
+		if = {
+			limit = {
+				check_variable = {
+					SOTN_LoyaltyChange_tempvar > 0
+				}
+			}
+			custom_effect_tooltip = SOTN_RoyalDiet_AddSocialistLoyalty_tt
+		}
+		else = {
+			custom_effect_tooltip = SOTN_RoyalDiet_LowerSocialistLoyalty_tt
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				check_variable = {
+					SOTN_LoyaltyChange_tempvar > 0
+				}
+			}
+			custom_effect_tooltip = SOTN_RoyalDiet_AddSuprLoyalty_tt
+		}
+		else = {
+			custom_effect_tooltip = SOTN_RoyalDiet_LowerSuprLoyalty_tt
+		}
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+SOTN_RoyalDiet_ChangeIndependentLoyalty_effect = { #Requires a prior setup of SOTN_LoyaltyChange_tempvar
+	add_to_variable = {
+		SOTN_DietLoyalty_array^3 = SOTN_LoyaltyChange_tempvar
+	}
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^3
+		min = 0
+		max = SOTN_DietSeats_array^3
+	}
+	if = {
+		limit = {
+			check_variable = {
+				SOTN_LoyaltyChange_tempvar > 0
+			}
+		}
+		custom_effect_tooltip = SOTN_RoyalDiet_AddIndependentLoyalty_tt
+	}
+	else = {
+		custom_effect_tooltip = SOTN_RoyalDiet_LowerIndependentLoyalty_tt
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Harmony to Neutral
+SOTN_RoyalDiet_TransferHarmonyNeutral_effect = {
+	custom_effect_tooltip = SOTN_RoyalDiet_TransferHarmonyNeutral_tt
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^0
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^1 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^0 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^1 = SOTN_DietSeats_array^0
+		}
+		set_variable = {
+			SOTN_DietSeats_array^0 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^0
+		min = 0
+		max = SOTN_DietSeats_array^0
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Neutral to Harmony
+SOTN_RoyalDiet_TransferNeutralHarmony_effect = {
+	custom_effect_tooltip = SOTN_RoyalDiet_TransferNeutralHarmony_tt
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^1
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^0 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^1 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^0 = SOTN_DietSeats_array^1
+		}
+		set_variable = {
+			SOTN_DietSeats_array^1 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^1
+		min = 0
+		max = SOTN_DietSeats_array^1
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Harmony to Independent
+SOTN_RoyalDiet_TransferHarmonyInd_effect = {
+	custom_effect_tooltip = SOTN_RoyalDiet_TransferHarmonyInd_tt
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^0
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^3 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^0 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^3 = SOTN_DietSeats_array^0
+		}
+		set_variable = {
+			SOTN_DietSeats_array^0 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^0
+		min = 0
+		max = SOTN_DietSeats_array^0
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Independent to Harmony
+SOTN_RoyalDiet_TransferIndHarmony_effect = {
+	custom_effect_tooltip = SOTN_RoyalDiet_TransferIndHarmony_tt
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^3
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^0 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^3 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^0 = SOTN_DietSeats_array^3
+		}
+		set_variable = {
+			SOTN_DietSeats_array^3 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^3
+		min = 0
+		max = SOTN_DietSeats_array^3
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Independent to Neutral
+SOTN_RoyalDiet_TransferIndNeutral_effect = {
+	custom_effect_tooltip = SOTN_RoyalDiet_TransferIndNeutral_tt
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^3
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^1 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^3 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^1 = SOTN_DietSeats_array^3
+		}
+		set_variable = {
+			SOTN_DietSeats_array^3 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^3
+		min = 0
+		max = SOTN_DietSeats_array^3
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Neutral to Independent
+SOTN_RoyalDiet_TransferNeutralInd_effect = {
+	custom_effect_tooltip = SOTN_RoyalDiet_TransferNeutralInd_tt
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^1
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^3 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^1 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^3 = SOTN_DietSeats_array^1
+		}
+		set_variable = {
+			SOTN_DietSeats_array^1 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^1
+		min = 0
+		max = SOTN_DietSeats_array^1
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Neutral to Populists
+SOTN_RoyalDiet_TransferNeutralPop_effect = {
+	if = {
+		limit = {
+			has_country_flag = SOTN_SocialistsInGovernment_flag
+		}
+		custom_effect_tooltip = SOTN_RoyalDiet_TransferNeutralSoc_tt
+	}
+	else = {
+		custom_effect_tooltip = SOTN_RoyalDiet_TransferNeutralSupr_tt
+	}
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^1
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^2 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^1 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^2 = SOTN_DietSeats_array^1
+		}
+		set_variable = {
+			SOTN_DietSeats_array^1 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^1
+		min = 0
+		max = SOTN_DietSeats_array^1
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Pop to Neutral
+SOTN_RoyalDiet_TransferPopNeutral_effect = {
+	if = {
+		limit = {
+			has_country_flag = SOTN_SocialistsInGovernment_flag
+		}
+		custom_effect_tooltip = SOTN_RoyalDiet_TransferSocNeutral_tt
+	}
+	else = {
+		custom_effect_tooltip = SOTN_RoyalDiet_TransferSuprNeutral_tt
+	}
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^2
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^1 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^2 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^1 = SOTN_DietSeats_array^2
+		}
+		set_variable = {
+			SOTN_DietSeats_array^2 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^2
+		min = 0
+		max = SOTN_DietSeats_array^2
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Pop to Independent
+SOTN_RoyalDiet_TransferPopInd_effect = {
+	if = {
+		limit = {
+			has_country_flag = SOTN_SocialistsInGovernment_flag
+		}
+		custom_effect_tooltip = SOTN_RoyalDiet_TransferSocInd_tt
+	}
+	else = {
+		custom_effect_tooltip = SOTN_RoyalDiet_TransferSupind_tt
+	}
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^2
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^3 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^2 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^3 = SOTN_DietSeats_array^2
+		}
+		set_variable = {
+			SOTN_DietSeats_array^2 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^2
+		min = 0
+		max = SOTN_DietSeats_array^2
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+# Seat transfers - Ind to Pop
+SOTN_RoyalDiet_TransferIndPop_effect = {
+	if = {
+		limit = {
+			has_country_flag = SOTN_SocialistsInGovernment_flag
+		}
+		custom_effect_tooltip = SOTN_RoyalDiet_TransferIndSoc_tt
+	}
+	else = {
+		custom_effect_tooltip = SOTN_RoyalDiet_TransferIndSup_tt
+	}
+	if = {
+		limit = {
+			check_variable = { #Check if the "donor" faction has more or less seats
+				var = SOTN_DietSeats_array^3
+				value = SOTN_SeatChange_tempvar
+				compare = greater_than_or_equals
+			}
+		}
+		# Change the seats proper
+		add_to_variable = { #No need to clamp here as there are ALWAYS a fixed amount of seats being "passed around"
+			SOTN_DietSeats_array^2 = SOTN_SeatChange_tempvar
+		}
+		subtract_from_variable = {
+			SOTN_DietSeats_array^3 = SOTN_SeatChange_tempvar
+		}
+	}
+	else = {
+		add_to_variable = { #Ditto
+			SOTN_DietSeats_array^2 = SOTN_DietSeats_array^3
+		}
+		set_variable = {
+			SOTN_DietSeats_array^3 = 0
+		}
+	}
+	# Handling the loyal seat count is easier as those do not transfer
+	# We remove the "donor" seats from the loyal via a simple clamping
+	clamp_variable = {
+		var = SOTN_DietLoyalty_array^3
+		min = 0
+		max = SOTN_DietSeats_array^3
+	}
+	#Re-calculate how many seats are currently loyal 
+	SOTN_RoyalDiet_UdpateTotalSupport_effect = yes
+}
+
+#Scripted effect to handle and update the total current support throughout all facitons
+SOTN_RoyalDiet_UdpateTotalSupport_effect = { 
+	set_variable = {
+		SOTN_TotalDietSupport_var = 0
+	}
+	add_to_variable = {
+		SOTN_TotalDietSupport_var = SOTN_DietLoyalty_array^0
+	}
+	add_to_variable = {
+		SOTN_TotalDietSupport_var = SOTN_DietLoyalty_array^1
+	}
+	add_to_variable = {
+		SOTN_TotalDietSupport_var = SOTN_DietLoyalty_array^2
+	}
+	add_to_variable = {
+		SOTN_TotalDietSupport_var = SOTN_DietLoyalty_array^3
+	}
+}
+
+SOTN_UpdateReformProgress_effect = { #Requires a prior setup of SOTN_ReformProgress_tempvar
+	add_to_variable = {
+		SOTN_ReformProgress_var = SOTN_ReformProgress_tempvar
+	}
+	clamp_variable = {
+		var = SOTN_ReformProgress_var
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = SOTN_UpdateReformProgress_tt
+}

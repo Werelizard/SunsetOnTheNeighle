@@ -1,0 +1,121 @@
+SOTN_VizierPharaoh_BOP = {
+    initial_value = 0.25
+    left_side = SOTN_BOP_Vizier_side
+    right_side = SOTN_BOP_King_side
+	decision_category = SOTN_VizierBOP_Category
+	# Situation is in equilbrium between the Vizier and the King
+    range = {
+        id = SOTN_VizierPharaoh_Mid
+        min = -0.2
+        max = 0.2
+        modifier = {
+           political_power_factor = 0.05
+        }
+    }
+	# Situation is favouring the Vizier
+    side = {
+        id = SOTN_BOP_Vizier_side
+        icon = GFX_SOTN_Vizier_BOP
+        range = {
+            id = SOTN_VizierPharaoh_Vizier_Low
+            min = -0.5
+            max = -0.2
+            modifier = {
+               political_advisor_cost_factor = -0.15
+			   economy_cost_factor = -0.1
+			   trade_laws_cost_factor = -0.1
+			   mobilization_laws_cost_factor = -0.1
+            }
+            on_activate = {
+                
+            }
+            on_deactivate = {
+                
+            }
+        }
+        range = {
+            id = SOTN_VizierPharaoh_Vizier_medium
+            min = -0.9
+            max = -0.5
+            modifier = {
+				political_advisor_cost_factor = -0.2
+				economy_cost_factor = -0.2
+				trade_laws_cost_factor = -0.2
+				mobilization_laws_cost_factor = -0.2
+				political_power_gain = -0.2
+            }
+            on_activate = {
+               
+            }
+            on_deactivate = {
+                
+            }
+        }
+        range = {
+            id = SOTN_VizierPharaoh_Vizier_high
+            min = -1
+            max = -0.9
+            modifier = {
+				political_advisor_cost_factor = -0.2
+				economy_cost_factor = -0.2
+				trade_laws_cost_factor = -0.2
+				mobilization_laws_cost_factor = -0.2
+                political_power_gain = -0.4
+                party_popularity_stability_factor = -0.1
+            }
+        }
+    }
+	# Situation is favouring the King
+    side = {
+        id = SOTN_BOP_King_side
+        icon = GFX_SOTN_Pharaoh_BOP
+        range = {
+            id = SOTN_VizierPharaoh_King_Low
+            min = 0.2
+            max = 0.5
+            modifier = {
+                stability_factor = 0.05
+			    drift_defence_factor = 0.10
+				command_power_gain_mult = 0.05
+			    high_command_cost_factor = -0.10
+            }
+            on_activate = {
+               
+            }
+            on_deactivate = {
+                
+            }
+        }
+        range = {
+            id = SOTN_VizierPharaoh_King_mid
+            min = 0.5
+            max = 0.9
+            modifier = {
+				stability_factor = 0.1
+				drift_defence_factor = 0.20
+				command_power_gain_mult = 0.1
+                high_command_cost_factor = -0.2
+				political_power_gain = -0.2
+            }
+            on_activate = {
+               
+            }
+            on_deactivate = {
+                
+            }
+        }
+        range = {
+            id = SOTN_VizierPharaoh_King_high
+            min = 0.9
+            max = 1
+            modifier = {
+				stability_factor = 0.1
+				drift_defence_factor = 0.20
+				command_power_gain_mult = 0.1
+                high_command_cost_factor = -0.2
+				political_power_gain = -0.4
+                party_popularity_stability_factor = -0.1
+            }
+        }
+    }
+}

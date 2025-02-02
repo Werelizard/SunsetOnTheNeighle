@@ -1,0 +1,17 @@
+SOTN_isSubmodCountry_trigger = {
+	OR = {
+		original_tag = MGY
+	}
+}
+
+# Maredjay-related triggers
+SOTN_hasMaredjay_trigger = { #Checks if has a variant of the Maredjay active
+	OR = {
+		has_idea = SOTN_Maredjay
+	}
+}
+SOTN_HasMaredjayArmy_trigger = { #Checks if has a variant of the Maredjay academy spirit
+	OR = {
+		has_idea = SOTN_MaredjayArmy
+	}
+}

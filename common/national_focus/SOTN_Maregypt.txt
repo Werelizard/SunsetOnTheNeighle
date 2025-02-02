@@ -1,0 +1,1907 @@
+focus_tree = {
+	id = SOTN_MGY_Tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = MGY
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 2500
+		y = 2500
+	}
+
+	initial_show_position = {
+		focus = SOTN_KingSpeech
+	}
+
+	#
+	# INITIAL POLITICS FOCUS TREE
+	#
+
+	focus = { 
+		id = SOTN_KingSpeech
+		icon = GFX_SOTN_KingSpeech
+		cost = 6
+		x = 10
+		y = 0
+		cancelable = no
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			SOTN_character_KingKhefer = {
+				unit_leader_event = {
+					id = SOTN_MgyFlavour.2
+					days = 1
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = SOTN_HarmonySociety
+		icon = GFX_SOTN_HarmonySociety
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = SOTN_KingSpeech
+		prerequisite = {
+			focus = SOTN_KingSpeech
+		}
+		available = {
+			has_idea = SOTN_ScarsOfTheJulyUprising
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			swap_ideas = {
+				remove_idea = SOTN_ScarsOfTheJulyUprising
+				add_idea = SOTN_LotusSociety
+			}
+		}
+		allow_branch = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_OpenSociety
+		}
+	}
+	focus = {
+		id = SOTN_OpenSociety
+		icon = GFX_SOTN_OpenSociety
+		cost = 6
+		x = 1
+		y = 1
+		relative_position_id = SOTN_KingSpeech
+		prerequisite = {
+			focus = SOTN_KingSpeech
+		}
+		available = {
+			NOT = {
+				has_completed_focus = SOTN_ManephisDecree
+			}
+			has_idea = SOTN_ScarsOfTheJulyUprising
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			country_event = SOTN_MgyFlavour.7
+			custom_effect_tooltip = SOTN_doublespace
+			remove_ideas = {
+				SOTN_ScarsOfTheJulyUprising
+			}
+		}
+		allow_branch = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_HarmonySociety
+		}
+	}
+	focus = { 
+		id = SOTN_VizierOffice
+		icon = GFX_SOTN_VizierOffice
+		cost = 6
+		x = 4
+		y = 1
+		relative_position_id = SOTN_KingSpeech
+		prerequisite = {
+			focus = SOTN_KingSpeech
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			set_power_balance = {
+				id = SOTN_VizierPharaoh_BOP
+				left_side = SOTN_BOP_Vizier_side
+				right_side = SOTN_BOP_King_side
+				set_value = -0.3
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			unlock_decision_tooltip = SOTN_Bop_ExpandBureaucracy
+			unlock_decision_tooltip = SOTN_Bop_VizierialMeeting
+			unlock_decision_tooltip = SOTN_Bop_DismissOverseers
+			unlock_decision_tooltip = SOTN_Bop_PromoteNomarchs
+			custom_effect_tooltip = SOTN_doublespace
+			unlock_national_focus = SOTN_VizierCabinet
+		}
+	}
+	focus = { 
+		id = SOTN_SidelineKing
+		icon = GFX_SOTN_SidelineKing
+		cost = 6
+		x = -2
+		y = 1
+		relative_position_id = SOTN_VizierOffice
+		prerequisite = {
+			focus = SOTN_VizierOffice
+		}
+		available = {
+			OR = {		
+				NOT = {
+					has_power_balance = {
+						id = SOTN_VizierPharaoh_BOP
+					}
+				}
+				is_power_balance_in_range = {
+					id = SOTN_VizierPharaoh_BOP
+					range < SOTN_VizierPharaoh_King_mid
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_power_balance_value = {
+				id = SOTN_VizierPharaoh_BOP
+				value = -0.1
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			custom_effect_tooltip = SOTN_SidelineKing_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_character = SOTN_character_Narmare
+						SOTN_character_Narmare = {
+							has_character_flag = SOTN_isUnderHouseArrest_flag
+						}
+					}
+					SOTN_character_Narmare = {
+						unit_leader_event = {
+							id = SOTN_MgyFlavour.8
+							days = 2
+						}
+					}
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = SOTN_SidelineVizier
+		}
+	}
+	focus = { 
+		id = SOTN_SidelineVizier
+		icon = GFX_SOTN_SidelineVizier
+		cost = 6
+		x = 2
+		y = 1
+		relative_position_id = SOTN_VizierOffice
+		prerequisite = {
+			focus = SOTN_VizierOffice
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_power_balance = {
+						id = SOTN_VizierPharaoh_BOP
+					}
+				}
+				is_power_balance_in_range = {
+					id = SOTN_VizierPharaoh_BOP
+					range > SOTN_VizierPharaoh_Vizier_medium
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_power_balance_value = {
+				id = SOTN_VizierPharaoh_BOP
+				value = 0.1
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			custom_effect_tooltip = SOTN_SidelineVizier_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_character = SOTN_character_Narmare
+						SOTN_character_Narmare = {
+							has_character_flag = SOTN_isUnderHouseArrest_flag
+						}
+					}
+					SOTN_character_Narmare = {
+						unit_leader_event = {
+							id = SOTN_MgyFlavour.8
+							days = 2
+						}
+					}
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = SOTN_SidelineKing
+		}
+	}
+	focus = { 
+		id = SOTN_DynasticPropaganda
+		icon = GFX_SOTN_DynasticPropaganda
+		cost = 6
+		x = 6
+		y = 1
+		relative_position_id = SOTN_VizierOffice
+		prerequisite = {
+			focus = SOTN_VizierOffice
+		}
+		available = {
+			if = {
+				limit = {
+					has_government = neutrality
+					has_country_leader = {
+						character = SOTN_character_KingKhefer
+						ruling_only = yes
+					}
+				}
+				neutrality > 0.6
+			}
+			else = {
+				democratic > 0.6
+			}
+			has_stability > 0.4
+			has_country_leader = {
+				character = SOTN_character_KingKhefer
+				ruling_only = yes
+			}
+			OR = {
+				NOT = {
+					has_power_balance = {
+						id = SOTN_VizierPharaoh_BOP
+					}
+				}
+				is_power_balance_in_range = {
+					id = SOTN_VizierPharaoh_BOP
+					range > SOTN_VizierPharaoh_Mid
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOTN_PoliticalUnrest
+				}
+				every_owned_state = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+						}
+					}
+					SOTN_DecreaseStateUnrest_medium_effect = yes
+				}
+			}
+			else = {
+				add_stability = 0.1
+			}
+			swap_ruler_traits = {
+				remove = SOTN_YoungKing_Trait
+				add = SOTN_YoungKingGood_Trait
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_StrengthenKing
+		icon = GFX_SOTN_StrengthenKing
+		cost = 6
+		x = 4
+		y = 2
+		relative_position_id = SOTN_VizierOffice
+		prerequisite = {
+			focus = SOTN_DynasticPropaganda
+		}
+		prerequisite = {
+			focus = SOTN_SidelineVizier
+		}
+		available = {
+			has_country_leader = {
+				character = SOTN_character_KingKhefer
+				ruling_only = yes
+			}
+			OR = {
+				NOT = {
+					has_power_balance = {
+						id = SOTN_VizierPharaoh_BOP
+					}
+				}
+				is_power_balance_in_range = {
+					id = SOTN_VizierPharaoh_BOP
+					range > SOTN_VizierPharaoh_King_Low
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			SOTN_character_KingKhefer = {
+				add_trait = {
+					trait = SOTN_AbsoluteMonarchTrait_Trait
+				}
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_AppointAdmin
+		icon = GFX_SOTN_AppointAdmin
+		cost = 6
+		x = 0
+		y = 2
+		relative_position_id = SOTN_VizierOffice
+		prerequisite = {
+			focus = SOTN_SidelineKing
+			focus = SOTN_SidelineVizier
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = SOTN_StreamLinedAdministration
+					}
+				}
+				add_ideas = {
+					SOTN_OfficeOFTheTwoLands
+				}
+			}
+			else = {
+				add_ideas = SOTN_StreamLinedAdministrationAndOverseer
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = SOTN_NeighktVizier_flag
+					}
+				}	
+				custom_effect_tooltip = SOTN_doublespace
+				SOTN_Character_Neighkt = {
+					add_trait = {
+						trait = SOTN_OverseerOfTheCrown_Trait
+					}
+				}
+			}
+			else = {
+				add_political_power = 25
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_RefillTreasury
+		icon = GFX_SOTN_RefillTreasury
+		cost = 6
+		x = -3
+		y = 2
+		relative_position_id = SOTN_VizierOffice
+		prerequisite = {
+			focus = SOTN_VizierOffice
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					any_owned_state = {
+						has_dynamic_modifier = {
+							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+						}
+					}
+					SOTN_IncreaseStateUnrest_small_effect = yes
+				}
+			}
+			else = {
+				add_stability = -0.05
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_timed_idea = {
+				idea = SOTN_IncreasedTaxes
+				days = 540
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			unlock_national_focus = SOTN_ReformDeneb
+		}
+	}
+	focus = { 
+		id = SOTN_ClassicRevival
+		icon = GFX_SOTN_ClassicRevival
+		cost = 6
+		x = -4
+		y = 3
+		relative_position_id = SOTN_VizierOffice
+		continue_if_invalid = yes
+		cancel_if_invalid = no
+		prerequisite = {
+			focus = SOTN_RefillTreasury
+		}
+		available = {
+			has_political_power > 100
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+
+		}
+		completion_reward = {
+			add_political_power = -100
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_research_slot = 1
+			SOTN_UpgradeIlliteracy_effect = yes
+		}
+	}
+	focus = { 
+		id = SOTN_AssimilateAdmin
+		icon = GFX_SOTN_AssimilateAdmin
+		cost = 6
+		x = -2
+		y = 3
+		relative_position_id = SOTN_VizierOffice
+		prerequisite = {
+			focus = SOTN_RefillTreasury
+		}
+		prerequisite = {
+			focus = SOTN_SidelineKing
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_power_balance = {
+						id =  SOTN_VizierPharaoh_BOP
+					}
+				}
+				is_power_balance_in_range = {
+					id = SOTN_VizierPharaoh_BOP
+					range < SOTN_VizierPharaoh_Vizier_medium
+				}
+			}
+			OR = {
+				all_core_state = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOTN_StabilityTwiceAvgUnrest_tt
+					check_variable = {
+						SOTN_Unrest_DoubleAverage_var < ROOT@stability
+					}
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = SOTN_OfficeOFTheTwoLands
+					}
+				}
+				add_ideas = {
+					SOTN_StreamLinedAdministration
+				}
+			}
+			else = {
+				add_ideas = SOTN_StreamLinedAdministrationAndOverseer
+			}
+		}
+	}
+	focus = { # Dynamic focus
+		id = SOTN_VizierCabinet
+		icon = {
+			trigger = { has_country_flag = SOTN_ShaaDoofVizier_flag }
+			value = GFX_SOTN_VizierCabinet_ShaaDoof
+		}
+		# icon = {
+		# 	trigger = { has_country_flag = SOTN_NeighktVizier_flag }
+		# 	value = GFX_focus_example_democratic
+		# }
+		cost = 6
+		x = 2
+		y = 3
+		relative_position_id = SOTN_VizierOffice
+		dynamic = yes
+		prerequisite = {
+			
+		}
+		available = {
+			has_completed_focus = SOTN_VizierOffice
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = SOTN_ShaaDoofVizier_flag
+				}
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = -0.05
+				}
+				custom_effect_tooltip = SOTN_doublespace
+				add_political_power = 25
+			}
+		}
+		allow_branch = {
+			SOTN_HasVizierMechanic_trigger = yes
+		}
+	}
+	focus = { 
+		id = SOTN_RoyalDiet
+		icon = GFX_SOTN_RoyalDiet
+		cost = 6
+		x = 0
+		y = 4
+		relative_position_id = SOTN_VizierOffice
+		cancelable = no
+		prerequisite = {
+			focus = SOTN_AppointAdmin
+		}
+		prerequisite = {
+			focus = SOTN_VizierCabinet
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOTN_RoyalDiet_tt
+		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = SOTN_RoyalDietFails_flag
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_MaregyptRenaissance
+		icon = GFX_SOTN_MaregyptRenaissance
+		cost = 6
+		x = 0
+		y = 6
+		relative_position_id = SOTN_VizierOffice
+		prerequisite = {
+			focus = SOTN_RoyalDiet
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOTN_ReformReached_tt
+				check_variable = {
+					var = SOTN_ReformProgress_var
+					value = SOTN_ReformGoal_var
+					compare = greater_than_or_equals
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOTN_StabilityTwiceAvgUnrest_tt
+				check_variable = {
+					SOTN_Unrest_DoubleAverage_var < ROOT@stability
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			remove_ideas = SOTN_PoliticalUnrest
+		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = SOTN_RoyalDietFails_flag
+			}
+		}
+	}
+	#
+	# VIZIER TREE - SHAA DOOF
+	#
+	focus = {
+		id = SOTN_ManephisDecree
+		icon = GFX_SOTN_ManephisDecree
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = SOTN_VizierCabinet
+		prerequisite = {
+			focus = SOTN_VizierCabinet
+		}
+		available = {
+			NOT = {
+				has_completed_focus = SOTN_OpenSociety
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_ideas = SOTN_ManephisProclamation
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockStateWideDecision_tt
+					DECISION = SOTN_ReinforceGarrisons_dummy
+				}
+			}
+		}
+		allow_branch = {
+			has_country_flag = SOTN_ShaaDoofVizier_flag
+			SOTN_HasVizierMechanic_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_WorkWithAhhotep
+		icon = GFX_SOTN_WorkWithAhhotep
+		cost = 6
+		x = -1
+		y = 2
+		relative_position_id = SOTN_VizierCabinet
+		prerequisite = {
+			focus = SOTN_RoyalDiet
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.02
+			}
+			set_temp_variable = {
+				SOTN_SeatChange_tempvar = 5
+			}
+			SOTN_RoyalDiet_TransferNeutralHarmony_effect = yes
+		}
+		allow_branch = {
+			has_country_flag = SOTN_ShaaDoofVizier_flag
+			SOTN_HasVizierMechanic_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_DenyExtremists
+		icon = GFX_SOTN_DenyExtremists
+		cost = 6
+		x = 1
+		y = 2
+		relative_position_id = SOTN_VizierCabinet
+		prerequisite = {
+			focus = SOTN_ManephisDecree
+		}
+		prerequisite = {
+			focus = SOTN_RoyalDiet
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.02
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChangeDisplay_tempvar = 10
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChange_tempvar = -10
+			}
+			SOTN_RoyalDiet_ChangePopulistLoyalty_effect = yes
+			set_temp_variable = {
+				SOTN_SeatChange_tempvar = 5
+			}
+			SOTN_RoyalDiet_TransferPopInd_effect = yes
+		}
+		allow_branch = {
+			has_country_flag = SOTN_ShaaDoofVizier_flag
+			SOTN_HasVizierMechanic_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_ReinforceHarmonyInDiet
+		icon = GFX_SOTN_ReinforceHarmonyInDiet
+		cost = 6
+		x = -3
+		y = 2
+		relative_position_id = SOTN_VizierCabinet
+		prerequisite = {
+			focus = SOTN_RoyalDiet
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			set_temp_variable = {
+				SOTN_SeatChange_tempvar = 10
+			}
+			SOTN_RoyalDiet_TransferIndHarmony_effect = yes
+		}
+		allow_branch = {
+			has_country_flag = SOTN_ShaaDoofVizier_flag
+			SOTN_HasVizierMechanic_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_StrongArmAristocrats
+		icon = GFX_SOTN_StrongArmAristocrats
+		cost = 6
+		x = -4
+		y = 1
+		relative_position_id = SOTN_VizierCabinet
+		prerequisite = {
+			focus = SOTN_AssimilateAdmin
+		}
+		available = {
+			OR = {
+				NOT = {
+					has_power_balance = {
+						id =  SOTN_VizierPharaoh_BOP
+					}
+				}
+				is_power_balance_in_range = {
+					id = SOTN_VizierPharaoh_BOP
+					range < SOTN_VizierPharaoh_Vizier_medium
+				}
+			}
+			OR = {
+				has_completed_focus = SOTN_ManephisDecree
+				SOTN_RoyalDietMajority_trigger = yes
+			}	
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_ideas = SOTN_BlackmailedAristocrats
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = SOTN_StrongArmAristocrats
+				AND = {		
+					has_country_flag = SOTN_ShaaDoofVizier_flag
+					SOTN_HasVizierMechanic_trigger = yes
+				}
+			}
+		}
+	}
+	#
+	# FAMINE RISK HANDLING - if not a full blown famine
+	#
+	focus = { 
+		id = SOTN_YearOfTheLocust
+		icon = GFX_SOTN_YearOfTheLocust
+		cost = 6
+		x = -3
+		y = 1
+		relative_position_id = SOTN_KingSpeech
+		prerequisite = {
+			focus = SOTN_KingSpeech
+		}
+		available = {
+			
+		}
+		bypass = {
+			has_idea = SOTN_FamineInTheNeighle
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			unlock_decision_tooltip = SOTN_ImportCrops
+			unlock_decision_tooltip = SOTN_DiversifyEconomy
+			#TO DO: event
+		}
+	}
+	focus = { 
+		id = SOTN_IrrigationWorks
+		icon = GFX_SOTN_IrrigationWorks
+		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_YearOfTheLocust
+		}
+		available = {
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}	
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			set_temp_variable = {
+				SOTN_ReformProgress_tempvar = 5
+			}
+			SOTN_UpdateReformProgress_effect = yes
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockStateWideDecision_tt
+					DECISION = SOTN_FixIrrigation_dummy
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			SOTN_UpgradePoverty_effect = yes
+		}
+		allow_branch = {
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_ForcefulDistribution
+		icon = GFX_SOTN_ForcefulDistribution
+		cost = 6
+		x = -1
+		y = 2
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_YearOfTheLocust
+		}
+		available = {
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+			OR = {
+				has_completed_focus = SOTN_MaregyptRenaissance
+				SOTN_RoyalDietMajority_trigger = yes
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			set_temp_variable = {
+				SOTN_LoyaltyChangeDisplay_tempvar = 10
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChange_tempvar = -10
+			}
+			SOTN_RoyalDiet_ChangeHarmonyLoyalty_effect = yes
+			set_temp_variable = {
+				SOTN_LoyaltyChangeDisplay_tempvar = 20
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChange_tempvar = -20
+			}
+			SOTN_RoyalDiet_ChangeNeutralLoyalty_effect = yes
+			set_temp_variable = {
+				SOTN_LoyaltyChangeDisplay_tempvar = 10
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChange_tempvar = -10
+			}
+			SOTN_RoyalDiet_ChangeIndependentLoyalty_effect = yes
+			custom_effect_tooltip = SOTN_doublespace
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+				}
+				prioritize = {
+					735
+					736
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+				}
+				prioritize = {
+					734
+					737
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_political_power = 50
+			custom_effect_tooltip = SOTN_doublespace
+			add_days_mission_timeout = {
+				mission = SOTN_LoomingFamine
+				days = 120
+			}
+		}
+		mutually_exclusive = {
+			focus = SOTN_LandCompensation
+		}
+		allow_branch = {
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_LandCompensation
+		icon = GFX_SOTN_LandCompensation
+		cost = 6
+		x = 1
+		y = 2
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_YearOfTheLocust
+		}
+		available = {
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+			OR = {
+				has_completed_focus = SOTN_MaregyptRenaissance
+				SOTN_RoyalDietMajority_trigger = yes
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			set_temp_variable = {
+				SOTN_LoyaltyChangeDisplay_tempvar = 5
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChange_tempvar = -5
+			}
+			SOTN_RoyalDiet_ChangeHarmonyLoyalty_effect = yes
+			set_temp_variable = {
+				SOTN_LoyaltyChangeDisplay_tempvar = 10
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChange_tempvar = -10
+			}
+			SOTN_RoyalDiet_ChangePopulistLoyalty_effect = yes
+			set_temp_variable = {
+				SOTN_LoyaltyChangeDisplay_tempvar = 5
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChange_tempvar = -5
+			}
+			SOTN_RoyalDiet_ChangeIndependentLoyalty_effect = yes
+			custom_effect_tooltip = SOTN_doublespace
+			set_temp_variable = {
+				SOTN_ReformProgress_tempvar = -10
+			}
+			SOTN_UpdateReformProgress_effect = yes
+			custom_effect_tooltip = SOTN_doublespace
+			add_days_mission_timeout = {
+				mission = SOTN_LoomingFamine
+				days = 60
+			}
+		}
+		mutually_exclusive = {
+			focus = SOTN_ForcefulDistribution
+		}
+		allow_branch = {
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_LandReform
+		icon = GFX_SOTN_LandReform
+		cost = 6
+		x = 0
+		y = 3
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_ForcefulDistribution
+			focus = SOTN_LandCompensation
+		}
+		available = {
+			737 = {
+				OR = {
+					AND = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						infrastructure > 4
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+			734 = {
+				OR = {
+					AND = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						infrastructure > 4
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+			735 = {
+				OR = {
+					AND = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						infrastructure > 4
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+			736 = {
+				OR = {
+					AND = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						infrastructure > 4
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+			759 = {
+				OR = {
+					AND = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						infrastructure > 4
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+			758 = {
+				OR = {
+					AND = {
+						is_owned_by = ROOT
+						is_fully_controlled_by = ROOT
+						infrastructure > 4
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			remove_mission = SOTN_LoomingFamine
+			remove_ideas = {
+				SOTN_FamineRisk
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			if =  {
+				limit = {
+					has_idea = SOTN_PoliticalUnrest
+				}
+				add_stability = 0.05
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 737
+							state = 734
+							state = 735
+							state = 736
+							state = 759
+							state = 758
+						}
+					}
+					SOTN_DecreaseStateUnrest_medium_effect = yes
+				}
+				else = {
+					add_stability = 0.1
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			set_temp_variable = {
+				SOTN_ReformProgress_tempvar = 10
+			}
+			SOTN_UpdateReformProgress_effect = yes
+		}
+		allow_branch = {
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+		}
+	}
+	# FAMINE HAPPENED - focuses to deal with that
+	focus = { 
+		id = SOTN_EmergencyRelief
+		icon = GFX_SOTN_EmergencyRelief
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_YearOfTheLocust
+		}
+		available = {
+			has_idea = SOTN_FamineInTheNeighle	
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			unlock_decision_tooltip = SOTN_FamineScrapExports
+			unlock_decision_tooltip =SOTN_FamineLandRepossession
+			unlock_decision_tooltip =SOTN_FamineSaveFarms
+			unlock_decision_tooltip =SOTN_FamineZebricanGrain
+			unlock_decision_tooltip =SOTN_FamineEquestrianFood
+			unlock_decision_tooltip =SOTN_FamineHippogrifFish
+		}
+		allow_branch = {
+			OR = {
+				has_idea = SOTN_FamineInTheNeighle
+				has_completed_focus = SOTN_FamineIsOver
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_FocusOnCities
+		icon = GFX_SOTN_FocusOnCities
+		cost = 6
+		x = 1
+		y = 2
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_EmergencyRelief
+		}
+		prerequisite = {
+			focus = SOTN_AskForAid
+		}
+		available = {
+			has_idea = SOTN_FamineInTheNeighle	
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+			every_owned_state = {
+				limit = {
+					NOT = {
+						has_state_category = megalopolis
+					}
+					NOT = {
+						has_state_category = city
+					}
+					NOT = {
+						has_state_category = large_city
+					}
+					NOT = {
+						has_state_category = metropolis
+					}
+					NOT = {
+						has_state_category = wasteland
+					}
+					NOT = {
+						has_state_category = large_town
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = SOTN_MODIFIER_FamineEffects_mod
+					days = 730
+				}
+				if = {
+					limit = {
+						owner = {
+							has_idea = SOTN_PoliticalUnrest
+						}
+					}
+					SOTN_IncreaseStateUnrest_small_effect = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
+						has_state_category = large_town
+					}
+					NOT = {
+						has_state_category = wasteland
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				if = {
+					limit = {
+						owner = {
+							has_idea = SOTN_PoliticalUnrest
+						}
+					}
+					SOTN_DecreaseStateUnrest_small_effect = yes
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = SOTN_FocusOnVillages
+		}
+		allow_branch = {
+			OR = {
+				has_idea = SOTN_FamineInTheNeighle
+				has_completed_focus = SOTN_FamineIsOver
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_FocusOnVillages
+		icon = GFX_SOTN_FocusOnVillages
+		cost = 6
+		x = -1
+		y = 2
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_EmergencyRelief
+		}
+		prerequisite = {
+			focus = SOTN_AskForAid
+		}
+		available = {
+			has_idea = SOTN_FamineInTheNeighle	
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.1
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
+						has_state_category = large_town
+					}
+					NOT = {
+						has_state_category = wasteland
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = SOTN_MODIFIER_FamineEffects_mod
+					days = 730
+				}
+				if = {
+					limit = {
+						owner = {
+							has_idea = SOTN_PoliticalUnrest
+						}
+					}
+					SOTN_IncreaseStateUnrest_small_effect = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					NOT = {
+						has_state_category = megalopolis
+					}
+					NOT = {
+						has_state_category = city
+					}
+					NOT = {
+						has_state_category = large_city
+					}
+					NOT = {
+						has_state_category = metropolis
+					}
+					NOT = {
+						has_state_category = wasteland
+					}
+					NOT = {
+						has_state_category = large_town
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				if = {
+					limit = {
+						owner = {
+							has_idea = SOTN_PoliticalUnrest
+						}
+					}
+					SOTN_DecreaseStateUnrest_small_effect = yes
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = SOTN_FocusOnCities
+		}
+		allow_branch = {
+			OR = {
+				has_idea = SOTN_FamineInTheNeighle
+				has_completed_focus = SOTN_FamineIsOver
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_AskForAid
+		icon = GFX_SOTN_AskForAid
+		cost = 6
+		x = 1
+		y = 1
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_YearOfTheLocust
+		}
+		available = {
+			has_idea = SOTN_FamineInTheNeighle	
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		allow_branch = {
+			OR = {
+				has_idea = SOTN_FamineInTheNeighle
+				has_completed_focus = SOTN_FamineIsOver
+			}
+		}
+	}
+	focus = { 
+		id = SOTN_FamineIsOver
+		icon = GFX_SOTN_FamineIsOver
+		cost = 6
+		x = 0
+		y = 3
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			focus = SOTN_FocusOnCities
+			focus = SOTN_FocusOnVillages
+		}
+		available = {
+			has_idea = SOTN_FamineInTheNeighle	
+			count_triggers = {
+				amount = 4
+				custom_trigger_tooltip = {
+					tooltip = SOTN_FamineScrapExportsComplete_tt
+					has_country_flag = SOTN_FamineScrapExportsComplete_flag
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOTN_FamineLandRepossessionComplete_tt
+					has_country_flag = SOTN_FamineLandRepossessionComplete_flag
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOTN_FamineSaveFarms_tt
+					has_country_flag = SOTN_FamineSaveFarms_flag
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOTN_FamineZebricanGrain_tt
+					has_country_flag = SOTN_FamineZebricanGrain_flag
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOTN_FamineEquestrianFood_tt
+					has_country_flag = SOTN_FamineEquestrianFood_flag
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOTN_FamineHippogrifFish_tt
+					has_country_flag = SOTN_FamineHippogrifFish_flag
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			remove_ideas = SOTN_FamineInTheNeighle
+			custom_effect_tooltip = SOTN_doublespace
+			add_stability = 0.1
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockStateWideDecision_tt
+					DECISION = SOTN_FixIrrigation_dummy
+				}
+			}
+		}
+		allow_branch = {
+			OR = {
+				has_idea = SOTN_FamineInTheNeighle
+				has_completed_focus = SOTN_FamineIsOver
+			}
+		}
+	}
+	#Economy - Industrialisation
+	focus = { 
+		id = SOTN_NewBudget
+		icon = GFX_goal_unknown
+		cost = 6
+		x = -8
+		y = 1
+		relative_position_id = SOTN_KingSpeech
+		prerequisite = {
+			
+		}
+		available = {
+			SOTN_RoyalDietMajority_trigger = yes
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = SOTN_Urbanisation
+		icon = GFX_goal_unknown
+		cost = 6
+		x = 1
+		y = 1
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			focus = SOTN_NewBudget
+			focus = SOTN_YearOfTheLocust
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = SOTN_ExpandDockyards
+		icon = GFX_goal_unknown
+		cost = 6
+		x = 2
+		y = 2
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			focus = SOTN_Urbanisation
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = SOTN_DealWithDebt
+		icon = GFX_goal_unknown
+		cost = 6
+		x = -2
+		y = 0
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = SOTN_MaregyptianBank
+		icon = GFX_goal_unknown
+		cost = 6
+		x = -1
+		y = 1
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			focus = SOTN_DealWithDebt
+		}
+		prerequisite = {
+			focus = SOTN_NewBudget
+		}
+		available = {
+			OR = {
+				has_completed_focus = SOTN_MaregyptRenaissance
+				SOTN_RoyalDietMajority_trigger = yes
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = SOTN_InviteInvestors
+		icon = GFX_goal_unknown
+		cost = 6
+		x = -3
+		y = 1
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			focus = SOTN_DealWithDebt
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_FinancialIndependence
+		}
+	}
+	focus = { 
+		id = SOTN_FinancialIndependence
+		icon = GFX_goal_unknown
+		cost = 6
+		x = -5
+		y = 1
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			focus = SOTN_DealWithDebt
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_InviteInvestors
+		}
+	}
+	focus = { 
+		id = SOTN_PartialStatism
+		icon = GFX_goal_unknown
+		cost = 6
+		x = -5
+		y = 2
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			focus = SOTN_FinancialIndependence
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = SOTN_IndustrialGrants
+		icon = GFX_goal_unknown
+		cost = 6
+		x = 0
+		y = 2
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			focus = SOTN_Urbanisation
+		}
+		available = {
+			OR = {
+				has_completed_focus = SOTN_MaregyptRenaissance
+				SOTN_RoyalDietMajority_trigger = yes
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = SOTN_ReformDeneb
+		icon = GFX_goal_unknown
+		cost = 6
+		x = -2
+		y = 2
+		relative_position_id = SOTN_NewBudget
+		prerequisite = {
+			focus = SOTN_InviteInvestors
+			focus = SOTN_MaregyptianBank
+		}
+		available = {
+			has_completed_focus = SOTN_RefillTreasury
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = SOTN_AgrarianEconomy
+		icon = GFX_goal_unknown
+		cost = 6
+		x = 4
+		y = 1
+		relative_position_id = SOTN_ReformDeneb
+		prerequisite = {
+			focus = SOTN_ReformDeneb
+		}
+		available = {
+			OR = {
+				has_completed_focus = SOTN_MaregyptRenaissance
+				SOTN_RoyalDietMajority_trigger = yes
+			}
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_MixedEconomy
+		}
+	}
+	focus = { 
+		id = SOTN_MixedEconomy
+		icon = GFX_goal_unknown
+		cost = 6
+		x = -2
+		y = 1
+		relative_position_id = SOTN_ReformDeneb
+		prerequisite = {
+			focus = SOTN_ReformDeneb
+		}
+		available = {
+			OR = {
+				has_completed_focus = SOTN_MaregyptRenaissance
+				SOTN_RoyalDietMajority_trigger = yes
+			}
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_AgrarianEconomy
+		}
+	}
+}

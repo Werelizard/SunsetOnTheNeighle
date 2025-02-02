@@ -1,0 +1,42 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#SHADOW ON THE NEIGHLE SETUP
+			
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			# Check if the state has unrest or not
+			if = {
+				limit = {
+					FROM = {
+						original_tag = MGY
+					}
+				}
+				SOTN_Unrest_onStateOwnershipChange_effect = yes
+			}
+		}
+	}
+	on_unit_leader_created = {
+		effect = {
+			character = {
+				if = {
+					limit = {
+						is_army_leader = yes
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = SOTN_MaredjayArmy
+							}
+						}
+						ROOT = {
+							add_unit_leader_trait = SOTN_MaredjayOfficer
+						}
+					}
+				}
+			}
+		}
+	}
+}

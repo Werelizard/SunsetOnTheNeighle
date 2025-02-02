@@ -1,0 +1,249 @@
+﻿division_template = {
+	name = "Onhooves Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Lancers"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Royal Guard"
+	regiments = {
+		SOTN_MaredjayUnit = { x = 0 y = 0 }
+		SOTN_MaredjayUnit = { x = 0 y = 1 }
+		SOTN_MaredjayUnit = { x = 0 y = 2 }
+		SOTN_MaredjayUnit = { x = 1 y = 0 }
+		SOTN_MaredjayUnit = { x = 1 y = 1 }
+		SOTN_MaredjayUnit = { x = 1 y = 2 }
+		SOTN_MaredjayUnit = { x = 2 y = 0 }
+		SOTN_MaredjayUnit = { x = 2 y = 1 }
+		SOTN_MaredjayUnit = { x = 2 y = 2 }
+		SOTN_MaredjayUnit = { x = 3 y = 0 }
+		SOTN_MaredjayUnit = { x = 3 y = 1 }
+		SOTN_MaredjayUnit = { x = 3 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 2
+	is_locked = yes
+	force_allow_recruiting = yes
+}
+
+units = {
+
+	division = {
+		name = "Khopesh Detachment"
+		location = 7321
+		division_template = "Royal Guard"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Menes Detachment"
+		location = 7321
+		division_template = "Royal Guard"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "1st Lancers"
+		location = 7284
+		division_template = "Lancers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "2nd Lancers"
+		location = 7284
+		division_template = "Lancers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Manephis Detachment"
+		location = 7284
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Somnambula Detachment"
+		location = 7284
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "2nd Lancers"
+		location = 5195
+		division_template = "Lancers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "3rd Lancers"
+		location = 5195
+		division_template = "Lancers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Trotanis Detachment"
+		location = 5195
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Eagle Detachment"
+		location = 5195
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Pepy Detachment"
+		location = 5195
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "5th Lancers"
+		location = 1379
+		division_template = "Lancers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "4th Lancers"
+		location = 1379
+		division_template = "Lancers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Ramareses Detachment"
+		location = 1379
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Neighkt Detachment"
+		location = 1379
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "6th Lancers"
+		location = 19183
+		division_template = "Lancers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Horwy Detachment"
+		location = 1379
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Serneight Detachment"
+		location = 4804
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Marery Detachment"
+		location = 4804
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Akhmin Detachment"
+		location = 19213
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "Nebet Detachment"
+		location = 19213
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		start_manpower_factor = 1
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MGY"
+		}
+		requested_factories = 2
+		progress = 0.75
+		efficiency = 100
+		industrial_manufacturer = mio:generic_infantry_equipment_organization
+	}
+	add_equipment_production = {
+	    equipment = {
+		    type = support_equipment_1
+		    creator = "MGY"
+	    }
+	    requested_factories = 1
+	    progress = 0.50
+	    efficiency = 60
+    }
+}
+
+#Start the focus
+focus = {
+	current = "SOTN_KingSpeech"
+	progress = 0
+}

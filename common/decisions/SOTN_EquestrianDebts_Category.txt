@@ -1,0 +1,3 @@
+SOTN_EquestrianDebts_Category = {
+	
+}

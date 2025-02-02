@@ -1,0 +1,198 @@
+leader_traits = {
+    #################
+    # LEADER TRAITS #
+    #################
+    SOTN_YoungKing_Trait = {
+        random = no
+        
+        offensive_war_stability_factor = -0.1
+		defensive_war_stability_factor = -0.1
+    }
+	SOTN_KingOfUpperAndLowerMaregypt_Trait = {
+        random = no
+        
+        stability_factor = 0.05
+		party_popularity_stability_factor = 0.1
+    }
+    SOTN_YoungKingGood_Trait = {
+        random = no
+        offensive_war_stability_factor = 0.05
+        defensive_war_stability_factor = 0.05
+    }
+    SOTN_AbsoluteMonarchTrait_Trait = {
+        random = no
+
+        political_power_gain = 0.2
+    }
+    SOTN_TheGreatKing_Trait = {
+        stability_factor = 0.1
+        war_support_factor = 0.1
+		party_popularity_stability_factor = 0.1
+        political_power_gain = 0.2
+        conscription = 0.01
+    }
+    SOTN_DesertMare_Trait = {
+        random = no
+        sprite = 1
+        
+        army_morale_factor = -0.1
+        army_attack_factor = 0.05
+        war_support_factor = 0.05
+    }
+    SOTN_PeasantPrince_Trait = {
+        random = no
+        sprite = 1
+        
+        stability_factor = 0.1
+        consumer_goods_factor = 0.05
+        communism_drift = 0.02
+        democratic_drift = 0.02
+    }
+    SOTN_theColonel_Trait = {
+        war_support_factor = 0.02
+        conscription_factor = 0.05
+        ai_focus_aggressive_factor = 0.25
+    }  
+    ##############################
+    # ADVISOR TRAITS - ALIGNMENT #
+    ##############################
+    SOTN_VizierMinister_Trait = {
+        power_balance_weekly = -0.01
+    }
+    SOTN_RoyalistMinister_Trait = {
+        power_balance_weekly = 0.01
+    }
+
+    ##############################
+    # ADVISOR TRAITS - ROYALISTS #
+    ##############################
+    
+    # Overseer of the Treasury (v) {x}
+    SOTN_OverseerTreasury_Trait = {
+        political_power_factor = 0.05
+        consumer_goods_factor = -0.1
+    }
+    
+    # Overseer of the Granaries (v) {x}
+    SOTN_OverseerGranaries_Trait = {
+        min_export = -0.2
+        supply_consumption_factor = -0.1
+        production_speed_industrial_complex_factor = 0.05
+    }
+
+    # Overseer of Ports and Trade (v) {x}
+    SOTN_OverseerPortsAndTrade_Trait = {
+        political_power_factor = 0.05
+        trade_opinion_factor = 0.25
+        resource_trade_cost_bonus_per_factory = 1
+    }
+
+    # Overseer of the Temples (v) {x}
+    SOTN_OverseerOfTemples_Trait = {
+        stability_factor = 0.05
+        party_popularity_stability_factor = 0.1
+        political_power_factor = 0.03
+    }
+
+    # Overser of the Workers (v) {x}
+    SOTN_OverseerOfWorkers_Trait = {
+        production_speed_industrial_complex_factor = 0.1
+        production_speed_infrastructure_factor = 0.1
+        local_resources_factor = 0.1
+        production_lack_of_resource_penalty_factor = -0.05
+    }
+
+    # Head of the Lotus Society (V) {x}
+    SOTN_LotusSocietyHead_Trait = {
+        resistance_growth = -0.1
+        required_garrison_factor = -0.1
+        stability_factor = 0.05
+    }
+
+    # Guild Representative (V) {x}
+    SOTN_GuildRepresentative_Trait = {
+        production_factory_efficiency_gain_factor = 0.05
+        production_factory_max_efficiency_factor = 0.05
+    }
+
+    # Overseer of the Two Lands (K) {x}
+    SOTN_OverseerOfTheCrown_Trait = {
+        political_power_gain = 0.1
+    }
+
+    # Adminsitrative Poridgy (K) {x}
+    SOTN_AdminProdigy_Trait = {
+        political_advisor_cost_factor = -0.15
+        political_power_cost = -0.1
+    }
+
+    # Harmonic Grandee (K) {x}
+    SOTN_HarmonicGrandee_Trait = {
+        democratic_drift = 0.02
+        stability_factor = 0.05
+        democratic_acceptance = 25
+    }
+
+    # Royalist Loudmouth (K) {x}
+    SOTN_RoyalistLoudmouth_Trait = {
+        neutrality_drift = 0.01
+        democratic_drift = 0.01
+        offensive_war_stability_factor = 0.15
+    }
+
+    # Great Architect (K)
+    SOTN_GreatArchitect_Trait = {
+        production_speed_buildings_factor = 0.05
+        global_building_slots_factor = 0.15
+    }
+
+    # Well-Connected Noblepony (K)
+    SOTN_WellConnectedNoblepony_Trait = {
+        consumer_goods_factor = -0.15
+    }
+
+    # Voice of Restraint (K)
+    SOTN_VoiceOfRestraint_Trait = {
+        war_support_factor = -0.1
+        justify_war_goal_time = 0.25
+        opinion_gain_monthly_factor = 0.15
+        stability_factor = 0.1
+    }
+
+    # Old Figurehead (K)
+    SOTN_OldFigurehead_Trait = {
+        political_power_factor = 0.15
+        neutrality_drift = 0.2
+    }
+
+    ##################################
+    # ADVISOR TRAITS - HARMONY (ALL) #
+    ##################################
+
+    # Ambassador of Harmony {x}
+    SOTN_PillarofHope_Trait = {
+        opinion_gain_monthly_same_ideology_factor = 0.25
+        improve_relations_maintain_cost_factor = -0.25
+        democratic_drift = 0.2
+        defensive_war_stability_factor = 0.1
+        stability_factor = 0.05
+    }
+
+    # Gentle Pony
+    SOTN_GentlePony_Trait = {
+        compliance_growth = 0.1
+        resistance_damage_to_garrison = -0.1
+    }
+
+    ###############################
+    # ADVISOR TRAITS - ALL COMMON #
+    ###############################
+
+    # Head of the Equestrian Commission
+    SOTN_EquestrianCommission_Trait = {
+        economy_cost_factor = -0.1
+        trade_laws_cost_factor = -0.1
+        production_speed_buildings_factor = 0.07
+        stability_factor = -0.07
+    }
+}

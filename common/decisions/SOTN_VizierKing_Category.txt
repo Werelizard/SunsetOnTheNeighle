@@ -1,0 +1,20 @@
+SOTN_VizierBOP_Category = {
+	SOTN_Bop_ReviewOverseers = {
+
+	}
+	SOTN_Bop_ExpandBureaucracy = {
+
+	}
+	SOTN_Bop_VizierialMeeting = {
+		
+	}
+	SOTN_Bop_DismissOverseers = {
+
+	}
+	SOTN_Bop_PromoteNomarchs = {
+
+	}
+	SOTN_Bop_ReinforceTheGuard = {
+
+	}
+}

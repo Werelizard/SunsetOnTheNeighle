@@ -1,0 +1,38 @@
+SOTN_RoyalDiet_Category = {
+	SOTN_RoyalDiet_Setup = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			SOTN_RoyalDiet_Setup_effect = yes
+		}
+	}
+	SOTN_RoyalDiet_LoyaltyDebug = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			set_temp_variable = {
+				SOTN_LoyaltyChangeDisplay_tempvar = 10
+			}
+			set_temp_variable = {
+				SOTN_LoyaltyChange_tempvar = 10
+			}
+			SOTN_RoyalDiet_ChangeHarmonyLoyalty_effect = yes
+		}
+	}
+	SOTN_RoyalDiet_SeatsDebug = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			set_temp_variable = {
+				SOTN_SeatChange_tempvar = 5
+			}
+			set_temp_variable = {
+				SOTN_ReformProgress_tempvar = 0
+			}
+			SOTN_RoyalDiet_TransferHarmonyNeutral_effect = yes
+		}
+	}
+}

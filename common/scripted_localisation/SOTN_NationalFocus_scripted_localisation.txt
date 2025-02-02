@@ -1,0 +1,15 @@
+defined_text = {
+	name = Get_VizierCabinet_ScripLoc
+	text = {
+		trigger = {
+			has_country_flag = SOTN_ShaaDoofVizier_flag
+		}
+		localization_key = VizierCabinet_ShaaDoof
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOTN_NeighktVizier_flag
+		}
+		localization_key = NeighktCabinet_ShaaDoof
+	}
+}

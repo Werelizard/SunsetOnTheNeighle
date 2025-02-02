@@ -1,0 +1,705 @@
+characters = {
+	# Country Leaders at the Start
+	SOTN_character_KingKhefer = { #King Khefer - Monarchist
+		name = SOTN_character_KingKhefer
+		portraits = {
+			civilian = {
+				large = "GFX_SOTN_character_KingKhefer"
+			}
+			army = {
+				large = "GFX_SOTN_character_KingKhefer"
+			}
+		}
+		country_leader = {
+			ideology = SOTN_harmonic_pharaonism
+			desc = SOTN_character_KingKhefer_Bio
+			expire = "1111.1.1.1"
+			id=-1
+			traits = {
+				SOTN_KingOfUpperAndLowerMaregypt_Trait
+				SOTN_YoungKing_Trait
+			}
+		}
+		country_leader = {
+			ideology = SOTN_traditional_pharaonism
+			desc = SOTN_character_KingKhefer_Bio
+			expire = "1111.1.1.1"
+			id=-1
+			traits = {
+				SOTN_KingOfUpperAndLowerMaregypt_Trait
+				SOTN_YoungKing_Trait
+			}
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				media_personality
+				politically_connected
+				trait_cautious
+			}
+		}
+	}
+	
+	SOTN_character_FerukIntef = {
+		name = SOTN_character_FerukIntef
+		portraits = {
+			civilian = {
+				large = "GFX_SOTN_character_FerukIntef"
+				small = "GFX_SOTN_character_FerukIntef_Advisor"
+			}
+			army = {
+				large = "GFX_SOTN_character_FerukIntef"
+				small = "GFX_SOTN_character_FerukIntef_Advisor"
+			}
+		}
+		country_leader = {
+			ideology = ultranationalism
+			expire = "1111.1.1.1"
+			desc = SOTN_character_FerukInteft_Bio
+			id=-1
+			traits = {
+				
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SOTN_character_FerukIntef
+			desc = SOTN_character_FerukInteft_Bio
+			traits = {
+				army_infantry_2
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 1
+			traits = {
+				trait_reckless
+				SOTN_SupremacistOfficer
+				thorough_planner
+				politically_connected
+			}
+		}
+		gender = female
+	}
+	SOTN_character_Narmare = { #Narmare Rud
+		name = SOTN_character_Narmare
+		portraits = {
+			civilian = {
+				large = "GFX_SOTN_character_Narmare"
+			}
+		}
+		country_leader = {
+			ideology = primitive_communism
+			expire = "1111.1.1.1"
+			desc = SOTN_character_Narmare_Bio
+			id=-1
+			traits = {
+				SOTN_PeasantPrince_Trait
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
+	}
+	#Ministers and other leaders
+	SOTN_character_ShaaDoof = {
+		name = SOTN_character_ShaaDoof
+		portraits = {
+			civilian = {
+				large = "GFX_SOTN_character_ShaaDoof"
+				small = "GFX_SOTN_ShaaDoof_Advisor"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
+	}
+	SOTN_character_Ahhotep = { #Sabni Neferet - the Maredjay leader
+		name = SOTN_character_Ahhotep
+		portraits = {
+			civilian = {
+				large = "GFX_SOTN_character_Ahhotep"
+				small = "GFX_SOTN_character_Ahhotep_Advisor"
+			}
+			army = {
+				large = "GFX_SOTN_character_Ahhotep"
+				small = "GFX_SOTN_character_Ahhotep_Advisor"	
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = SOTN_character_Narmare
+			desc = SOTN_character_Ahhotep_Bio
+			traits = {
+				army_chief_drill_1
+			}
+			can_be_fired = no
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			traits = {
+				trait_cautious
+				SOTN_MaredjayOfficer
+				desert_fox
+				infantry_officer
+			}
+		}
+		
+		gender = female
+	}
+	SOTN_character_NeighSer = { #Sabni Neferet - the Maredjay leader
+		name = SOTN_character_NeighSer 
+		portraits = {
+			civilian = {
+				large = "GFX_SOTN_character_Ahhotep"
+				small = "GFX_SOTN_character_Ahhotep_Advisor"
+			}
+			army = {
+				large = "GFX_SOTN_character_Ahhotep"
+				small = "GFX_SOTN_character_Ahhotep_Advisor"	
+			}
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			traits = {
+				trait_cautious
+				SOTN_MaredjayOfficer
+				desert_fox
+				infantry_officer
+			}
+		}
+		
+		gender = female
+	}
+	SOTN_Character_Somnambula = {
+		name = SOTN_Character_Somnambula
+		portraits = {
+			civilian = {
+				large = "GFX_SOTN_Somnambula"
+				small = "GFX_SOTN_Somnambula_Advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOTN_Character_Somnambula
+			desc = SOTN_Character_Somnambula_Bio
+			traits = {
+				SOTN_PillarofHope_Trait
+			}
+			visible = {
+				has_country_flag = SOTN_SomnambulaExiled_flag
+			}
+			available = {
+				has_government = democratic
+				is_country_leader = no
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			desc = SOTN_Character_Somnambula_Bio
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				always = no
+			}
+		}
+	}
+	#Advisors
+	SOTN_Character_Meritamen = { #Overseer of the temples
+		name = SOTN_Character_Meritamen
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOTN_Character_Meritamen
+			desc = SOTN_Character_Meritamen_Bio
+			idea_token = SOTN_Character_Meritamen
+			traits = {
+				SOTN_OverseerOfTemples_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = -0.1
+				}
+			}
+		}
+		gender = female
+	}
+	SOTN_Character_Meketrotre = { #Overseer of the Treasury
+		name = SOTN_Character_Meketrotre
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Meketrotre_Bio
+			idea_token = SOTN_Character_Meketrotre
+			traits = {
+				SOTN_OverseerTreasury_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = -0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Neighbamun = { #Overseer of the Granaries
+		name = SOTN_Character_Neighbamun
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Neighbamun_Bio
+			idea_token = SOTN_Character_Neighbamun
+			traits = {
+				SOTN_OverseerGranaries_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = -0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Wadjhoof = { #Overseer of the Ports
+		name = SOTN_Character_Wadjhoof
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Wadjhoof_Bio
+			idea_token = SOTN_Character_Wadjhoof
+			traits = {
+				SOTN_OverseerPortsAndTrade_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = -0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Maneighra = { #Overseer of the Workers
+		name = SOTN_Character_Maneighra
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Maneighra_Bio
+			idea_token = SOTN_Character_Maneighra
+			traits = {
+				SOTN_OverseerOfWorkers_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = -0.1
+				}
+			}
+		}
+		gender = female
+	}
+	SOTN_Character_ImaruOfManephis = { # ead of the Lorus Society
+		name = SOTN_Character_ImaruOfManephis
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_ImaruOfManephis_Bio
+			idea_token = SOTN_Character_ImaruOfManephis
+			traits = {
+				SOTN_LotusSocietyHead_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = -0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Sennedjem = { # Guild Repsrentative
+		name = SOTN_Character_Sennedjem
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Sennedjem_Bio
+			idea_token = SOTN_Character_Sennedjem
+			traits = {
+				SOTN_GuildRepresentative_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = -0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Neighkt = { # Overseer of the Two Lands (he's a protégé of Shaa Doof but is more loyal to the King)
+		name = SOTN_Character_Neighkt
+		portraits = {
+			civilian = {
+				large = "GFX_SOTN_Neightk"
+				small = "GFX_SOTN_Neightk_Advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Neighkt_Bio
+			idea_token = SOTN_Character_Neighkt
+			traits = {
+				SOTN_AdminProdigy_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = 0.1
+				}
+			}
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				media_personality
+				politically_connected
+				trait_cautious
+			}
+		}
+	}
+	SOTN_Character_IbiWarmhoof = { # Harmonic Grandee
+		name = SOTN_Character_IbiWarmhoof
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_IbiWarmhoof_Bio
+			idea_token = SOTN_Character_IbiWarmhoof
+			traits = {
+				SOTN_HarmonicGrandee_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = 0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Huneighfer = { # Royalist Loudmouth
+		name = SOTN_Character_Huneighfer
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Huneighfer_Bio
+			idea_token = SOTN_Character_Huneighfer
+			traits = {
+				SOTN_RoyalistLoudmouth_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = 0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Imhotep = { # Architect
+		name = SOTN_Character_Imhotep
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Imhotep_Bio
+			idea_token = SOTN_Character_Imhotep
+			traits = {
+				SOTN_GreatArchitect_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = 0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Imenmose = { # Well connected Noblepony
+		name = SOTN_Character_Imenmose
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Imenmose_Bio
+			idea_token = SOTN_Character_Imenmose
+			traits = {
+				SOTN_WellConnectedNoblepony_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = 0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Seshat = { # Voice of Restraint
+		name = SOTN_Character_Seshat
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Seshat_Bio
+			idea_token = SOTN_Character_Seshat
+			traits = {
+				SOTN_VoiceOfRestraint_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = 0.1
+				}
+			}
+		}
+		gender = female
+	}
+	SOTN_Character_Khoofu = { # Well connected Noblepony
+		name = SOTN_Character_Khoofu
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Khoofu_Bio
+			idea_token = SOTN_Character_Khoofu
+			traits = {
+				SOTN_OldFigurehead_Trait
+			}
+			visible = {
+				has_country_leader = {
+					character = SOTN_character_KingKhefer
+					ruling_only = yes
+				}
+			}
+			on_add = {
+				add_power_balance_value = {
+					id = SOTN_VizierPharaoh_BOP
+					value = 0.1
+				}
+			}
+		}
+	}
+	SOTN_Character_Maretmaaet = { # Gentlepony
+		name = SOTN_Character_Maretmaaet
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Maretmaaet_Bio
+			idea_token = SOTN_Character_Maretmaaet
+			traits = {
+				SOTN_GentlePony_Trait
+			}
+			available = {
+				has_government = democratic
+			}
+		}
+		gender = female
+	}
+	SOTN_Character_Appleseed = { # Gentlepony
+		name = SOTN_Character_Appleseed
+		portraits = {
+			civilian = {
+				large = ""
+				small = ""
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = SOTN_Character_Appleseede_Bio
+			idea_token = SOTN_Character_Appleseed
+			traits = {
+				SOTN_EquestrianCommission_Trait
+			}
+			available = {
+				has_idea = SOTN_EquestrianComission
+			}
+		}
+	}
+}

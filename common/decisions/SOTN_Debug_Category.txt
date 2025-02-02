@@ -1,0 +1,127 @@
+SOTN_Debug_Category = {
+	SOTN_Debug_CycleVizier = {
+
+		days_re_enable = 0
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_flag = SOTN_ShaaDoofVizier_flag
+				}
+				custom_effect_tooltip = SOTN_Debug_RemoveShaaDoof_tt
+				clr_country_flag = SOTN_ShaaDoofVizier_flag
+			}
+			else = {
+				custom_effect_tooltip = SOTN_Debug_AppointShaaDoof_tt
+				set_country_flag = SOTN_ShaaDoofVizier_flag
+			}
+		}
+	}
+
+	SOTN_Debug_CheckNumberOfStates = {
+		complete_effect = {
+			SOTN_Unrest_GetNumberOfPossibleStates_effect = yes
+		}
+	}
+
+	SOTN_Debug_AddUnrestModifiers = {
+		available = {
+			NOT = {
+				any_owned_state = {
+					has_dynamic_modifier = {
+						modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+					}
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					impassable = no
+				}
+				add_dynamic_modifier = {
+					modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+				}
+			}
+		}
+	}
+
+	SOTN_Debug_IncreaseUnrestInAllStates = {
+		fixed_random_seed = no
+
+		available = {
+			any_owned_state = {
+				has_dynamic_modifier = {
+					modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+				}
+			}
+		}
+
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+					}
+				}
+				random_list = {
+					33 = {
+						SOTN_IncreaseStateUnrest_small_effect = yes
+					}
+					33 = {
+						SOTN_IncreaseStateUnrest_medium_effect = yes
+					}
+					33 = {
+						SOTN_IncreaseStateUnrest_large_effect = yes
+					}
+				}
+			}
+		}
+	}
+	SOTN_Debug_GetAverageUnrest = {
+		complete_effect = {
+			SOTN_Unrest_GetAverage_effect = yes
+		}
+	}
+
+	SOTN_SwitchFamine_Tree = {
+		complete_effect = {
+			if = {
+				limit = {
+					has_idea = SOTN_FamineRisk
+				}
+				swap_ideas = {
+					remove_idea = SOTN_FamineRisk
+					add_idea = SOTN_FamineInTheNeighle
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SOTN_FamineInTheNeighle
+					add_idea = SOTN_FamineRisk
+				}
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	SOTN_RemovePop = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = yes
+				}
+				set_temp_variable = {
+					SOTN_PopRemove_tempvar = state_population 
+				}
+				multiply_temp_variable = {
+					SOTN_PopRemove_tempvar = -0.1
+				}
+				add_manpower = SOTN_PopRemove_tempvar
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+spriteTypes = {
+	# Advisor Portraits 
+	spriteType = {
+		name = "GFX_SOTN_ShaaDoof_Advisor"
+		texturefile = "gfx/interface/advisors/ShaaDoof_PortraitSmall.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_character_Ahhotep_Advisor"
+		texturefile = "gfx/interface/advisors/Ahhotep_PortraitSmall.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_character_FerukIntef_Advisor"
+		texturefile = "gfx/interface/advisors/FaarIntef_PortraitSmall.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_Somnambula_Advisor"
+		texturefile = "gfx/interface/advisors/Somnambula_PortraitSmall.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_Neightk_Advisor"
+		texturefile = "gfx/interface/advisors/Neighkt_PortraitSmall.dds"
+	}
+
+	# Country Leader Portraits   
+	spriteType = {
+		name = "GFX_SOTN_character_KingKhefer"
+		texturefile = "gfx/leaders/SOTN_KingKhefer.tga"
+	}
+	spriteType = {
+		name = "GFX_SOTN_character_Ahhotep"
+		texturefile = "gfx/leaders/SOTN_Ahhotep.tga"
+	}
+	spriteType = {
+		name = "GFX_SOTN_character_Narmare"
+		texturefile = "gfx/leaders/SOTN_Narmare.tga"
+	}
+	spriteType = {
+		name = "GFX_SOTN_character_ShaaDoof"
+		texturefile = "gfx/leaders/SOTN_ShaaDoof.tga"
+	}
+	spriteType = {
+		name = "GFX_SOTN_character_FerukIntef"
+		texturefile = "gfx/leaders/SOTN_FaarIntef.tga"
+	}
+	spriteType = {
+		name = "GFX_SOTN_Somnambula"
+		texturefile = "gfx/leaders/SOTN_Somnambula.tga"
+	}
+	spriteType = {
+		name = "GFX_SOTN_Neightk"
+		texturefile = "gfx/leaders/SOTN_Neighkt.tga"
+	}
+
+	# Character traits
+	spriteType = {
+		name = "GFX_trait_SOTN_MaredjayOfficer"
+		texturefile = "gfx/interface/traits/personal/trait_SOTN_Maredjay.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_SOTN_SupremacistOfficer"
+		texturefile = "gfx/interface/traits/personal/trait_SOTN_SupremacistOfficer.dds"
+	}
+}

@@ -1,0 +1,59 @@
+SOTN_Debug_Category = {
+
+	visible = {
+		is_debug = yes
+		SOTN_isSubmodCountry_trigger = yes
+	}
+}
+
+SOTN_VizierBOP_Category = {
+	# Category for the Vizier-King Balance of Power
+	visible = {
+		always = no
+	}
+}
+
+SOTN_FadingSun_Category = {
+	# Category for the unrest and crises
+	icon = GFX_SOTN_FadingSun_Category
+	priority = 1000
+	visible = {
+		always = yes
+		original_tag = MGY
+		NOT = {
+			has_country_flag = SOTN_ANewDawn_flag
+		}
+	}
+	visible_when_empty = yes
+}
+
+SOTN_EquestrianDebts_Category = {
+	# Category for the unrest and crises
+	icon = GFX_SOTN_EquestrianDebts_Category
+	priority = 900
+	visible = {
+		always = yes
+		original_tag = MGY
+		has_idea = SOTN_EquestrianComission
+	}
+	visible_when_empty = yes
+}
+
+SOTN_MaregyptianSphere_Category = {
+	# Category for Mareygpt's relations and diplomacy
+	visible = {
+		always = yes
+		original_tag = MGY
+	}
+}
+
+SOTN_RoyalDiet_Category = {
+	priority = 900
+	visible = {
+		OR = {
+			is_debug = yes
+			has_country_flag = SOTN_DietActive_flag
+		}
+		original_tag = MGY
+	}
+}

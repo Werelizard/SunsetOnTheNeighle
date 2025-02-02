@@ -1,0 +1,94 @@
+spriteTypes = {
+	# Country Ideas
+	spriteType = {
+		name = "GFX_idea_SOTN_FadingSun"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_FadingSun.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_FamineRisk"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_FamineRisk.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_FamineRisk_2"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_FamineRisk.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_FamineRisk_3"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_FamineRisk.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_FamineRisk_4"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_FamineRisk.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_FamineRisk_5"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_FamineRisk.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_Maredjay"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_Maredjay.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_EquestrianComission"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_EquestrianComission.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_PoliticalUnrest"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_PoliticalUnrest.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_ScarsOfTheJulyUprising"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_ScarsOfTheJulyUprising.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_FamineInTheNeighle"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_FamineStruck.dds"
+	}
+	# Province modifiers
+	spriteType = {
+		name = "GFX_SOTN_unrestModifier_icon"
+		texturefile = "gfx/interface/LocalUnrestIcon.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_BadInfrastructure_icon"
+		texturefile = "gfx/interface/BadInfrastructure.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_FamineEffects_icon"
+		texturefile = "gfx/interface/LocalFamine.dds"
+	}
+	# Industrial Concernts
+	spriteType = {
+		name = "GFX_idea_SOTN_Djoser"
+		texturefile = "gfx/interface/designers/SOTN_Djoser.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_Shaaty"
+		texturefile = "gfx/interface/designers/SOTN_Shaaty.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_ManephisArms"
+		texturefile = "gfx/interface/designers/SOTN_ManephisArms.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_Dockyards"
+		texturefile = "gfx/interface/designers/SOTN_Dockyards.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_Bank"
+		texturefile = "gfx/interface/designers/SOTN_Bank.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_MareAir"
+		texturefile = "gfx/interface/designers/SOTN_MareAir.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOTN_SomRadio"
+		texturefile = "gfx/interface/designers/SOTN_SomRadio.dds"
+	}
+	#Army Spirits
+	spriteType = {
+		name = "GFX_idea_SOTN_MaredjayArmy"
+		texturefile = "gfx/interface/officer_corp/spirits/spirit_idea_SOTN_MaredjayArmy.dds"
+	}
+}

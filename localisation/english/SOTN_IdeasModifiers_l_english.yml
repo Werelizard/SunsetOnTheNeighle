@@ -1,0 +1,84 @@
+﻿l_english:
+ # Country Ideas
+ SOTN_FadingSun:0 "The Fading Sun"
+ SOTN_FadingSun_desc:0 "Maregypt is no longer the realm it was. Once, it was the envy of all of Zebrica - a beacon of Harmony and prosperity for all. Now it is but a ruin, a blend of urban sprawl, disaffected estates and run-down farmland admist a field of millenia-old pyramids, temples and desert. A dying kingdom, it stands as one of the last fading bastions of Harmonic governance on the continent - with the ideals of old growing ever more unpopular as the days go by."
+
+ SOTN_EquestrianComission:0 "The Equestrian Commission"
+ SOTN_EquestrianComission_desc:0 "In the wake of the Storm King's rise and fall, King Khefer - pressured by Shaa Doof - negotiated an unpopular agreement with princess Celestia in order to salvage the country's economy. While this proved somewhat successfull in avoiding an immediate collapse of the Maregyptian economy, the payments for this assistance has now come due, driving the Maregyptian economy further towards bankruptcy."
+ SOTN_EquestrianComission_EnforcedFreeTrade_tt:0 "Can change trade laws: §RNo§!"
+
+ SOTN_FamineRisk:0 "The Long Drought"
+ SOTN_FamineRisk_desc:0 "Whilst the bounty of the Neighle has proved miraculous in its own, the river remains as unpredictable as it is capricious. The recent flood was dire, leaving many farms deserted and innumerable fields left to whither under the blazing sun. Many amongst the administration fear that we may be staring down the barrel of a potential famine..."
+
+ SOTN_Maredjay:0 "The Maredjay"
+ SOTN_Maredjay_desc:0 "The Maredjay - the King's all-female royal elite - have long been granted a near-total dominance of the military, dictating its tactics, training regimens, selection process and even choosing the army's leadership. This has come at a great cost however, as their recent political entrenchment has trapped our armed forces in the past."
+ SOTN_CanRecruitMaredjay_yes:0 "Can train and recruit Maredjay battalions: §GYes§!"
+ SOTN_CanSelectAcademySpirit_no:0 "Can change the spirit of the army: §tNo§!"
+
+ SOTN_PoliticalUnrest:0 "Political Unrest"
+ SOTN_PoliticalUnrest_desc:0 "§LThis is a §gdynamic§! modifier. It will update to reflect the rising £SOTN_unrest_text_icon §Yunrest§!§L throughout the nation.§T\n--------------\n§!Our nation is currently experiencing widespread unrest, tethering on the edge of a civil war, with only the vague promises of reform keeping it at bay."
+
+ SOTN_ScarsOfTheJulyUprising:0 "Socialist Crackdown"
+ SOTN_ScarsOfTheJulyUprising_desc:0 "Shortly after the fall of the Storm King, a series of peaceful demonstrations, organised by the now defunct Agrarian Party, turned violent - though there were luckily no casualites reported. Whilst the Maredjay and the local authorities denied instigating it, the resulting mistrust has led to a crackdown on the state's part against percieved 'agitators'."
+
+ SOTN_FamineInTheNeighle:0 "The Whithering Neighle"
+ SOTN_FamineInTheNeighle_desc:0 "Sing, sing us the song of death, for to us here amongst the reeds such a fate would be bring but release"
+
+ SOTN_OfficeOFTheTwoLands:0 "The Office of the Two Lands"
+ SOTN_OfficeOFTheTwoLands_desc:0 ""
+
+ SOTN_StreamLinedAdministration:0 "Streamlined Administration"
+ SOTN_StreamLinedAdministration_desc:0 ""
+
+ SOTN_StreamLinedAdministrationAndOverseer:0 "Perfected Administration"
+ SOTN_StreamLinedAdministration_desc:0 ""
+ 
+ SOTN_IncreasedTaxes:0 "Increased Taxes"
+ SOTN_IncreasedTaxes_desc:0 ""
+
+ SOTN_LotusSociety:0 "Anti-Maregyptian Inquest Committee"
+ SOTN_LotusSociety_desc:0 ""
+ 
+ SOTN_ManephisProclamation:0 "Expanded Vizierial Powers"
+ SOTN_ManephisProclamation_desc:0 ""
+
+ SOTN_MaregyptReborn:0 "The New Kingdom"
+ SOTN_MaregyptReborn_desc:0 ""
+
+ SOTN_BlackmailedAristocrats:0 "Loyal Bureaucrats"
+ SOTN_BlackmailedAristocrats_desc:0 ""
+
+ #Hidden Ideas
+ SOTN_Vizier_ShaaDoof:0 "Shaa Doof"
+
+ #Dynamic Modifiers - Countries
+ SOTN_EquestrianComission_Dynmod:0 "$SOTN_EquestrianComission$"
+
+ SOTN_PoliticalUnrest_Dynmod:0 "$SOTN_PoliticalUnrest$"
+
+ SOTN_PoliticalUnrest_StabilityImpact_tt:0 "Stability:§W§! [?SOTN_UnrestImpact_var|+2%]"
+ SOTN_PoliticalUnrest_PoliticalPowerFactorImpact_tt:0 "Political Power Gain:§W§! [?SOTN_UnrestImpactSmall_var|+2%]"
+ SOTN_PoliticalUnrest_AverageUnrest_tt:0 "\nCurrent average £SOTN_unrest_text_icon unrest is: §t[?SOTN_Unrest_Average_var|%%]§!"
+
+ #Dynamic Modifiers - States
+ SOTN_MODIFIER_LocalUnrest_Dynmod:0 "Provincial Unrest"
+ SOTN_MODIFIER_BadInfrastructure_mod:0 "Flood-Prone State"
+ SOTN_MODIFIER_FamineEffects_mod:0 "Reeling From the Famine"
+
+ # Modifiers - state/province wise
+ SOTN_MODIFIER_LocalUnrest:0 "£SOTN_unrest_text_icon Local Unrest"
+
+ #Industrial Concerns
+ SOTN_Djoser:0 "Djoser Construction"
+ SOTN_Shaaty:0 "Shaaty Industries"
+ SOTN_ManephisArms:0 "Manephis Arsenal"
+ SOTN_Dockyards:0 "Somnambula Dockyards"
+ SOTN_Bank:0 "National Maregyptian Bank"
+ SOTN_MareAir:0 "Neighle Airlines"
+ SOTN_SomRadio:0 "Radio Shezu"
+
+ #Army spirits
+ SOTN_MaredjayArmy:0 "Maredjay Commanders"
+ SOTN_MaredjayArmy_desc:0 "$SOTN_Maredjay_desc$"
+ SOTN_MaredjayArmy_tt:0 "New Officers: begin with the §Y"Maredjay Officer"§! trait."
+ SOTN_MaredjayArmy_trigger_no:0 "§tCannot select a new spirit of the academy while §!§Y$SOTN_MaredjayArmy$§!§t is active!§!"

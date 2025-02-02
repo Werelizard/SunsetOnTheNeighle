@@ -1,0 +1,33 @@
+# Behaviour file for the Vizier Advisor Scripted GUI
+
+scripted_gui = {
+	SOTN_VizierAdvisor_ScriptedGUI = {
+		window_name = SOTN_VizierAdvisor_Window
+		context_type = player_context
+		parent_window_token = politics_tab
+
+		visible = {
+			SOTN_HasVizierMechanic_trigger = yes
+		}
+
+		triggers = {
+			SOTN_VizierAdvisor_Empty_visible = {
+				NOT = {
+					SOTN_HasViziersTrigger_trigger = yes
+				}
+			}
+			SOTN_VizierAdvisor_Badge_visible = {
+				NOT = {
+					SOTN_HasViziersTrigger_trigger = yes
+				}
+			}
+			SOTN_VizierAdvisor_ShaaDoof_visible = {
+				SOTN_HasShaaDoof_Vizier_trigger = yes
+			}
+		}
+
+		ai_enabled = { #The AI should not be able to see it (no use as it's purely cosmetic and everything is done via dynmaic modifiers)
+			always = no
+		}
+	}
+}

@@ -1,0 +1,298 @@
+ideas = {
+	#     #
+	##   ##   ##   #####  ######  ####  #   # #####  #####
+	# # # #  #  #  #    # #      #    #  # #  #    #   #
+	#  #  # #    # #    # #####  #        #   #    #   #
+	#     # ###### #####  #      #  ###   #   #####    #
+	#     # #    # #   #  #      #    #   #   #        #
+	#     # #    # #    # ######  ####    #   #        #
+
+
+	country = {
+		# Starting ideas for Maregypt
+		SOTN_FadingSun = { #Fake idea - hides a dynamic modifier
+			modifier = {
+				resistance_growth = 0.1
+				compliance_growth = -0.2
+				political_power_cost = 0.3
+				war_support_factor = -0.3
+			}
+		}
+		SOTN_FamineRisk = {
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.1
+				monthly_population = -0.2
+			}
+		}
+		SOTN_Maredjay = {
+			modifier = {
+				max_planning_factor = 0.05
+				command_power_gain = 0.25
+				custom_modifier_tooltip = SOTN_CanRecruitMaredjay_yes
+				custom_modifier_tooltip = SOTN_CanSelectAcademySpirit_no
+			}
+		}
+		SOTN_ScarsOfTheJulyUprising = {
+			modifier = {
+				communism_drift = -0.1
+				conscription_factor = -0.1
+			    stability_factor = -0.05
+			}
+			allowed = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		SOTN_EquestrianComission = {
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				custom_modifier_tooltip = SOTN_EquestrianComission_EnforcedFreeTrade_tt
+			}
+			targeted_modifier = {
+				tag = EQS
+				cic_to_target_factor = 0.45
+			}
+			on_remove = {
+				clr_country_flag = TRD_forced_market
+			}
+		}
+		SOTN_PoliticalUnrest = {
+			#Fake national ideas - actually a dynamic modifier
+			modifier = {
+				custom_modifier_tooltip = SOTN_PoliticalUnrest_StabilityImpact_tt
+				custom_modifier_tooltip = SOTN_PoliticalUnrest_PoliticalPowerFactorImpact_tt
+				custom_modifier_tooltip = SOTN_PoliticalUnrest_AverageUnrest_tt
+			} 
+			on_remove = {
+				remove_dynamic_modifier = {
+					modifier = SOTN_PoliticalUnrest_Dynmod
+				}
+			}
+		}
+		# Country ideas - after start
+		SOTN_IncreasedTaxes = {
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		SOTN_FamineInTheNeighle = {
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription_factor = -0.25
+				monthly_population = -0.5
+				weekly_manpower = -100
+				stability_weekly_factor = -0.01
+			}
+		}
+		SOTN_OfficeOFTheTwoLands = {
+			modifier = {
+				compliance_growth = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SOTN_StreamLinedAdministration = {
+			modifier = {
+				local_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+		SOTN_StreamLinedAdministrationAndOverseer = {
+			modifier = {
+				local_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.05
+				compliance_growth = 0.1
+			}
+		}
+		SOTN_LotusSociety = {
+			modifier = {
+				political_power_gain = -0.2
+				fascism_drift = -0.1
+				communism_drift = -0.1
+				drift_defence_factor = 0.2
+				SOTN_UnrestChange_modifier = -0.5
+			}
+			allowed = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		SOTN_ManephisProclamation = {
+			modifier = {
+				stability_factor = -0.1
+				democratic_drift = 0.1
+				SOTN_UnrestChange_modifier = -0.5
+			}
+		}
+		SOTN_BlackmailedAristocrats = {
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	}
+	# Industrial Conern
+	industrial_concern = {
+		SOTN_Djoser = {
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+			}
+			research_bonus = {
+				construction_tech = 0.1
+			}
+			allowed = {
+				original_tag = MGY
+			}
+		}
+		SOTN_Shaaty = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+			equipment_bonus = {
+				motorized = {
+					build_cost_ic = -0.05
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.05
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+				}
+			}
+			allowed = {
+				original_tag = MGY
+			}
+		}
+		SOTN_ManephisArms = {
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					reliability_factor = 0.05
+				}
+				magical_equipment = {
+					build_cost_ic = -0.05
+					reliability_factor = 0.05
+				}
+			}
+			allowed = {
+				original_tag = MGY
+			}
+			available = {
+				735 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		SOTN_Dockyards = {
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.1
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.05
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05
+				}
+			}
+			allowed = {
+				original_tag = MGY
+			}
+			available = {
+				733 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		SOTN_Bank = {
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+			allowed = {
+				original_tag = MGY
+			}
+		}
+		SOTN_MareAir = {
+			modifier = {
+				air_accidents_factor = -0.1
+				air_detection = 0.05
+			}
+			equipment_bonus = {
+				small_plane_airframe_0 = {
+					build_cost_ic = -0.05
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.05
+				}
+			}
+			allowed = {
+				original_tag = MGY
+			}
+		}
+		SOTN_SomRadio = {
+			modifier = {
+				
+			}
+			research_bonus = {
+				electronics = 0.15
+			}
+			allowed = {
+				original_tag = MGY
+			}
+		}
+	}
+	#Army Spirits
+	academy_spirit = {
+		SOTN_MaredjayArmy = {
+			ledger = army
+			removal_cost = -1
+			visible = { 
+				SOTN_hasMaredjay_trigger = yes
+			}
+			modifier = {
+				army_spirit_category_type_cost_factor = 1.5
+				custom_modifier_tooltip = SOTN_MaredjayArmy_tt
+			}
+			ai_will_do = {
+				factor = 1.5
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+	}
+	#Hidden ideas
+	hidden_ideas = {
+		SOTN_Vizier_ShaaDoof = {
+			modifier = {
+				stability_factor = 0.1
+				# political_power_cost = 0.1
+				political_power_factor = -0.1
+				power_balance_weekly = -0.01
+			}
+			on_remove = {
+				clr_country_flag = SOTN_ShaaDoofVizier_flag
+			}
+		}
+	}
+}

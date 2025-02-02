@@ -1,0 +1,141 @@
+﻿l_english:
+ SOTN_KingSpeech:0 "A Long-Expected Address"
+ SOTN_KingSpeech_desc:0 ""
+
+ SOTN_VizierOffice:0 "One House, Two Crowns"
+ SOTN_VizierOffice_desc:0 ""
+
+ SOTN_SidelineKing:0 "Curtail Royal Power"
+ SOTN_SidelineKing_desc:0 ""
+ SOTN_SidelineKing_tt:0 "Decreases the cost of all §YVizierial§! £decision_icon_small decisions by £pol_power §G15§!"
+
+ SOTN_SidelineVizier:0 "Restore Royal Prerogative"
+ SOTN_SidelineVizier_desc:0 ""
+ SOTN_SidelineVizier_tt:0 "Decreases the cost of all §YRoyal§! £decision_icon_small decisions by £pol_power §G15§!"
+
+ SOTN_AppointAdmin:0 "Renew the Office of the Two Lands"
+ SOTN_AppointAdmin_desc:0 ""
+
+ SOTN_RefillTreasury:0 "Refill the Treasury"
+ SOTN_RefillTreasury_desc:0 ""
+
+ SOTN_AssimilateAdmin:0 "Subsume Nomarchial Administrations"
+ SOTN_AssimilateAdmin_desc:0 ""
+ SOTN_StabilityTwiceAvgUnrest_tt:0 "Stability is at least twice higher than the average unrest (§Y[?SOTN_Unrest_DoubleAverage_var|%%]§!)"
+
+ SOTN_DynasticPropaganda:0 "Restore Dynastic Prestige"
+ SOTN_DynasticPropaganda_desc:0 "" 
+
+ SOTN_StrengthenKing:0 "Consolidate Royal Power"
+ SOTN_StrengthenKing_desc:0 ""
+ 
+ SOTN_ClassicRevival:0 "Revive Classical Education"
+ SOTN_ClassicRevival_desc:0 ""
+
+ SOTN_VizierCabinet:0 "[Get_VizierCabinet_ScripLoc]"
+ SOTN_VizierCabinet_desc:0 ""
+
+ SOTN_RoyalDiet:0 "Convene the Royal Diet"
+ SOTN_RoyalDiet_desc:0 ""
+ SOTN_RoyalDiet_tt:0 "§CDelegates from all Maregyptian provinces will travel to the capital at the King's behest. This will allow us to begin focusing on reforming the country's political scene.\n\n§!§RShould these efforts to diffuse the situation fail however it is likely to make matters far worse...§!"
+
+ SOTN_ManephisDecree:0 "The Manephis Decree"
+ SOTN_ManephisDecree_desc:0 ""
+
+ SOTN_WorkWithAhhotep:0 "Cut a Deal with the Iron Mare"
+ SOTN_WorkWithAhhotep_desc:0 ""
+
+ SOTN_DenyExtremists:0 "Outmaneuver Radicals"
+ SOTN_DenyExtremists_desc:0 ""
+
+ SOTN_ReinforceHarmonyInDiet:0 "Reach out to the Reformist Clique"
+ SOTN_ReinforceHarmonyInDiet_desc:0 ""
+
+ SOTN_StrongArmAristocrats:0 "Ensure Bureaucratic Loyalty"
+ SOTN_StrongArmAristocrats_desc:0 ""
+ SOTN_MajorityInDiet_tt:0 "Holds a Majority in the Diet"
+
+ SOTN_HarmonySociety:0 "Renew the Crack-Down"
+ SOTN_HarmonySociety_desc:0 ""
+
+ SOTN_OpenSociety:0 "Work with the Opposition"
+ SOTN_OpenSociety_desc:0 ""
+
+ SOTN_MaregyptRenaissance:0 "A Maregyptian Renaissance"
+ SOTN_MaregyptRenaissance_desc:0 ""
+ SOTN_ReformReached_tt:0 "Reform progress is greater than or equal to §Y[?SOTN_ReformGoal_var|%%]§! (currently §Y[?SOTN_ReformProgress_var|%%]§!)"
+
+ #Economy - Famine / Infrastructure
+ SOTN_YearOfTheLocust:0 "The Year of the Grasshoper"
+ SOTN_YearOfTheLocust_desc:0 ""
+
+ SOTN_IrrigationWorks:0 "Improve Rural Irrigation"
+ SOTN_IrrigationWorks_desc:0 ""
+
+ SOTN_ForcefulDistribution:0 "Break the Grain Monopolies"
+ SOTN_ForcefulDistribution_desc:0 ""
+
+ SOTN_LandCompensation:0 "Compensate the Landowners"
+ SOTN_LandCompensation_desc:0 ""
+ 
+ SOTN_LandReform:0 "A Year of Plenty"
+ SOTN_LandReform_desc:0 ""
+
+ # Economy - Catastrophic Famine
+ SOTN_EmergencyRelief:0 "Nation-Wide Rationning"
+ SOTN_EmergencyRelief_desc:0 ""
+
+ SOTN_FocusOnCities:0 "Focus on the Cities"
+ SOTN_FocusOnCities_desc:0 ""
+ SOTN_FaminePopLoss_tt:0 "Between "
+
+ SOTN_FocusOnVillages:0 "Focus on the Villages"
+ SOTN_FocusOnVillages_desc:0 ""
+
+ SOTN_AskForAid:0 "A Cry for Help"
+ SOTN_AskForAid_desc:0 ""
+
+ SOTN_FamineIsOver:0 "Fill the Granaries"
+ SOTN_FamineIsOver_desc:0 ""
+ SOTN_FamineScrapExportsComplete_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineScrapExports$§! decision"
+ SOTN_FamineLandRepossessionComplete_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineLandRepossession$§! decision"
+ SOTN_FamineSaveFarms_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineSaveFarms$§! decision"
+ SOTN_FamineZebricanGrain_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineZebricanGrain$§! decision"
+ SOTN_FamineEquestrianFood_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineEquestrianFood$§! decision"
+ SOTN_FamineHippogrifFish_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineHippogrifFish$§! decision"
+
+ SOTN_NewBudget:0 "The [GetYear] National Budget"
+ SOTN_NewBudget_desc:0 ""
+
+ SOTN_Urbanisation:0 "Continue Urbanisation"
+ SOTN_Urbanisation_desc:0 ""
+
+ SOTN_ExpandDockyards:0 "Revitalise Neighlotic Trade"
+ SOTN_ExpandDockyards_desc:0 ""
+
+ SOTN_DealWithDebt:0 "Integrate the Equestrian Commission"
+ SOTN_DealWithDebt_desc:0 ""
+
+ SOTN_MaregyptianBank:0 "The National Maregyptian Bank"
+ SOTN_MaregyptianBank_desc:0 ""
+
+ SOTN_InviteInvestors:0 "Attract Investors"
+ SOTN_InviteInvestors_desc:0 ""
+
+ SOTN_FinancialIndependence:0 "Secure Financial Independence"
+ SOTN_FinancialIndependence_desc:0 ""
+
+ SOTN_PartialStatism:0 "Economic Centralisation"
+ SOTN_PartialStatism_desc:0 ""
+
+ SOTN_IndustrialGrants:0 "New Industrial Grants"
+ SOTN_IndustrialGrants_desc:0 ""
+
+ SOTN_ReformDeneb:0 "Revalue the Deneb"
+ SOTN_ReformDeneb_desc:0 ""
+
+ SOTN_AgrarianEconomy:0 "Modernised Agrarianism"
+ SOTN_AgrarianEconomy_desc:0 ""
+
+ SOTN_MixedEconomy:0 "Towards a Mixed Economy"
+ SOTN_MixedEconomy_desc:0 ""

@@ -1,0 +1,101 @@
+SOTN_UpgradeIlliteracy_effect = {
+	if = {
+		limit = {
+			has_idea = lack_of_scientists
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists
+			add_idea = lack_of_scientists1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists1
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists1
+			add_idea = lack_of_scientists2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists2
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists2
+			add_idea = lack_of_scientists3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists3
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists3
+			add_idea = no_lack_of_scientists
+		}
+	}
+	else = {
+		
+	}
+}
+
+SOTN_UpgradePoverty_effect = {
+	if = {
+		limit = {
+			has_idea = poverty
+		}
+		swap_ideas = {
+			remove_idea = poverty
+			add_idea = poverty1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty1
+		}
+		swap_ideas = {
+			remove_idea = poverty1
+			add_idea = poverty2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty2
+		}
+		swap_ideas = {
+			remove_idea = poverty2
+			add_idea = poverty3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty3
+		}
+		swap_ideas = {
+			remove_idea = poverty3
+			add_idea = poverty4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty4
+		}
+		swap_ideas = {
+			remove_idea = poverty4
+			add_idea = poverty5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty5
+		}
+		swap_ideas = {
+			remove_idea = poverty5
+			add_idea = no_poverty
+		}
+	}
+	else = {
+		add_stability = 0.05
+	}
+}

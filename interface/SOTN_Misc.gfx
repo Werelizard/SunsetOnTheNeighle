@@ -1,0 +1,33 @@
+spriteTypes = {
+	spriteType = { 
+		name = "GFX_unit_SOTN_MaredjayUnit_icon_medium"				
+		textureFile = "gfx/interface/counters/divisions_large/SOTN_MaredjayUnit_icon.dds"  
+		noOfFrames = 2
+	}
+   
+	spriteType = { 
+		name = "GFX_unit_SOTN_MaredjayUnit_icon_medium_white"					
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SOTN_MaredjayUnit_icon.dds" 
+		noOfFrames = 2
+	}
+   
+	spriteType = {
+		name = "GFX_unit_SOTN_MaredjayUnit_icon_small"
+		texturefile = "gfx/texticons/unit_SOTN_MaredjayUnit_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}	
+	#Decisions icons 
+	spriteType = {
+		name = "GFX_SOTN_FadingSun_Category"
+		textureFile = "gfx/interface/decisions/SOTN_fadingsun_decision.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_EquestrianDebts_Category"
+		textureFile = "gfx/interface/decisions/SOTN_EquestrianDebts_decision.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_FamineRisk_Decision"
+		textureFile = "gfx/interface/decisions/SOTN_FamineDecision.dds"
+	}
+}

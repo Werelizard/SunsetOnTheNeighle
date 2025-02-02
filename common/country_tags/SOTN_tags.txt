@@ -1,0 +1,2 @@
+EQS = "countries/Equestria.txt"
+MGY = "countries/Maregypt.txt"

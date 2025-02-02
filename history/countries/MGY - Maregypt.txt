@@ -1,0 +1,281 @@
+﻿capital = 733
+
+oob = "MGY_1007"
+
+set_research_slots = 2
+
+give_guarantee = KLG
+
+# Starting tech
+set_technology = {
+	pony_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	tech_pegasi = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	fuel_silos = 1
+	tech_recon = 1
+	trench_warfare = 1
+	tech_trucks = 1
+	fleet_in_being = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes
+if = {
+    limit = {
+        NOT = { has_dlc = "Man the Guns" }
+    }
+    set_technology = {
+        early_submarine = 1
+        early_destroyer = 1
+        basic_destroyer = 1
+        early_light_cruiser = 1
+        early_heavy_cruiser = 1
+        early_battleship = 1
+        early_battlecruiser = 1
+        early_carrier = 1
+		early_light_carrier = 1
+        transport = 1
+    }
+	set_naval_oob = "MGY_1007_naval_legacy"
+}
+if = {
+    limit = {
+        has_dlc = "Man the Guns"
+    }
+    set_technology = {
+        basic_naval_mines = 1
+        submarine_mine_laying = 1
+        early_ship_hull_light = 1
+        basic_ship_hull_light = 1
+        early_ship_hull_submarine = 1
+        early_ship_hull_cruiser = 1
+        basic_ship_hull_cruiser = 1
+        early_ship_hull_heavy = 1
+        basic_battery = 1
+        basic_light_battery = 1
+        basic_medium_battery = 1
+        basic_heavy_battery = 1
+        basic_torpedo = 1
+        sonar = 1
+        smoke_generator = 1
+        basic_depth_charges = 1
+        basic_cruiser_armor_scheme = 1
+        basic_heavy_armor_scheme = 1
+        mtg_transport = 1
+        basic_fire_control_system = 1
+    }
+	set_naval_oob = "MGY_1007_naval"
+}
+
+add_ideas = {
+	# limited_conscription
+	# free_trade
+	# civilian_economy
+	# lack_of_scientists2
+	# outdated_industry
+	# zebrica_legacy_of_storm1
+	# poverty
+}
+
+set_convoys = 150
+
+set_popularities = {
+	democratic = 60
+	fascism = 8
+	communism = 2
+	neutrality = 30
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1001.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_stability = 0.5
+set_war_support = 0.35
+
+add_to_tech_sharing_group = equestrian_research
+
+set_rule = {
+	can_generate_female_aces = yes
+	can_generate_female_unit_leaders  = yes
+	can_generate_female_country_leaders = yes
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "Ardent Class"
+		type = ship_hull_light_1
+		name_group = EQS_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Acasta Class"
+		type = ship_hull_light_1
+		name_group = EQS_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_anti_air_2
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Twilight Class"
+		type = ship_hull_light_2
+		name_group = EQS_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_2
+			mid_1_custom_slot = ship_torpedo_2
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Emerald Class"
+		type = ship_hull_cruiser_1
+		name_group = EQS_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Canterlot Class"
+		type = ship_hull_cruiser_1
+		name_group = EQS_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_medium_battery_2
+		}
+	}
+}
+
+#Shadow on the Neighle Setup
+log = "[GetDateText] Begin Shadow on the Neighle Setup for [ROOT.GetName]."
+## Unrest setup
+SOTN_UnrestStartup_effect = yes
+set_country_flag = has_custom_advisors
+set_country_flag = has_custom_spymaster
+#Vizier setup
+SOTN_VizierMechanicSetup_effect = yes
+#Reform setuo
+set_variable = {
+	SOTN_ReformProgress_var = 0
+}
+set_variable = {
+	SOTN_ReformGoal_var = 50
+}
+#Flooded province modifiers
+every_owned_state = {
+	limit = {
+		OR = {
+			state = 737
+			state = 734
+			state = 735
+			state = 736
+			state = 759
+			state = 758
+		}
+	}
+	add_dynamic_modifier = {
+		modifier = SOTN_MODIFIER_BadInfrastructure_mod
+	}
+}
+log = "[GetDateText] Shadow on the Neighle Setup end for [ROOT.GetName]."
+
+#Characters - leaders
+recruit_character = SOTN_character_KingKhefer
+recruit_character = SOTN_character_Narmare
+recruit_character = SOTN_character_FerukIntef
+#Characters - advisors
+recruit_character = SOTN_character_Ahhotep
+recruit_character = SOTN_character_ShaaDoof
+recruit_character = SOTN_Character_Somnambula
+recruit_character = SOTN_Character_Meritamen
+recruit_character = SOTN_Character_Meketrotre
+recruit_character = SOTN_Character_Neighbamun
+recruit_character = SOTN_Character_Wadjhoof
+recruit_character = SOTN_Character_Maneighra
+recruit_character = SOTN_Character_ImaruOfManephis
+recruit_character = SOTN_Character_Sennedjem
+recruit_character = SOTN_Character_Neighkt
+recruit_character = SOTN_Character_IbiWarmhoof
+recruit_character = SOTN_Character_Huneighfer
+recruit_character = SOTN_Character_Imhotep
+recruit_character = SOTN_Character_Imenmose
+recruit_character = SOTN_Character_Seshat
+recruit_character = SOTN_Character_Khoofu
+recruit_character = SOTN_Character_Maretmaaet
+recruit_character = SOTN_Character_Appleseed
+recruit_character = SOTN_character_NeighSer
+
+#Advisors
+activate_advisor = SOTN_character_Narmare
+
+#Tech
+set_technology = {	
+	# SOTN_MaredjayTech = 1
+}
+
+##New Ideas + EaW specs
+add_ideas = {
+	SOTN_FadingSun
+	SOTN_FamineRisk
+	SOTN_EquestrianComission
+	SOTN_PoliticalUnrest
+	SOTN_Maredjay
+	volunteer_only
+	free_trade
+	civilian_economy
+	lack_of_scientists2
+	outdated_industry
+	poverty
+	SOTN_Vizier_ShaaDoof
+	SOTN_MaredjayArmy
+	SOTN_ScarsOfTheJulyUprising
+}

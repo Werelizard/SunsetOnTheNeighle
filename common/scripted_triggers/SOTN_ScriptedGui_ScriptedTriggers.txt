@@ -1,0 +1,35 @@
+# Scripted triggers for the Vizier scripted GUI
+
+SOTN_HasVizierMechanic_trigger = { #Master trigger to check if the GUI should be enabled
+	OR = {
+		tag = MGY
+	}
+	NOT = {
+		has_country_flag = SOTN_AbolishedViziership_flag
+	}
+}
+
+SOTN_HasViziersTrigger_trigger = { #Trigger to check that any Vizier is active
+	SOTN_HasVizierMechanic_trigger = yes
+	OR = {
+		SOTN_HasShaaDoof_Vizier_trigger = yes
+	}
+}
+
+SOTN_HasShaaDoof_Vizier_trigger = { #Trigger to check that Shaa Doof is the current Vizier
+	has_country_flag = SOTN_ShaaDoofVizier_flag
+}
+
+#Scripted triggers for diet-related matters
+SOTN_RoyalDietMajority_trigger = {
+	has_completed_focus = SOTN_RoyalDiet
+	custom_trigger_tooltip = {
+		tooltip = SOTN_MajorityInDiet_tt
+		check_variable = {
+			SOTN_TotalDietSupport_var > 106
+		}
+		NOT = {
+			has_country_flag = SOTN_RoyalDietFails_flag
+		}
+	}
+}

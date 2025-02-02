@@ -1,0 +1,27 @@
+﻿l_english:
+ SOTN_doublespace:0 " \n"
+
+ #Political Party Names
+ MGY_zebricansocialism_party:0 "ISHT"
+ MGY_zebricansocialism_party_long:0 "Iset Sesha en Heyter-Tawy (Maregyptian Reform Party)"
+
+ #Ideology Names
+ SOTN_traditional_pharaonism:0 "Authoritarian Pharaonism"
+ SOTN_traditional_pharaonism_desc:0 "Authoritarian Pharaonism - or classical Pharaonism - denotes a despotic, monarchial ideology centered around the unifying figure of a monarch acting in the stead of the divine. While undemocratic by nature, Authoritarian Pharaonism does not seek to build a totalitarian state. Rather, it emphasises traditionalism, agrarianism, the role of the Pharaoh, national restoration and third positioning. It is opposed to both Harmony and Communism, while keeping itself distinct from Supremacist beliefs by rejecting nationalism, building on Maregypt's past rather than a dictatorial view of the future."
+
+ SOTN_harmonic_pharaonism:0 "Benevolent Pharaonism"
+ SOTN_harmonic_pharaonism_desc:0 "Benevolent Pharaonism combines the divine mandate of classical Maregyptian Pharaonism, recognising the monarch  as a quasi-deity - or rather, a divine agent - and their as the custodian of the Neighle valley, with elements of Harmonic philosophy. It emphasises inderect royal rule, friendship, peaceful co-existence and the preservation of the natural world. While not entirely authoritarian, Pharaonism is necessarily anti-democratic as only the monarch and their close council are viewed as endowed with political agency. A unique method of government blending past and future, benevolent Pharaonism straddles the thin line seperating the optimism of harmony and the harsh, sun-bathed philosophy of the Maregypt of old."
+
+ SOTN_ProgressiveSocialism:0 "Neighlitic Socialism"
+ SOTN_ProgressiveSocialism_desc:0 ""
+
+ #Army Units
+ SOTN_MaredjayUnit:0 "Maredjay"
+ SOTN_MaredjayTech:0 "Maredjay"
+
+ #Dynamic Localisation
+ VizierCabinet_ShaaDoof:0 "The Pony in the High Stable"
+ NeighktCabinet_ShaaDoof:0 "The Prodigy Enters"
+
+ #Modifier
+ SOTN_UnrestChange_modifier:0 "Weekly Global Unrest Change"

@@ -1,0 +1,233 @@
+SOTN_FadingSun_Category = {
+	SOTN_LoomingFamine = {
+		icon = GFX_SOTN_FamineRisk_Decision
+		activation = {
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 301
+
+		priority = 1000
+
+		highlight_states = {
+			
+		}
+
+		cancel_trigger = {
+			has_completed_focus = SOTN_LandReform
+		}
+
+		available = {
+			always = no
+		}
+		complete_effect = {
+			
+		}
+		timeout_effect = {
+			if = {
+				limit = {
+					has_idea = SOTN_PoliticalUnrest
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 737
+							state = 734
+							state = 735
+							state = 736
+							state = 759
+							state = 758
+						}
+					}
+					SOTN_IncreaseStateUnrest_large_effect = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = SOTN_FamineRisk
+				add_idea = SOTN_FamineInTheNeighle
+			}
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+				#TO DO: event to announce you fucked up big time
+			}
+		}
+	}
+	SOTN_ReinforceGarrisons_dummy = {
+		visible = {
+			always = no
+		}
+	}
+	SOTN_ReinforceGarrisons = {
+		icon = GFX_decision_generic_military
+		state_target = yes
+
+		target_root_trigger = {
+			has_idea = SOTN_PoliticalUnrest
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = SOTN_ReinforceGarrisons_Disabled_flag
+			}
+			has_completed_focus = SOTN_ManephisDecree
+		}
+
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+						}
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			add_manpower = 500
+		}
+
+		on_map_mode = map_and_decisions_view
+		days_remove = 60
+
+		custom_cost_trigger = {
+			OR = {
+				has_manpower > 500
+				has_manpower = 500
+			}
+			OR = {
+				has_equipment = {
+					infantry_equipment = 200
+				}
+				has_equipment = {
+					infantry_equipment > 200
+				}
+			}
+		}
+		custom_cost_text = SOTN_ReinforceGarrisons_cost
+		
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				has_dynamic_modifier = {
+					modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+				}
+				
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOTN_GarrionsNotReinforcing_tt
+				NOT = {
+					has_country_flag = SOTN_MaredjayDeployed_flag
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOTN_UnrestAtLeast1_tt
+				FROM = {
+					check_variable = {
+						SOTN_StateUnrest_var > 0
+					}
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SOTN_MaredjayDeployed_flag
+				add_manpower = -500
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -500
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				SOTN_DecreaseStateUnrest_small_effect = yes
+			}
+			add_stability = 0.02
+			hidden_effect = {
+				clr_country_flag = SOTN_MaredjayDeployed_flag
+			}
+		}
+	}
+	# Famine decisions
+	SOTN_FamineScrapExports = {
+		visible = {
+			has_idea = SOTN_FamineInTheNeighle
+			has_completed_focus = SOTN_EmergencyRelief
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SOTN_FamineScrapExportsComplete_flag
+			}
+		}
+	}
+	SOTN_FamineLandRepossession = {
+		visible = {
+			has_idea = SOTN_FamineInTheNeighle
+			has_completed_focus = SOTN_EmergencyRelief
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SOTN_FamineLandRepossessionComplete_flag
+			}
+		}
+	}
+	SOTN_FamineSaveFarms = {
+		visible = {
+			has_idea = SOTN_FamineInTheNeighle
+			has_completed_focus = SOTN_EmergencyRelief
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SOTN_FamineSaveFarms_flag
+			}
+		}
+	}
+	SOTN_FamineZebricanGrain = {
+		visible = {
+			has_idea = SOTN_FamineInTheNeighle
+			has_completed_focus = SOTN_EmergencyRelief
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SOTN_FamineZebricanGrain_flag
+			}
+		}
+	}
+	SOTN_FamineEquestrianFood = {
+		visible = {
+			has_idea = SOTN_FamineInTheNeighle
+			has_completed_focus = SOTN_EmergencyRelief
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SOTN_FamineEquestrianFood_flag
+			}
+		}
+	}
+	SOTN_FamineHippogrifFish = {
+		visible = {
+			has_idea = SOTN_FamineInTheNeighle
+			has_completed_focus = SOTN_EmergencyRelief
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SOTN_FamineHippogrifFish_flag
+			}
+		}
+	}
+}

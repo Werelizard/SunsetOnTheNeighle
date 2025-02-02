@@ -1,0 +1,70 @@
+﻿l_english:
+
+ #Debug Decisions
+ SOTN_Debug_CycleVizier:0 "Appoint / Remove $SOTN_ShaaDoof$ as Vizier"
+ SOTN_Debug_RemoveShaaDoof_tt:0 "Remove $SOTN_ShaaDoof$"
+ SOTN_Debug_AppointShaaDoof_tt:0 "Appoint $SOTN_ShaaDoof$"
+
+ SOTN_Debug_AddUnrestModifiers:0 "Add unrest modifiers to all owned states"
+ SOTN_Debug_IncreaseUnrestInAllStates:0 "Increase unrest in all states"
+ SOTN_Debug_GetAverageUnrest:0 "Average unrest is [?SOTN_Unrest_Average_var], the total unrest being [?SOTN_TotalUnrest_var]"
+
+ SOTN_Debug_CheckNumberOfStates:0 "The current number of owned states is: §Y[?MGY.SOTN_OwnedStates_var]§!"
+
+#  SOTN_RoyalDiet_AddIndependentLoyalty_tt:0 "Increase loyalty by [?SOTN_LoyaltyChange_tempvar|+]"
+#  SOTN_RoyalDiet_LowerIndependentLoyalty_tt:0 "Lower loyalty by [?SOTN_LoyaltyChange_tempvar|+]"
+
+ SOTN_StartEventChainSpeech:0 "Begin the King's Speech chain"
+
+ #The Fading Sun
+ SOTN_FadingSun_Category:0 "The Fading Sun"
+ SOTN_FadingSun_Category_desc:0 "$SOTN_FadingSun_desc$"
+
+ SOTN_ReinforceGarrisons_dummy:0 "Reinforce State Garrisons"
+
+ SOTN_ReinforceGarrisons:0 "Reinforce garrisons in [FROM.GetName]"
+ SOTN_ReinforceGarrisons_cost:0 "£infequip_text 200 £manpower_texticon 500"
+ SOTN_ReinforceGarrisons_cost_blocked:0 "£infequip_text §R200§! £manpower_texticon §R500§!"
+ SOTN_GarrionsNotReinforcing_tt:0 "Not: already reinforcing a garrison"
+ SOTN_UnrestAtLeast1_tt:0 "Not: £SOTN_unrest_text_icon unrest in [FROM.GetName] is snaller than §Y1§!"
+
+ SOTN_ReleaseNarmare:0 "Release Narmare from House Arrest"
+ SOTN_ReleaseNarmare_desc:0 "Narmare's arrest was a deeply unpopular move. By releasing him, we can attempt to make ammends with other political fations within the country."
+
+ SOTN_LoomingFamine:0 "Looming Famine"
+ SOTN_LoomingFamine_Stopped_tt:0 "Has completed the §Yland reform§!"
+
+ #Our debts
+ SOTN_EquestrianDebts_Category:0 "The Maregyptian Debt"
+ SOTN_EquestrianDebts_SellGrain:0 "Sell more grain"
+
+ #Vizier Bop decisions
+ SOTN_Bop_ReviewOverseers:0 "Appoint Vizierial Overseers"
+ SOTN_Bop_ExpandBureaucracy:0 "Expand the Bureaucratic Apparatus"
+ SOTN_Bop_VizierialMeeting:0 "Vizierial Reforms"
+ SOTN_Bop_DismissOverseers:0 "Dismiss Vizieral Overseers"
+ SOTN_Bop_PromoteNomarchs:0 "Promote Nomarchs in Court Positions"
+ SOTN_Bop_ReinforceTheGuard:0 "Expand the Guard"
+ 
+ #Royal Diet
+ SOTN_RoyalDiet_Category:0 "The Royal Diet"
+ SOTN_RoyalDiet_Category_desc:0 "Harmonist: [?SOTN_DietLoyalty_array^0]/[?SOTN_DietSeats_array^0]\nLoyalist: [?SOTN_DietLoyalty_array^1]/[?SOTN_DietSeats_array^1]\nPopulist: [?SOTN_DietLoyalty_array^2]/[?SOTN_DietSeats_array^2]\nIndependents: [?SOTN_DietLoyalty_array^3]/[?SOTN_DietSeats_array^3]\n\nTotal support: [?SOTN_TotalDietSupport_var]"
+
+ SOTN_RoyalDiet_Setup:0 "Debug: setup initial seats"
+
+ #Economy Decision
+ SOTN_ImportCrops:0 "Import Equestrian Crops"
+ SOTN_FixIrrigation_dummy:0 "Modernise the Waterways"
+ SOTN_DiversifyEconomy:0 "Purchase Modern Tools"
+ SOTN_FixIrrigation:0 "Modernise the Waterways"
+
+ #Famine decisions
+ SOTN_FamineScrapExports:0 "Scrap Agricultural Exports"
+ SOTN_FamineLandRepossession:0 "Nationalise Farmlands"
+ SOTN_FamineSaveFarms:0 "Rescue Struggling Farmers"
+ SOTN_FamineZebricanGrain:0 "Import Zebrican Grain"
+ SOTN_FamineEquestrianFood:0 "Buy Equestrian Apples"
+ SOTN_FamineHippogrifFish:0 "Purchase Hippogriffian Fish"
+
+ #Misc
+ SOTN_UnlockStateWideDecision_tt:0 "Unlocks State Decision: £decision_icon_small §Y$DECISION$§!"

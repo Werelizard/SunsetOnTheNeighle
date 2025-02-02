@@ -1,0 +1,87 @@
+economy_decisions = {
+	SOTN_ImportCrops = {
+		visible = {
+			has_completed_focus = SOTN_YearOfTheLocust
+			has_idea = SOTN_FamineRisk
+		}
+	}
+	SOTN_DiversifyEconomy = {
+		visible = {
+			has_completed_focus = SOTN_YearOfTheLocust
+			has_idea = SOTN_FamineRisk
+		}
+	}
+	SOTN_FixIrrigation_dummy = {
+		visible = {
+			always = no
+		}
+	}
+	SOTN_FixIrrigation = {
+		icon = GFX_decision_generic_military
+		state_target = yes
+
+		target_root_trigger = {
+			any_owned_state = {
+				has_dynamic_modifier = {
+					modifier = SOTN_MODIFIER_BadInfrastructure_mod
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = SOTN_IrrigationWorks
+				has_completed_focus = SOTN_FamineIsOver
+			}
+		}
+
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_owned_by = ROOT
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = SOTN_MODIFIER_BadInfrastructure_mod
+						}
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			
+		}
+
+		on_map_mode = map_and_decisions_view
+		days_remove = 60
+		
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				has_dynamic_modifier = {
+					modifier = SOTN_MODIFIER_BadInfrastructure_mod
+				}
+				
+			}
+		}
+		available = {
+			
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = SOTN_MODIFIER_BadInfrastructure_mod
+				}
+			}
+		}
+	}
+}

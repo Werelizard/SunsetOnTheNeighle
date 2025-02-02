@@ -1,0 +1,7 @@
+SOTN_UnrestChange_modifier = {
+	color_type = bad
+	value_type = number
+	precision = 1
+	
+	category = country
+}
