@@ -668,6 +668,268 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    spriteType = {
+		name = "GFX_SOTN_EconomyBudget"
+		texturefile = "gfx/interface/goals/MGY/SOTN_EconomyBudget.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_EconomyBudget_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_EconomyBudget.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_EconomyBudget.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_EconomyIntegrateCommission"
+		texturefile = "gfx/interface/goals/MGY/SOTN_EconomyIntegrateCommission.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_EconomyIntegrateCommission_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_EconomyIntegrateCommission.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_EconomyIntegrateCommission.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_EconomyNationalBank"
+		texturefile = "gfx/interface/goals/MGY/SOTN_EconomyNationalBank.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_EconomyNationalBank_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_EconomyNationalBank.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_EconomyNationalBank.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_EconomyTradeRiver"
+		texturefile = "gfx/interface/goals/MGY/SOTN_EconomyTradeRiver.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_EconomyTradeRiver_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_EconomyTradeRiver.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_EconomyTradeRiver.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_EconomyInvestors"
+		texturefile = "gfx/interface/goals/MGY/SOTN_EconomyInvestors.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_EconomyInvestors_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_EconomyInvestors.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_EconomyInvestors.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_EconomyUrbanisation"
+		texturefile = "gfx/interface/goals/MGY/SOTN_EconomyUrbanisation.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_EconomyUrbanisation_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_EconomyUrbanisation.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_EconomyUrbanisation.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_TechnicalEducation"
+		texturefile = "gfx/interface/goals/MGY/SOTN_TechnicalEducation.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_TechnicalEducation_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_TechnicalEducation.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_TechnicalEducation.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_NationalRail"
+		texturefile = "gfx/interface/goals/MGY/SOTN_NationalRail.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_NationalRail_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_NationalRail.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_NationalRail.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ModernScience"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ModernScience.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ModernScience_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ModernScience.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ModernScience.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ModernisedIndustry"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ModernisedIndustry.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ModernisedIndustry_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ModernisedIndustry.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ModernisedIndustry.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_AgrarianEconomy"
+		texturefile = "gfx/interface/goals/MGY/SOTN_AgrarianEconomy.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_AgrarianEconomy_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_AgrarianEconomy.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_AgrarianEconomy.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_IndustrialEconomy"
+		texturefile = "gfx/interface/goals/MGY/SOTN_IndustrialEconomy.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_IndustrialEconomy_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_IndustrialEconomy.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_IndustrialEconomy.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 }
-
-

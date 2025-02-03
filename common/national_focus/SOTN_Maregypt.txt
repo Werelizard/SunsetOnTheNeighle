@@ -58,6 +58,23 @@ focus_tree = {
 			focus = SOTN_KingSpeech
 		}
 		available = {
+			NOT = {
+				has_government = communism
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = SOTN_ShaaDoofIsVizier_tt
+					has_country_flag = SOTN_ShaaDoofVizier_flag
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOTN_AhhotepIsVizier_tt
+					has_country_flag = SOTN_AhhotepVizier_flag
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOTN_NeighktIsVizier_tt
+					has_country_flag = SOTN_NeighktVizier_flag
+				}
+			}
 			has_idea = SOTN_ScarsOfTheJulyUprising
 		}
 		bypass = {
@@ -95,6 +112,18 @@ focus_tree = {
 			focus = SOTN_KingSpeech
 		}
 		available = {
+			NOT = {
+				has_government = neutrality
+			}
+			NOT = {
+				has_government = fascism
+			}
+			NOT = {
+				custom_trigger_tooltip = {
+					tooltip = SOTN_AhhotepIsVizier_tt
+					has_country_flag = SOTN_AhhotepVizier_flag
+				}
+			}
 			NOT = {
 				has_completed_focus = SOTN_ManephisDecree
 			}
@@ -493,8 +522,6 @@ focus_tree = {
 				idea = SOTN_IncreasedTaxes
 				days = 540
 			}
-			custom_effect_tooltip = SOTN_doublespace
-			unlock_national_focus = SOTN_ReformDeneb
 		}
 	}
 	focus = { 
@@ -727,6 +754,10 @@ focus_tree = {
 			focus = SOTN_VizierCabinet
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOTN_ShaaDoofIsVizier_tt
+				has_country_flag = SOTN_ShaaDoofVizier_flag
+			}
 			NOT = {
 				has_completed_focus = SOTN_OpenSociety
 			}
@@ -763,7 +794,10 @@ focus_tree = {
 			focus = SOTN_RoyalDiet
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = SOTN_ShaaDoofIsVizier_tt
+				has_country_flag = SOTN_ShaaDoofVizier_flag
+			}
 		}
 		bypass = {
 			
@@ -800,7 +834,10 @@ focus_tree = {
 			focus = SOTN_RoyalDiet
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = SOTN_ShaaDoofIsVizier_tt
+				has_country_flag = SOTN_ShaaDoofVizier_flag
+			}
 		}
 		bypass = {
 			
@@ -845,7 +882,10 @@ focus_tree = {
 			focus = SOTN_RoyalDiet
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = SOTN_ShaaDoofIsVizier_tt
+				has_country_flag = SOTN_ShaaDoofVizier_flag
+			}
 		}
 		bypass = {
 			
@@ -879,6 +919,10 @@ focus_tree = {
 			focus = SOTN_AssimilateAdmin
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOTN_ShaaDoofIsVizier_tt
+				has_country_flag = SOTN_ShaaDoofVizier_flag
+			}
 			OR = {
 				NOT = {
 					has_power_balance = {
@@ -921,11 +965,11 @@ focus_tree = {
 		id = SOTN_YearOfTheLocust
 		icon = GFX_SOTN_YearOfTheLocust
 		cost = 6
-		x = -3
+		x = 0
 		y = 1
-		relative_position_id = SOTN_KingSpeech
+		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_KingSpeech
+			focus = SOTN_EconomyBudget
 		}
 		available = {
 			
@@ -1152,75 +1196,78 @@ focus_tree = {
 			focus = SOTN_LandCompensation
 		}
 		available = {
-			737 = {
-				OR = {
-					AND = {
-						is_owned_by = ROOT
-						is_fully_controlled_by = ROOT
-						infrastructure > 4
-					}
-					NOT = {
-						is_owned_by = ROOT
-					}
-				}
-			}
-			734 = {
-				OR = {
-					AND = {
-						is_owned_by = ROOT
-						is_fully_controlled_by = ROOT
-						infrastructure > 4
-					}
-					NOT = {
-						is_owned_by = ROOT
+			custom_trigger_tooltip = {
+				tooltip = SOTN_LandReformRequirements_tt
+				737 = {
+					OR = {
+						AND = {
+							is_owned_by = ROOT
+							is_fully_controlled_by = ROOT
+							infrastructure > 4
+						}
+						NOT = {
+							is_owned_by = ROOT
+						}
 					}
 				}
-			}
-			735 = {
-				OR = {
-					AND = {
-						is_owned_by = ROOT
-						is_fully_controlled_by = ROOT
-						infrastructure > 4
-					}
-					NOT = {
-						is_owned_by = ROOT
-					}
-				}
-			}
-			736 = {
-				OR = {
-					AND = {
-						is_owned_by = ROOT
-						is_fully_controlled_by = ROOT
-						infrastructure > 4
-					}
-					NOT = {
-						is_owned_by = ROOT
+				734 = {
+					OR = {
+						AND = {
+							is_owned_by = ROOT
+							is_fully_controlled_by = ROOT
+							infrastructure > 4
+						}
+						NOT = {
+							is_owned_by = ROOT
+						}
 					}
 				}
-			}
-			759 = {
-				OR = {
-					AND = {
-						is_owned_by = ROOT
-						is_fully_controlled_by = ROOT
-						infrastructure > 4
-					}
-					NOT = {
-						is_owned_by = ROOT
+				735 = {
+					OR = {
+						AND = {
+							is_owned_by = ROOT
+							is_fully_controlled_by = ROOT
+							infrastructure > 4
+						}
+						NOT = {
+							is_owned_by = ROOT
+						}
 					}
 				}
-			}
-			758 = {
-				OR = {
-					AND = {
-						is_owned_by = ROOT
-						is_fully_controlled_by = ROOT
-						infrastructure > 4
+				736 = {
+					OR = {
+						AND = {
+							is_owned_by = ROOT
+							is_fully_controlled_by = ROOT
+							infrastructure > 4
+						}
+						NOT = {
+							is_owned_by = ROOT
+						}
 					}
-					NOT = {
-						is_owned_by = ROOT
+				}
+				759 = {
+					OR = {
+						AND = {
+							is_owned_by = ROOT
+							is_fully_controlled_by = ROOT
+							infrastructure > 4
+						}
+						NOT = {
+							is_owned_by = ROOT
+						}
+					}
+				}
+				758 = {
+					OR = {
+						AND = {
+							is_owned_by = ROOT
+							is_fully_controlled_by = ROOT
+							infrastructure > 4
+						}
+						NOT = {
+							is_owned_by = ROOT
+						}
 					}
 				}
 			}
@@ -1267,6 +1314,10 @@ focus_tree = {
 				SOTN_ReformProgress_tempvar = 10
 			}
 			SOTN_UpdateReformProgress_effect = yes
+			custom_effect_tooltip = SOTN_doublespace
+			unlock_national_focus = SOTN_ModernisedIndustry
+			unlock_national_focus = SOTN_AgrarianEconomy
+			unlock_national_focus = SOTN_IndustrialEconomy
 		}
 		allow_branch = {
 			NOT = {
@@ -1585,6 +1636,10 @@ focus_tree = {
 					DECISION = SOTN_FixIrrigation_dummy
 				}
 			}
+			custom_effect_tooltip = SOTN_doublespace
+			unlock_national_focus = SOTN_ModernisedIndustry
+			unlock_national_focus = SOTN_AgrarianEconomy
+			unlock_national_focus = SOTN_IndustrialEconomy
 		}
 		allow_branch = {
 			OR = {
@@ -1594,18 +1649,18 @@ focus_tree = {
 		}
 	}
 	#Economy - Industrialisation
-	focus = { 
-		id = SOTN_NewBudget
-		icon = GFX_goal_unknown
-		cost = 6
-		x = -8
+	focus = {
+		id = SOTN_EconomyBudget
+		icon = GFX_SOTN_EconomyBudget
+		cost = 1
+		x = -4
 		y = 1
 		relative_position_id = SOTN_KingSpeech
 		prerequisite = {
-			
+			focus = SOTN_KingSpeech
 		}
 		available = {
-			SOTN_RoyalDietMajority_trigger = yes
+			
 		}
 		bypass = {
 			
@@ -1617,93 +1672,18 @@ focus_tree = {
 			
 		}
 	}
-	focus = { 
-		id = SOTN_Urbanisation
-		icon = GFX_goal_unknown
-		cost = 6
-		x = 1
-		y = 1
-		relative_position_id = SOTN_NewBudget
-		prerequisite = {
-			focus = SOTN_NewBudget
-			focus = SOTN_YearOfTheLocust
-		}
-		available = {
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			
-		}
-	}
-	focus = { 
-		id = SOTN_ExpandDockyards
-		icon = GFX_goal_unknown
-		cost = 6
+	focus = {
+		id = SOTN_EconomyUrbanisation
+		icon = GFX_SOTN_EconomyUrbanisation
+		cost = 1
 		x = 2
-		y = 2
-		relative_position_id = SOTN_NewBudget
-		prerequisite = {
-			focus = SOTN_Urbanisation
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			
-		}
-	}
-	focus = { 
-		id = SOTN_DealWithDebt
-		icon = GFX_goal_unknown
-		cost = 6
-		x = -2
-		y = 0
-		relative_position_id = SOTN_NewBudget
-		prerequisite = {
-			
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			
-		}
-	}
-	focus = { 
-		id = SOTN_MaregyptianBank
-		icon = GFX_goal_unknown
-		cost = 6
-		x = -1
 		y = 1
-		relative_position_id = SOTN_NewBudget
+		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_DealWithDebt
-		}
-		prerequisite = {
-			focus = SOTN_NewBudget
+			focus = SOTN_EconomyBudget
 		}
 		available = {
-			OR = {
-				has_completed_focus = SOTN_MaregyptRenaissance
-				SOTN_RoyalDietMajority_trigger = yes
-			}
+			
 		}
 		bypass = {
 			
@@ -1715,67 +1695,107 @@ focus_tree = {
 			
 		}
 	}
-	focus = { 
-		id = SOTN_InviteInvestors
-		icon = GFX_goal_unknown
-		cost = 6
+	focus = {
+		id = SOTN_NationalRail
+		icon = GFX_SOTN_NationalRail
+		cost = 1
+		x = 3
+		y = 2
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_EconomyUrbanisation
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_TechnicalEducation
+		icon = GFX_SOTN_TechnicalEducation
+		cost = 1
+		x = 2
+		y = 4
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_EconomyUrbanisation
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_ModernScience
+		icon = GFX_SOTN_ModernScience
+		cost = 1
+		x = 3
+		y = 5
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_TechnicalEducation
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_EconomyIntegrateCommission
+		icon = GFX_SOTN_EconomyIntegrateCommission
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_EconomyBudget
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_EconomyTradeRiver
+		icon = GFX_SOTN_EconomyTradeRiver
+		cost = 1
 		x = -3
-		y = 1
-		relative_position_id = SOTN_NewBudget
-		prerequisite = {
-			focus = SOTN_DealWithDebt
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			
-		}
-		mutually_exclusive = {
-			focus = SOTN_FinancialIndependence
-		}
-	}
-	focus = { 
-		id = SOTN_FinancialIndependence
-		icon = GFX_goal_unknown
-		cost = 6
-		x = -5
-		y = 1
-		relative_position_id = SOTN_NewBudget
-		prerequisite = {
-			focus = SOTN_DealWithDebt
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			
-		}
-		mutually_exclusive = {
-			focus = SOTN_InviteInvestors
-		}
-	}
-	focus = { 
-		id = SOTN_PartialStatism
-		icon = GFX_goal_unknown
-		cost = 6
-		x = -5
 		y = 2
-		relative_position_id = SOTN_NewBudget
+		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_FinancialIndependence
+			focus = SOTN_EconomyIntegrateCommission
 		}
 		available = {
 			
@@ -1790,45 +1810,18 @@ focus_tree = {
 			
 		}
 	}
-	focus = { 
-		id = SOTN_IndustrialGrants
-		icon = GFX_goal_unknown
-		cost = 6
-		x = 0
-		y = 2
-		relative_position_id = SOTN_NewBudget
-		prerequisite = {
-			focus = SOTN_Urbanisation
-		}
-		available = {
-			OR = {
-				has_completed_focus = SOTN_MaregyptRenaissance
-				SOTN_RoyalDietMajority_trigger = yes
-			}
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			
-		}
-	}
-	focus = { 
-		id = SOTN_ReformDeneb
-		icon = GFX_goal_unknown
-		cost = 6
+	focus = {
+		id = SOTN_EconomyNationalBank
+		icon = GFX_SOTN_EconomyNationalBank
+		cost = 1
 		x = -2
-		y = 2
-		relative_position_id = SOTN_NewBudget
+		y = 4
+		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_InviteInvestors
-			focus = SOTN_MaregyptianBank
+			focus = SOTN_EconomyIntegrateCommission
 		}
 		available = {
-			has_completed_focus = SOTN_RefillTreasury
+			
 		}
 		bypass = {
 			
@@ -1840,23 +1833,51 @@ focus_tree = {
 			
 		}
 	}
-	focus = { 
+	focus = {
+		id = SOTN_EconomyInvestors
+		icon = GFX_SOTN_EconomyInvestors
+		cost = 1
+		x = -3
+		y = 5
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_EconomyNationalBank
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
 		id = SOTN_AgrarianEconomy
-		icon = GFX_goal_unknown
-		cost = 6
-		x = 4
-		y = 1
-		relative_position_id = SOTN_ReformDeneb
+		icon = GFX_SOTN_AgrarianEconomy
+		cost = 1
+		x = -1
+		y = 6
+		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_ReformDeneb
+			focus = SOTN_EconomyNationalBank
 		}
 		available = {
-			OR = {
-				has_completed_focus = SOTN_MaregyptRenaissance
-				SOTN_RoyalDietMajority_trigger = yes
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = SOTN_FamineIsOver
+						has_idea = SOTN_FamineInTheNeighle
+					}
+				}
+				has_completed_focus = SOTN_FamineIsOver
 			}
-			NOT = {
-				has_idea = SOTN_FamineInTheNeighle
+			else = {
+				has_completed_focus = SOTN_LandReform
 			}
 		}
 		bypass = {
@@ -1869,26 +1890,31 @@ focus_tree = {
 			
 		}
 		mutually_exclusive = {
-			focus = SOTN_MixedEconomy
+			focus = SOTN_IndustrialEconomy
 		}
 	}
-	focus = { 
-		id = SOTN_MixedEconomy
-		icon = GFX_goal_unknown
-		cost = 6
-		x = -2
-		y = 1
-		relative_position_id = SOTN_ReformDeneb
+	focus = {
+		id = SOTN_IndustrialEconomy
+		icon = GFX_SOTN_IndustrialEconomy
+		cost = 1
+		x = 1
+		y = 6
+		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_ReformDeneb
+			focus = SOTN_TechnicalEducation
 		}
 		available = {
-			OR = {
-				has_completed_focus = SOTN_MaregyptRenaissance
-				SOTN_RoyalDietMajority_trigger = yes
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = SOTN_FamineIsOver
+						has_idea = SOTN_FamineInTheNeighle
+					}
+				}
+				has_completed_focus = SOTN_FamineIsOver
 			}
-			NOT = {
-				has_idea = SOTN_FamineInTheNeighle
+			else = {
+				has_completed_focus = SOTN_LandReform
 			}
 		}
 		bypass = {
@@ -1902,6 +1928,41 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = SOTN_AgrarianEconomy
+		}
+	}
+	focus = {
+		id = SOTN_ModernisedIndustry
+		icon = GFX_SOTN_ModernisedIndustry
+		cost = 1
+		x = 0
+		y = 5
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_TechnicalEducation
+			focus = SOTN_EconomyNationalBank
+		}
+		available = {
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = SOTN_FamineIsOver
+						has_idea = SOTN_FamineInTheNeighle
+					}
+				}
+				has_completed_focus = SOTN_FamineIsOver
+			}
+			else = {
+				has_completed_focus = SOTN_LandReform
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
 		}
 	}
 }

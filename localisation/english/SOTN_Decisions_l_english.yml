@@ -55,7 +55,7 @@
  #Economy Decision
  SOTN_ImportCrops:0 "Import Equestrian Crops"
  SOTN_FixIrrigation_dummy:0 "Modernise the Waterways"
- SOTN_DiversifyEconomy:0 "Purchase Modern Tools"
+ SOTN_DiversifyEconomy:0 "Purchase Farming Equipment"
  SOTN_FixIrrigation:0 "Modernise the Waterways"
 
  #Famine decisions

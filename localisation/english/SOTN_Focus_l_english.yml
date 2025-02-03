@@ -1,4 +1,14 @@
 ﻿l_english:
+ #Special tooltips
+ SOTN_ShaaDoofIsVizier_tt:0 "§YShaa Doof§! is the current Vizier"
+ SOTN_AhhotepIsVizier_tt:0 "§YAhhotep§! is the current Vizier"
+ SOTN_NeighktIsVizier_tt:0 "§YNeighkt Mer-Hor§! is the current Vizier"
+ 
+ SOTN_ShaaDoofIsVizier_tt_NOT:0 "NOT: $SOTN_ShaaDoofIsVizier_tt$"
+ SOTN_AhhotepIsVizier_tt_NOT:0 "NOT: $SOTN_AhhotepIsVizier_tt$"
+ SOTN_NeighktIsVizier_tt_NOT:0 "NOT: $SOTN_NeighktIsVizier_tt$"
+ 
+ #Focuses
  SOTN_KingSpeech:0 "A Long-Expected Address"
  SOTN_KingSpeech_desc:0 ""
 
@@ -66,7 +76,7 @@
  SOTN_ReformReached_tt:0 "Reform progress is greater than or equal to §Y[?SOTN_ReformGoal_var|%%]§! (currently §Y[?SOTN_ReformProgress_var|%%]§!)"
 
  #Economy - Famine / Infrastructure
- SOTN_YearOfTheLocust:0 "The Year of the Grasshoper"
+ SOTN_YearOfTheLocust:0 "Adress Food Shortages"
  SOTN_YearOfTheLocust_desc:0 ""
 
  SOTN_IrrigationWorks:0 "Improve Rural Irrigation"
@@ -80,6 +90,7 @@
  
  SOTN_LandReform:0 "A Year of Plenty"
  SOTN_LandReform_desc:0 ""
+ SOTN_LandReformRequirements_tt:0 "§Y[737.GetName]§!, §Y[734.GetName]§!, §Y[735.GetName]§!, §Y[736.GetName]§!, §Y[758.GetName]§! and §Y[759.GetName]§!:\n  One of the following must be true:\n    All of the following must be true:\n      Owned by @MGY §Y[ROOT.GetNameDef]§!\n      Fully controlled by @MGY §Y[ROOT.GetNameDef]§!\n      Infrastructure is at least §Y5§!\n    Is not owned by @MGY §Y[ROOT.GetNameDef]§!"
 
  # Economy - Catastrophic Famine
  SOTN_EmergencyRelief:0 "Nation-Wide Rationning"
@@ -104,38 +115,39 @@
  SOTN_FamineEquestrianFood_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineEquestrianFood$§! decision"
  SOTN_FamineHippogrifFish_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineHippogrifFish$§! decision"
 
- SOTN_NewBudget:0 "The [GetYear] National Budget"
- SOTN_NewBudget_desc:0 ""
+ #General Economy
+ SOTN_EconomyBudget:0 "Abandon the Gold Stater"
+ SOTN_EconomyBudget_desc:0 ""
 
- SOTN_Urbanisation:0 "Continue Urbanisation"
- SOTN_Urbanisation_desc:0 ""
+ SOTN_EconomyUrbanisation:0 "Rebuild Maregyptian Cities"
+ SOTN_EconomyUrbanisation_desc:0 ""
 
- SOTN_ExpandDockyards:0 "Revitalise Neighlotic Trade"
- SOTN_ExpandDockyards_desc:0 ""
+ SOTN_NationalRail:0 "From Somnambula to Dashoof in a Day"
+ SOTN_NationalRail_desc:0 ""
 
- SOTN_DealWithDebt:0 "Integrate the Equestrian Commission"
- SOTN_DealWithDebt_desc:0 ""
+ SOTN_TechnicalEducation:0 "Abolish Scribal Privileges"
+ SOTN_TechnicalEducation_desc:0 ""
 
- SOTN_MaregyptianBank:0 "The National Maregyptian Bank"
- SOTN_MaregyptianBank_desc:0 ""
+ SOTN_ModernScience:0 "The Manephis Academy of Sciences"
+ SOTN_ModernScience_desc:0 ""
 
- SOTN_InviteInvestors:0 "Attract Investors"
- SOTN_InviteInvestors_desc:0 ""
+ SOTN_EconomyIntegrateCommission:0 "Strenghten Financial Controls"
+ SOTN_EconomyIntegrateCommission_desc:0 ""
 
- SOTN_FinancialIndependence:0 "Secure Financial Independence"
- SOTN_FinancialIndependence_desc:0 ""
+ SOTN_EconomyTradeRiver:0 "Rebuild the River Trade"
+ SOTN_EconomyTradeRiver_desc:0 ""
 
- SOTN_PartialStatism:0 "Economic Centralisation"
- SOTN_PartialStatism_desc:0 ""
+ SOTN_EconomyNationalBank:0 "The First [ROOT.GetAdjective] Bank"
+ SOTN_EconomyNationalBank_desc:0 ""
 
- SOTN_IndustrialGrants:0 "New Industrial Grants"
- SOTN_IndustrialGrants_desc:0 ""
+ SOTN_EconomyInvestors:0 "Attract Foreign Investors"
+ SOTN_EconomyInvestors_desc:0 ""
 
- SOTN_ReformDeneb:0 "Revalue the Deneb"
- SOTN_ReformDeneb_desc:0 ""
-
- SOTN_AgrarianEconomy:0 "Modernised Agrarianism"
+ SOTN_AgrarianEconomy:0 "The Granary of Zebrica"
  SOTN_AgrarianEconomy_desc:0 ""
 
- SOTN_MixedEconomy:0 "Towards a Mixed Economy"
- SOTN_MixedEconomy_desc:0 ""
+ SOTN_IndustrialEconomy:0 "The Great Trot Forward"
+ SOTN_IndustrialEconomy_desc:0 ""
+
+ SOTN_ModernisedIndustry:0 "Harness the Neighle"
+ SOTN_ModernisedIndustry_desc:0 ""
