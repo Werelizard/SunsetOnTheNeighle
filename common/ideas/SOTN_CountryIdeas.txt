@@ -10,11 +10,11 @@ ideas = {
 
 	country = {
 		# Starting ideas for Maregypt
-		SOTN_FadingSun = { #Fake idea - hides a dynamic modifier
+		SOTN_FadingSun = { 
 			modifier = {
-				resistance_growth = 0.1
+				resistance_growth = 0.2
 				compliance_growth = -0.2
-				political_power_cost = 0.3
+				political_power_cost = 0.1
 				war_support_factor = -0.3
 			}
 		}

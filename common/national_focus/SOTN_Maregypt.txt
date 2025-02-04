@@ -301,7 +301,7 @@ focus_tree = {
 		id = SOTN_DynasticPropaganda
 		icon = GFX_SOTN_DynasticPropaganda
 		cost = 6
-		x = 6
+		x = 5
 		y = 1
 		relative_position_id = SOTN_VizierOffice
 		prerequisite = {
@@ -1954,6 +1954,538 @@ focus_tree = {
 			else = {
 				has_completed_focus = SOTN_LandReform
 			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	#The Maregyptian World
+	focus = {
+		id = SOTN_MaregyptSphereStart
+		icon = GFX_SOTN_MaregyptSphereStart
+		cost = 1
+		x = 11
+		y = 0
+		relative_position_id = SOTN_KingSpeech
+		prerequisite = {
+			
+		}
+		available = {
+			has_army_manpower = {
+				size > 75000
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptRedrawBoundaries
+		icon = GFX_SOTN_MaregyptRedrawBoundaries
+		cost = 1
+		x = 0
+		y = 3
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptSphereStart
+		}
+		prerequisite = {
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereKingOfSouth
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 4
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptRedrawBoundaries
+		}
+		prerequisite = {
+			focus = SOTN_StrengthenKing
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_MaregyptSphereSouthAutonomy
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereTimbuktuKneels
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 5
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptSphereKingOfSouth
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereSouthAutonomy
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 4
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptRedrawBoundaries
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_MaregyptSphereKingOfSouth
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereAlwaniIntegration
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 5
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptSphereKingOfSouth
+			focus = SOTN_MaregyptSphereSouthAutonomy
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereExpandAdminsitration
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 6
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptSphereAlwaniIntegration
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereSineighiProvince
+		icon = GFX_SOTN_MaregyptSphereSineighiProvince
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptSphereStart
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereKlugetown
+		icon = GFX_SOTN_MaregyptSphereKlugetown
+		cost = 1
+		x = 3
+		y = 1
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptSphereStart
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereTreatyOfColtoba
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -2
+		y = 2
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptTreaty
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_MaregyptIrrenditism
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptSphereSupportSameNations
+		icon = GFX_SOTN_MaregyptSphereSupportSameNations
+		cost = 1
+		dynamic = yes
+		x = -1
+		y = 1
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptSphereStart
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptIntervention
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 7
+		y = 0
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+
+		}
+		available = {
+			OR = {
+				has_war = yes
+				threat > 0.1
+				any_other_country = {
+					OR = {
+						original_tag = HIP
+						original_tag = CTH
+						original_tag = WAR
+						original_tag = BAT
+						original_tag = TBK
+					}
+					has_war = yes
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptTreaty
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -2
+		y = 1
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptIntervention
+			focus = SOTN_MaregyptSphereStart
+		}
+		prerequisite = {
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptInterveneZumidia
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptTreaty
+		}
+		prerequisite = {
+			focus = SOTN_MaregyptIntervention
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_MaregyptArmedNeutrality
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptArmedNeutrality
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 2
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptTreaty
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_MaregyptInterveneZumidia
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptHomeDefence
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 3
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptArmedNeutrality
+			focus = SOTN_MaregyptInterveneZumidia
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptNorthernAmbitions
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 4
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptInterveneZumidia
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptScienceTreaty
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 3
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptTreaty
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptGreatWarIntervention
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 1
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptIntervention
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptIrrenditism
+		icon = GFX_SOTN_MaregyptIrrenditism
+		cost = 1
+		x = 2
+		y = 2
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MaregyptSphereKlugetown
+			focus = SOTN_MaregyptSphereSineighiProvince
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_MaregyptSphereTreatyOfColtoba
+		}
+	}
+	focus = {
+		id = SOTN_MutualFriendshipTreaty
+		icon = GFX_SOTN_MutualFriendshipTreaty
+		cost = 1
+		x = -3
+		y = 3
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptSphereTreatyOfColtoba
+		}
+		available = {
+			
 		}
 		bypass = {
 			

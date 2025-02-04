@@ -26,6 +26,7 @@ SOTN_MODIFIER_BadInfrastructure_mod = { #State modifier for bad infrastructure
     remove_trigger = {
        
     }
+	local_building_slots_factor = -0.2
 	state_production_speed_infrastructure_factor = -0.15
 }
 
@@ -35,6 +36,6 @@ SOTN_MODIFIER_FamineEffects_mod = { #State modifier for bad infrastructure
     remove_trigger = {
        
     }
-	recruitable_population_factor = -0.5
-	local_building_slots = -2
+	recruitable_population_factor = -0.33
+	local_building_slots = -1
 }

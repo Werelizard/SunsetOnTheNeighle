@@ -151,3 +151,67 @@
 
  SOTN_ModernisedIndustry:0 "Harness the Neighle"
  SOTN_ModernisedIndustry_desc:0 ""
+
+ # Maregyptian Diplomacy - Common
+ SOTN_MaregyptSphereStart:0 "The Maregyptian Domain"
+ SOTN_MaregyptSphereStart_desc:0 ""
+
+ SOTN_MaregyptRedrawBoundaries:0 "Strengthen Governmental Authority"
+ SOTN_MaregyptRedrawBoundaries_desc:0 ""
+
+ SOTN_MaregyptSphereKingOfSouth:0 "King of Zush"
+ SOTN_MaregyptSphereKingOfSouth_desc:0 ""
+
+ SOTN_MaregyptSphereTimbuktuKneels:0 "Bring the Zebras to Heel"
+ SOTN_MaregyptSphereTimbuktuKneels_desc:0 ""
+
+ SOTN_MaregyptSphereSouthAutonomy:0 "Southern Autonomies"
+ SOTN_MaregyptSphereSouthAutonomy_desc:0 ""
+
+ SOTN_MaregyptSphereAlwaniIntegration:0 "The Errant Mule"
+ SOTN_MaregyptSphereAlwaniIntegration_desc:0 ""
+
+ SOTN_MaregyptSphereExpandAdminsitration:0 "A New Kingdom"
+ SOTN_MaregyptSphereExpandAdminsitration_desc:0 ""
+
+ SOTN_MaregyptSphereSineighiProvince:0 "Pacify the Sineighi"
+ SOTN_MaregyptSphereSineighiProvince_desc:0 ""
+
+ SOTN_MaregyptSphereKlugetown:0 "Uproot the Klugtown Rot"
+ SOTN_MaregyptSphereKlugetown_desc:0 ""
+
+ SOTN_MaregyptSphereTreatyOfColtoba:0 "The Treaty of Coltoba"
+ SOTN_MaregyptSphereTreatyOfColtoba_desc:0 ""
+
+ SOTN_MaregyptSphereSupportSameNations:0 "Secure the Green Bay"
+ SOTN_MaregyptSphereSupportSameNations_desc:0 ""
+
+ SOTN_MaregyptIntervention:0 "In the Eye of the Storm"
+ SOTN_MaregyptIntervention_desc:0 ""
+
+ SOTN_MaregyptTreaty:0 "The Manephis Accord"
+ SOTN_MaregyptTreaty_desc:0 ""
+
+ SOTN_MaregyptInterveneZumidia:0 "The North Zebrican Powderkeg"
+ SOTN_MaregyptInterveneZumidia_desc:0 ""
+
+ SOTN_MaregyptArmedNeutrality:0 "Limited Neutrality"
+ SOTN_MaregyptArmedNeutrality_desc:0 ""
+
+ SOTN_MaregyptHomeDefence:0 "Home Defence"
+ SOTN_MaregyptHomeDefence_desc:0 ""
+
+ SOTN_MaregyptNorthernAmbitions:0 "Zebrican Ambitions"
+ SOTN_MaregyptNorthernAmbitions_desc:0 ""
+
+ SOTN_MaregyptScienceTreaty:0 "Promote Scientific Collaboration"
+ SOTN_MaregyptScienceTreaty_desc:0 ""
+
+ SOTN_MaregyptGreatWarIntervention:0 "The Canterlot Intervention"
+ SOTN_MaregyptGreatWarIntervention_desc:0 ""
+
+ SOTN_MutualFriendshipTreaty:0 "Our Furred Brethren"
+ SOTN_MutualFriendshipTreaty_desc:0 ""
+
+ SOTN_MaregyptIrrenditism:0 "Re-Assert Maregyptian Claims"
+ SOTN_MaregyptIrrenditism_desc:0 ""

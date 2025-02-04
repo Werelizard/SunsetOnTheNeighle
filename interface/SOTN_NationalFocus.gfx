@@ -932,4 +932,158 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptSphereStart"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptSphereStart.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptSphereStart_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptSphereStart.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptSphereStart.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptSphereSupportSameNations"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptSphereSupportSameNations.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptSphereSupportSameNations_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptSphereSupportSameNations.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptSphereSupportSameNations.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptSphereSineighiProvince"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptSphereSineighiProvince.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptSphereSineighiProvince_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptSphereSineighiProvince.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptSphereSineighiProvince.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptSphereKlugetown"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptSphereKlugetown.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptSphereKlugetown_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptSphereKlugetown.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptSphereKlugetown.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptRedrawBoundaries"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptRedrawBoundaries.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptRedrawBoundaries_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptRedrawBoundaries.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptRedrawBoundaries.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptIrrenditism"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptIrrenditism.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptIrrenditism_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptIrrenditism.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptIrrenditism.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MutualFriendshipTreaty"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MutualFriendshipTreaty.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MutualFriendshipTreaty_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MutualFriendshipTreaty.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MutualFriendshipTreaty.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 }
