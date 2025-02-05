@@ -1086,4 +1086,270 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    spriteType = {
+		name = "GFX_SOTN_AbolishCommission"
+		texturefile = "gfx/interface/goals/MGY/SOTN_AbolishCommission.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_AbolishCommission_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_AbolishCommission.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_AbolishCommission.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_AbolishCommission"
+		texturefile = "gfx/interface/goals/MGY/SOTN_AbolishCommission.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_AbolishCommission_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_AbolishCommission.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_AbolishCommission.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_PayDebts"
+		texturefile = "gfx/interface/goals/MGY/SOTN_PayDebts.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_PayDebts_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_PayDebts.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_PayDebts.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptIntervention"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptIntervention.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptIntervention_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptIntervention.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptIntervention.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptTreaty"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptTreaty.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptTreaty_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptTreaty.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptTreaty.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptScienceTreaty"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptScienceTreaty.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptScienceTreaty_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptScienceTreaty.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptScienceTreaty.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    
+    spriteType = {
+		name = "GFX_SOTN_MaregyptSphereTreatyOfColtoba"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptSphereTreatyOfColtoba.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptSphereTreatyOfColtoba_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptSphereTreatyOfColtoba.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptSphereTreatyOfColtoba.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptGreatWarIntervention"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptGreatWarIntervention.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptGreatWarIntervention_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptGreatWarIntervention.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptGreatWarIntervention.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptInterveneZumidia"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptInterveneZumidia.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptInterveneZumidia_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptInterveneZumidia.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptInterveneZumidia.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptArmedNeutrality"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptArmedNeutrality.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptArmedNeutrality_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptArmedNeutrality.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptArmedNeutrality.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptHomeDefence"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptHomeDefence.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptHomeDefence_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptHomeDefence.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptHomeDefence.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MaregyptNorthernAmbitions"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MaregyptNorthernAmbitions.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MaregyptNorthernAmbitions_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MaregyptNorthernAmbitions.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MaregyptNorthernAmbitions.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 }
+

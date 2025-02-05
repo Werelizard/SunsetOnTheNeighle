@@ -3,9 +3,12 @@
  SOTN_FadingSun:0 "The Fading Sun"
  SOTN_FadingSun_desc:0 "Maregypt is no longer the realm it was. Once, it was the envy of all of Zebrica - a beacon of Harmony and prosperity for all. Now it is but a ruin, a blend of urban sprawl, disaffected estates and run-down farmland admist a field of millenia-old pyramids, temples and desert. A dying kingdom, it stands as one of the last fading bastions of Harmonic governance on the continent - with the ideals of old growing ever more unpopular as the days go by."
 
- SOTN_EquestrianComission:0 "The Equestrian Commission"
+ SOTN_EquestrianComission:0 "Endebted Economy"
  SOTN_EquestrianComission_desc:0 "In the wake of the Storm King's rise and fall, King Khefer - pressured by Shaa Doof - negotiated an unpopular agreement with princess Celestia in order to salvage the country's economy. While this proved somewhat successfull in avoiding an immediate collapse of the Maregyptian economy, the payments for this assistance has now come due, driving the Maregyptian economy further towards bankruptcy."
  SOTN_EquestrianComission_EnforcedFreeTrade_tt:0 "Can change trade laws: §RNo§!"
+
+ SOTN_EquestrianComissionWorse:0 "Financial Crisis"
+ SOTN_EquestrianComissionWorse_desc:0 "$SOTN_EquestrianComission_desc$"
 
  SOTN_FamineRisk:0 "The Long Drought"
  SOTN_FamineRisk_desc:0 "Whilst the bounty of the Neighle has proved miraculous in its own, the river remains as unpredictable as it is capricious. The recent flood was dire, leaving many farms deserted and innumerable fields left to whither under the blazing sun. Many amongst the administration fear that we may be staring down the barrel of a potential famine..."

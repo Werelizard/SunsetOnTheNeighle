@@ -25,8 +25,9 @@ focus_tree = {
 		id = SOTN_KingSpeech
 		icon = GFX_SOTN_KingSpeech
 		cost = 6
-		x = 10
-		y = 0
+		x = 4
+		y = -1
+		relative_position_id = SOTN_EconomyBudget
 		cancelable = no
 		available = {
 			
@@ -529,7 +530,7 @@ focus_tree = {
 		icon = GFX_SOTN_ClassicRevival
 		cost = 6
 		x = -4
-		y = 3
+		y = 4
 		relative_position_id = SOTN_VizierOffice
 		continue_if_invalid = yes
 		cancel_if_invalid = no
@@ -966,10 +967,11 @@ focus_tree = {
 		icon = GFX_SOTN_YearOfTheLocust
 		cost = 6
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_EconomyBudget
+			focus = SOTN_PayDebts
+			focus = SOTN_AbolishCommission
 		}
 		available = {
 			
@@ -1653,11 +1655,32 @@ focus_tree = {
 		id = SOTN_EconomyBudget
 		icon = GFX_SOTN_EconomyBudget
 		cost = 1
-		x = -4
-		y = 1
-		relative_position_id = SOTN_KingSpeech
+		x = 0
+		y = 0
 		prerequisite = {
-			focus = SOTN_KingSpeech
+		
+		}
+		available = {
+			has_idea = SOTN_EquestrianComissionWorse
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOTN_AbolishCommission
+		icon = GFX_SOTN_AbolishCommission
+		cost = 1
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SOTN_EconomyBudget
 		}
 		available = {
 			
@@ -1671,10 +1694,13 @@ focus_tree = {
 		completion_reward = {
 			
 		}
+		mutually_exclusive = {
+			focus = SOTN_PayDebts
+		}
 	}
 	focus = {
-		id = SOTN_EconomyUrbanisation
-		icon = GFX_SOTN_EconomyUrbanisation
+		id = SOTN_PayDebts
+		icon = GFX_SOTN_PayDebts
 		cost = 1
 		x = 2
 		y = 1
@@ -1694,13 +1720,40 @@ focus_tree = {
 		completion_reward = {
 			
 		}
+		mutually_exclusive = {
+			focus = SOTN_AbolishCommission
+		}
+	}
+	focus = {
+		id = SOTN_EconomyUrbanisation
+		icon = GFX_SOTN_EconomyUrbanisation
+		cost = 1
+		x = 2
+		y = 2
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_PayDebts
+			focus = SOTN_AbolishCommission
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
 	}
 	focus = {
 		id = SOTN_NationalRail
 		icon = GFX_SOTN_NationalRail
 		cost = 1
 		x = 3
-		y = 2
+		y = 3
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_EconomyUrbanisation
@@ -1723,7 +1776,7 @@ focus_tree = {
 		icon = GFX_SOTN_TechnicalEducation
 		cost = 1
 		x = 2
-		y = 4
+		y = 5
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_EconomyUrbanisation
@@ -1746,7 +1799,7 @@ focus_tree = {
 		icon = GFX_SOTN_ModernScience
 		cost = 1
 		x = 3
-		y = 5
+		y = 6
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_TechnicalEducation
@@ -1769,10 +1822,11 @@ focus_tree = {
 		icon = GFX_SOTN_EconomyIntegrateCommission
 		cost = 1
 		x = -2
-		y = 1
+		y = 2
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_EconomyBudget
+			focus = SOTN_PayDebts
+			focus = SOTN_AbolishCommission
 		}
 		available = {
 			
@@ -1792,7 +1846,7 @@ focus_tree = {
 		icon = GFX_SOTN_EconomyTradeRiver
 		cost = 1
 		x = -3
-		y = 2
+		y = 3
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_EconomyIntegrateCommission
@@ -1815,7 +1869,7 @@ focus_tree = {
 		icon = GFX_SOTN_EconomyNationalBank
 		cost = 1
 		x = -2
-		y = 4
+		y = 5
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_EconomyIntegrateCommission
@@ -1838,7 +1892,7 @@ focus_tree = {
 		icon = GFX_SOTN_EconomyInvestors
 		cost = 1
 		x = -3
-		y = 5
+		y = 6
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_EconomyNationalBank
@@ -1861,7 +1915,7 @@ focus_tree = {
 		icon = GFX_SOTN_AgrarianEconomy
 		cost = 1
 		x = -1
-		y = 6
+		y = 7
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_EconomyNationalBank
@@ -1898,7 +1952,7 @@ focus_tree = {
 		icon = GFX_SOTN_IndustrialEconomy
 		cost = 1
 		x = 1
-		y = 6
+		y = 7
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_TechnicalEducation
@@ -1935,7 +1989,7 @@ focus_tree = {
 		icon = GFX_SOTN_ModernisedIndustry
 		cost = 1
 		x = 0
-		y = 5
+		y = 6
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_TechnicalEducation
@@ -2189,7 +2243,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MaregyptSphereTreatyOfColtoba
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MaregyptSphereTreatyOfColtoba
 		cost = 1
 		x = -2
 		y = 2
@@ -2239,7 +2293,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MaregyptIntervention
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MaregyptIntervention
 		cost = 1
 		x = 7
 		y = 0
@@ -2275,7 +2329,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MaregyptTreaty
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MaregyptTreaty
 		cost = 1
 		x = -2
 		y = 1
@@ -2301,7 +2355,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MaregyptInterveneZumidia
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MaregyptInterveneZumidia
 		cost = 1
 		x = 0
 		y = 2
@@ -2330,13 +2384,39 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MaregyptArmedNeutrality
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MaregyptArmedNeutrality
 		cost = 1
 		x = 2
 		y = 2
 		relative_position_id = SOTN_MaregyptIntervention
 		prerequisite = {
-			focus = SOTN_MaregyptTreaty
+			focus = SOTN_MaregyptIntervention
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_MaregyptInterveneZumidia
+		}
+	}
+	focus = {
+		id = SOTN_SupportHarmonicResistance
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 3
+		y = 3
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptArmedNeutrality
 		}
 		available = {
 			
@@ -2356,7 +2436,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MaregyptHomeDefence
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MaregyptHomeDefence
 		cost = 1
 		x = 1
 		y = 3
@@ -2380,7 +2460,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MaregyptNorthernAmbitions
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MaregyptNorthernAmbitions
 		cost = 1
 		x = 0
 		y = 4
@@ -2402,8 +2482,61 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_MaregyptScienceTreaty
+		id = SOTN_HarmonyShield
 		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 5
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptNorthernAmbitions
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_ZebricanUnion
+		}
+	}
+	focus = {
+		id = SOTN_ZebricanUnion
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 5
+		relative_position_id = SOTN_MaregyptIntervention
+		prerequisite = {
+			focus = SOTN_MaregyptNorthernAmbitions
+			focus = SOTN_MaregyptArmedNeutrality
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			
+		}
+		mutually_exclusive = {
+			focus = SOTN_HarmonyShield
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptScienceTreaty
+		icon = GFX_SOTN_MaregyptScienceTreaty
 		cost = 1
 		x = -1
 		y = 3
@@ -2426,7 +2559,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MaregyptGreatWarIntervention
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MaregyptGreatWarIntervention
 		cost = 1
 		x = 1
 		y = 1

@@ -33,6 +33,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/MGY/SOTN_EquestrianComission.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_SOTN_EquestrianComissionWorse"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_EquestrianComission.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_SOTN_PoliticalUnrest"
 		texturefile = "gfx/interface/ideas/MGY/SOTN_PoliticalUnrest.dds"
 	}

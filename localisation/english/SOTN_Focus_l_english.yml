@@ -116,6 +116,12 @@
  SOTN_FamineHippogrifFish_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineHippogrifFish$§! decision"
 
  #General Economy
+ SOTN_AbolishCommission:0 "Default on Our Debts"
+ SOTN_AbolishCommission_desc:0 ""
+
+ SOTN_PayDebts:0 "Negotiate Debt Restructuring"
+ SOTN_PayDebts_desc:0 ""
+ 
  SOTN_EconomyBudget:0 "Abandon the Gold Stater"
  SOTN_EconomyBudget_desc:0 ""
 
@@ -131,7 +137,7 @@
  SOTN_ModernScience:0 "The Manephis Academy of Sciences"
  SOTN_ModernScience_desc:0 ""
 
- SOTN_EconomyIntegrateCommission:0 "Strenghten Financial Controls"
+ SOTN_EconomyIntegrateCommission:0 "Strengthen Financial Controls"
  SOTN_EconomyIntegrateCommission_desc:0 ""
 
  SOTN_EconomyTradeRiver:0 "Rebuild the River Trade"
@@ -189,20 +195,29 @@
  SOTN_MaregyptIntervention:0 "In the Eye of the Storm"
  SOTN_MaregyptIntervention_desc:0 ""
 
- SOTN_MaregyptTreaty:0 "The Manephis Accord"
+ SOTN_MaregyptTreaty:0 "The Manephis Accords"
  SOTN_MaregyptTreaty_desc:0 ""
 
- SOTN_MaregyptInterveneZumidia:0 "The North Zebrican Powderkeg"
+ SOTN_MaregyptInterveneZumidia:0 "The Zumidian Powderkeg"
  SOTN_MaregyptInterveneZumidia_desc:0 ""
 
  SOTN_MaregyptArmedNeutrality:0 "Limited Neutrality"
  SOTN_MaregyptArmedNeutrality_desc:0 ""
+
+ SOTN_SupportHarmonicResistance:0 "The Green Corridor"
+ SOTN_SupportHarmonicResistance_desc:0 ""
 
  SOTN_MaregyptHomeDefence:0 "Home Defence"
  SOTN_MaregyptHomeDefence_desc:0 ""
 
  SOTN_MaregyptNorthernAmbitions:0 "Zebrican Ambitions"
  SOTN_MaregyptNorthernAmbitions_desc:0 ""
+
+ SOTN_HarmonyShield:0 "In Harmony's Name"
+ SOTN_HarmonyShield_desc:0 ""
+
+ SOTN_ZebricanUnion:0 "The Khufu Plan"
+ SOTN_ZebricanUnion_desc:0 ""
 
  SOTN_MaregyptScienceTreaty:0 "Promote Scientific Collaboration"
  SOTN_MaregyptScienceTreaty_desc:0 ""
