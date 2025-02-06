@@ -39,4 +39,27 @@ on_actions = {
 			}
 		}
 	}
+	on_startup = {
+		effect = {
+			MGY = {		
+				#Initialise the event chain
+				SOTN_character_KingKhefer = {
+					unit_leader_event = {
+						id = SOTN_MgyFlavour.2
+						days = 5
+					}
+				}
+				add_opinion_modifier = {
+					target = ABY
+					modifier = distrustful_relations
+				}
+			}
+			ABY = {
+				add_opinion_modifier = {
+					target = MGY
+					modifier = distrustful_relations
+				}
+			}
+		}
+	}
 }

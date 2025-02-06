@@ -279,3 +279,5 @@ add_ideas = {
 	SOTN_MaredjayArmy
 	SOTN_ScarsOfTheJulyUprising
 }
+
+#Diplomacy

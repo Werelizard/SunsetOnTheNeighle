@@ -152,6 +152,8 @@ unit_leader_event = { # Narmare is arrested. Unrest increases MORE.
 			}
 			SOTN_IncreaseStateUnrest_medium_effect = yes
 		}
+		custom_effect_tooltip = SOTN_doublespace
+		complete_national_focus = SOTN_KingSpeech
 	}
 }
 

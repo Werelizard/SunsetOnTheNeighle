@@ -10,14 +10,44 @@ SOTN_HasVizierMechanic_trigger = { #Master trigger to check if the GUI should be
 }
 
 SOTN_HasViziersTrigger_trigger = { #Trigger to check that any Vizier is active
-	SOTN_HasVizierMechanic_trigger = yes
 	OR = {
 		SOTN_HasShaaDoof_Vizier_trigger = yes
+		SOTN_HasNeighkt_Vizier_trigger = yes
+		SOTN_HasAhhotep_Vizier_trigger = yes
+		SOTN_HasNaramre_Vizier_trigger = yes
+		SOTN_HasNeighSer_Vizier_trigger = yes
 	}
 }
 
 SOTN_HasShaaDoof_Vizier_trigger = { #Trigger to check that Shaa Doof is the current Vizier
-	has_country_flag = SOTN_ShaaDoofVizier_flag
+	custom_trigger_tooltip = {
+		tooltip = SOTN_ShaaDoofIsVizier_tt
+		has_country_flag = SOTN_ShaaDoofVizier_flag
+	}
+}
+SOTN_HasNeighkt_Vizier_trigger = { #Trigger to check that Neighkt Met-Hor is the current Vizier
+	custom_trigger_tooltip = {
+		tooltip = SOTN_NeighktIsVizier_tt
+		has_country_flag = SOTN_NeighktVizier_flag
+	}
+}
+SOTN_HasAhhotep_Vizier_trigger = { #Trigger to check that Ahhotep is the current Vizier
+	custom_trigger_tooltip = {
+		tooltip = SOTN_AhhotepIsVizier_tt
+		has_country_flag = SOTN_AhhotepVizier_flag
+	}
+}
+SOTN_HasNaramre_Vizier_trigger = { #Trigger to check that Narmare is the current Vizier
+	custom_trigger_tooltip = {
+		tooltip = SOTN_NarmareIsVizier_tt
+		has_country_flag = SOTN_NarmareVizier_flag
+	}
+}
+SOTN_HasNeighSer_Vizier_trigger = { #Trigger to check that Neigh Ser is the current Vizier
+	custom_trigger_tooltip = {
+		tooltip = SOTN_NeighSerIsVizier_tt
+		has_country_flag = SOTN_NeighSerVizier_flag
+	}
 }
 
 #Scripted triggers for diet-related matters

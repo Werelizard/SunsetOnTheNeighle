@@ -4,13 +4,11 @@ leader_traits = {
     #################
     SOTN_YoungKing_Trait = {
         random = no
-        
         offensive_war_stability_factor = -0.1
 		defensive_war_stability_factor = -0.1
     }
 	SOTN_KingOfUpperAndLowerMaregypt_Trait = {
         random = no
-        
         stability_factor = 0.05
 		party_popularity_stability_factor = 0.1
     }
@@ -21,8 +19,9 @@ leader_traits = {
     }
     SOTN_AbsoluteMonarchTrait_Trait = {
         random = no
-
-        political_power_gain = 0.2
+        political_power_gain = 0.1
+        stability_factor = 0.05
+        power_balance_weekly = 0.01
     }
     SOTN_TheGreatKing_Trait = {
         stability_factor = 0.1

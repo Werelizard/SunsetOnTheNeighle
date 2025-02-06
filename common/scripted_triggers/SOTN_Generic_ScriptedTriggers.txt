@@ -15,3 +15,30 @@ SOTN_HasMaredjayArmy_trigger = { #Checks if has a variant of the Maredjay academ
 		has_idea = SOTN_MaredjayArmy
 	}
 }
+
+#Checks if North Zebrica is at War
+SOTN_PotentialNorthZebricanWar_trigger = { 
+	custom_trigger_tooltip = {
+		tooltip = SOTN_PotentialNorthZebricanWar_tt
+		any_country = {
+			OR = {
+				original_tag = BAT
+				original_tag = WAR
+				original_tag = HIP
+				original_tag = CTH
+			}
+			has_war = yes
+		}
+	}
+}
+
+SOTN_PotentialEquusWar_trigger = { #Checks if the Great War is ongoing
+	custom_trigger_tooltip = {
+		tooltip = SOTN_PotentialEquusWar_tt
+		OR = {
+			CHN = {
+				has_war_with = EQS
+			}
+		}
+	}
+}

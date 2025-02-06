@@ -1,12 +1,18 @@
 ﻿l_english:
  #Special tooltips
- SOTN_ShaaDoofIsVizier_tt:0 "§YShaa Doof§! is the current Vizier"
- SOTN_AhhotepIsVizier_tt:0 "§YAhhotep§! is the current Vizier"
- SOTN_NeighktIsVizier_tt:0 "§YNeighkt Mer-Hor§! is the current Vizier"
+ SOTN_ShaaDoofIsVizier_tt:0 "§Y$SOTN_character_ShaaDoof$§! is the current Vizier"
+ SOTN_AhhotepIsVizier_tt:0 "§Y$SOTN_character_Ahhotep$§! is the current Vizier"
+ SOTN_NeighktIsVizier_tt:0 "§Y$SOTN_Character_Neighkt$§! is the current Vizier"
+ SOTN_NarmareIsVizier_tt:0 "§Y$SOTN_character_NeighSer$§! is the current Vizier"
+ SOTN_NeighSerIsVizier_tt:0 "§Y$SOTN_character_Narmare$§! is the current Vizier"
  
  SOTN_ShaaDoofIsVizier_tt_NOT:0 "NOT: $SOTN_ShaaDoofIsVizier_tt$"
  SOTN_AhhotepIsVizier_tt_NOT:0 "NOT: $SOTN_AhhotepIsVizier_tt$"
  SOTN_NeighktIsVizier_tt_NOT:0 "NOT: $SOTN_NeighktIsVizier_tt$"
+
+ SOTN_AccessToThisFocus_tt:0 "We have access to this branch of the focus tree"
+ SOTN_EventCompletion_tt:0 "This focus will be §Yautomatically§! completed through an §Yevent§!."
+ SOTN_UnlockNationalFocus_tt:0 "[ROOT.GetName] unlocks the §Y"$FOCUS$"§! national focus,"
  
  #Focuses
  SOTN_KingSpeech:0 "A Long-Expected Address"
@@ -42,7 +48,8 @@
  SOTN_ClassicRevival:0 "Revive Classical Education"
  SOTN_ClassicRevival_desc:0 ""
 
- SOTN_VizierCabinet:0 "[Get_VizierCabinet_ScripLoc]"
+#  SOTN_VizierCabinet:0 "[Get_VizierCabinet_ScripLoc]"
+ SOTN_VizierCabinet:0 "The Pony in the High Stable"
  SOTN_VizierCabinet_desc:0 ""
 
  SOTN_RoyalDiet:0 "Convene the Royal Diet"
@@ -159,74 +166,76 @@
  SOTN_ModernisedIndustry_desc:0 ""
 
  # Maregyptian Diplomacy - Common
- SOTN_MaregyptSphereStart:0 "The Maregyptian Domain"
+ SOTN_MaregyptSphereStart:0 "Beyond the Sands and the Sea"
  SOTN_MaregyptSphereStart_desc:0 ""
 
- SOTN_MaregyptRedrawBoundaries:0 "Strengthen Governmental Authority"
- SOTN_MaregyptRedrawBoundaries_desc:0 ""
+ SOTN_FriendshipMission:0 "Friends From Across the Ocean"
+ SOTN_FriendshipMission_desc:0 ""
 
- SOTN_MaregyptSphereKingOfSouth:0 "King of Zush"
- SOTN_MaregyptSphereKingOfSouth_desc:0 ""
+ SOTN_CentraliseAuthority:0 "Strengthen Governmental Authority"
+ SOTN_CentraliseAuthority_desc:0 ""
 
- SOTN_MaregyptSphereTimbuktuKneels:0 "Bring the Zebras to Heel"
- SOTN_MaregyptSphereTimbuktuKneels_desc:0 ""
+ SOTN_KingOfZush:0 "A Kingdom Reunited"
+ SOTN_KingOfZush_desc:0 ""
 
- SOTN_MaregyptSphereSouthAutonomy:0 "Southern Autonomies"
- SOTN_MaregyptSphereSouthAutonomy_desc:0 ""
+ SOTN_AttackTimbucktu:0 "Bring the Zebras to Heel"
+ SOTN_AttackTimbucktu_desc:0 ""
 
- SOTN_MaregyptSphereAlwaniIntegration:0 "The Errant Mule"
- SOTN_MaregyptSphereAlwaniIntegration_desc:0 ""
+ SOTN_SouthAutonomy:0 "Devolved Administration"
+ SOTN_SouthAutonomy_desc:0 ""
 
- SOTN_MaregyptSphereExpandAdminsitration:0 "A New Kingdom"
- SOTN_MaregyptSphereExpandAdminsitration_desc:0 ""
+ SOTN_TakeAlwani:0 "The Errant Son"
+ SOTN_TakeAlwani_desc:0 ""
 
- SOTN_MaregyptSphereSineighiProvince:0 "Pacify the Sineighi"
- SOTN_MaregyptSphereSineighiProvince_desc:0 ""
+ SOTN_PacifySineighi:0 "Pacify the Sineighi"
+ SOTN_PacifySineighi_desc:0 ""
 
- SOTN_MaregyptSphereKlugetown:0 "Uproot the Klugtown Rot"
- SOTN_MaregyptSphereKlugetown_desc:0 ""
+ SOTN_TakeKlugTown:0 "Uproot the Klugtown Rot"
+ SOTN_TakeKlugTown_desc:0 ""
 
- SOTN_MaregyptSphereTreatyOfColtoba:0 "The Treaty of Coltoba"
- SOTN_MaregyptSphereTreatyOfColtoba_desc:0 ""
+ SOTN_TreatyOfColtoba:0 "The Treaty of Coltoba"
+ SOTN_TreatyOfColtoba_desc:0 ""
 
- SOTN_MaregyptSphereSupportSameNations:0 "Secure the Green Bay"
- SOTN_MaregyptSphereSupportSameNations_desc:0 ""
+ SOTN_GreenBayControl:0 "Secure the Green Bay"
+ SOTN_GreenBayControl_desc:0 ""
 
- SOTN_MaregyptIntervention:0 "In the Eye of the Storm"
- SOTN_MaregyptIntervention_desc:0 ""
+ SOTN_EyeOfStorm:0 "In the Eye of the Storm"
+ SOTN_EyeOfStorm_desc:0 ""
+ SOTN_PotentialNorthZebricanWar_tt:0 "War has errupted in North Zebrica"
+ SOTN_PotentialEquusWar_tt:0 "War has errupted in Equus"
 
- SOTN_MaregyptTreaty:0 "The Manephis Accords"
- SOTN_MaregyptTreaty_desc:0 ""
+ SOTN_ManephisAccords:0 "The Manephis Accords"
+ SOTN_ManephisAccords_desc:0 ""
 
- SOTN_MaregyptInterveneZumidia:0 "The Zumidian Powderkeg"
- SOTN_MaregyptInterveneZumidia_desc:0 ""
+ SOTN_InterveneZumidia:0 "The Zumidian Powderkeg"
+ SOTN_InterveneZumidia_desc:0 ""
 
- SOTN_MaregyptArmedNeutrality:0 "Limited Neutrality"
- SOTN_MaregyptArmedNeutrality_desc:0 ""
+ SOTN_ArmedNeutrality:0 "Armed Neutrality"
+ SOTN_ArmedNeutrality_desc:0 ""
 
- SOTN_SupportHarmonicResistance:0 "The Green Corridor"
+ SOTN_SupportHarmonicResistance:0 "Legitimise Resistance Movements"
  SOTN_SupportHarmonicResistance_desc:0 ""
 
- SOTN_MaregyptHomeDefence:0 "Home Defence"
- SOTN_MaregyptHomeDefence_desc:0 ""
+ SOTN_HomeDefence:0 "Home Defence"
+ SOTN_HomeDefence_desc:0 ""
 
- SOTN_MaregyptNorthernAmbitions:0 "Zebrican Ambitions"
- SOTN_MaregyptNorthernAmbitions_desc:0 ""
+ SOTN_ZebricanAmbitions:0 "Zebrican Ambitions"
+ SOTN_ZebricanAmbitions_desc:0 ""
 
  SOTN_HarmonyShield:0 "In Harmony's Name"
  SOTN_HarmonyShield_desc:0 ""
 
- SOTN_ZebricanUnion:0 "The Khufu Plan"
- SOTN_ZebricanUnion_desc:0 ""
+ SOTN_SetyiPlan:0 "The Setyi-Maret Plan"
+ SOTN_SetyiPlan_desc:0 ""
 
- SOTN_MaregyptScienceTreaty:0 "Promote Scientific Collaboration"
- SOTN_MaregyptScienceTreaty_desc:0 ""
+ SOTN_SharedResearch:0 "Promote Scientific Collaboration"
+ SOTN_SharedResearch_desc:0 ""
 
- SOTN_MaregyptGreatWarIntervention:0 "The Canterlot Intervention"
- SOTN_MaregyptGreatWarIntervention_desc:0 ""
+ SOTN_CanterlotIntervention:0 "The Canterlot Intervention"
+ SOTN_CanterlotIntervention_desc:0 ""
 
  SOTN_MutualFriendshipTreaty:0 "Our Furred Brethren"
  SOTN_MutualFriendshipTreaty_desc:0 ""
 
- SOTN_MaregyptIrrenditism:0 "Re-Assert Maregyptian Claims"
+ SOTN_MaregyptIrrenditism:0 "Reassert Maregyptian Claims"
  SOTN_MaregyptIrrenditism_desc:0 ""
