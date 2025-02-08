@@ -12,9 +12,10 @@
 
  SOTN_AccessToThisFocus_tt:0 "We have access to this branch of the focus tree"
  SOTN_EventCompletion_tt:0 "This focus will be §Yautomatically§! completed through an §Yevent§!."
- SOTN_UnlockNationalFocus_tt:0 "[ROOT.GetName] unlocks the §Y"$FOCUS$"§! national focus,"
+ SOTN_UnlockNationalFocus_tt:0 "[ROOT.GetName] unlocks the §Y"$FOCUS$"§! national focus."
+ SOTN_DietIsOngoing_tt:0 "The §YRoyal Reforms§! are ongoing."
  
- #Focuses
+ #Focuses - Political
  SOTN_KingSpeech:0 "A Long-Expected Address"
  SOTN_KingSpeech_desc:0 ""
 
@@ -48,8 +49,7 @@
  SOTN_ClassicRevival:0 "Revive Classical Education"
  SOTN_ClassicRevival_desc:0 ""
 
-#  SOTN_VizierCabinet:0 "[Get_VizierCabinet_ScripLoc]"
- SOTN_VizierCabinet:0 "The Pony in the High Stable"
+ SOTN_VizierCabinet:0 "[Get_VizierCabinet_ScripLoc]"
  SOTN_VizierCabinet_desc:0 ""
 
  SOTN_RoyalDiet:0 "Convene the Royal Diet"
@@ -81,6 +81,43 @@
  SOTN_MaregyptRenaissance:0 "A Maregyptian Renaissance"
  SOTN_MaregyptRenaissance_desc:0 ""
  SOTN_ReformReached_tt:0 "Reform progress is greater than or equal to §Y[?SOTN_ReformGoal_var|%%]§! (currently §Y[?SOTN_ReformProgress_var|%%]§!)"
+
+ # Focuses - Neightk
+ SOTN_PromoteOptimism:0 "Rally Around the Ideal"
+ SOTN_PromoteOptimism_desc:0 ""
+
+ SOTN_BoldPromises:0 "Bold Promises"
+ SOTN_BoldPromises_desc:0 ""
+
+ SOTN_TowardsReformism:0 "Address the Diet"
+ SOTN_TowardsReformism_desc:0 ""
+
+ SOTN_FriendshipInTheVillages:0 "Friendship in the Village"
+ SOTN_FriendshipInTheVillages_desc:0 ""
+
+ SOTN_RuralProsperity:0 "Rural Prosperity"
+ SOTN_RuralProsperity_desc:0 ""
+
+ SOTN_FriendshipClubs:0 "Endorse Friendship Clubs"
+ SOTN_FriendshipClubs_desc:0 ""
+
+ SOTN_ParliamentAlliesHarmony:0 "The Necessary Game"
+ SOTN_ParliamentAlliesHarmony_desc:0 ""
+
+ SOTN_HarmonyAndTraditionalists:0 "Compromise with the Old Guard"
+ SOTN_HarmonyAndTraditionalists_desc:0 ""
+
+ SOTN_HarmonyAlone:0 "Absolute Harmony"
+ SOTN_HarmonyAlone_desc:0 ""
+
+ SOTN_ParliamentHarmonyComittee:0 "Direct the Makheru"
+ SOTN_ParliamentHarmonyComittee_desc:0 ""
+
+ SOTN_AdoptEquestrianCode:0 "Adopt the Equestrian Legal Code"
+ SOTN_AdoptEquestrianCode_desc:0 ""
+
+ SOTN_ReformRamaresesCode:0 "Reform the Ramerses Code"
+ SOTN_ReformRamaresesCode_desc:0 ""
 
  #Economy - Famine / Infrastructure
  SOTN_YearOfTheLocust:0 "Adress Food Shortages"
@@ -239,3 +276,73 @@
 
  SOTN_MaregyptIrrenditism:0 "Reassert Maregyptian Claims"
  SOTN_MaregyptIrrenditism_desc:0 ""
+
+ #Harmony wins in the Diet
+ SOTN_HarmonicReformWin:0 "Triumph of Harmony"
+ SOTN_HarmonicReformWin_desc:0 ""
+
+ SOTN_HarmonicLiberalism:0 "Reform from Within..."
+ SOTN_HarmonicLiberalism_desc:0 "
+
+ SOTN_EntrenchedLiberties:0 "To Everypony their Liberty"
+ SOTN_EntrenchedLiberties_Desc:0 ""
+
+ SOTN_HarmonyNotEquality:0 "Harmony, not Marksism!"
+ SOTN_HarmonyNotEquality_desc:0 ""
+
+ SOTN_ReconcileTheCentre:0 "Revive the Grand Coalition"
+ SOTN_ReconcileTheCentre_desc:0 ""
+
+ SOTN_ModerateSocialReform:0 "Promulgate Progressive Values"
+ SOTN_ModerateSocialReform_desc:0 ""
+
+ SOTN_CivilService:0 "The Civil Service Act"
+ SOTN_CivilService_desc:0 ""
+
+ SOTN_FriendshipReignited:0 "Friendship, Renewed"
+ SOTN_FriendshipReignited_desc:0 ""
+
+ SOTN_DefangNobility:0 "Defang the Nobility"
+ SOTN_DefangNobility_desc:0 ""
+
+ SOTN_AbolishTitulatures:0 "Abolish Titulatures"
+ SOTN_AbolishTitulatures_desc:0 ""
+
+ SOTN_CollaborateWitAristocrats:0 "Collaborate with the Nomarchy"
+ SOTN_CollaborateWitAristocrats_desc:0 ""
+
+ SOTN_OldOrder:0 "...or Without?"
+ SOTN_OldOrder_desc:0 ""
+
+ SOTN_AdvisoryConcil:0 "Disband the Advisory Council"
+ SOTN_AdvisoryConcil_desc:0 ""
+
+ SOTN_HarmonyThroughOrder:0 "Harmony Through Order"
+ SOTN_HarmonyThroughOrder_desc:0 ""
+
+ SOTN_AbolishViziership:0 "Revoke the Viziership"
+ SOTN_AbolishViziership_desc:0 ""
+
+ SOTN_AnnullParties:0 "A Truly Harmonic Society"
+ SOTN_AnnullParties_desc:0 ""
+
+ SOTN_TheNewSun:0 "Revival of Harmony"
+ SOTN_TheNewSun_desc:0 ""
+
+ SOTN_BanSocialists:0 "Suspend Anti-Royalist Organisations"
+ SOTN_BanSocialists_desc:0 ""
+
+ SOTN_NoMoreSupremacy:0 "Crush the Military Movement"
+ SOTN_NoMoreSupremacy_desc:0 ""
+ 
+ SOTN_PurifiedAdministration:0 "Suffer not the Unkind"
+ SOTN_PurifiedAdministration_desc:0 ""
+
+ SOTN_AgrarianConcessions:0 "Reward the Tiller and the Farmer"
+ SOTN_AgrarianConcessions_desc:0 ""
+
+ SOTN_NewEconomicPolicies:0 "A Fairer Maregypt"
+ SOTN_NewEconomicPolicies_desc:0 ""
+
+ SOTN_LiftTheBan:0 "Abolish the Three-Trot Ban"
+ SOTN_LiftTheBan_desc:0 ""

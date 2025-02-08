@@ -2,8 +2,8 @@
 
  #Debug Decisions
  SOTN_Debug_CycleVizier:0 "Appoint / Remove $SOTN_ShaaDoof$ as Vizier"
- SOTN_Debug_RemoveShaaDoof_tt:0 "Remove $SOTN_ShaaDoof$"
- SOTN_Debug_AppointShaaDoof_tt:0 "Appoint $SOTN_ShaaDoof$"
+ SOTN_Debug_RemoveShaaDoof_tt:0 "Remove $SOTN_character_ShaaDoof$ as Vizier"
+ SOTN_Debug_AppointShaaDoof_tt:0 "Appoint $SOTN_character_ShaaDoof$ as Vizier"
 
  SOTN_Debug_AddUnrestModifiers:0 "Add unrest modifiers to all owned states"
  SOTN_Debug_IncreaseUnrestInAllStates:0 "Increase unrest in all states"

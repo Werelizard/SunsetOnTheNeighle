@@ -197,6 +197,8 @@ if = {
 
 #Shadow on the Neighle Setup
 log = "[GetDateText] Begin Shadow on the Neighle Setup for [ROOT.GetName]."
+#Flags setup
+set_country_flag = SOTN_HarmonicPathUnlocked_flag
 ## Unrest setup
 SOTN_UnrestStartup_effect = yes
 set_country_flag = has_custom_advisors
@@ -279,5 +281,3 @@ add_ideas = {
 	SOTN_MaredjayArmy
 	SOTN_ScarsOfTheJulyUprising
 }
-
-#Diplomacy

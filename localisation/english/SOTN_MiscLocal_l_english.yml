@@ -20,8 +20,8 @@
  SOTN_MaredjayTech:0 "Maredjay"
 
  #Dynamic Localisation
- VizierCabinet_ShaaDoof:0 "The Pony in the High Stable"
- NeighktCabinet_ShaaDoof:0 "The Prodigy Enters"
+ SOTN_VizierCabinet_ShaaDoof:0 "The Pony in the High Stable"
+ SOTN_VizierCabinet_Neighkt:0 "The Prodigy Enters"
 
  #Modifier
  SOTN_UnrestChange_modifier:0 "Weekly Global Unrest Change"
