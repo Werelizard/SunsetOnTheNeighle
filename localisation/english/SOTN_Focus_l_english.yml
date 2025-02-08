@@ -83,7 +83,7 @@
  SOTN_ReformReached_tt:0 "Reform progress is greater than or equal to §Y[?SOTN_ReformGoal_var|%%]§! (currently §Y[?SOTN_ReformProgress_var|%%]§!)"
 
  # Focuses - Neightk
- SOTN_PromoteOptimism:0 "Rally Around the Ideal"
+ SOTN_PromoteOptimism:0 "Rally Around the Vizier"
  SOTN_PromoteOptimism_desc:0 ""
 
  SOTN_BoldPromises:0 "Bold Promises"
@@ -107,7 +107,7 @@
  SOTN_HarmonyAndTraditionalists:0 "Compromise with the Old Guard"
  SOTN_HarmonyAndTraditionalists_desc:0 ""
 
- SOTN_HarmonyAlone:0 "Absolute Harmony"
+ SOTN_HarmonyAlone:0 "Uncompromising Idealism"
  SOTN_HarmonyAlone_desc:0 ""
 
  SOTN_ParliamentHarmonyComittee:0 "Direct the Makheru"
