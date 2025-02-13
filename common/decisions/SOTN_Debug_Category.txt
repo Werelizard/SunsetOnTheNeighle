@@ -116,4 +116,19 @@ SOTN_Debug_Category = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
+
+	SOTN_TglTraditionWinFlag = {
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_flag = SOTN_TraditionalistWin_flag
+				}
+				clr_country_flag = SOTN_TraditionalistWin_flag
+			}
+			else = {
+				set_country_flag = SOTN_TraditionalistWin_flag
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
 }

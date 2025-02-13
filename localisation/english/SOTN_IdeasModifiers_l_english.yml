@@ -1,7 +1,5 @@
 ﻿l_english:
  # Country Ideas
- SOTN_FadingSun:0 "The Fading Sun"
- SOTN_FadingSun_desc:0 "Maregypt is no longer the realm it was. Once, it was the envy of all of Zebrica - a beacon of Harmony and prosperity for all. Now it is but a ruin, a blend of urban sprawl, disaffected estates and run-down farmland admist a field of millenia-old pyramids, temples and desert. A dying kingdom, it stands as one of the last fading bastions of Harmonic governance on the continent - with the ideals of old growing ever more unpopular as the days go by."
 
  SOTN_EquestrianComission:0 "Endebted Economy"
  SOTN_EquestrianComission_desc:0 "In the wake of the Storm King's rise and fall, King Khefer - pressured by Shaa Doof - negotiated an unpopular agreement with princess Celestia in order to salvage the country's economy. While this proved somewhat successfull in avoiding an immediate collapse of the Maregyptian economy, the payments for this assistance has now come due, driving the Maregyptian economy further towards bankruptcy."
@@ -16,12 +14,12 @@
  SOTN_Maredjay:0 "The Maredjay"
  SOTN_Maredjay_desc:0 "The Maredjay - the King's all-female royal elite - have long been granted a near-total dominance of the military, dictating its tactics, training regimens, selection process and even choosing the army's leadership. This has come at a great cost however, as their recent political entrenchment has trapped our armed forces in the past."
  SOTN_CanRecruitMaredjay_yes:0 "Can train and recruit Maredjay battalions: §GYes§!"
- SOTN_CanSelectAcademySpirit_no:0 "Can change the spirit of the army: §tNo§!"
+ SOTN_CanSelectAcademySpirit_no:0 "Can change the spirit of the academy: §RNo§!"
 
  SOTN_PoliticalUnrest:0 "Political Unrest"
- SOTN_PoliticalUnrest_desc:0 "§LThis is a §gdynamic§! modifier. It will update to reflect the rising £SOTN_unrest_text_icon §Yunrest§!§L throughout the nation.§T\n--------------\n§!Our nation is currently experiencing widespread unrest, tethering on the edge of a civil war, with only the vague promises of reform keeping it at bay."
+ SOTN_PoliticalUnrest_desc:0 "§LThis is a §gdynamic§! modifier. It will update to reflect the rising £SOTN_unrest_text_icon §Yunrest§!§L throughout the nation.§W\n--------------\n§!Our nation is currently experiencing widespread unrest, tethering on the edge of a civil war, with only the vague promises of reform keeping it at bay."
 
- SOTN_ScarsOfTheJulyUprising:0 "Socialist Crackdown"
+ SOTN_ScarsOfTheJulyUprising:0 "Anti-Socialist Sentiment"
  SOTN_ScarsOfTheJulyUprising_desc:0 "Shortly after the fall of the Storm King, a series of peaceful demonstrations, organised by the now defunct Agrarian Party, turned violent - though there were luckily no casualites reported. Whilst the Maredjay and the local authorities denied instigating it, the resulting mistrust has led to a crackdown on the state's part against percieved 'agitators'."
 
  SOTN_FamineInTheNeighle:0 "The Whithering Neighle"
@@ -59,9 +57,10 @@
 
  SOTN_PoliticalUnrest_Dynmod:0 "$SOTN_PoliticalUnrest$"
 
- SOTN_PoliticalUnrest_StabilityImpact_tt:0 "Stability:§W§! [?SOTN_UnrestImpact_var|+2%]"
- SOTN_PoliticalUnrest_PoliticalPowerFactorImpact_tt:0 "Political Power Gain:§W§! [?SOTN_UnrestImpactSmall_var|+2%]"
- SOTN_PoliticalUnrest_AverageUnrest_tt:0 "\nCurrent average £SOTN_unrest_text_icon unrest is: §t[?SOTN_Unrest_Average_var|%%]§!"
+ SOTN_PoliticalUnrest_StabilityImpact_tt:0 "Stability: [?SOTN_UnrestImpact_var|+2%]"
+ SOTN_PoliticalUnrest_PoliticalPowerFactorImpact_tt:0 "Political Power Gain: [?SOTN_UnrestImpactSmall_var|+2%]"
+ SOTN_PoliticalUnrest_WarSupportImpact_tt:0 "War Support: [?SOTN_UnrestImpact_var|+2%]"
+ SOTN_PoliticalUnrest_AverageUnrest_tt:0 "\nCurrent average £SOTN_unrest_text_icon unrest is: §R[?SOTN_Unrest_Average_var|%%]§!"
 
  #Dynamic Modifiers - States
  SOTN_MODIFIER_LocalUnrest_Dynmod:0 "Provincial Unrest"
@@ -84,4 +83,4 @@
  SOTN_MaredjayArmy:0 "Maredjay Commanders"
  SOTN_MaredjayArmy_desc:0 "$SOTN_Maredjay_desc$"
  SOTN_MaredjayArmy_tt:0 "New Officers: begin with the §Y"Maredjay Officer"§! trait."
- SOTN_MaredjayArmy_trigger_no:0 "§tCannot select a new spirit of the academy while §!§Y$SOTN_MaredjayArmy$§!§t is active!§!"
+ SOTN_MaredjayArmy_trigger_no:0 "§RCannot select a new spirit of the academy while §!§Y$SOTN_MaredjayArmy$§!§R is active!§!"

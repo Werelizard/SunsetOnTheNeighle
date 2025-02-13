@@ -22,7 +22,7 @@
  SOTN_VizierOffice:0 "One House, Two Crowns"
  SOTN_VizierOffice_desc:0 ""
 
- SOTN_SidelineKing:0 "Curtail Royal Power"
+ SOTN_SidelineKing:0 "Assert Vizierial Power"
  SOTN_SidelineKing_desc:0 ""
  SOTN_SidelineKing_tt:0 "Decreases the cost of all §YVizierial§! £decision_icon_small decisions by £pol_power §G15§!"
 
@@ -104,7 +104,7 @@
  SOTN_ParliamentAlliesHarmony:0 "The Necessary Game"
  SOTN_ParliamentAlliesHarmony_desc:0 ""
 
- SOTN_HarmonyAndTraditionalists:0 "Compromise with the Old Guard"
+ SOTN_HarmonyAndTraditionalists:0 "Align with the Old Guard"
  SOTN_HarmonyAndTraditionalists_desc:0 ""
 
  SOTN_HarmonyAlone:0 "Uncompromising Idealism"
@@ -277,6 +277,43 @@
  SOTN_MaregyptIrrenditism:0 "Reassert Maregyptian Claims"
  SOTN_MaregyptIrrenditism_desc:0 ""
 
+ # Military Focuses
+ SOTN_MilitaryBegin:0 "Review the Military"
+ SOTN_MilitaryBegin_desc:0 ""
+
+ SOTN_KickstartMilitary:0 "Reignite the Arms Industry"
+ SOTN_KickstartMilitary_desc:0 ""
+
+ SOTN_ExpandOil:0 "Secure our Fuel Supply"
+ SOTN_ExpandOil_desc:0 ""
+
+ SOTN_ArmyResearch:0 "Create the Special Research Division"
+ SOTN_ArmyResearch_desc:0 ""
+
+ SOTN_ProjectSutesh:0 "Project Sutesh"
+ SOTN_ProjectSutesh_desc:0 ""
+
+ SOTN_ManephisArsenal:0 "Expand the Manephis Arsenal"
+ SOTN_ManephisArsenal_desc:0 ""
+
+ SOTN_RoyalArsenal:0 "Renovate the Royal Armories"
+ SOTN_RoyalArsenal_desc:0 ""
+
+ SOTN_MilProduction:0 "Calibrate our Factories"
+ SOTN_MilProduction_desc:0 ""
+
+ SOTN_GunProduction:0 "To Every Hoof, a Rifle"
+ SOTN_GunProduction_desc:0 ""
+
+ SOTN_TankProduction:0 "A Fleet of Steel and Fire"
+ SOTN_TankProduction_desc:0 ""
+
+ SOTN_ResourcesExpansion:0 "Optimise Resource Exploitation"
+ SOTN_ResourcesExpansion_desc:0 ""
+
+ SOTN_OfficerCorps:0 "Address the High Command"
+ SOTN_OfficerCorps_desc:0 ""
+
  #Harmony wins in the Diet
  SOTN_HarmonicReformWin:0 "Triumph of Harmony"
  SOTN_HarmonicReformWin_desc:0 ""
@@ -320,7 +357,7 @@
  SOTN_HarmonyThroughOrder:0 "Harmony Through Order"
  SOTN_HarmonyThroughOrder_desc:0 ""
 
- SOTN_AbolishViziership:0 "Revoke the Viziership"
+ SOTN_AbolishViziership:0 "The King's Government"
  SOTN_AbolishViziership_desc:0 ""
 
  SOTN_AnnullParties:0 "A Truly Harmonic Society"
@@ -346,3 +383,35 @@
 
  SOTN_LiftTheBan:0 "Abolish the Three-Trot Ban"
  SOTN_LiftTheBan_desc:0 ""
+
+ # Ahhotep's Winning tree (reforms)
+
+ SOTN_MaredjayReformWin:0 "To the Victor, the Spoils"
+ SOTN_MaredjayReformWin_desc:0 ""
+ 
+ SOTN_AMaredjaySociety:0 "Expand the Maredjay"
+ SOTN_AMaredjaySociety_desc:0 ""
+
+ SOTN_AbsoluteStateControl:0 "Disband the Diet"
+ SOTN_AbsoluteStateControl_desc:0 ""
+
+ SOTN_EmphasiseTradition:0 "Emphasise Moralist Policies"
+ SOTN_EmphasiseTradition_desc:0 ""
+
+ SOTN_MaredjayNomarchy:0 "Purge the Nomarchy"
+ SOTN_MaredjayNomarchy_desc:0 ""
+
+ SOTN_NewSociety:0 "Subsume the Bureaucracy"
+ SOTN_NewSociety_desc:0 ""
+
+ SOTN_MightMakesRight:0 "Declare the Akha-Ta"
+ SOTN_MightMakesRight_desc:0 ""
+
+ SOTN_DeclareRegency:0 "The Perpetual Regency"
+ SOTN_DeclareRegency_desc:0 ""
+
+ SOTN_TowardsRevivalism:0 "An Organic State"
+ SOTN_TowardsRevivalism_desc:0 ""
+
+ SOTN_FriendshipIsAnIllusion:0 "Break the Chains that Bind"
+ SOTN_FriendshipIsAnIllusion_desc:0 ""

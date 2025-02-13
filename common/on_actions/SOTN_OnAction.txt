@@ -41,7 +41,9 @@ on_actions = {
 	}
 	on_startup = {
 		effect = {
-			MGY = {		
+			MGY = {	
+				#Flags setup
+				set_country_flag = trade_laws_blocked
 				#Initialise the event chain
 				SOTN_character_KingKhefer = {
 					unit_leader_event = {

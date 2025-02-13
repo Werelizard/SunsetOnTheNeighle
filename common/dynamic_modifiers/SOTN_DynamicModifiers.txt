@@ -5,6 +5,7 @@ SOTN_PoliticalUnrest_Dynmod = { #Hidden dynamic modifier to handle the effects o
     }
 	stability_factor = SOTN_UnrestImpact_var
 	political_power_factor = SOTN_UnrestImpactSmall_var
+	war_support_factor = SOTN_UnrestImpact_var
 }
 
 SOTN_MODIFIER_LocalUnrest_Dynmod = { #State modifier for the local unrest

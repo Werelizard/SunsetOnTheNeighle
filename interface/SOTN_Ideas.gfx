@@ -1,10 +1,6 @@
 spriteTypes = {
 	# Country Ideas
 	spriteType = {
-		name = "GFX_idea_SOTN_FadingSun"
-		texturefile = "gfx/interface/ideas/MGY/SOTN_FadingSun.dds"
-	}
-	spriteType = {
 		name = "GFX_idea_SOTN_FamineRisk"
 		texturefile = "gfx/interface/ideas/MGY/SOTN_FamineRisk.dds"
 	}
