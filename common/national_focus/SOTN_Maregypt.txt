@@ -2665,29 +2665,33 @@ focus_tree = {
 			focus = SOTN_SouthAutonomy
 		}
 	}
-	focus = {
-		id = SOTN_AttackTimbucktu
-		icon = GFX_SOTN_AttackTimbucktu
-		cost = 1
-		x = -1
-		y = 5
-		relative_position_id = SOTN_MaregyptSphereStart
-		prerequisite = {
-			focus = SOTN_KingOfZush
-		}
-		available = {
+	# focus = {
+	# 	id = SOTN_AttackTimbucktu
+	# 	icon = GFX_SOTN_AttackTimbucktu
+	# 	cost = 1
+	# 	x = 3
+	# 	y = 5
+	# 	relative_position_id = SOTN_MaregyptSphereStart
+	# 	prerequisite = {
+	# 		focus = SOTN_KingOfZush
+	# 		focus = SOTN_SouthAutonomy
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SOTN_ZebricanAmbitions
+	# 	}
+	# 	available = {
 			
-		}
-		bypass = {
+	# 	}
+	# 	bypass = {
 			
-		}
-		select_effect = {
+	# 	}
+	# 	select_effect = {
 			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AttackTimbucktu"	
-		}
-	}
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_AttackTimbucktu"	
+	# 	}
+	# }
 	focus = {
 		id = SOTN_SouthAutonomy
 		icon = GFX_SOTN_SouthAutonomy
@@ -2718,7 +2722,7 @@ focus_tree = {
 		id = SOTN_TakeAlwani
 		icon = GFX_SOTN_TakeAlwani
 		cost = 1
-		x = 1
+		x = 0
 		y = 5
 		relative_position_id = SOTN_MaregyptSphereStart
 		prerequisite = {
@@ -3209,11 +3213,10 @@ focus_tree = {
 		}
 	}
 	#
-	# Military Tree - Conflict between the "Young Officers" and the Maredjay
-	#
+	# Military Tree 
 	focus = {
 		id = SOTN_MilitaryBegin
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MilitaryBegin
 		cost = 1
 		x = 18
 		y = 0
@@ -3236,7 +3239,7 @@ focus_tree = {
 	# Military - Industry
 	focus = {
 		id = SOTN_KickstartMilitary
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_KickstartMilitary
 		cost = 1
 		x = -2
 		y = 1
@@ -3248,13 +3251,6 @@ focus_tree = {
 			OR = {
 				has_completed_focus = SOTN_PayDebts
 				has_completed_focus = SOTN_AbolishCommission
-			}
-			custom_trigger_tooltip = {
-				tooltip = SOTN_DietIsOngoing_tt
-				NOT = {
-					has_completed_focus = SOTN_MaregyptRenaissance
-				}
-				has_completed_focus = SOTN_RoyalDiet
 			}
 		}
 		bypass = {
@@ -3272,7 +3268,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ExpandOil
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ExpandOil
 		cost = 1
 		x = -6
 		y = 2
@@ -3298,7 +3294,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ArmyResearch
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ArmyResearch
 		cost = 1
 		x = -4
 		y = 2
@@ -3324,7 +3320,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ProjectSutesh
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ProjectSutesh
 		cost = 1
 		x = -5
 		y = 3
@@ -3350,7 +3346,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ManephisArsenal
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ManephisArsenal
 		cost = 1
 		x = -1
 		y = 3
@@ -3376,7 +3372,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_RoyalArsenal
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_RoyalArsenal
 		cost = 1
 		x = -2
 		y = 2
@@ -3402,7 +3398,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MilProduction
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MilProduction
 		cost = 1
 		x = -2
 		y = 4
@@ -3429,7 +3425,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_GunProduction
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_GunProduction
 		cost = 1
 		x = -2
 		y = 5
@@ -3455,7 +3451,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_TankProduction
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_TankProduction
 		cost = 1
 		x = -4
 		y = 5
@@ -3484,13 +3480,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ResourcesExpansion
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ResourcesExpansion
 		cost = 1
 		x = -3
 		y = 3
 		relative_position_id = SOTN_MilitaryBegin
 		prerequisite = {
-			focus = SOTN_ArmyResearch
+			focus = SOTN_KickstartMilitary
 		}
 		available = {
 			
@@ -3511,7 +3507,7 @@ focus_tree = {
 	# Military - Debate On Army Focus
 	focus = {
 		id = SOTN_OfficerCorps
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_OfficerCorps
 		cost = 1
 		x = 0
 		y = 1
@@ -3537,7 +3533,7 @@ focus_tree = {
 	#Military - Air Force
 	focus = {
 		id = SOTN_AirforceStart
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_AirforceStart
 		cost = 1
 		x = 0
 		y = 7
@@ -3588,7 +3584,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_AcesPrimacy
+		id = SOTN_LightAirPrimacy
 		icon = GFX_goal_unknown
 		cost = 1
 		x = -1
@@ -3607,7 +3603,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AcesPrimacy"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_LightAirPrimacy"	
 		}
 		mutually_exclusive = {
 		}
@@ -3716,7 +3712,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_AirGroundCoordination
+		id = SOTN_MediumAirSpecialisation
 		icon = GFX_goal_unknown
 		cost = 1
 		x = 0
@@ -3735,7 +3731,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AirGroundCoordination"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_MediumAirSpecialisation"	
 		}
 		mutually_exclusive = {
 		}
@@ -3748,7 +3744,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SOTN_GroundSupport
 		prerequisite = {
-			focus = SOTN_AirGroundCoordination
+			focus = SOTN_MediumAirSpecialisation
 		}
 		available = {
 			
@@ -3763,6 +3759,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_GroupedStrategies"	
 		}
 		mutually_exclusive = {
+			focus = SOTN_TacticalPrioritisation
 		}
 	}
 	focus = {
@@ -3773,7 +3770,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SOTN_GroundSupport
 		prerequisite = {
-			focus = SOTN_AirGroundCoordination
+			focus = SOTN_MediumAirSpecialisation
 		}
 		available = {
 			
@@ -3788,6 +3785,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TacticalPrioritisation"	
 		}
 		mutually_exclusive = {
+			focus = SOTN_GroupedStrategies
 		}
 	}
 	focus = {
@@ -3894,7 +3892,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_Paratroopers
+		id = SOTN_Interception
 		icon = GFX_goal_unknown
 		cost = 1
 		x = 1
@@ -3913,7 +3911,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_Paratroopers"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_Interception"	
 		}
 		mutually_exclusive = {
 		}
@@ -3975,7 +3973,7 @@ focus_tree = {
 	#Military - Naval Branch
 	focus = {
 		id = SOTN_NavyStart
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_NavyStart
 		cost = 1
 		x = 12
 		y = 7
@@ -4059,8 +4057,6 @@ focus_tree = {
 		relative_position_id = SOTN_NavyStart
 		prerequisite = {
 			focus = SOTN_RiverPatrols
-		}
-		prerequisite = {
 			focus = SOTN_NavyBases
 		}
 		available = {
@@ -4368,7 +4364,7 @@ focus_tree = {
 	#Military - Land Branch
 	focus = {
 		id = SOTN_ArmyStart
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ArmyStart
 		cost = 1
 		x = 6
 		y = 2
@@ -4650,7 +4646,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_WeasponsOfTomorrow
+		id = SOTN_WeaponsOfTomorrow
 		icon = GFX_goal_unknown
 		cost = 1
 		x = 1
@@ -4669,7 +4665,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_WeasponsOfTomorrow"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_WeaponsOfTomorrow"	
 		}
 		mutually_exclusive = {
 		}

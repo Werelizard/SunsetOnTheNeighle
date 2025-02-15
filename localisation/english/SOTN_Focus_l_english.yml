@@ -284,13 +284,13 @@
  SOTN_KickstartMilitary:0 "Reignite the Arms Industry"
  SOTN_KickstartMilitary_desc:0 ""
 
- SOTN_ExpandOil:0 "Secure our Fuel Supply"
+ SOTN_ExpandOil:0 "Nationalise the Keshtyu Oil Fields"
  SOTN_ExpandOil_desc:0 ""
 
  SOTN_ArmyResearch:0 "Create the Special Research Division"
  SOTN_ArmyResearch_desc:0 ""
 
- SOTN_ProjectSutesh:0 "Project Sutesh"
+ SOTN_ProjectSutesh:0 "As Sutesh Unto Usir"
  SOTN_ProjectSutesh_desc:0 ""
 
  SOTN_ManephisArsenal:0 "Expand the Manephis Arsenal"
@@ -299,20 +299,175 @@
  SOTN_RoyalArsenal:0 "Renovate the Royal Armories"
  SOTN_RoyalArsenal_desc:0 ""
 
- SOTN_MilProduction:0 "Calibrate our Factories"
+ SOTN_MilProduction:0 "The Royal Office of Military Engineering"
  SOTN_MilProduction_desc:0 ""
 
- SOTN_GunProduction:0 "To Every Hoof, a Rifle"
+ SOTN_GunProduction:0 "Mass-Produced Rifles"
  SOTN_GunProduction_desc:0 ""
 
- SOTN_TankProduction:0 "A Fleet of Steel and Fire"
+ SOTN_TankProduction:0 "Chariots For the New Age"
  SOTN_TankProduction_desc:0 ""
 
- SOTN_ResourcesExpansion:0 "Optimise Resource Exploitation"
+ SOTN_ResourcesExpansion:0 "Strategic Resource Extraction"
  SOTN_ResourcesExpansion_desc:0 ""
 
  SOTN_OfficerCorps:0 "Address the High Command"
  SOTN_OfficerCorps_desc:0 ""
+
+ SOTN_AirforceStart:0 "Seize the Heavens"
+ SOTN_AirforceStart_desc:0 ""
+
+ SOTN_BuildAirfields:0 "Expand the National Airfields"
+ SOTN_BuildAirfields_desc:0 ""
+
+ SOTN_RadarProject:0 "The S.H.U. Project"
+
+ SOTN_AirSuperiority:0 "Master the Skies"
+ SOTN_AirSuperiority_desc:0 ""
+
+ SOTN_LightAirPrimacy:0 "Prioritise Agility"
+ SOTN_LightAirPrimacy_desc:0 ""
+
+ SOTN_AirSpecialisation:0 "Squadron to Squadron Combat"
+ SOTN_AirSpecialisation_desc:0 ""
+
+ SOTN_MareJockeys:0 "Best of the Best"
+ SOTN_MareJockeys_desc:0 ""
+
+ SOTN_AntiAirCombat:0 "Anti-Air Defences"
+ SOTN_AntiAirCombat_desc:0 ""
+
+ SOTN_GroundSupport:0 "The Wing and The Horeshoe"
+ SOTN_GroundSupport_desc:0 ""
+
+ SOTN_MediumAirSpecialisation:0 "Dive Bomber Specialisation"
+ SOTN_MediumAirSpecialisation_desc:0 ""
+
+ SOTN_GroupedStrategies:0 "Air-to-Air Coordination"
+ SOTN_GroupedStrategies_desc:0 ""
+
+ SOTN_TacticalPrioritisation:0 "Ground-to-Air Coordination"
+ SOTN_TacticalPrioritisation_desc:0 ""
+
+ SOTN_NightOperations:0 "Soaring Under the Moonlight"
+ SOTN_NightOperations_desc:0 ""
+
+ SOTN_LongOperations:0 "Long-Range Flying"
+ SOTN_LongOperations_desc:0 ""
+
+ SOTN_CoordinatedRaids:0 "Strategic Targeting Prioritisation"
+ SOTN_CoordinatedRaids_desc:0 ""
+
+ SOTN_HorusProject:0 "Expand He-RU Facilities"
+ SOTN_HorusProject_desc:0 ""
+ 
+ SOTN_Interception:0 "Death From Above"
+ SOTN_Interception_desc:0 ""
+
+ SOTN_NavyStart:0 "From the Neighle and into the Wadj-Ur"
+ SOTN_NavyStart_desc:0 ""
+
+ SOTN_NavyBases:0 "New Delta Dockyards"
+ SOTN_NavyBases_desc:0 ""
+
+ SOTN_RiverPatrols:0 "Fortify the Coastline"
+ SOTN_RiverPatrols_desc:0 ""
+
+ SOTN_DevelopMarines:0 "Shore-to-Shore Deployment"
+ SOTN_DevelopMarines_desc:0 ""
+
+ SOTN_OverseasOperations:0 "Support Overseas Operations"
+ SOTN_OverseasOperations_desc:0 ""
+
+ SOTN_LightNavy:0 "Naval Deterrence"
+ SOTN_LightNavy_desc:0 ""
+
+ SOTN_AntiSubmarine:0 "Anti-Submarine Manoeuvres"
+ SOTN_AntiSubmarine_desc:0 ""
+
+ SOTN_ExpandMerchantMarine:0 "Expand the Merchant Marine"
+ SOTN_ExpandMerchantMarine_desc:0 ""
+
+ SOTN_EscortFocus:0 "Dedicated Convoy Escorts"
+ SOTN_EscortFocus_desc:0 ""
+
+ SOTN_FlySwatters:0 "Naval Fly Swatters"
+ SOTN_FlySwatters_desc:0 ""
+
+ SOTN_AmbitiousNavy:0 "Naval Supremacy"
+ SOTN_AmbitiousNavy_desc:0 ""
+
+ SOTN_ModernShips:0 "Commission a High Seas Fleet"
+ SOTN_ModernShips_desc:0 ""
+
+ SOTN_AdmiraltyReinforcement:0 "The [ROOT.Capital.GetName] Naval Academy"
+ SOTN_AdmiraltyReinforcement_desc:0 ""
+
+ SOTN_DominateTheWaves:0 "Dominate the Waves"
+ SOTN_DominateTheWaves_desc:0 ""
+
+ SOTN_MobileBases:0 "Floating Bases"
+ SOTN_MobileBases_desc:0 ""
+
+ SOTN_ArmyStart:0 "The [ROOT.GetAdjective] Army"
+ SOTN_ArmyStart_desc:0 ""
+
+ SOTN_VictoryOfDiscipline:0 "Victory Through Discipline"
+ SOTN_VictoryOfDiscipline_desc:0 ""
+
+ SOTN_NewAcademies:0 "Expand Officer Training"
+ SOTN_NewAcademies_desc:0 ""
+
+ SOTN_WarOfLogistics:0 "War of Logistics"
+ SOTN_WarOfLogistics_desc:0 ""
+
+ SOTN_ExpandTraining:0 "Large-Scale Excercises"
+ SOTN_ExpandTraining_desc:0 ""
+
+ SOTN_HonourAndGlory:0 "Honour and Glory"
+ SOTN_HonourAndGlory_desc:0 ""
+
+ SOTN_DefeatInDetail:0 "Defeat in Detail"
+ SOTN_DefeatInDetail_desc:0 ""
+
+ SOTN_VictoryOfScience:0 "Victory Through Arms"
+ SOTN_VictoryOfScience_desc:0 ""
+
+ SOTN_MotorisedArmy:0 "Expansive Motorisation"
+ SOTN_MotorisedArmy_desc:0 ""
+
+ SOTN_TankDrive:0 "Large-Scale Armour Buildup"
+ SOTN_TankDrive_desc:0 ""
+
+ SOTN_WarfareOfManeouver:0 "Manoeuvre Warfare"
+ SOTN_WarfareOfManeouver_desc:0 ""
+
+ SOTN_WeaponsOfTomorrow:0 "The Weapons of Tomorrow"
+ SOTN_WeaponsOfTomorrow_desc:0 ""
+
+ SOTN_CombinedArms:0 "Combined Arms Doctrine"
+ SOTN_CombinedArms_desc:0 ""
+
+ SOTN_ModernFirearms:0 "Adopt Modern Firearms"
+ SOTN_ModernFirearms_desc:0 ""
+
+ SOTN_RadiosAndComms:0 "Establish Radio Companies"
+ SOTN_RadiosAndComms_desc:0 ""
+
+ SOTN_ModernArtillery:0 "Backbone of the Infantry"
+ SOTN_ModernArtillery_desc:0 ""
+
+ SOTN_ExpandNursing:0 "Recruit the Hem-Sekhm"
+ SOTN_ExpandNursing_desc:0 ""
+
+ SOTN_ReviewTraining:0 "Streamline the Maredjay's Organisation"
+ SOTN_ReviewTraining_desc:0 ""
+
+ SOTN_LoyalArmy:0 "A Loyal Army"
+ SOTN_LoyalArmy_desc:0 ""
+
+ SOTN_IndependentArmy:0 "An Independent Army"
+ SOTN_IndependentArmy_desc:0 ""
 
  #Harmony wins in the Diet
  SOTN_HarmonicReformWin:0 "Triumph of Harmony"

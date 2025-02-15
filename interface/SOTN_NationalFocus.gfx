@@ -1527,4 +1527,335 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    # Military focuses
+    spriteType = {
+		name = "GFX_SOTN_MilitaryBegin"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MilitaryBegin.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MilitaryBegin_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MilitaryBegin.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MilitaryBegin.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_KickstartMilitary"
+		texturefile = "gfx/interface/goals/MGY/SOTN_KickstartMilitary.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_KickstartMilitary_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_KickstartMilitary.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_KickstartMilitary.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ExpandOil"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ExpandOil.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ExpandOil_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ExpandOil.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ExpandOil.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ArmyResearch"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ArmyResearch.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ArmyResearch_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ArmyResearch.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ArmyResearch.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ProjectSutesh"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ProjectSutesh.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ProjectSutesh_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ProjectSutesh.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ProjectSutesh.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ManephisArsenal"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ManephisArsenal.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ManephisArsenal_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ManephisArsenal.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ManephisArsenal.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_RoyalArsenal"
+		texturefile = "gfx/interface/goals/MGY/SOTN_RoyalArsenal.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_RoyalArsenal_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_RoyalArsenal.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_RoyalArsenal.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MilProduction"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MilProduction.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MilProduction_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MilProduction.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MilProduction.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_GunProduction"
+		texturefile = "gfx/interface/goals/MGY/SOTN_GunProduction.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_GunProduction_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_GunProduction.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_GunProduction.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_TankProduction"
+		texturefile = "gfx/interface/goals/MGY/SOTN_TankProduction.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_TankProduction_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_TankProduction.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_TankProduction.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ResourcesExpansion"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ResourcesExpansion.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ResourcesExpansion_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ResourcesExpansion.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ResourcesExpansion.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_OfficerCorps"
+		texturefile = "gfx/interface/goals/MGY/SOTN_OfficerCorps.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_OfficerCorps_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_OfficerCorps.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_OfficerCorps.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_NavyStart"
+		texturefile = "gfx/interface/goals/MGY/SOTN_NavyStart.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_NavyStart_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_NavyStart.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_NavyStart.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_AirforceStart"
+		texturefile = "gfx/interface/goals/MGY/SOTN_AirforceStart.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_AirforceStart_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_AirforceStart.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_AirforceStart.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ArmyStart"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ArmyStart.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ArmyStart_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ArmyStart.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ArmyStart.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 }
