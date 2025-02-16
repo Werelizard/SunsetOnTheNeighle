@@ -1858,4 +1858,158 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    spriteType = {
+		name = "GFX_SOTN_VictoryOfDiscipline"
+		texturefile = "gfx/interface/goals/MGY/SOTN_VictoryOfDiscipline.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_VictoryOfDiscipline_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_VictoryOfDiscipline.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_VictoryOfDiscipline.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_VictoryOfScience"
+		texturefile = "gfx/interface/goals/MGY/SOTN_VictoryOfScience.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_VictoryOfScience_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_VictoryOfScience.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_VictoryOfScience.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_NewAcademies"
+		texturefile = "gfx/interface/goals/MGY/SOTN_NewAcademies.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_NewAcademies_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_NewAcademies.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_NewAcademies.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_WarOfLogistics"
+		texturefile = "gfx/interface/goals/MGY/SOTN_WarOfLogistics.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_WarOfLogistics_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_WarOfLogistics.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_WarOfLogistics.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ExpandTraining"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ExpandTraining.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ExpandTraining_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ExpandTraining.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ExpandTraining.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_HonourAndGlory"
+		texturefile = "gfx/interface/goals/MGY/SOTN_HonourAndGlory.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_HonourAndGlory_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_HonourAndGlory.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_HonourAndGlory.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_DefeatInDetail"
+		texturefile = "gfx/interface/goals/MGY/SOTN_DefeatInDetail.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_DefeatInDetail_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_DefeatInDetail.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_DefeatInDetail.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 }

@@ -3029,38 +3029,38 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_HomeDefence"	
 		}
 	}
-	focus = {
-		id = SOTN_ZebricanAmbitions
-		icon = GFX_SOTN_ZebricanAmbitions
-		cost = 1
-		x = 0
-		y = 4
-		relative_position_id = SOTN_EyeOfStorm
-		prerequisite = {
-			focus = SOTN_InterveneZumidia
-		}
-		available = {
+	# focus = {
+	# 	id = SOTN_ZebricanAmbitions
+	# 	icon = GFX_SOTN_ZebricanAmbitions
+	# 	cost = 1
+	# 	x = 0
+	# 	y = 4
+	# 	relative_position_id = SOTN_EyeOfStorm
+	# 	prerequisite = {
+	# 		focus = SOTN_InterveneZumidia
+	# 	}
+	# 	available = {
 			
-		}
-		bypass = {
+	# 	}
+	# 	bypass = {
 			
-		}
-		select_effect = {
+	# 	}
+	# 	select_effect = {
 			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ZebricanAmbitions"	
-		}
-	}
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_ZebricanAmbitions"	
+	# 	}
+	# }
 	focus = {
 		id = SOTN_HarmonyShield
 		icon = GFX_SOTN_HarmonyShield
 		cost = 1
 		x =0
-		y = 5
+		y = 4
 		relative_position_id = SOTN_EyeOfStorm
 		prerequisite = {
-			focus = SOTN_ZebricanAmbitions
+			focus = SOTN_InterveneZumidia
 		}
 		available = {
 			
@@ -3083,11 +3083,11 @@ focus_tree = {
 		icon = GFX_SOTN_SetyiPlan
 		cost = 1
 		x = 2
-		y = 5
+		y = 4
 		relative_position_id = SOTN_EyeOfStorm
 		prerequisite = {
-			focus = SOTN_ZebricanAmbitions
 			focus = SOTN_ArmedNeutrality
+			focus = SOTN_InterveneZumidia
 		}
 		available = {
 			
@@ -4389,7 +4389,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_VictoryOfDiscipline
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_VictoryOfDiscipline
 		cost = 1
 		x = -4
 		y = 1
@@ -4415,7 +4415,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_NewAcademies
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_NewAcademies
 		cost = 1
 		x = -1
 		y = 1
@@ -4440,7 +4440,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_WarOfLogistics
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_WarOfLogistics
 		cost = 1
 		x = 1
 		y = 1
@@ -4465,7 +4465,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ExpandTraining
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ExpandTraining
 		cost = 1
 		x = 0
 		y = 2
@@ -4493,7 +4493,7 @@ focus_tree = {
 	}
 	focus = {		
 		id = SOTN_HonourAndGlory
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_HonourAndGlory
 		cost = 1
 		x = -1
 		y = 3
@@ -4518,7 +4518,7 @@ focus_tree = {
 	}
 	focus = {		
 		id = SOTN_DefeatInDetail
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_DefeatInDetail
 		cost = 1
 		x = 1
 		y = 3
@@ -4543,7 +4543,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_VictoryOfScience
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_VictoryOfScience
 		cost = 1
 		x = 4
 		y = 1

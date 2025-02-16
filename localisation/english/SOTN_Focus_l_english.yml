@@ -421,7 +421,7 @@
  SOTN_WarOfLogistics:0 "War of Logistics"
  SOTN_WarOfLogistics_desc:0 ""
 
- SOTN_ExpandTraining:0 "Large-Scale Excercises"
+ SOTN_ExpandTraining:0 "Decisive Planning"
  SOTN_ExpandTraining_desc:0 ""
 
  SOTN_HonourAndGlory:0 "Honour and Glory"
@@ -430,7 +430,7 @@
  SOTN_DefeatInDetail:0 "Defeat in Detail"
  SOTN_DefeatInDetail_desc:0 ""
 
- SOTN_VictoryOfScience:0 "Victory Through Arms"
+ SOTN_VictoryOfScience:0 "Victory Through Technology"
  SOTN_VictoryOfScience_desc:0 ""
 
  SOTN_MotorisedArmy:0 "Expansive Motorisation"
@@ -460,7 +460,7 @@
  SOTN_ExpandNursing:0 "Recruit the Hem-Sekhm"
  SOTN_ExpandNursing_desc:0 ""
 
- SOTN_ReviewTraining:0 "Streamline the Maredjay's Organisation"
+ SOTN_ReviewTraining:0 "Reform the Maredjay"
  SOTN_ReviewTraining_desc:0 ""
 
  SOTN_LoyalArmy:0 "A Loyal Army"
