@@ -4569,7 +4569,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MotorisedArmy
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MotorisedArmy
 		cost = 1
 		x = -1
 		y = 1
@@ -4594,7 +4594,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_TankDrive
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_TankDrive
 		cost = 1
 		x = 1
 		y = 1
@@ -4619,7 +4619,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_WarfareOfManeouver
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_WarfareOfManeouver
 		cost = 1
 		x = 0
 		y = 2
@@ -4647,7 +4647,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_WeaponsOfTomorrow
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_WeaponsOfTomorrow
 		cost = 1
 		x = 1
 		y = 3
@@ -4672,7 +4672,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_CombinedArms
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_CombinedArms
 		cost = 1
 		x = -1
 		y = 3

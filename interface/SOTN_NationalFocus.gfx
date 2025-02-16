@@ -2012,4 +2012,114 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    spriteType = {
+		name = "GFX_SOTN_MotorisedArmy"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MotorisedArmy.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MotorisedArmy_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MotorisedArmy.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MotorisedArmy.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_TankDrive"
+		texturefile = "gfx/interface/goals/MGY/SOTN_TankDrive.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_TankDrive_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_TankDrive.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_TankDrive.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_WarfareOfManeouver"
+		texturefile = "gfx/interface/goals/MGY/SOTN_WarfareOfManeouver.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_WarfareOfManeouver_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_WarfareOfManeouver.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_WarfareOfManeouver.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_WeaponsOfTomorrow"
+		texturefile = "gfx/interface/goals/MGY/SOTN_WeaponsOfTomorrow.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_WeaponsOfTomorrow_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_WeaponsOfTomorrow.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_WeaponsOfTomorrow.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_CombinedArms"
+		texturefile = "gfx/interface/goals/MGY/SOTN_CombinedArms.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_CombinedArms_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_CombinedArms.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_CombinedArms.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 }
