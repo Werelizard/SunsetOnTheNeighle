@@ -264,7 +264,8 @@ activate_advisor = SOTN_character_Narmare
 ##New Ideas + EaW specs
 add_ideas = {
 	SOTN_PoliticalUnrest
-	SOTN_EquestrianComission
+	SOTN_EndebtedEconomy
+	SOTN_EquestrianInvestment
 	SOTN_FamineRisk
 	SOTN_Maredjay
 	volunteer_only

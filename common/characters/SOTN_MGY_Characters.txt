@@ -698,7 +698,7 @@ characters = {
 				SOTN_EquestrianCommission_Trait
 			}
 			available = {
-				has_idea = SOTN_EquestrianComission
+				has_idea = SOTN_EndebtedEconomy
 			}
 		}
 	}

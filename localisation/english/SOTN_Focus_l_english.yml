@@ -302,7 +302,7 @@
  SOTN_MilProduction:0 "The Royal Office of Military Engineering"
  SOTN_MilProduction_desc:0 ""
 
- SOTN_GunProduction:0 "Mass-Produced Rifles"
+ SOTN_GunProduction:0 "Scaled-Up Rifle Production"
  SOTN_GunProduction_desc:0 ""
 
  SOTN_TankProduction:0 "Chariots For the New Age"
@@ -317,7 +317,7 @@
  SOTN_AirforceStart:0 "Seize the Heavens"
  SOTN_AirforceStart_desc:0 ""
 
- SOTN_BuildAirfields:0 "Expand the National Airfields"
+ SOTN_BuildAirfields:0 "The Trotanis Air Base"
  SOTN_BuildAirfields_desc:0 ""
 
  SOTN_RadarProject:0 "The S.H.U. Project"
@@ -331,10 +331,10 @@
  SOTN_AirSpecialisation:0 "Squadron to Squadron Combat"
  SOTN_AirSpecialisation_desc:0 ""
 
- SOTN_MareJockeys:0 "Best of the Best"
+ SOTN_MareJockeys:0 "Daring Marejockeys"
  SOTN_MareJockeys_desc:0 ""
 
- SOTN_AntiAirCombat:0 "Anti-Air Defences"
+ SOTN_AntiAirCombat:0 "Airspace Denial Stratagem"
  SOTN_AntiAirCombat_desc:0 ""
 
  SOTN_GroundSupport:0 "The Wing and The Horeshoe"
@@ -355,7 +355,7 @@
  SOTN_LongOperations:0 "Long-Range Flying"
  SOTN_LongOperations_desc:0 ""
 
- SOTN_CoordinatedRaids:0 "Strategic Targeting Prioritisation"
+ SOTN_CoordinatedRaids:0 "Scorched Skies Doctrine"
  SOTN_CoordinatedRaids_desc:0 ""
 
  SOTN_HorusProject:0 "Expand He-RU Facilities"
@@ -448,16 +448,16 @@
  SOTN_CombinedArms:0 "Mechanized Waves"
  SOTN_CombinedArms_desc:0 ""
 
- SOTN_ModernFirearms:0 "Adopt Modern Firearms"
+ SOTN_ModernFirearms:0 "Hire Griffonian Gunsmiths"
  SOTN_ModernFirearms_desc:0 ""
 
- SOTN_RadiosAndComms:0 "Establish Radio Companies"
+ SOTN_RadiosAndComms:0 "Portable Radios"
  SOTN_RadiosAndComms_desc:0 ""
 
  SOTN_ModernArtillery:0 "Backbone of the Infantry"
  SOTN_ModernArtillery_desc:0 ""
 
- SOTN_ExpandNursing:0 "Recruit the Hem-Sekhm"
+ SOTN_ExpandNursing:0 "Formalise the Hem-Sekhm"
  SOTN_ExpandNursing_desc:0 ""
 
  SOTN_ReviewTraining:0 "Reform the Maredjay"

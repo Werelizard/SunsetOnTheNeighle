@@ -1,12 +1,14 @@
 ﻿l_english:
  # Country Ideas
 
- SOTN_EquestrianComission:0 "Endebted Economy"
- SOTN_EquestrianComission_desc:0 "In the wake of the Storm King's rise and fall, King Khefer - pressured by Shaa Doof - negotiated an unpopular agreement with princess Celestia in order to salvage the country's economy. While this proved somewhat successfull in avoiding an immediate collapse of the Maregyptian economy, the payments for this assistance has now come due, driving the Maregyptian economy further towards bankruptcy."
- SOTN_EquestrianComission_EnforcedFreeTrade_tt:0 "Can change trade laws: §RNo§!"
-
- SOTN_EquestrianComissionWorse:0 "Financial Crisis"
- SOTN_EquestrianComissionWorse_desc:0 "$SOTN_EquestrianComission_desc$"
+ SOTN_EndebtedEconomy:0 "Endebted Economy"
+ SOTN_EndebtedEconomy_desc:0 "In the wake of the Storm King's rise and fall, King Khefer - pressured by Shaa Doof - negotiated an unpopular agreement with princess Celestia in order to salvage the country's economy. While this proved somewhat successfull in avoiding an immediate collapse of the Maregyptian economy, the payments for this assistance has now come due, driving the Maregyptian economy further towards bankruptcy."
+ 
+ SOTN_EquestrianInvestment:0 "Equestrian-Hippogriffan Friendship and Prosperity Commission"
+ SOTN_EquestrianInvestment_desc:0 "As part of efforts to sustain the light of Harmony in Maregypt, substantial investments by both Equestria and Hippogrifia were agreed upon, with the aim to promote modernisation and stabilise the Neighle valley from further spiralling into financial oblivion. Thus the EHFPC was born. Of course, this agreement has elicited predictable backlash and become one of the most popular wedge issues throughout all sides of the political divide."
+ SOTN_ExtraCivilianFactory_1_tt:0 "Off-Map Civilian Factories: §G1§!"
+ SOTN_ExtraCivilianFactory_2_tt:0 "Off-Map Civilian Factories: §G2§!"
+ SOTN_EnforcedFreeTrade_tt:0 "Can change trade laws: §RNo§!"
 
  SOTN_FamineRisk:0 "The Long Drought"
  SOTN_FamineRisk_desc:0 "Whilst the bounty of the Neighle has proved miraculous in its own, the river remains as unpredictable as it is capricious. The recent flood was dire, leaving many farms deserted and innumerable fields left to whither under the blazing sun. Many amongst the administration fear that we may be staring down the barrel of a potential famine..."
@@ -53,7 +55,7 @@
  SOTN_Vizier_ShaaDoof:0 "Shaa Doof"
 
  #Dynamic Modifiers - Countries
- SOTN_EquestrianComission_Dynmod:0 "$SOTN_EquestrianComission$"
+ SOTN_EndebtedEconomy_Dynmod:0 "$SOTN_EndebtedEconomy$"
 
  SOTN_PoliticalUnrest_Dynmod:0 "$SOTN_PoliticalUnrest$"
 

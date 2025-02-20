@@ -34,7 +34,7 @@ SOTN_EquestrianDebts_Category = {
 	visible = {
 		always = yes
 		original_tag = MGY
-		has_idea = SOTN_EquestrianComission
+		has_idea = SOTN_EndebtedEconomy
 	}
 	visible_when_empty = yes
 }

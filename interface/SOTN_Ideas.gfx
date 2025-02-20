@@ -25,12 +25,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/MGY/SOTN_Maredjay.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SOTN_EquestrianComission"
-		texturefile = "gfx/interface/ideas/MGY/SOTN_EquestrianComission.dds"
+		name = "GFX_idea_SOTN_EndebtedEconomy"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_EndebtedEconomy.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SOTN_EquestrianComissionWorse"
-		texturefile = "gfx/interface/ideas/MGY/SOTN_EquestrianComission.dds"
+		name = "GFX_idea_SOTN_EquestrianInvestment"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_EquestrianInvestment.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SOTN_PoliticalUnrest"

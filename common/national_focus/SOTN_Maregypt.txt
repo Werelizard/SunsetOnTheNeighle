@@ -3558,7 +3558,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_AirSuperiority
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_AirSuperiority
 		cost = 1
 		x = -4
 		y = 1
@@ -3584,8 +3584,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_LightAirPrimacy
-		icon = GFX_goal_unknown
+		id = SOTN_AirSpecialisation
+		icon = GFX_SOTN_AirSpecialisation
 		cost = 1
 		x = -1
 		y = 1
@@ -3609,8 +3609,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_AirSpecialisation
-		icon = GFX_goal_unknown
+		id = SOTN_LightAirPrimacy
+		icon = GFX_SOTN_LightAirPrimacy
 		cost = 1
 		x = 0
 		y = 2
@@ -3635,13 +3635,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MareJockeys
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MareJockeys
 		cost = 1
 		x = -1
 		y = 3
 		relative_position_id = SOTN_AirSuperiority
 		prerequisite = {
-			focus = SOTN_AirSpecialisation
+			focus = SOTN_LightAirPrimacy
 		}
 		available = {
 			
@@ -3660,13 +3660,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_AntiAirCombat
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_AntiAirCombat
 		cost = 1
 		x = 1
 		y = 3
 		relative_position_id = SOTN_AirSuperiority
 		prerequisite = {
-			focus = SOTN_AirSpecialisation
+			focus = SOTN_LightAirPrimacy
 			focus = SOTN_GroupedStrategies
 		}
 		available = {
@@ -3686,7 +3686,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_GroundSupport
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_GroundSupport
 		cost = 1
 		x = 0
 		y = 1
@@ -3713,7 +3713,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MediumAirSpecialisation
-		icon = GFX_goal_unknown
+		icon = SOTN_MediumAirSpecialisation
 		cost = 1
 		x = 0
 		y = 1
@@ -3738,7 +3738,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_GroupedStrategies
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_GroupedStrategies
 		cost = 1
 		x = -1
 		y = 2
@@ -3764,7 +3764,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_TacticalPrioritisation
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_TacticalPrioritisation
 		cost = 1
 		x = 1
 		y = 2
@@ -3790,7 +3790,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_LongOperations
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_LongOperations
 		cost = 1
 		x = 4
 		y = 1
@@ -3817,7 +3817,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_CoordinatedRaids
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_CoordinatedRaids
 		cost = 1
 		x = 1
 		y = 1
@@ -3842,7 +3842,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_HorusProject
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_HorusProject
 		cost = 1
 		x = 0
 		y = 2
@@ -3918,7 +3918,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_BuildAirfields
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_BuildAirfields
 		cost = 1
 		x = -2
 		y = 2
@@ -3945,7 +3945,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_RadarProject
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_RadarProject
 		cost = 1
 		x = 2
 		y = 2
@@ -4698,7 +4698,7 @@ focus_tree = {
 	
 	focus = {
 		id = SOTN_ModernFirearms
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ModernFirearms
 		cost = 1
 		x = 2
 		y = 2
@@ -4724,7 +4724,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_RadiosAndComms
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_RadiosAndComms
 		cost = 1
 		x = 3
 		y = 1
@@ -4750,7 +4750,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ModernArtillery
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ModernArtillery
 		cost = 1
 		x = -2
 		y = 2
@@ -4776,7 +4776,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ExpandNursing
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ExpandNursing
 		cost = 1
 		x = -3
 		y = 1
@@ -4802,7 +4802,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ReviewTraining
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ReviewTraining
 		cost = 1
 		x = 0
 		y = 3
@@ -4828,7 +4828,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_LoyalArmy
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_LoyalArmy
 		cost = 1
 		x = -1
 		y = 1
@@ -4854,7 +4854,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_IndependentArmy
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_IndependentArmy
 		cost = 1
 		x = 1
 		y = 1
