@@ -4286,7 +4286,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ModernShips
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ModernShips
 		cost = 1
 		x = -1
 		y = 1
@@ -4310,8 +4310,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_AdmiraltyReinforcement
-		icon = GFX_goal_unknown
+		id = SOTN_AgressiveNavy
+		icon = GFX_SOTN_AgressiveNavy
 		cost = 1
 		x = 1
 		y = 1
@@ -4329,14 +4329,14 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AdmiraltyReinforcement"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AgressiveNavy"	
 		}
 		mutually_exclusive = {
 		}
 	}
 	focus = {
 		id = SOTN_DominateTheWaves
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_DominateTheWaves
 		cost = 1
 		x = 0
 		y = 2
@@ -4345,7 +4345,7 @@ focus_tree = {
 			focus = SOTN_ModernShips
 		}
 		prerequisite = {
-			focus = SOTN_AdmiraltyReinforcement
+			focus = SOTN_AgressiveNavy
 		}
 		available = {
 			
@@ -4364,7 +4364,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MobileBases
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_MobileBases
 		cost = 1
 		x = -1
 		y = 3

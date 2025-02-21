@@ -373,7 +373,7 @@
  SOTN_NavyBases:0 "Renovate the Sea-Smithy"
  SOTN_NavyBases_desc:0 ""
 
- SOTN_ModernNavyDoctrine:0 "A New Generation of Admirals"
+ SOTN_ModernNavyDoctrine:0 "The [ROOT.Capital.GetName] Naval Academy"
  SOTN_ModernNavyDoctrine_desc:0 ""
 
  SOTN_DevelopMarines:0 "Shore-to-Shore Deployment"
@@ -403,8 +403,8 @@
  SOTN_ModernShips:0 "Commission a High Seas Fleet"
  SOTN_ModernShips_desc:0 ""
 
- SOTN_AdmiraltyReinforcement:0 "The [ROOT.Capital.GetName] Naval Academy"
- SOTN_AdmiraltyReinforcement_desc:0 ""
+ SOTN_AgressiveNavy:0 "Ba en Sebek"
+ SOTN_AgressiveNavy_desc:0 ""
 
  SOTN_DominateTheWaves:0 "Dominate the Waves"
  SOTN_DominateTheWaves_desc:0 ""

@@ -2870,4 +2870,92 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    spriteType = {
+		name = "GFX_SOTN_ModernShips"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ModernShips.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ModernShips_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ModernShips.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ModernShips.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_AgressiveNavy"
+		texturefile = "gfx/interface/goals/MGY/SOTN_AgressiveNavy.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_AgressiveNavy_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_AgressiveNavy.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_AgressiveNavy.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_DominateTheWaves"
+		texturefile = "gfx/interface/goals/MGY/SOTN_DominateTheWaves.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_DominateTheWaves_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_DominateTheWaves.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_DominateTheWaves.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_MobileBases"
+		texturefile = "gfx/interface/goals/MGY/SOTN_MobileBases.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_MobileBases_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_MobileBases.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_MobileBases.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 }
