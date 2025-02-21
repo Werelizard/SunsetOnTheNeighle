@@ -40,21 +40,8 @@ ideas = {
 		SOTN_EndebtedEconomy = {
 			modifier = {
 				consumer_goods_factor = 0.3
-				political_power_gain = -0.10
 				stability_factor = -0.1
-				production_speed_buildings_factor = -0.2
-			}
-		}
-		SOTN_EquestrianInvestment = {
-			modifier = {
-				custom_modifier_tooltip = SOTN_ExtraCivilianFactory_1_tt
-				custom_modifier_tooltip = SOTN_EnforcedFreeTrade_tt
-				hidden_modifier = {
-					industrial_factory_donations = 1
-				}
-			}
-			research_bonus = {
-				industry = 0.07
+				production_speed_buildings_factor = -0.1
 			}
 		}
 		SOTN_PoliticalUnrest = {
@@ -142,6 +129,28 @@ ideas = {
 	}
 	# Industrial Conern
 	industrial_concern = {
+		SOTN_EquestrianInvestment = {
+			modifier = {
+				economy_cost_factor = 0.5
+				trade_laws_cost_factor = 0.5
+				custom_modifier_tooltip = SOTN_ExtraCivilianFactory_1_tt
+				hidden_modifier = {
+					industrial_factory_donations = 1
+				}
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+			allowed = {
+				original_tag = MGY
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			visible = {
+				has_idea = SOTN_EquestrianInvestment
+			}
+		}
 		SOTN_Djoser = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
@@ -160,35 +169,41 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 				production_lack_of_resource_penalty_factor = -0.1
 			}
-			equipment_bonus = {
-				motorized = {
-					build_cost_ic = -0.05
-				}
-				armored_car_equipment = {
-					build_cost_ic = -0.05
-				}
-				mechanized_equipment = {
-					build_cost_ic = -0.05
-				}
+			research_bonus = {
+				industry = 0.1
 			}
+			# equipment_bonus = {
+			# 	motorized = {
+			# 		build_cost_ic = -0.05
+			# 	}
+			# 	armored_car_equipment = {
+			# 		build_cost_ic = -0.05
+			# 	}
+			# 	mechanized_equipment = {
+			# 		build_cost_ic = -0.05
+			# 	}
+			# }
 			allowed = {
 				original_tag = MGY
 			}
 		}
 		SOTN_ManephisArms = {
 			modifier = {
-				production_speed_arms_factory_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
 			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.05
-					reliability_factor = 0.05
-				}
-				magical_equipment = {
-					build_cost_ic = -0.05
-					reliability_factor = 0.05
-				}
+			research_bonus = {
+				infantry_tech = 0.1
 			}
+			# equipment_bonus = {
+			# 	infantry_equipment = {
+			# 		build_cost_ic = -0.05
+			# 		reliability_factor = 0.05
+			# 	}
+			# 	magical_equipment = {
+			# 		build_cost_ic = -0.05
+			# 		reliability_factor = 0.05
+			# 	}
+			# }
 			allowed = {
 				original_tag = MGY
 			}
@@ -200,19 +215,22 @@ ideas = {
 		}
 		SOTN_Dockyards = {
 			modifier = {
-				industrial_capacity_dockyard = 0.1
+				industrial_capacity_dockyard = 0.15
 			}
-			equipment_bonus = {
-				convoy = {
-					build_cost_ic = -0.1
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.05
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.05
-				}
+			research_bonus = {
+				naval_equipment = 0.1
 			}
+			# equipment_bonus = {
+			# 	convoy = {
+			# 		build_cost_ic = -0.1
+			# 	}
+			# 	ship_hull_light = {
+			# 		build_cost_ic = -0.05
+			# 	}
+			# 	ship_hull_cruiser = {
+			# 		build_cost_ic = -0.05
+			# 	}
+			# }
 			allowed = {
 				original_tag = MGY
 			}
@@ -224,7 +242,11 @@ ideas = {
 		}
 		SOTN_Bank = {
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.15
+				political_power_factor = 0.05
+			}
+			available = {
+				has_completed_focus = SOTN_EconomyNationalBank
 			}
 			allowed = {
 				original_tag = MGY
@@ -236,13 +258,18 @@ ideas = {
 				air_detection = 0.05
 			}
 			equipment_bonus = {
-				small_plane_airframe_0 = {
-					build_cost_ic = -0.05
-				}
-				medium_plane_airframe = {
-					build_cost_ic = -0.05
+				transport_plane_equipment = {
+					build_cost_ic = -0.1
 				}
 			}
+			# equipment_bonus = {
+			# 	small_plane_airframe_0 = {
+			# 		build_cost_ic = -0.05
+			# 	}
+			# 	medium_plane_airframe = {
+			# 		build_cost_ic = -0.05
+			# 	}
+			# }
 			allowed = {
 				original_tag = MGY
 			}

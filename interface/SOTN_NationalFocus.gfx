@@ -2628,4 +2628,246 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+    spriteType = {
+		name = "GFX_SOTN_TerrorFromTheSkies"
+		texturefile = "gfx/interface/goals/MGY/SOTN_TerrorFromTheSkies.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_TerrorFromTheSkies_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_TerrorFromTheSkies.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_TerrorFromTheSkies.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_LightNavy"
+		texturefile = "gfx/interface/goals/MGY/SOTN_LightNavy.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_LightNavy_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_LightNavy.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_LightNavy.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_AmbitiousNavy"
+		texturefile = "gfx/interface/goals/MGY/SOTN_AmbitiousNavy.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_AmbitiousNavy_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_AmbitiousNavy.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_AmbitiousNavy.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_NavyBases"
+		texturefile = "gfx/interface/goals/MGY/SOTN_NavyBases.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_NavyBases_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_NavyBases.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_NavyBases.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ModernNavyDoctrine"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ModernNavyDoctrine.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ModernNavyDoctrine_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ModernNavyDoctrine.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ModernNavyDoctrine.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_OverseasOperations"
+		texturefile = "gfx/interface/goals/MGY/SOTN_OverseasOperations.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_OverseasOperations_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_OverseasOperations.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_OverseasOperations.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_DevelopMarines"
+		texturefile = "gfx/interface/goals/MGY/SOTN_DevelopMarines.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_DevelopMarines_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_DevelopMarines.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_DevelopMarines.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_FlySwatters"
+		texturefile = "gfx/interface/goals/MGY/SOTN_FlySwatters.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_FlySwatters_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_FlySwatters.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_FlySwatters.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_EscortFocus"
+		texturefile = "gfx/interface/goals/MGY/SOTN_EscortFocus.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_EscortFocus_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_EscortFocus.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_EscortFocus.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_AntiSubmarine"
+		texturefile = "gfx/interface/goals/MGY/SOTN_AntiSubmarine.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_AntiSubmarine_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_AntiSubmarine.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_AntiSubmarine.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+		name = "GFX_SOTN_ExpandMerchantMarine"
+		texturefile = "gfx/interface/goals/MGY/SOTN_ExpandMerchantMarine.dds"
+	}
+	spriteType = {
+        name = GFX_SOTN_ExpandMerchantMarine_shine 
+        texturefile = gfx/interface/goals/MGY/SOTN_ExpandMerchantMarine.dds 
+        effectFile = gfx/FX/buttonstate.lua
+        animation = {
+            animationmaskfile = gfx/interface/goals/MGY/SOTN_ExpandMerchantMarine.dds 
+            animationtexturefile = gfx/interface/goals/shine_overlay.dds
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
 }

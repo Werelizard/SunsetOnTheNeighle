@@ -3713,7 +3713,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_MediumAirSpecialisation
-		icon = SOTN_MediumAirSpecialisation
+		icon = GFX_SOTN_MediumAirSpecialisation
 		cost = 1
 		x = 0
 		y = 1
@@ -3744,7 +3744,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SOTN_GroundSupport
 		prerequisite = {
-			focus = SOTN_MediumAirSpecialisation
+			focus = SOTN_GroundSupport
 		}
 		available = {
 			
@@ -3770,7 +3770,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SOTN_GroundSupport
 		prerequisite = {
-			focus = SOTN_MediumAirSpecialisation
+			focus = SOTN_GroundSupport
 		}
 		available = {
 			
@@ -3786,6 +3786,32 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = SOTN_GroupedStrategies
+		}
+	}
+	focus= {
+		id = SOTN_TerrorFromTheSkies
+		icon = GFX_SOTN_TerrorFromTheSkies
+		cost = 1
+		x = 0
+		y = 3
+		relative_position_id = SOTN_GroundSupport
+		prerequisite = {
+			focus = SOTN_TacticalPrioritisation
+			focus = SOTN_GroupedStrategies
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TerrorFromTheSkies"	
+		}
+		mutually_exclusive = {
 		}
 	}
 	focus = {
@@ -3998,7 +4024,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_NavyBases
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_NavyBases
 		cost = 1
 		x = -1
 		y = 2
@@ -4023,8 +4049,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_RiverPatrols
-		icon = GFX_goal_unknown
+		id = SOTN_ModernNavyDoctrine
+		icon = GFX_SOTN_ModernNavyDoctrine
 		cost = 1
 		x = 1
 		y = 2
@@ -4043,20 +4069,20 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RiverPatrols"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ModernNavyDoctrine"	
 		}
 		mutually_exclusive = {
 		}
 	}
 	focus = {
 		id = SOTN_DevelopMarines
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_DevelopMarines
 		cost = 1
 		x = 0
 		y = 3
 		relative_position_id = SOTN_NavyStart
 		prerequisite = {
-			focus = SOTN_RiverPatrols
+			focus = SOTN_ModernNavyDoctrine
 			focus = SOTN_NavyBases
 		}
 		available = {
@@ -4076,7 +4102,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_OverseasOperations
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_OverseasOperations
 		cost = 1
 		x = 0
 		y = 4
@@ -4101,7 +4127,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_LightNavy
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_LightNavy
 		cost = 1
 		x = -4
 		y = 1
@@ -4127,7 +4153,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_AntiSubmarine
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_AntiSubmarine
 		cost = 1
 		x = -1
 		y = 1
@@ -4153,7 +4179,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_ExpandMerchantMarine
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_ExpandMerchantMarine
 		cost = 1
 		x = 1
 		y = 1
@@ -4179,7 +4205,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_EscortFocus
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_EscortFocus
 		cost = 1
 		x = 0
 		y = 2
@@ -4208,7 +4234,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_FlySwatters
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_FlySwatters
 		cost = 1
 		x = 1
 		y = 3
@@ -4234,7 +4260,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_AmbitiousNavy
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_AmbitiousNavy
 		cost = 1
 		x = 4
 		y = 1

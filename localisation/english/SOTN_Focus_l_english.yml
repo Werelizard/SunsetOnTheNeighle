@@ -349,6 +349,9 @@
  SOTN_TacticalPrioritisation:0 "Ground-to-Air Coordination"
  SOTN_TacticalPrioritisation_desc:0 ""
 
+ SOTN_TerrorFromTheSkies:0 "Terror in the Skies"
+ SOTN_TerrorFromTheSkies_desc:0 ""
+
  SOTN_NightOperations:0 "Soaring Under the Moonlight"
  SOTN_NightOperations_desc:0 ""
 
@@ -364,25 +367,25 @@
  SOTN_Interception:0 "Death From Above"
  SOTN_Interception_desc:0 ""
 
- SOTN_NavyStart:0 "From the Neighle and into the Wadj-Ur"
+ SOTN_NavyStart:0 "Into the Wadj-Ur"
  SOTN_NavyStart_desc:0 ""
 
- SOTN_NavyBases:0 "New Delta Dockyards"
+ SOTN_NavyBases:0 "Renovate the Sea-Smithy"
  SOTN_NavyBases_desc:0 ""
 
- SOTN_RiverPatrols:0 "Fortify the Coastline"
- SOTN_RiverPatrols_desc:0 ""
+ SOTN_ModernNavyDoctrine:0 "A New Generation of Admirals"
+ SOTN_ModernNavyDoctrine_desc:0 ""
 
  SOTN_DevelopMarines:0 "Shore-to-Shore Deployment"
  SOTN_DevelopMarines_desc:0 ""
 
- SOTN_OverseasOperations:0 "Support Overseas Operations"
+ SOTN_OverseasOperations:0 "A Dedicated Marine Corps"
  SOTN_OverseasOperations_desc:0 ""
 
  SOTN_LightNavy:0 "Naval Deterrence"
  SOTN_LightNavy_desc:0 ""
 
- SOTN_AntiSubmarine:0 "Anti-Submarine Manoeuvres"
+ SOTN_AntiSubmarine:0 "War Under the Surface"
  SOTN_AntiSubmarine_desc:0 ""
 
  SOTN_ExpandMerchantMarine:0 "Expand the Merchant Marine"
@@ -391,7 +394,7 @@
  SOTN_EscortFocus:0 "Dedicated Convoy Escorts"
  SOTN_EscortFocus_desc:0 ""
 
- SOTN_FlySwatters:0 "Naval Fly Swatters"
+ SOTN_FlySwatters:0 "Seaborne Fly Swatters"
  SOTN_FlySwatters_desc:0 ""
 
  SOTN_AmbitiousNavy:0 "Naval Supremacy"

@@ -29,10 +29,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/MGY/SOTN_EndebtedEconomy.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SOTN_EquestrianInvestment"
-		texturefile = "gfx/interface/ideas/MGY/SOTN_EquestrianInvestment.dds"
-	}
-	spriteType = {
 		name = "GFX_idea_SOTN_PoliticalUnrest"
 		texturefile = "gfx/interface/ideas/MGY/SOTN_PoliticalUnrest.dds"
 	}
@@ -61,6 +57,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_SOTN_Djoser"
 		texturefile = "gfx/interface/designers/SOTN_Djoser.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SOTN_EquestrianInvestment"
+		texturefile = "gfx/interface/designers/SOTN_EquestrianInvestment.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SOTN_Shaaty"
