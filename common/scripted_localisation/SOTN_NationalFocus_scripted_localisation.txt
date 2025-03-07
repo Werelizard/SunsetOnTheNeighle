@@ -13,3 +13,25 @@ defined_text = {
 		localization_key = SOTN_VizierCabinet_Neighkt
 	}
 }
+
+defined_text = {
+	name = Get_RescueEquestria_ScripLoc
+	text = {
+		trigger = {
+			EQS = {
+				has_government = democratic
+			}
+		}
+		localization_key = SOTN_RescueEquestria
+	}
+	text = {
+		trigger = {
+			EQS = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+		localization_key = SOTN_RescueEquestria_alt
+	}
+}

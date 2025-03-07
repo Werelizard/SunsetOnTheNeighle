@@ -80,19 +80,16 @@
 
  SOTN_MaregyptRenaissance:0 "A Maregyptian Renaissance"
  SOTN_MaregyptRenaissance_desc:0 ""
- SOTN_ReformReached_tt:0 "Reform progress is greater than or equal to §Y[?SOTN_ReformGoal_var|%%]§! (currently §Y[?SOTN_ReformProgress_var|%%]§!)"
+ SOTN_ReformReached_tt:0 "Reform progress is greater than or equal to §Y[?SOTN_ReformGoal_var]§! points (currently §Y[?SOTN_ReformProgress_var]§! points)"
 
  # Focuses - Neightk
  SOTN_PromoteOptimism:0 "Rally Around the Vizier"
  SOTN_PromoteOptimism_desc:0 ""
 
- SOTN_BoldPromises:0 "Bold Promises"
- SOTN_BoldPromises_desc:0 ""
-
  SOTN_TowardsReformism:0 "Address the Diet"
  SOTN_TowardsReformism_desc:0 ""
 
- SOTN_FriendshipInTheVillages:0 "Friendship in the Village"
+ SOTN_FriendshipInTheVillages:0 "Harmony in the Village"
  SOTN_FriendshipInTheVillages_desc:0 ""
 
  SOTN_RuralProsperity:0 "Rural Prosperity"
@@ -169,8 +166,20 @@
  SOTN_EconomyBudget:0 "Abandon the Gold Stater"
  SOTN_EconomyBudget_desc:0 ""
 
- SOTN_EconomyUrbanisation:0 "Rebuild Maregyptian Cities"
+ SOTN_StabiliseCurrency:0 "Emergency Financial Reforms"
+ SOTN_StabiliseCurrency_desc:0 ""
+
+ SOTN_NewEconomicPartners:0 "New Economic Partners"
+ SOTN_NewEconomicPartners_desc:0 ""
+
+ SOTN_EconomyUrbanisation:0 "New Public Works"
  SOTN_EconomyUrbanisation_desc:0 ""
+
+ SOTN_RebuildCities:0 "Rebuild [ROOT.GetAdjective] Cities"
+ SOTN_RebuildCities_desc:0 ""
+
+ SOTN_FundIndustries:0 "Industrial Grants"
+ SOTN_FundIndustries_desc:0 ""
 
  SOTN_NationalRail:0 "From Somnambula to Dashoof in a Day"
  SOTN_NationalRail_desc:0 ""
@@ -250,6 +259,9 @@
  SOTN_ArmedNeutrality:0 "Armed Neutrality"
  SOTN_ArmedNeutrality_desc:0 ""
 
+ SOTN_FriendshipsBastion:0 "Friendship's Bastion"
+ SOTN_FriendshipsBastion_desc:0 ""
+
  SOTN_SupportHarmonicResistance:0 "Legitimise Resistance Movements"
  SOTN_SupportHarmonicResistance_desc:0 ""
 
@@ -276,6 +288,50 @@
 
  SOTN_MaregyptIrrenditism:0 "Reassert Maregyptian Claims"
  SOTN_MaregyptIrrenditism_desc:0 ""
+
+ SOTN_AbyssiniaGovernor:0 "The Governate of Panthera"
+ SOTN_AbyssiniaGovernor_desc:0 ""
+
+ SOTN_AbyssiniaDivisions:0 "Assimilate Abyssinian Administration"
+ SOTN_AbyssiniaDivisions_desc:0 ""
+
+ SOTN_EcononmicAssitanceAby:0 "Working Hoof in Paw"
+ SOTN_EcononmicAssitanceAby_desc:0 ""
+
+ SOTN_PinTheEagle:0 "Clip the Vulture's Wings"
+ SOTN_PinTheEagle_desc:0 ""
+  
+ SOTN_RescueEquestria:0 "To Celestia's Side!"
+ SOTN_RescueEquestria_desc:0 "" 
+ SOTN_RescueEquestria_alt:0 "Restoration of Harmony"
+ SOTN_RescueEquestria_alt_desc:0 ""
+
+ SOTN_AHarmonicEmpire:0 "Towards Harmonic Hegemonism"
+ SOTN_AHarmonicEmpire_desc:0 ""
+
+ SOTN_QuellStorm:0 "Quell the Storm"
+ SOTN_QuellStorm_desc:0 ""
+
+ SOTN_ZebricaForZebricans:0 "Zebrica for Zebricans!"
+ SOTN_ZebricaForZebricans_desc:0 ""
+
+ SOTN_JointReliedFund:0 "Create the ZCED"
+ SOTN_JointReliedFund_desc:0 ""
+
+ SOTN_EconomicChamberZebrica:0 "Promote Economic Cooperation"
+ SOTN_EconomicChamberZebrica_desc:0 ""
+
+ SOTN_DeclarationOfUnity:0 "Declaration of Unity"
+ SOTN_DeclarationOfUnity_desc:0 ""
+
+ SOTN_DeclarationOfSolidarity:0 "Declaration of Solidarity"
+ SOTN_DeclarationOfSolidarity_desc:0 ""
+
+ SOTN_CommonDefence:0 "A Shared Burden"
+ SOTN_CommonDefence_desc:0 ""
+
+ SOTN_SecureLakes:0 "Secure the Lakes"
+ SOTN_SecureLakes_desc:0 ""
 
  # Military Focuses
  SOTN_MilitaryBegin:0 "Review the Military"
@@ -471,105 +527,52 @@
 
  SOTN_IndependentArmy:0 "An Independent Army"
  SOTN_IndependentArmy_desc:0 ""
-
- #Harmony wins in the Diet
- SOTN_HarmonicReformWin:0 "Triumph of Harmony"
- SOTN_HarmonicReformWin_desc:0 ""
-
- SOTN_HarmonicLiberalism:0 "Reform from Within..."
- SOTN_HarmonicLiberalism_desc:0 "
-
- SOTN_EntrenchedLiberties:0 "To Everypony their Liberty"
- SOTN_EntrenchedLiberties_Desc:0 ""
-
- SOTN_HarmonyNotEquality:0 "Harmony, not Marksism!"
- SOTN_HarmonyNotEquality_desc:0 ""
-
- SOTN_ReconcileTheCentre:0 "Revive the Grand Coalition"
- SOTN_ReconcileTheCentre_desc:0 ""
-
- SOTN_ModerateSocialReform:0 "Promulgate Progressive Values"
- SOTN_ModerateSocialReform_desc:0 ""
-
- SOTN_CivilService:0 "The Civil Service Act"
- SOTN_CivilService_desc:0 ""
-
- SOTN_FriendshipReignited:0 "Friendship, Renewed"
- SOTN_FriendshipReignited_desc:0 ""
-
- SOTN_DefangNobility:0 "Defang the Nobility"
- SOTN_DefangNobility_desc:0 ""
-
- SOTN_AbolishTitulatures:0 "Abolish Titulatures"
- SOTN_AbolishTitulatures_desc:0 ""
-
- SOTN_CollaborateWitAristocrats:0 "Collaborate with the Nomarchy"
- SOTN_CollaborateWitAristocrats_desc:0 ""
-
- SOTN_OldOrder:0 "...or Without?"
- SOTN_OldOrder_desc:0 ""
-
- SOTN_AdvisoryConcil:0 "Disband the Advisory Council"
- SOTN_AdvisoryConcil_desc:0 ""
-
- SOTN_HarmonyThroughOrder:0 "Harmony Through Order"
- SOTN_HarmonyThroughOrder_desc:0 ""
-
- SOTN_AbolishViziership:0 "The King's Government"
- SOTN_AbolishViziership_desc:0 ""
-
- SOTN_AnnullParties:0 "A Truly Harmonic Society"
- SOTN_AnnullParties_desc:0 ""
-
- SOTN_TheNewSun:0 "Revival of Harmony"
- SOTN_TheNewSun_desc:0 ""
-
- SOTN_BanSocialists:0 "Suspend Anti-Royalist Organisations"
- SOTN_BanSocialists_desc:0 ""
-
- SOTN_NoMoreSupremacy:0 "Crush the Military Movement"
- SOTN_NoMoreSupremacy_desc:0 ""
  
- SOTN_PurifiedAdministration:0 "Suffer not the Unkind"
- SOTN_PurifiedAdministration_desc:0 ""
+ #Neighkt's Reforms
+ SOTN_CourtReformists:0 "Court Reformists"
+ SOTN_CourtReformists_desc:0 ""
 
- SOTN_AgrarianConcessions:0 "Reward the Tiller and the Farmer"
- SOTN_AgrarianConcessions_desc:0 ""
+ SOTN_ChangeFromByThePeople:0 "A Foundation for Everypony's Needs"
+ SOTN_ChangeFromByThePeople_desc:0 ""
 
- SOTN_NewEconomicPolicies:0 "A Fairer Maregypt"
- SOTN_NewEconomicPolicies_desc:0 ""
+ SOTN_ProgressNotPopulism:0 "Idealism, not Populism"
+ SOTN_ProgressNotPopulism_desc:0 ""
 
- SOTN_LiftTheBan:0 "Abolish the Three-Trot Ban"
- SOTN_LiftTheBan_desc:0 ""
+ SOTN_UnlikelyAllies:0 "Unlikely Allies"
+ SOTN_UnlikelyAllies_desc:0 ""
 
- # Ahhotep's Winning tree (reforms)
+ SOTN_BoldPromises:0 "Bold Promises"
+ SOTN_BoldPromises_desc:0 ""
 
- SOTN_MaredjayReformWin:0 "To the Victor, the Spoils"
- SOTN_MaredjayReformWin_desc:0 ""
+ SOTN_CooperativeEconomics:0 "An Economy for the People"
+ SOTN_CooperativeEconomics_desc:0 ""
+
+ SOTN_AppointNewMinisters:0 "Shuffle the Ministries"
+ SOTN_AppointNewMinisters_desc:0 ""
+
+ SOTN_CensureTraditionalists:0 "Censure Traditionalists"
+ SOTN_CensureTraditionalists_desc:0 ""
+
+ SOTN_NewCoalition:0 "The New Coalition"
+ SOTN_NewCoalition_desc:0 ""
+
+ SOTN_CourtTraditionalists:0 "Approach the Royalists"
+ SOTN_CourtTraditionalists_desc:0 ""
+
+ SOTN_NewHarmony:0 "Friendship Under the Crown"
+ SOTN_NewHarmony_desc:0 ""
+
+ SOTN_HarmonicStateTheory:0 "Harmonic State Theory"
+ SOTN_HarmonicStateTheory_desc:0 ""
+
+ SOTN_CensorExtremists:0 "Censor Anti-Royalists"
+ SOTN_CensorExtremists_desc:0 ""
+
+ SOTN_AlignNomarchs:0 "Align the Nomarchs"
+ SOTN_AlignNomarchs_desc:0 ""
+
+ SOTN_RoyalistCoalition:0 "A King's Assembly"
+ SOTN_RoyalistCoalition_desc:0 ""
  
- SOTN_AMaredjaySociety:0 "Expand the Maredjay"
- SOTN_AMaredjaySociety_desc:0 ""
-
- SOTN_AbsoluteStateControl:0 "Disband the Diet"
- SOTN_AbsoluteStateControl_desc:0 ""
-
- SOTN_EmphasiseTradition:0 "Emphasise Moralist Policies"
- SOTN_EmphasiseTradition_desc:0 ""
-
- SOTN_MaredjayNomarchy:0 "Purge the Nomarchy"
- SOTN_MaredjayNomarchy_desc:0 ""
-
- SOTN_NewSociety:0 "Subsume the Bureaucracy"
- SOTN_NewSociety_desc:0 ""
-
- SOTN_MightMakesRight:0 "Declare the Akha-Ta"
- SOTN_MightMakesRight_desc:0 ""
-
- SOTN_DeclareRegency:0 "The Perpetual Regency"
- SOTN_DeclareRegency_desc:0 ""
-
- SOTN_TowardsRevivalism:0 "An Organic State"
- SOTN_TowardsRevivalism_desc:0 ""
-
- SOTN_FriendshipIsAnIllusion:0 "Break the Chains that Bind"
- SOTN_FriendshipIsAnIllusion_desc:0 ""
+ SOTN_ElevateTheManephisClique:0 "Support the Manephis Clique"
+ SOTN_ElevateTheManephisClique_desc:0 ""

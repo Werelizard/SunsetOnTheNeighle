@@ -446,7 +446,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_country_flag = SOTN_NeighktVizier_flag
+						SOTN_HasNeighkt_Vizier_trigger = yes
 					}
 				}	
 				custom_effect_tooltip = SOTN_doublespace
@@ -465,8 +465,8 @@ focus_tree = {
 		id = SOTN_RefillTreasury
 		icon = GFX_SOTN_RefillTreasury
 		cost = 6
-		x = -3
-		y = 2
+		x = -4
+		y = 1
 		relative_position_id = SOTN_VizierOffice
 		prerequisite = {
 			focus = SOTN_VizierOffice
@@ -549,13 +549,13 @@ focus_tree = {
 		id = SOTN_ClassicRevival
 		icon = GFX_SOTN_ClassicRevival
 		cost = 6
-		x = -4
-		y = 4
+		x = -1
+		y = 3
 		relative_position_id = SOTN_VizierOffice
 		continue_if_invalid = yes
 		cancel_if_invalid = no
 		prerequisite = {
-			focus = SOTN_RefillTreasury
+			focus = SOTN_AppointAdmin
 		}
 		available = {
 			has_political_power > 100
@@ -586,8 +586,8 @@ focus_tree = {
 		id = SOTN_AssimilateAdmin
 		icon = GFX_SOTN_AssimilateAdmin
 		cost = 6
-		x = -2
-		y = 3
+		x = -3
+		y = 2
 		relative_position_id = SOTN_VizierOffice
 		prerequisite = {
 			focus = SOTN_RefillTreasury
@@ -742,18 +742,17 @@ focus_tree = {
 		id = SOTN_RoyalDiet
 		icon = GFX_SOTN_RoyalDiet
 		cost = 6
-		x = 0
-		y = 4
-		relative_position_id = SOTN_VizierOffice
+		x = -2
+		y = 1
+		relative_position_id = SOTN_VizierCabinet
 		cancelable = no
-		prerequisite = {
-			focus = SOTN_AppointAdmin
-		}
 		prerequisite = {
 			focus = SOTN_VizierCabinet
 		}
+		prerequisite = {
+			focus = SOTN_AppointAdmin
+		}
 		available = {
-			
 		}
 		bypass = {
 			
@@ -782,13 +781,16 @@ focus_tree = {
 		id = SOTN_MaregyptRenaissance
 		icon = GFX_SOTN_MaregyptRenaissance
 		cost = 6
-		x = 0
-		y = 6
-		relative_position_id = SOTN_VizierOffice
+		x = -2
+		y = 3
+		relative_position_id = SOTN_VizierCabinet
 		prerequisite = {
 			focus = SOTN_RoyalDiet
 		}
 		available = {
+			NOT = {
+				has_idea = SOTN_FamineInTheNeighle
+			}
 			custom_trigger_tooltip = {
 				tooltip = SOTN_ReformReached_tt
 				check_variable = {
@@ -1008,11 +1010,11 @@ focus_tree = {
 		id = SOTN_StrongArmAristocrats
 		icon = GFX_SOTN_StrongArmAristocrats
 		cost = 6
-		x = -4
+		x = 2
 		y = 1
 		relative_position_id = SOTN_VizierCabinet
 		prerequisite = {
-			focus = SOTN_AssimilateAdmin
+			focus = SOTN_VizierCabinet
 		}
 		available = {
 			SOTN_HasShaaDoof_Vizier_trigger = yes
@@ -1056,7 +1058,7 @@ focus_tree = {
 		id = SOTN_PromoteOptimism
 		icon = GFX_goal_unknown
 		cost = 6
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = SOTN_VizierCabinet
 		prerequisite = {
@@ -1086,41 +1088,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_BoldPromises
-		icon = GFX_goal_unknown
-		cost = 6
-		x = -1
-		y = 2
-		relative_position_id = SOTN_VizierCabinet
-		prerequisite = {
-			focus = SOTN_PromoteOptimism
-			focus = SOTN_RoyalDiet
-		}
-		available = {
-			SOTN_HasNeighkt_Vizier_trigger = yes
-			has_completed_focus = SOTN_VizierCabinet
-			custom_trigger_tooltip = {
-				tooltip = SOTN_DietIsOngoing_tt
-				NOT = {
-					has_completed_focus = SOTN_MaregyptRenaissance
-				}
-				has_completed_focus = SOTN_RoyalDiet
-			}
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_BoldPromises"
-		}
-		allow_branch = {
-			SOTN_HasNeighkt_Vizier_trigger = yes
-		}
-	}
-	focus = {
 		id = SOTN_TowardsReformism
 		icon = GFX_goal_unknown
 		cost = 6
@@ -1133,8 +1100,8 @@ focus_tree = {
 		available = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
 			OR = {
-				has_completed_focus = SOTN_HarmonyAlone
-				has_completed_focus = SOTN_HarmonyAndTraditionalists
+				has_completed_focus = SOTN_CourtReformists
+				has_completed_focus = SOTN_CourtTraditionalists	
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOTN_DietIsOngoing_tt
@@ -1161,7 +1128,7 @@ focus_tree = {
 		id = SOTN_FriendshipInTheVillages
 		icon = GFX_goal_unknown
 		cost = 6
-		x = -5
+		x = -4
 		y = 3
 		relative_position_id = SOTN_VizierCabinet
 		prerequisite = {
@@ -1194,7 +1161,7 @@ focus_tree = {
 		id = SOTN_RuralProsperity
 		icon = GFX_goal_unknown
 		cost = 6
-		x = -6
+		x = -5
 		y = 4
 		relative_position_id = SOTN_VizierCabinet
 		prerequisite = {
@@ -1259,8 +1226,8 @@ focus_tree = {
 	focus = {
 		id = SOTN_ParliamentAlliesHarmony
 		icon = GFX_goal_unknown
-		cost = 6
-		x = 2
+		cost = 5
+		x = 4
 		y = 1
 		relative_position_id = SOTN_VizierCabinet
 		prerequisite = {
@@ -1290,12 +1257,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_HarmonyAndTraditionalists
+		id = SOTN_CourtReformists
 		icon = GFX_goal_unknown
-		cost = 6
-		x = 3
-		y = 2
-		relative_position_id = SOTN_VizierCabinet
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = SOTN_ParliamentAlliesHarmony
 		prerequisite = {
 			focus = SOTN_ParliamentAlliesHarmony
 		}
@@ -1316,24 +1283,21 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_HarmonyAndTraditionalists"
-		}
-		mutually_exclusive = {
-			focus = SOTN_HarmonyAlone
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_CourtReformists"
 		}
 		allow_branch = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
 		}
 	}
 	focus = {
-		id = SOTN_HarmonyAlone
+		id = SOTN_ChangeFromByThePeople
 		icon = GFX_goal_unknown
-		cost = 6
-		x = 1
+		cost = 5
+		x = -3
 		y = 2
-		relative_position_id = SOTN_VizierCabinet
+		relative_position_id = SOTN_ParliamentAlliesHarmony
 		prerequisite = {
-			focus = SOTN_ParliamentAlliesHarmony
+			focus = SOTN_CourtReformists
 		}
 		available = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
@@ -1352,25 +1316,21 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_HarmonyAlone"
-		}
-		mutually_exclusive = {
-			focus = SOTN_HarmonyAndTraditionalists
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ChangeFromByThePeople"
 		}
 		allow_branch = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
 		}
 	}
 	focus = {
-		id = SOTN_ParliamentHarmonyComittee
+		id = SOTN_ProgressNotPopulism
 		icon = GFX_goal_unknown
-		cost = 6
-		x = 2
+		cost = 5
+		x = -2
 		y = 3
-		relative_position_id = SOTN_VizierCabinet
+		relative_position_id = SOTN_ParliamentAlliesHarmony
 		prerequisite = {
-			focus = SOTN_HarmonyAlone
-			focus = SOTN_HarmonyAndTraditionalists
+			focus = SOTN_ChangeFromByThePeople
 		}
 		available = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
@@ -1389,24 +1349,101 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ParliamentHarmonyComittee"
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ProgressNotPopulism"
+		}
+		mutually_exclusive = {
+			focus = SOTN_BoldPromises
 		}
 		allow_branch = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
 		}
 	}
 	focus = {
-		id = SOTN_AdoptEquestrianCode
+		id = SOTN_UnlikelyAllies
 		icon = GFX_goal_unknown
-		cost = 6
-		x = 1
+		cost = 5
+		x = -4
+		y = 1
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_ParliamentAlliesHarmony
+		}
+		prerequisite = {
+			focus = SOTN_PromoteOptimism
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_SocialistAlliesInDiet_tt
+				has_country_flag = SOTN_SocialistAlliesInDiet_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_UnlikelyAllies"
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_BoldPromises
+		icon = GFX_goal_unknown
+		cost = 5
+		x = -4
+		y = 3
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_UnlikelyAllies
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_BoldPromises"
+		}
+		mutually_exclusive = {
+			focus = SOTN_ProgressNotPopulism
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_CooperativeEconomics
+		icon = GFX_goal_unknown
+		cost = 5
+		x = -3
 		y = 4
-		relative_position_id = SOTN_VizierCabinet
+		relative_position_id = SOTN_ParliamentAlliesHarmony
 		prerequisite = {
-			focus = SOTN_HarmonyAlone
-		}
-		prerequisite = {
-			focus = SOTN_ParliamentHarmonyComittee
+			focus = SOTN_ProgressNotPopulism
+			focus = SOTN_BoldPromises
 		}
 		available = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
@@ -1425,24 +1462,166 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AdoptEquestrianCode"
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ProgressNotPopulism"
+		}
+		mutually_exclusive = {
+			focus = SOTN_BoldPromises
 		}
 		allow_branch = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
 		}
 	}
 	focus = {
-		id = SOTN_ReformRamaresesCode
+		id = SOTN_AppointNewMinisters
 		icon = GFX_goal_unknown
-		cost = 6
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_CourtReformists
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AppointNewMinisters"
+		}
+		mutually_exclusive = {
+			focus = SOTN_ElevateTheManephisClique
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_CensureTraditionalists
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_AppointNewMinisters
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_CensureTraditionalists"
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_NewCoalition
+		icon = GFX_goal_unknown
+		cost = 5
+		x = -1
+		y = 4
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_ProgressNotPopulism
+			focus = SOTN_BoldPromises
+		}
+		prerequisite = {
+			focus = SOTN_AppointNewMinisters
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NewCoalition"
+		}
+		mutually_exclusive = {
+			focus = SOTN_ElevateTheManephisClique
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_CourtTraditionalists
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_ParliamentAlliesHarmony
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_CourtTraditionalists"
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_NewHarmony
+		icon = GFX_goal_unknown
+		cost = 5
 		x = 3
-		y = 4
-		relative_position_id = SOTN_VizierCabinet
+		y = 2
+		relative_position_id = SOTN_ParliamentAlliesHarmony
 		prerequisite = {
-			focus = SOTN_HarmonyAndTraditionalists
-		}
-		prerequisite = {
-			focus = SOTN_ParliamentHarmonyComittee
+			focus = SOTN_CourtTraditionalists
 		}
 		available = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
@@ -1461,7 +1640,184 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ReformRamaresesCode"
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NewHarmony"
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_HarmonicStateTheory
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 5
+		y = 2
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_CourtTraditionalists
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_HarmonicStateTheory"
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_CensorExtremists
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 6
+		y = 3
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_HarmonicStateTheory
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			NOT = {
+				has_completed_focus = SOTN_OpenSociety
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_CensorExtremists§"
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_AlignNomarchs
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 4
+		y = 3
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_HarmonicStateTheory
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AlignNomarchs"
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_RoyalistCoalition
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 2
+		y = 4
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_NewHarmony
+		}
+		prerequisite = {
+			focus = SOTN_ElevateTheManephisClique
+		}
+		prerequisite = {
+			focus = SOTN_AlignNomarchs
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AlliesAcrossAisle"
+		}
+		allow_branch = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+		}
+	}
+	focus = {
+		id = SOTN_ElevateTheManephisClique
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = SOTN_ParliamentAlliesHarmony
+		prerequisite = {
+			focus = SOTN_CourtTraditionalists
+		}
+		available = {
+			SOTN_HasNeighkt_Vizier_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = SOTN_DietIsOngoing_tt
+				NOT = {
+					has_completed_focus = SOTN_MaregyptRenaissance
+				}
+				has_completed_focus = SOTN_RoyalDiet
+			}
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ElevateTheManephisClique"
+		}
+		mutually_exclusive = {
+			focus = SOTN_AppointNewMinisters
 		}
 		allow_branch = {
 			SOTN_HasNeighkt_Vizier_trigger = yes
@@ -2272,6 +2628,55 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SOTN_StabiliseCurrency
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -4
+		y = 2
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_AbolishCommission
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_StabiliseCurrency"
+		}
+	}
+	focus = {
+		id = SOTN_NewEconomicPartners
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -4
+		y = 4
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_StabiliseCurrency
+		}
+		prerequisite = {
+			focus = SOTN_EconomyTradeRiver
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NewEconomicPartners"
+		}
+	}
+	focus = {
 		id = SOTN_EconomyUrbanisation
 		icon = GFX_SOTN_EconomyUrbanisation
 		cost = 1
@@ -2299,7 +2704,7 @@ focus_tree = {
 		id = SOTN_NationalRail
 		icon = GFX_SOTN_NationalRail
 		cost = 1
-		x = 3
+		x = 5
 		y = 3
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
@@ -2316,6 +2721,52 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationalRail"
+		}
+	}
+	focus = {
+		id = SOTN_RebuildCities
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 3
+		y = 3
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_EconomyUrbanisation
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RebuildCities"
+		}
+	}
+	focus = {
+		id = SOTN_FundIndustries
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 4
+		y = 4
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_RebuildCities
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_FundIndustries"
 		}
 	}
 	focus = {
@@ -2640,7 +3091,7 @@ focus_tree = {
 		id = SOTN_KingOfZush
 		icon = GFX_SOTN_KingOfZush
 		cost = 1
-		x = -1
+		x = -2
 		y = 4
 		relative_position_id = SOTN_MaregyptSphereStart
 		prerequisite = {
@@ -2696,7 +3147,7 @@ focus_tree = {
 		id = SOTN_SouthAutonomy
 		icon = GFX_SOTN_SouthAutonomy
 		cost = 1
-		x = 2
+		x = 0
 		y = 4
 		relative_position_id = SOTN_MaregyptSphereStart
 		prerequisite = {
@@ -2716,30 +3167,6 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = SOTN_KingOfZush
-		}
-	}
-	focus = {
-		id = SOTN_TakeAlwani
-		icon = GFX_SOTN_TakeAlwani
-		cost = 1
-		x = 0
-		y = 5
-		relative_position_id = SOTN_MaregyptSphereStart
-		prerequisite = {
-			focus = SOTN_KingOfZush
-			focus = SOTN_SouthAutonomy
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TakeAlwani"	
 		}
 	}
 	focus = {
@@ -2980,8 +3407,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_SupportHarmonicResistance
-		icon = GFX_SOTN_SupportHarmonicResistance
+		id = SOTN_FriendshipsBastion
+		icon = GFX_goal_unknown
 		cost = 1
 		x = 3
 		y = 3
@@ -2999,22 +3426,18 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SupportHarmonicResistance"	
-		}
-		mutually_exclusive = {
-			focus = SOTN_InterveneZumidia
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_FriendshipsBeacon"	
 		}
 	}
 	focus = {
 		id = SOTN_HomeDefence
 		icon = GFX_SOTN_HomeDefence
 		cost = 1
-		x = 1
-		y = 3
+		x = 2
+		y = 4
 		relative_position_id = SOTN_EyeOfStorm
 		prerequisite = {
 			focus = SOTN_ArmedNeutrality
-			focus = SOTN_InterveneZumidia
 		}
 		available = {
 			
@@ -3053,10 +3476,36 @@ focus_tree = {
 	# 	}
 	# }
 	focus = {
+		id = SOTN_SupportHarmonicResistance
+		icon = GFX_SOTN_SupportHarmonicResistance
+		cost = 1
+		x = 1
+		y = 3
+		relative_position_id = SOTN_EyeOfStorm
+		prerequisite = {
+			focus = SOTN_ArmedNeutrality
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SupportHarmonicResistance"	
+		}
+		mutually_exclusive = {
+			focus = SOTN_InterveneZumidia
+		}
+	}
+	focus = {
 		id = SOTN_HarmonyShield
 		icon = GFX_SOTN_HarmonyShield
 		cost = 1
-		x =0
+		x = 0
 		y = 4
 		relative_position_id = SOTN_EyeOfStorm
 		prerequisite = {
@@ -3075,19 +3524,18 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_HarmonyShield"	
 		}
 		mutually_exclusive = {
-			focus = SOTN_SetyiPlan
+			# focus = SOTN_SetyiPlan
 		}
 	}
 	focus = {
-		id = SOTN_SetyiPlan
-		icon = GFX_SOTN_SetyiPlan
+		id = SOTN_SecureLakes
+		icon = GFX_goal_unknown
 		cost = 1
-		x = 2
-		y = 4
-		relative_position_id = SOTN_EyeOfStorm
+		x = -1
+		y = 2
+		relative_position_id = SOTN_HarmonyShield
 		prerequisite = {
-			focus = SOTN_ArmedNeutrality
-			focus = SOTN_InterveneZumidia
+			focus = SOTN_HarmonyShield
 		}
 		available = {
 			
@@ -3099,12 +3547,321 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SetyiPlan"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SecureLakes"	
 		}
 		mutually_exclusive = {
-			focus = SOTN_HarmonyShield
 		}
 	}
+	focus = {
+		id = SOTN_TakeAlwani
+		icon = GFX_SOTN_TakeAlwani
+		cost = 1
+		x = 1
+		y = 2
+		relative_position_id = SOTN_HarmonyShield
+		prerequisite = {
+			focus = SOTN_HarmonyShield
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TakeAlwani"	
+		}
+		mutually_exclusive = {
+		}
+	}
+	focus = {
+		id = SOTN_RescueEquestria
+		icon = GFX_goal_unknown
+		dynamic = yes
+		cost = 1
+		x = 0
+		y = 1
+		relative_position_id = SOTN_HarmonyShield
+		prerequisite = {
+			focus = SOTN_HarmonyShield
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RescueEquestria"	
+		}
+		mutually_exclusive = {
+		}
+	}
+	focus = {
+		id = SOTN_AHarmonicEmpire
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SOTN_HarmonyShield
+		prerequisite = {
+			focus = SOTN_HarmonyShield
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AHarmonicEmpire"	
+		}
+		mutually_exclusive = {
+		}
+	}
+	focus = {
+		id = SOTN_QuellStorm
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 3
+		relative_position_id = SOTN_HarmonyShield
+		prerequisite = {
+			focus = SOTN_SecureLakes
+		}
+		prerequisite = {
+			focus = SOTN_TakeAlwani
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_QuellStorm"	
+		}
+		mutually_exclusive = {
+		}
+	}
+	focus = {
+		id = SOTN_ZebricaForZebricans
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -3
+		y = 1
+		relative_position_id = SOTN_HarmonyShield
+		prerequisite = {
+			focus = SOTN_HarmonyShield
+		}
+		prerequisite = {
+			focus = SOTN_PinTheEagle
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ZebricaForZebricans"	
+		}
+		mutually_exclusive = {
+		}
+	}
+	# focus = {
+	# 	id = SOTN_TakeAlwani
+	# 	icon = GFX_SOTN_TakeAlwani
+	# 	cost = 1
+	# 	x = -3
+	# 	y = 1
+	# 	relative_position_id = SOTN_HarmonyShield
+	# 	prerequisite = {
+	# 		focus = SOTN_HarmonyShield
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_TakeAlwani"	
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_SetyiPlan
+	# 	icon = GFX_SOTN_SetyiPlan
+	# 	cost = 1
+	# 	x = 4
+	# 	y = 4
+	# 	relative_position_id = SOTN_EyeOfStorm
+	# 	prerequisite = {
+	# 		focus = SOTN_ArmedNeutrality
+	# 		focus = SOTN_InterveneZumidia
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_SetyiPlan"	
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SOTN_HarmonyShield
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_JointReliedFund
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = -2
+	# 	y = 1
+	# 	relative_position_id = SOTN_SetyiPlan
+	# 	prerequisite = {
+	# 		focus = SOTN_SetyiPlan
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_JointReliedFund"	
+	# 	}
+	# 	mutually_exclusive = {
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_EconomicChamberZebrica
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = SOTN_SetyiPlan
+	# 	prerequisite = {
+	# 		focus = SOTN_SetyiPlan
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomicChamberZebrica"	
+	# 	}
+	# 	mutually_exclusive = {
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_DeclarationOfUnity
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = -1
+	# 	y = 2
+	# 	relative_position_id = SOTN_SetyiPlan
+	# 	prerequisite = {
+	# 		focus = SOTN_SetyiPlan
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_DeclarationOfUnity"	
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SOTN_DeclarationOfSolidarity
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_DeclarationOfSolidarity
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = 1
+	# 	y = 2
+	# 	relative_position_id = SOTN_SetyiPlan
+	# 	prerequisite = {
+	# 		focus = SOTN_SetyiPlan
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_DeclarationOfSolidarity"	
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SOTN_DeclarationOfUnity
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_CommonDefence
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = 0
+	# 	y = 3
+	# 	relative_position_id = SOTN_SetyiPlan
+	# 	prerequisite = {
+	# 		focus = SOTN_DeclarationOfSolidarity
+	# 		focus = SOTN_DeclarationOfUnity
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_CommonDefence"	
+	# 	}
+	# 	mutually_exclusive = {
+	# 	}
+	# }
 	focus = {
 		id = SOTN_SharedResearch
 		icon = GFX_SOTN_SharedResearch
@@ -3190,6 +3947,61 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SOTN_AbyssiniaGovernor
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 3
+		relative_position_id = SOTN_MaregyptSphereStart
+		
+		prerequisite = {
+			focus = SOTN_MaregyptIrrenditism
+		}
+		available = {
+		
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AbyssiniaGovernor"
+		}
+		mutually_exclusive = {
+		}
+	}
+	focus = {
+		id = SOTN_AbyssiniaDivisions
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 5
+		relative_position_id = SOTN_MaregyptSphereStart
+		
+		prerequisite = {
+			focus = SOTN_AbyssiniaGovernor
+		}
+		prerequisite = {
+			focus = SOTN_SouthAutonomy
+		}
+		available = {
+		
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AbyssiniaDivisions"
+		}
+		mutually_exclusive = {
+		}
+	}
+	focus = {
 		id = SOTN_MutualFriendshipTreaty
 		icon = GFX_SOTN_MutualFriendshipTreaty
 		cost = 1
@@ -3210,6 +4022,53 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_MutualFriendshipTreaty"	
+		}
+	}
+	focus = {
+		id = SOTN_EcononmicAssitanceAby
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 5
+		y = 4
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MutualFriendshipTreaty
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_EcononmicAssitanceAby"	
+		}
+	}
+	focus = {
+		id = SOTN_PinTheEagle
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 3
+		y = 4
+		relative_position_id = SOTN_MaregyptSphereStart
+		prerequisite = {
+			focus = SOTN_MutualFriendshipTreaty
+			focus = SOTN_MaregyptIrrenditism
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PinTheEagle"	
 		}
 	}
 	#
