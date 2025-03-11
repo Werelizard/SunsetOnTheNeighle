@@ -78,6 +78,9 @@
  SOTN_OpenSociety:0 "Work with the Opposition"
  SOTN_OpenSociety_desc:0 ""
 
+ SOTN_StabiliseTheRealm:0 "Reassure our People"
+ SOTN_StabiliseTheRealm_desc:0 ""
+
  SOTN_MaregyptRenaissance:0 "A Maregyptian Renaissance"
  SOTN_MaregyptRenaissance_desc:0 ""
  SOTN_ReformReached_tt:0 "Reform progress is greater than or equal to §Y[?SOTN_ReformGoal_var]§! points (currently §Y[?SOTN_ReformProgress_var]§! points)"
@@ -120,6 +123,9 @@
  SOTN_YearOfTheLocust:0 "Adress Food Shortages"
  SOTN_YearOfTheLocust_desc:0 ""
 
+ SOTN_PurchaseGrain:0 "Increase Grain Imports"
+ SOTN_PurchaseGrain_desc:0 ""
+
  SOTN_IrrigationWorks:0 "Improve Rural Irrigation"
  SOTN_IrrigationWorks_desc:0 ""
 
@@ -156,60 +162,94 @@
  SOTN_FamineEquestrianFood_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineEquestrianFood$§! decision"
  SOTN_FamineHippogrifFish_tt:0 "Has taken the £decision_icon_small §Y$SOTN_FamineHippogrifFish$§! decision"
 
- #General Economy
+ #Economy - Debts
  SOTN_AbolishCommission:0 "Default on Our Debts"
  SOTN_AbolishCommission_desc:0 ""
 
  SOTN_PayDebts:0 "Negotiate Debt Restructuring"
  SOTN_PayDebts_desc:0 ""
- 
+
+ SOTN_FateOfCommission:0 "Fate of the Equestrian Commission"
+ SOTN_FateOfCommission_desc:0 ""
+
+ SOTN_NationaliseHippogriffInterests:0 "Nationalise [HIP.GetAdjective] Investments"
+ SOTN_NationaliseHippogriffInterests_desc:0 ""
+
+ SOTN_SeizeEquestrianAssets:0 "Seize [EQS.GetAdjective] Assets"
+ SOTN_SeizeEquestrianAssets_desc:0 ""
+
+ SOTN_DevelopInternalMarket:0 "Expand the Internal Market"
+ SOTN_DevelopInternalMarket_desc:0 ""
+
+ SOTN_SelfSufficientEconomy:0 "A Self-Sufficient Economy"
+ SOTN_SelfSufficientEconomy_desc:0 ""
+
+ SOTN_MaregyptBank:0 "The First [ROOT.GetAdjective] Bank"
+ SOTN_MaregyptBank_desc:0 ""
+
+ SOTN_TarriffWall:0 "Raise the Trade Wall"
+ SOTN_TarriffWall_desc:0 ""
+
+ SOTN_PriceControls:0 "Enact Price Controls"
+ SOTN_PriceControls_desc:0 ""
+
+ SOTN_IncreaseTaxes:0 "Increased Taxes"
+ SOTN_IncreaseTaxes_desc:0 ""
+
+ SOTN_TackleInterest:0 "Restore the Treasury"
+ SOTN_TackleInterest_desc:0 ""
+
+ #Economy - General
  SOTN_EconomyBudget:0 "Abandon the Gold Stater"
  SOTN_EconomyBudget_desc:0 ""
 
- SOTN_StabiliseCurrency:0 "Emergency Financial Reforms"
- SOTN_StabiliseCurrency_desc:0 ""
+ SOTN_EconomyDevelopment:0 "Rebuild the [ROOT.GetAdjective] Economy"
+ SOTN_EconomyDevelopment_desc:0 ""
 
- SOTN_NewEconomicPartners:0 "New Economic Partners"
- SOTN_NewEconomicPartners_desc:0 ""
+ SOTN_RataphetMetalworks:0 "The R'ataphet Metalworks"
+ SOTN_RataphetMetalworks_desc:0 ""
 
- SOTN_EconomyUrbanisation:0 "New Public Works"
- SOTN_EconomyUrbanisation_desc:0 ""
+ SOTN_SomnambulaDockyards:0 "Expand the Somnambula Dockyards"
+ SOTN_SomnambulaDockyards_desc:0 ""
 
- SOTN_RebuildCities:0 "Rebuild [ROOT.GetAdjective] Cities"
- SOTN_RebuildCities_desc:0 ""
+ SOTN_RiverTrade:0 "Exploit Maregypt's Lifeline"
+ SOTN_RiverTrade_desc:0 ""
 
- SOTN_FundIndustries:0 "Industrial Grants"
- SOTN_FundIndustries_desc:0 ""
+ SOTN_RoyalOfficeOfWorks:0 "Appoint an Overseer of the Great Works"
+ SOTN_RoyalOfficeOfWorks_desc:0 ""
 
- SOTN_NationalRail:0 "From Somnambula to Dashoof in a Day"
+ SOTN_Electrification:0 "A Light in Every Home"
+ SOTN_Electrification_desc:0 ""
+
+ SOTN_IndustrialGrants:0 "Fund Industrial Programs"
+ SOTN_IndustrialGrants_desc:0 ""
+
+ SOTN_CashCrops:0 "Golden Crops"
+ SOTN_CashCrops_desc:0 ""
+
+ SOTN_LightIndustry:0 "Light Industrial Developments"
+ SOTN_LightIndustry_desc:0 ""
+
+ SOTN_SubsidiesArtisans:0 "Rescue the Artisanal Sector"
+ SOTN_SubsidiesArtisans_desc:0 ""
+
+ SOTN_SubsidiseHeavyIndustry:0 "The Great Trot Forward"
+ SOTN_SubsidiseHeavyIndustry_desc:0 ""
+
+ SOTN_MaregyptianMiracle:0 "A [ROOT.GetAdjective] Miracle"
+ SOTN_MaregyptianMiracle_desc:0 ""
+
+ SOTN_DevelopProvinces:0 "Develop the Provinces"
+ SOTN_DevelopProvinces_desc:0 ""
+
+ SOTN_NationalRail:0 "From Somnambula to Mareoë in a Day!"
  SOTN_NationalRail_desc:0 ""
 
- SOTN_TechnicalEducation:0 "Abolish Scribal Privileges"
- SOTN_TechnicalEducation_desc:0 ""
+ SOTN_BroadEducationCampaign:0 "Abolish Scribal Privileges"
+ SOTN_BroadEducationCampaign_desc:0 ""
 
- SOTN_ModernScience:0 "The Manephis Academy of Sciences"
+ SOTN_ModernScience:0 "A Great Library for the Modern Age"
  SOTN_ModernScience_desc:0 ""
-
- SOTN_EconomyIntegrateCommission:0 "Strengthen Financial Controls"
- SOTN_EconomyIntegrateCommission_desc:0 ""
-
- SOTN_EconomyTradeRiver:0 "Rebuild the River Trade"
- SOTN_EconomyTradeRiver_desc:0 ""
-
- SOTN_EconomyNationalBank:0 "The First [ROOT.GetAdjective] Bank"
- SOTN_EconomyNationalBank_desc:0 ""
-
- SOTN_EconomyInvestors:0 "Attract Foreign Investors"
- SOTN_EconomyInvestors_desc:0 ""
-
- SOTN_AgrarianEconomy:0 "The Granary of Zebrica"
- SOTN_AgrarianEconomy_desc:0 ""
-
- SOTN_IndustrialEconomy:0 "The Great Trot Forward"
- SOTN_IndustrialEconomy_desc:0 ""
-
- SOTN_ModernisedIndustry:0 "Harness the Neighle"
- SOTN_ModernisedIndustry_desc:0 ""
 
  # Maregyptian Diplomacy - Common
  SOTN_MaregyptSphereStart:0 "Beyond the Sands and the Sea"

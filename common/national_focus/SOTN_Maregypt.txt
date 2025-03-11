@@ -9,8 +9,8 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = {
-		x = 2200
-		y = 1200
+		x = 3080
+		y = 1300
 	}
 
 	initial_show_position = {
@@ -25,7 +25,7 @@ focus_tree = {
 		id = SOTN_KingSpeech
 		icon = GFX_SOTN_KingSpeech
 		cost = 6
-		x = 4
+		x = 10
 		y = -1
 		relative_position_id = SOTN_EconomyBudget
 		cancelable = no
@@ -135,6 +135,37 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = SOTN_HarmonySociety
+		}
+	}
+	focus = {
+		id = SOTN_StabiliseTheRealm
+		icon = GFX_goal_unknown
+		cost = 6
+		x = 0
+		y = 2
+		relative_position_id = SOTN_KingSpeech
+		prerequisite = {
+			focus = SOTN_OpenSociety
+			focus = SOTN_HarmonySociety
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_StabiliseTheRealm"
+			add_stability = 0.1
+			}
+		allow_branch = {
+			
+		}
+		mutually_exclusive = {
+			
 		}
 	}
 	focus = { 
@@ -461,90 +492,90 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { 
-		id = SOTN_RefillTreasury
-		icon = GFX_SOTN_RefillTreasury
-		cost = 6
-		x = -4
-		y = 1
-		relative_position_id = SOTN_VizierOffice
-		prerequisite = {
-			focus = SOTN_VizierOffice
-		}
-		available = {
+	# focus = { 
+	# 	id = SOTN_RefillTreasury
+	# 	icon = GFX_SOTN_RefillTreasury
+	# 	cost = 6
+	# 	x = -4
+	# 	y = 1
+	# 	relative_position_id = SOTN_VizierOffice
+	# 	prerequisite = {
+	# 		focus = SOTN_VizierOffice
+	# 	}
+	# 	available = {
 			
-		}
-		bypass = {
+	# 	}
+	# 	bypass = {
 			
-		}
-		select_effect = {
+	# 	}
+	# 	select_effect = {
 			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RefillTreasury"
-			if = {
-				limit = {
-					any_owned_state = {
-						has_dynamic_modifier = {
-							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
-						}
-					}
-				}
-				every_owned_state = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
-						}
-					}
-					SOTN_IncreaseStateUnrest_small_effect = yes
-				}
-			}
-			else = {
-				add_stability = -0.05
-			}
-			custom_effect_tooltip = SOTN_doublespace
-			add_popularity = {
-				ideology = ROOT
-				popularity = -0.05
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0 include_locked = yes
-					}
-					OR = { #Taken from Kaiserreich's files, tweaked a bit.
-						is_in_home_area = yes
-						AND = {
-							NOT = {
-								is_in_home_area = yes
-							}
-							owner = {
-								any_owned_state = {
-									is_in_home_area = yes
-									free_building_slots = {
-										building = industrial_complex
-										size < 1
-										include_locked = yes
-									}
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			custom_effect_tooltip = SOTN_doublespace
-			add_timed_idea = {
-				idea = SOTN_IncreasedTaxes
-				days = 540
-			}
-		}
-	}
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_RefillTreasury"
+	# 		if = {
+	# 			limit = {
+	# 				any_owned_state = {
+	# 					has_dynamic_modifier = {
+	# 						modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+	# 					}
+	# 				}
+	# 			}
+	# 			every_owned_state = {
+	# 				limit = {
+	# 					has_dynamic_modifier = {
+	# 						modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+	# 					}
+	# 				}
+	# 				SOTN_IncreaseStateUnrest_small_effect = yes
+	# 			}
+	# 		}
+	# 		else = {
+	# 			add_stability = -0.05
+	# 		}
+	# 		custom_effect_tooltip = SOTN_doublespace
+	# 		add_popularity = {
+	# 			ideology = ROOT
+	# 			popularity = -0.05
+	# 		}
+	# 		random_owned_controlled_state = {
+	# 			limit = {
+	# 				free_building_slots = {
+	# 					building = industrial_complex
+	# 					size > 0 include_locked = yes
+	# 				}
+	# 				OR = { #Taken from Kaiserreich's files, tweaked a bit.
+	# 					is_in_home_area = yes
+	# 					AND = {
+	# 						NOT = {
+	# 							is_in_home_area = yes
+	# 						}
+	# 						owner = {
+	# 							any_owned_state = {
+	# 								is_in_home_area = yes
+	# 								free_building_slots = {
+	# 									building = industrial_complex
+	# 									size < 1
+	# 									include_locked = yes
+	# 								}
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 			add_extra_state_shared_building_slots = 1
+	# 			add_building_construction = {
+	# 				type = industrial_complex
+	# 				level = 1
+	# 			}
+	# 		}
+	# 		custom_effect_tooltip = SOTN_doublespace
+	# 		add_timed_idea = {
+	# 			idea = SOTN_IncreasedTaxes
+	# 			days = 540
+	# 		}
+	# 	}
+	# }
 	focus = { 
 		id = SOTN_ClassicRevival
 		icon = GFX_SOTN_ClassicRevival
@@ -590,9 +621,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = SOTN_VizierOffice
 		prerequisite = {
-			focus = SOTN_RefillTreasury
-		}
-		prerequisite = {
 			focus = SOTN_SidelineKing
 		}
 		available = {
@@ -631,48 +659,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AssimilateAdmin"
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SOTN_OfficeOFTheTwoLands
-					}
-				}
-				add_ideas = {
-					SOTN_StreamLinedAdministration
-				}
-			}
-			else = {
-				add_ideas = SOTN_StreamLinedAdministrationAndOverseer
-			}
-			custom_effect_tooltip = SOTN_doublespace
-			every_owned_state = {
-				limit = {
-					OR = { #Taken from Kaiserreich's files, tweaked a bit.
-						is_in_home_area = yes
-						AND = {
-							NOT = {
-								is_in_home_area = yes
-							}
-							owner = {
-								any_owned_state = {
-									is_in_home_area = yes
-									free_building_slots = {
-										building = industrial_complex
-										size < 1
-										include_locked = yes
-									}
-								}
-							}
-						}
-					}
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-			}
 		}
 	}
 	focus = { # Dynamic focus
@@ -1826,16 +1812,43 @@ focus_tree = {
 	#
 	# FAMINE RISK HANDLING - if not a full blown famine
 	#
+	focus = {
+		id = SOTN_PurchaseGrain
+		icon = GFX_goal_unknown
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			# focus = SOTN_PayDebts
+			# focus = SOTN_AbolishCommission
+			focus = SOTN_YearOfTheLocust
+		}
+		available = {
+			has_idea = SOTN_FamineRisk
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PurchaseGrain"
+			#TO DO: event
+		}
+	}
 	focus = { 
 		id = SOTN_YearOfTheLocust
 		icon = GFX_SOTN_YearOfTheLocust
 		cost = 6
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_PayDebts
-			focus = SOTN_AbolishCommission
+			# focus = SOTN_PayDebts
+			# focus = SOTN_AbolishCommission
+			focus = SOTN_EconomyBudget
 		}
 		available = {
 			
@@ -1857,11 +1870,14 @@ focus_tree = {
 		id = SOTN_IrrigationWorks
 		icon = GFX_SOTN_IrrigationWorks
 		cost = 6
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = SOTN_YearOfTheLocust
 		prerequisite = {
 			focus = SOTN_YearOfTheLocust
+		}
+		prerequisite = {
+			focus = SOTN_EconomyDevelopment
 		}
 		available = {
 			NOT = {
@@ -1900,10 +1916,10 @@ focus_tree = {
 		icon = GFX_SOTN_ForcefulDistribution
 		cost = 6
 		x = -1
-		y = 2
-		relative_position_id = SOTN_YearOfTheLocust
+		y = 1
+		relative_position_id = SOTN_IrrigationWorks
 		prerequisite = {
-			focus = SOTN_YearOfTheLocust
+			focus = SOTN_IrrigationWorks
 		}
 		available = {
 			NOT = {
@@ -1991,10 +2007,10 @@ focus_tree = {
 		icon = GFX_SOTN_LandCompensation
 		cost = 6
 		x = 1
-		y = 2
-		relative_position_id = SOTN_YearOfTheLocust
+		y = 1
+		relative_position_id = SOTN_IrrigationWorks
 		prerequisite = {
-			focus = SOTN_YearOfTheLocust
+			focus = SOTN_IrrigationWorks
 		}
 		available = {
 			NOT = {
@@ -2059,8 +2075,8 @@ focus_tree = {
 		icon = GFX_SOTN_LandReform
 		cost = 6
 		x = 0
-		y = 3
-		relative_position_id = SOTN_YearOfTheLocust
+		y = 2
+		relative_position_id = SOTN_IrrigationWorks
 		prerequisite = {
 			focus = SOTN_ForcefulDistribution
 			focus = SOTN_LandCompensation
@@ -2216,11 +2232,11 @@ focus_tree = {
 		id = SOTN_EmergencyRelief
 		icon = GFX_SOTN_EmergencyRelief
 		cost = 6
-		x = -1
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = SOTN_YearOfTheLocust
 		prerequisite = {
-			focus = SOTN_YearOfTheLocust
+			focus = SOTN_AskForAid
 		}
 		available = {
 			has_idea = SOTN_FamineInTheNeighle	
@@ -2251,14 +2267,11 @@ focus_tree = {
 		id = SOTN_FocusOnCities
 		icon = GFX_SOTN_FocusOnCities
 		cost = 6
-		x = 1
-		y = 2
+		x = 2
+		y = 3
 		relative_position_id = SOTN_YearOfTheLocust
 		prerequisite = {
 			focus = SOTN_EmergencyRelief
-		}
-		prerequisite = {
-			focus = SOTN_AskForAid
 		}
 		available = {
 			has_idea = SOTN_FamineInTheNeighle	
@@ -2347,14 +2360,11 @@ focus_tree = {
 		id = SOTN_FocusOnVillages
 		icon = GFX_SOTN_FocusOnVillages
 		cost = 6
-		x = -1
-		y = 2
+		x = 0
+		y = 3
 		relative_position_id = SOTN_YearOfTheLocust
 		prerequisite = {
 			focus = SOTN_EmergencyRelief
-		}
-		prerequisite = {
-			focus = SOTN_AskForAid
 		}
 		available = {
 			has_idea = SOTN_FamineInTheNeighle	
@@ -2472,8 +2482,8 @@ focus_tree = {
 		id = SOTN_FamineIsOver
 		icon = GFX_SOTN_FamineIsOver
 		cost = 6
-		x = 0
-		y = 3
+		x = 1
+		y = 4
 		relative_position_id = SOTN_YearOfTheLocust
 		prerequisite = {
 			focus = SOTN_FocusOnCities
@@ -2576,14 +2586,406 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_AbolishCommission
-		icon = GFX_SOTN_AbolishCommission
+		id = SOTN_EconomyDevelopment
+		icon = GFX_goal_unknown
 		cost = 1
-		x = -2
+		x = 6
 		y = 1
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_EconomyBudget
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyStart"
+		}
+	}
+	focus = {
+		id = SOTN_RataphetMetalworks
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SOTN_EconomyDevelopment
+		prerequisite = {
+			focus = SOTN_EconomyDevelopment
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RataphetMetalworks"
+		}
+	}
+	focus = {
+		id = SOTN_SomnambulaDockyards
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SOTN_EconomyDevelopment
+		prerequisite = {
+			focus = SOTN_EconomyDevelopment
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SomnambulaDockyards"
+		}
+	}
+	focus = {
+		id = SOTN_RiverTrade
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 3
+		y = 2
+		relative_position_id = SOTN_EconomyDevelopment
+		prerequisite = {
+			focus = SOTN_SomnambulaDockyards
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RiverTrade"
+		}
+	}
+	focus = {
+		id = SOTN_RoyalOfficeOfWorks
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = SOTN_EconomyDevelopment
+		prerequisite = {
+			focus = SOTN_EconomyDevelopment
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RoyalOfficeOfWorks"
+		}
+	}
+	focus = {
+		id = SOTN_Electrification
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 1
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_RoyalOfficeOfWorks
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_Electrification"
+		}
+	}
+	focus = {
+		id = SOTN_IndustrialGrants
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -2
+		y = 2
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_RoyalOfficeOfWorks
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_IndustrialGrants"
+		}
+	}
+	focus = {
+		id = SOTN_CashCrops
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -3
+		y = 3
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_IndustrialGrants
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_CashCrops"
+		}
+	}
+	focus = {
+		id = SOTN_LightIndustry
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 3
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_IndustrialGrants
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_LightIndustry"
+		}
+	}
+	focus = {
+		id = SOTN_SubsidiesArtisans
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -1
+		y = 4
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_IndustrialGrants
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SubsidiesArtisans"
+		}
+		mutually_exclusive = {
+			focus = SOTN_SubsidiseHeavyIndustry
+		}
+	}
+	focus = {
+		id = SOTN_SubsidiseHeavyIndustry
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 4
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_LightIndustry
+		}
+		prerequisite = {
+			focus = SOTN_BroadEducationCampaign
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SubsidiseHeavyIndustry"
+		}
+		mutually_exclusive = {
+			focus = SOTN_SubsidiesArtisans
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptianMiracle
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 0
+		y = 5
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_SubsidiseHeavyIndustry
+			focus = SOTN_SubsidiesArtisans
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_MaregyptianMiracle"
+		}
+		mutually_exclusive = {
+			focus = SOTN_SubsidiesArtisans
+		}
+	}
+	focus = {
+		id = SOTN_DevelopProvinces
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 1
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_RoyalOfficeOfWorks
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_DevelopProvinces"
+		}
+	}
+	focus = {
+		id = SOTN_NationalRail
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 3
+		y = 2
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_DevelopProvinces
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationalRail"
+		}
+	}
+	focus = {
+		id = SOTN_BroadEducationCampaign
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 1
+		y = 2
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_DevelopProvinces
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_BroadEducationCampaign"
+		}
+	}
+	focus = {
+		id = SOTN_ModernScience
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 2
+		y = 3
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_BroadEducationCampaign
+		}
+		available = {
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ModernScience"
+		}
+	}
+	# ECONOMY - Debts
+	focus = {
+		id = SOTN_FateOfCommission
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -4
+		y = 1
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_EconomyBudget
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_FateOfCommission"
+		}
+		mutually_exclusive = {
+			focus = SOTN_PayDebts
+		}
+	}
+	focus = {
+		id = SOTN_AbolishCommission
+		icon = GFX_SOTN_AbolishCommission
+		cost = 1
+		x = -6
+		y = 2
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_FateOfCommission
 		}
 		available = {
 			
@@ -2602,14 +3004,153 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = SOTN_NationaliseHippogriffInterests
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -7
+		y = 3
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_AbolishCommission
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationaliseHippogriffInterests"
+		}
+	}
+	focus = {
+		id = SOTN_SeizeEquestrianAssets
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -6
+		y = 4
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_AbolishCommission
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SeizeEquestrianAssets"
+		}
+	}
+	focus = {
+		id = SOTN_DevelopInternalMarket
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -5
+		y = 3
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_AbolishCommission
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_DevelopInternalMarket"
+		}
+	}
+	focus = {
+		id = SOTN_TarriffWall
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -5
+		y = 5
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_DevelopInternalMarket
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TarriffWall"
+		}
+	}
+	focus = {
+		id = SOTN_SelfSufficientEconomy
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -4
+		y = 4
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_DevelopInternalMarket
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SelfSufficientEconomy"
+		}
+	}
+	focus = {
+		id = SOTN_MaregyptBank
+		icon = GFX_goal_unknown
+		cost = 1
+		x = -3
+		y = 5
+		relative_position_id = SOTN_EconomyBudget
+		prerequisite = {
+			focus = SOTN_SelfSufficientEconomy
+			focus = SOTN_TackleInterest
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_MaregyptBank"
+		}
+	}
+	focus = {
 		id = SOTN_PayDebts
 		icon = GFX_SOTN_PayDebts
 		cost = 1
-		x = 2
-		y = 1
+		x = -2
+		y = 2
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_EconomyBudget
+			focus = SOTN_FateOfCommission
 		}
 		available = {
 			
@@ -2628,309 +3169,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_StabiliseCurrency
+		id = SOTN_PriceControls
 		icon = GFX_goal_unknown
-		cost = 1
-		x = -4
-		y = 2
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_AbolishCommission
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_StabiliseCurrency"
-		}
-	}
-	focus = {
-		id = SOTN_NewEconomicPartners
-		icon = GFX_goal_unknown
-		cost = 1
-		x = -4
-		y = 4
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_StabiliseCurrency
-		}
-		prerequisite = {
-			focus = SOTN_EconomyTradeRiver
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NewEconomicPartners"
-		}
-	}
-	focus = {
-		id = SOTN_EconomyUrbanisation
-		icon = GFX_SOTN_EconomyUrbanisation
-		cost = 1
-		x = 2
-		y = 2
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_PayDebts
-			focus = SOTN_AbolishCommission
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyUrbanisation"
-		}
-	}
-	focus = {
-		id = SOTN_NationalRail
-		icon = GFX_SOTN_NationalRail
-		cost = 1
-		x = 5
-		y = 3
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_EconomyUrbanisation
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationalRail"
-		}
-	}
-	focus = {
-		id = SOTN_RebuildCities
-		icon = GFX_goal_unknown
-		cost = 1
-		x = 3
-		y = 3
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_EconomyUrbanisation
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RebuildCities"
-		}
-	}
-	focus = {
-		id = SOTN_FundIndustries
-		icon = GFX_goal_unknown
-		cost = 1
-		x = 4
-		y = 4
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_RebuildCities
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_FundIndustries"
-		}
-	}
-	focus = {
-		id = SOTN_TechnicalEducation
-		icon = GFX_SOTN_TechnicalEducation
-		cost = 1
-		x = 2
-		y = 5
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_EconomyUrbanisation
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TechnicalEducation"
-		}
-	}
-	focus = {
-		id = SOTN_ModernScience
-		icon = GFX_SOTN_ModernScience
-		cost = 1
-		x = 3
-		y = 6
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_TechnicalEducation
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ModernScience"
-		}
-	}
-	focus = {
-		id = SOTN_EconomyIntegrateCommission
-		icon = GFX_SOTN_EconomyIntegrateCommission
-		cost = 1
-		x = -2
-		y = 2
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_PayDebts
-			focus = SOTN_AbolishCommission
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyIntegrateCommission"	
-		}
-	}
-	focus = {
-		id = SOTN_EconomyTradeRiver
-		icon = GFX_SOTN_EconomyTradeRiver
-		cost = 1
-		x = -3
-		y = 3
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_EconomyIntegrateCommission
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyTradeRiver"	
-		}
-	}
-	focus = {
-		id = SOTN_EconomyNationalBank
-		icon = GFX_SOTN_EconomyNationalBank
-		cost = 1
-		x = -2
-		y = 5
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_EconomyIntegrateCommission
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyNationalBank"	
-		}
-	}
-	focus = {
-		id = SOTN_EconomyInvestors
-		icon = GFX_SOTN_EconomyInvestors
-		cost = 1
-		x = -3
-		y = 6
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_EconomyNationalBank
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyInvestors"	
-		}
-	}
-	focus = {
-		id = SOTN_AgrarianEconomy
-		icon = GFX_SOTN_AgrarianEconomy
 		cost = 1
 		x = -1
-		y = 7
+		y = 3
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_EconomyNationalBank
+			focus = SOTN_PayDebts
 		}
 		available = {
-			if = {
-				limit = {
-					OR = {
-						has_completed_focus = SOTN_FamineIsOver
-						has_idea = SOTN_FamineInTheNeighle
-					}
-				}
-				has_completed_focus = SOTN_FamineIsOver
-			}
-			else = {
-				has_completed_focus = SOTN_LandReform
-			}
+			
 		}
 		bypass = {
 			
@@ -2939,35 +3188,23 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AgrarianEconomy"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PriceControls"
 		}
 		mutually_exclusive = {
-			focus = SOTN_IndustrialEconomy
 		}
 	}
 	focus = {
-		id = SOTN_IndustrialEconomy
-		icon = GFX_SOTN_IndustrialEconomy
+		id = SOTN_IncreaseTaxes
+		icon = GFX_goal_unknown
 		cost = 1
-		x = 1
-		y = 7
+		x = -3
+		y = 3
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_TechnicalEducation
+			focus = SOTN_PayDebts
 		}
 		available = {
-			if = {
-				limit = {
-					OR = {
-						has_completed_focus = SOTN_FamineIsOver
-						has_idea = SOTN_FamineInTheNeighle
-					}
-				}
-				has_completed_focus = SOTN_FamineIsOver
-			}
-			else = {
-				has_completed_focus = SOTN_LandReform
-			}
+			
 		}
 		bypass = {
 			
@@ -2976,36 +3213,24 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_IndustrialEconomy"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_IncreaseTaxes"
 		}
 		mutually_exclusive = {
-			focus = SOTN_AgrarianEconomy
 		}
 	}
 	focus = {
-		id = SOTN_ModernisedIndustry
-		icon = GFX_SOTN_ModernisedIndustry
+		id = SOTN_TackleInterest
+		icon = GFX_goal_unknown
 		cost = 1
-		x = 0
-		y = 6
+		x = -2
+		y = 4
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_TechnicalEducation
-			focus = SOTN_EconomyNationalBank
+			focus = SOTN_IncreaseTaxes
+			focus = SOTN_PriceControls
 		}
 		available = {
-			if = {
-				limit = {
-					OR = {
-						has_completed_focus = SOTN_FamineIsOver
-						has_idea = SOTN_FamineInTheNeighle
-					}
-				}
-				has_completed_focus = SOTN_FamineIsOver
-			}
-			else = {
-				has_completed_focus = SOTN_LandReform
-			}
+			
 		}
 		bypass = {
 			
@@ -3014,9 +3239,401 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ModernisedIndustry"	
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TackleInterest"
+		}
+		mutually_exclusive = {
 		}
 	}
+	# focus = {
+	# 	id = SOTN_StabiliseCurrency
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = -4
+	# 	y = 2
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_AbolishCommission
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_StabiliseCurrency"
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_NewEconomicPartners
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = -4
+	# 	y = 4
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_StabiliseCurrency
+	# 	}
+	# 	prerequisite = {
+	# 		focus = SOTN_EconomyTradeRiver
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_NewEconomicPartners"
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_EconomyUrbanisation
+	# 	icon = GFX_SOTN_EconomyUrbanisation
+	# 	cost = 1
+	# 	x = 2
+	# 	y = 2
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_PayDebts
+	# 		focus = SOTN_AbolishCommission
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyUrbanisation"
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_NationalRail
+	# 	icon = GFX_SOTN_NationalRail
+	# 	cost = 1
+	# 	x = 5
+	# 	y = 3
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_EconomyUrbanisation
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationalRail"
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_RebuildCities
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = 3
+	# 	y = 3
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_EconomyUrbanisation
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_RebuildCities"
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_FundIndustries
+	# 	icon = GFX_goal_unknown
+	# 	cost = 1
+	# 	x = 4
+	# 	y = 4
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_RebuildCities
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_FundIndustries"
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_TechnicalEducation
+	# 	icon = GFX_SOTN_TechnicalEducation
+	# 	cost = 1
+	# 	x = 2
+	# 	y = 5
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_EconomyUrbanisation
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_TechnicalEducation"
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_ModernScience
+	# 	icon = GFX_SOTN_ModernScience
+	# 	cost = 1
+	# 	x = 3
+	# 	y = 6
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_TechnicalEducation
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_ModernScience"
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_EconomyIntegrateCommission
+	# 	icon = GFX_SOTN_EconomyIntegrateCommission
+	# 	cost = 1
+	# 	x = -2
+	# 	y = 2
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_PayDebts
+	# 		focus = SOTN_AbolishCommission
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyIntegrateCommission"	
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_EconomyTradeRiver
+	# 	icon = GFX_SOTN_EconomyTradeRiver
+	# 	cost = 1
+	# 	x = -3
+	# 	y = 3
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_EconomyIntegrateCommission
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyTradeRiver"	
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_EconomyNationalBank
+	# 	icon = GFX_SOTN_EconomyNationalBank
+	# 	cost = 1
+	# 	x = -2
+	# 	y = 5
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_EconomyIntegrateCommission
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyNationalBank"	
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_EconomyInvestors
+	# 	icon = GFX_SOTN_EconomyInvestors
+	# 	cost = 1
+	# 	x = -3
+	# 	y = 6
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_EconomyNationalBank
+	# 	}
+	# 	available = {
+			
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_EconomyInvestors"	
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_AgrarianEconomy
+	# 	icon = GFX_SOTN_AgrarianEconomy
+	# 	cost = 1
+	# 	x = -1
+	# 	y = 7
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_EconomyNationalBank
+	# 	}
+	# 	available = {
+	# 		if = {
+	# 			limit = {
+	# 				OR = {
+	# 					has_completed_focus = SOTN_FamineIsOver
+	# 					has_idea = SOTN_FamineInTheNeighle
+	# 				}
+	# 			}
+	# 			has_completed_focus = SOTN_FamineIsOver
+	# 		}
+	# 		else = {
+	# 			has_completed_focus = SOTN_LandReform
+	# 		}
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_AgrarianEconomy"	
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SOTN_IndustrialEconomy
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_IndustrialEconomy
+	# 	icon = GFX_SOTN_IndustrialEconomy
+	# 	cost = 1
+	# 	x = 1
+	# 	y = 7
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_TechnicalEducation
+	# 	}
+	# 	available = {
+	# 		if = {
+	# 			limit = {
+	# 				OR = {
+	# 					has_completed_focus = SOTN_FamineIsOver
+	# 					has_idea = SOTN_FamineInTheNeighle
+	# 				}
+	# 			}
+	# 			has_completed_focus = SOTN_FamineIsOver
+	# 		}
+	# 		else = {
+	# 			has_completed_focus = SOTN_LandReform
+	# 		}
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_IndustrialEconomy"	
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SOTN_AgrarianEconomy
+	# 	}
+	# }
+	# focus = {
+	# 	id = SOTN_ModernisedIndustry
+	# 	icon = GFX_SOTN_ModernisedIndustry
+	# 	cost = 1
+	# 	x = 0
+	# 	y = 6
+	# 	relative_position_id = SOTN_EconomyBudget
+	# 	prerequisite = {
+	# 		focus = SOTN_TechnicalEducation
+	# 		focus = SOTN_EconomyNationalBank
+	# 	}
+	# 	available = {
+	# 		if = {
+	# 			limit = {
+	# 				OR = {
+	# 					has_completed_focus = SOTN_FamineIsOver
+	# 					has_idea = SOTN_FamineInTheNeighle
+	# 				}
+	# 			}
+	# 			has_completed_focus = SOTN_FamineIsOver
+	# 		}
+	# 		else = {
+	# 			has_completed_focus = SOTN_LandReform
+	# 		}
+	# 	}
+	# 	bypass = {
+			
+	# 	}
+	# 	select_effect = {
+			
+	# 	}
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus SOTN_ModernisedIndustry"	
+	# 	}
+	# }
 	#The Maregyptian World
 	focus = {
 		id = SOTN_MaregyptSphereStart
@@ -3922,7 +4539,9 @@ focus_tree = {
 		available = {
 			ABY = {
 				exists = yes
-				is_subject = no
+				NOT = {
+					is_subject_of = ROOT
+				}
 				NOT = {
 					has_war_with = ROOT
 				}
@@ -4077,9 +4696,8 @@ focus_tree = {
 		id = SOTN_MilitaryBegin
 		icon = GFX_SOTN_MilitaryBegin
 		cost = 1
-		x = 18
-		y = 0
-		relative_position_id = SOTN_MaregyptSphereStart
+		x = 42
+		y = -1
 		prerequisite = {
 		}
 		available = {
@@ -4108,8 +4726,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_completed_focus = SOTN_PayDebts
-				has_completed_focus = SOTN_AbolishCommission
+				has_completed_focus = SOTN_SelfSufficientEconomy
+				has_completed_focus = SOTN_TackleInterest
 			}
 		}
 		bypass = {

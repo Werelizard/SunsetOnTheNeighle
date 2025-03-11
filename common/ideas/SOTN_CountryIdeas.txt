@@ -50,7 +50,7 @@ ideas = {
 				custom_modifier_tooltip = SOTN_PoliticalUnrest_StabilityImpact_tt
 				custom_modifier_tooltip = SOTN_PoliticalUnrest_PoliticalPowerFactorImpact_tt
 				custom_modifier_tooltip = SOTN_PoliticalUnrest_WarSupportImpact_tt
-				custom_modifier_tooltip = SOTN_PoliticalUnrest_AverageUnrest_tt
+				# custom_modifier_tooltip = SOTN_PoliticalUnrest_AverageUnrest_tt
 			} 
 			on_remove = {
 				remove_dynamic_modifier = {
