@@ -123,7 +123,7 @@
  SOTN_YearOfTheLocust:0 "Adress Food Shortages"
  SOTN_YearOfTheLocust_desc:0 ""
 
- SOTN_PurchaseGrain:0 "Increase Grain Imports"
+ SOTN_PurchaseGrain:0 "Import Foreign Foodstuffs"
  SOTN_PurchaseGrain_desc:0 ""
 
  SOTN_IrrigationWorks:0 "Improve Rural Irrigation"
@@ -169,34 +169,31 @@
  SOTN_PayDebts:0 "Negotiate Debt Restructuring"
  SOTN_PayDebts_desc:0 ""
 
- SOTN_FateOfCommission:0 "Fate of the Equestrian Commission"
+ SOTN_FateOfCommission:0 "Fate of the Friendship Commission"
  SOTN_FateOfCommission_desc:0 ""
 
  SOTN_NationaliseForeignInterests:0 "Nationalise Foreign Investments"
  SOTN_NationaliseForeignInterests_desc:0 ""
 
- SOTN_SubsidiseNationalIndustries:0 "Subsidise [ROOT.GetAdjective] Companies"
+ SOTN_SubsidiseNationalIndustries:0 "Rescue [ROOT.GetAdjective] Businesses"
  SOTN_SubsidiseNationalIndustries_desc:0 ""
 
  SOTN_DevelopInternalMarket:0 "Stimulate the Internal Market"
  SOTN_DevelopInternalMarket_desc:0 ""
 
- SOTN_SelfSufficientEconomy:0 "An Independent Economy"
- SOTN_SelfSufficientEconomy_desc:0 ""
-
- SOTN_MaregyptBank:0 "The First [ROOT.GetAdjective] Bank"
+ SOTN_MaregyptBank:0 "Regulate the Bank Sector"
  SOTN_MaregyptBank_desc:0 ""
 
  SOTN_TarriffWall:0 "Tarriff Agricultural Imports"
  SOTN_TarriffWall_desc:0 ""
 
- SOTN_PriceControls:0 "Enact Price Controls"
- SOTN_PriceControls_desc:0 ""
+ SOTN_LiquidateAssets:0 "Dissolve Unprofitable Farmsteads"
+ SOTN_LiquidateAssets_desc:0 ""
 
- SOTN_IncreaseTaxes:0 "Increased Taxes"
+ SOTN_IncreaseTaxes:0 "Increase Taxes"
  SOTN_IncreaseTaxes_desc:0 ""
 
- SOTN_TackleInterest:0 "Restore the Treasury"
+ SOTN_TackleInterest:0 "Balance the Treasury Books"
  SOTN_TackleInterest_desc:0 ""
 
  #Economy - General

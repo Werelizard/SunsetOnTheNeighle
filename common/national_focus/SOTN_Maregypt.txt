@@ -1812,32 +1812,6 @@ focus_tree = {
 	#
 	# FAMINE RISK HANDLING - if not a full blown famine
 	#
-	focus = {
-		id = SOTN_PurchaseGrain
-		icon = GFX_goal_unknown
-		cost = 5
-		x = -1
-		y = 1
-		relative_position_id = SOTN_YearOfTheLocust
-		prerequisite = {
-			# focus = SOTN_PayDebts
-			# focus = SOTN_AbolishCommission
-			focus = SOTN_YearOfTheLocust
-		}
-		available = {
-			has_idea = SOTN_FamineRisk
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PurchaseGrain"
-			#TO DO: event
-		}
-	}
 	focus = { 
 		id = SOTN_YearOfTheLocust
 		icon = GFX_SOTN_YearOfTheLocust
@@ -1863,6 +1837,33 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_YearOfTheLocust"
 			unlock_decision_tooltip = SOTN_ImportCrops
 			unlock_decision_tooltip = SOTN_DiversifyEconomy
+			#TO DO: event
+		}
+	}
+	
+	focus = {
+		id = SOTN_PurchaseGrain
+		icon = GFX_SOTN_PurchaseGrain
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = SOTN_YearOfTheLocust
+		prerequisite = {
+			# focus = SOTN_PayDebts
+			# focus = SOTN_AbolishCommission
+			focus = SOTN_YearOfTheLocust
+		}
+		available = {
+			has_idea = SOTN_FamineRisk
+		}
+		bypass = {
+			
+		}
+		select_effect = {
+			
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PurchaseGrain"
 			#TO DO: event
 		}
 	}
@@ -2587,7 +2588,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_EconomyDevelopment
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_EconomyDevelopment
 		cost = 1
 		x = 6
 		y = 1
@@ -2609,7 +2610,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_RataphetMetalworks
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_RataphetMetalworks
 		cost = 1
 		x = -1
 		y = 1
@@ -2631,7 +2632,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_SomnambulaDockyards
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_SomnambulaDockyards
 		cost = 1
 		x = 2
 		y = 1
@@ -2653,7 +2654,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_RiverTrade
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_RiverTrade
 		cost = 1
 		x = 3
 		y = 2
@@ -2675,7 +2676,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_RoyalOfficeOfWorks
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_RoyalOfficeOfWorks
 		cost = 1
 		x = 0
 		y = 2
@@ -2697,7 +2698,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_Electrification
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_Electrification
 		cost = 1
 		x = -1
 		y = 1
@@ -2864,7 +2865,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_DevelopProvinces
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_DevelopProvinces
 		cost = 1
 		x = 2
 		y = 1
@@ -2908,7 +2909,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_BroadEducationCampaign
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_BroadEducationCampaign
 		cost = 1
 		x = 1
 		y = 2
@@ -3007,8 +3008,8 @@ focus_tree = {
 		id = SOTN_NationaliseForeignInterests
 		icon = GFX_SOTN_NationaliseForeignInterests
 		cost = 1
-		x = -7
-		y = 3
+		x = -6
+		y = 4
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_AbolishCommission
@@ -3030,8 +3031,8 @@ focus_tree = {
 		id = SOTN_SubsidiseNationalIndustries
 		icon = GFX_SOTN_SubsidiseNationalIndustries
 		cost = 1
-		x = -6
-		y = 4
+		x = -7
+		y = 3
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_AbolishCommission
@@ -3058,6 +3059,9 @@ focus_tree = {
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_AbolishCommission
+		}
+		prerequisite = {
+			focus = SOTN_NationaliseForeignInterests
 		}
 		available = {
 			
@@ -3096,38 +3100,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_SelfSufficientEconomy
-		icon = GFX_goal_unknown
+		id = SOTN_MaregyptBank
+		icon = GFX_SOTN_MaregyptBank
 		cost = 1
 		x = -4
 		y = 4
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
-			focus = SOTN_DevelopInternalMarket
-		}
-		available = {
-			
-		}
-		bypass = {
-			
-		}
-		select_effect = {
-			
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SelfSufficientEconomy"
-		}
-	}
-	focus = {
-		id = SOTN_MaregyptBank
-		icon = GFX_goal_unknown
-		cost = 1
-		x = -3
-		y = 5
-		relative_position_id = SOTN_EconomyBudget
-		prerequisite = {
-			focus = SOTN_SelfSufficientEconomy
-			focus = SOTN_TackleInterest
+			focus = SOTN_PayDebts
+			focus = SOTN_AbolishCommission
 		}
 		available = {
 			
@@ -3169,8 +3150,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_PriceControls
-		icon = GFX_goal_unknown
+		id = SOTN_LiquidateAssets
+		icon = GFX_SOTN_LiquidateAssets
 		cost = 1
 		x = -1
 		y = 3
@@ -3188,14 +3169,14 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PriceControls"
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_LiquidateAssets"
 		}
 		mutually_exclusive = {
 		}
 	}
 	focus = {
 		id = SOTN_IncreaseTaxes
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_IncreaseTaxes
 		cost = 1
 		x = -3
 		y = 3
@@ -3220,14 +3201,14 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_TackleInterest
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_TackleInterest
 		cost = 1
 		x = -2
 		y = 4
 		relative_position_id = SOTN_EconomyBudget
 		prerequisite = {
 			focus = SOTN_IncreaseTaxes
-			focus = SOTN_PriceControls
+			focus = SOTN_LiquidateAssets
 		}
 		available = {
 			
