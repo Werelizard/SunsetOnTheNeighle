@@ -133,19 +133,17 @@ ideas = {
 			modifier = {
 				economy_cost_factor = 0.5
 				trade_laws_cost_factor = 0.5
-				custom_modifier_tooltip = SOTN_ExtraCivilianFactory_1_tt
-				hidden_modifier = {
-					industrial_factory_donations = 1
-				}
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.2
 			}
 			research_bonus = {
-				industry = 0.05
+				industry = 0.1
 			}
 			allowed = {
 				original_tag = MGY
 			}
 			allowed_to_remove = {
-				always = no
+				has_completed_focus = SOTN_FateOfCommission
 			}
 			visible = {
 				has_idea = SOTN_EquestrianInvestment

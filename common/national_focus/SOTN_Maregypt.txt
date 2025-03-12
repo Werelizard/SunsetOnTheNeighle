@@ -2953,7 +2953,7 @@ focus_tree = {
 	# ECONOMY - Debts
 	focus = {
 		id = SOTN_FateOfCommission
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_FateOfCommission
 		cost = 1
 		x = -4
 		y = 1
@@ -3004,8 +3004,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOTN_NationaliseHippogriffInterests
-		icon = GFX_goal_unknown
+		id = SOTN_NationaliseForeignInterests
+		icon = GFX_SOTN_NationaliseForeignInterests
 		cost = 1
 		x = -7
 		y = 3
@@ -3023,12 +3023,12 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationaliseHippogriffInterests"
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationaliseForeignInterests"
 		}
 	}
 	focus = {
-		id = SOTN_SeizeEquestrianAssets
-		icon = GFX_goal_unknown
+		id = SOTN_SubsidiseNationalIndustries
+		icon = GFX_SOTN_SubsidiseNationalIndustries
 		cost = 1
 		x = -6
 		y = 4
@@ -3046,12 +3046,12 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SeizeEquestrianAssets"
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SubsidiseNationalIndustries"
 		}
 	}
 	focus = {
 		id = SOTN_DevelopInternalMarket
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_DevelopInternalMarket
 		cost = 1
 		x = -5
 		y = 3
@@ -3074,7 +3074,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOTN_TarriffWall
-		icon = GFX_goal_unknown
+		icon = GFX_SOTN_TarriffWall
 		cost = 1
 		x = -5
 		y = 5

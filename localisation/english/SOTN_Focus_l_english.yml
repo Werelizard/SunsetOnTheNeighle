@@ -78,7 +78,7 @@
  SOTN_OpenSociety:0 "Work with the Opposition"
  SOTN_OpenSociety_desc:0 ""
 
- SOTN_StabiliseTheRealm:0 "Reassure our People"
+ SOTN_StabiliseTheRealm:0 "Assuage Popular Concerns"
  SOTN_StabiliseTheRealm_desc:0 ""
 
  SOTN_MaregyptRenaissance:0 "A Maregyptian Renaissance"
@@ -172,22 +172,22 @@
  SOTN_FateOfCommission:0 "Fate of the Equestrian Commission"
  SOTN_FateOfCommission_desc:0 ""
 
- SOTN_NationaliseHippogriffInterests:0 "Nationalise [HIP.GetAdjective] Investments"
- SOTN_NationaliseHippogriffInterests_desc:0 ""
+ SOTN_NationaliseForeignInterests:0 "Nationalise Foreign Investments"
+ SOTN_NationaliseForeignInterests_desc:0 ""
 
- SOTN_SeizeEquestrianAssets:0 "Seize [EQS.GetAdjective] Assets"
- SOTN_SeizeEquestrianAssets_desc:0 ""
+ SOTN_SubsidiseNationalIndustries:0 "Subsidise [ROOT.GetAdjective] Companies"
+ SOTN_SubsidiseNationalIndustries_desc:0 ""
 
- SOTN_DevelopInternalMarket:0 "Expand the Internal Market"
+ SOTN_DevelopInternalMarket:0 "Stimulate the Internal Market"
  SOTN_DevelopInternalMarket_desc:0 ""
 
- SOTN_SelfSufficientEconomy:0 "A Self-Sufficient Economy"
+ SOTN_SelfSufficientEconomy:0 "An Independent Economy"
  SOTN_SelfSufficientEconomy_desc:0 ""
 
  SOTN_MaregyptBank:0 "The First [ROOT.GetAdjective] Bank"
  SOTN_MaregyptBank_desc:0 ""
 
- SOTN_TarriffWall:0 "Raise the Trade Wall"
+ SOTN_TarriffWall:0 "Tarriff Agricultural Imports"
  SOTN_TarriffWall_desc:0 ""
 
  SOTN_PriceControls:0 "Enact Price Controls"
@@ -242,7 +242,7 @@
  SOTN_DevelopProvinces:0 "Develop the Provinces"
  SOTN_DevelopProvinces_desc:0 ""
 
- SOTN_NationalRail:0 "From Somnambula to Mareoë in a Day!"
+ SOTN_NationalRail:0 "From Somnambula to Mareoë in a Day"
  SOTN_NationalRail_desc:0 ""
 
  SOTN_BroadEducationCampaign:0 "Abolish Scribal Privileges"
