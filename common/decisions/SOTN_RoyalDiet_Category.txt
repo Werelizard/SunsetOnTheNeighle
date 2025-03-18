@@ -35,4 +35,16 @@ SOTN_RoyalDiet_Category = {
 			SOTN_RoyalDiet_TransferHarmonyNeutral_effect = yes
 		}
 	}
+	# Decision "acts"
+	SOTN_RoyalDiet_AppointOverseer = {
+		available = {
+			
+		}
+		visible = {
+			has_completed_focus = SOTN_EconomyDevelopment
+		}
+		complete_effect = {
+			
+		}
+	}
 }

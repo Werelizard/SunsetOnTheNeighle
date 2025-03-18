@@ -1,0 +1,8 @@
+SOTN_SetupEconomy = {
+	set_variable = {
+		SOTN_MaregyptEconomy_ConsumerFac_var = 0.05
+	}
+	set_variable = {
+		SOTN_MaregyptEconomy_ResourcePenalty_var = -0.10
+	}
+}

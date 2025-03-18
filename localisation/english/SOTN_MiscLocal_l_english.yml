@@ -25,3 +25,6 @@
 
  #Modifier
  SOTN_UnrestChange_modifier:0 "Weekly Global Unrest Change"
+
+ #Variable tooltips
+ SOTN_Reform_tt:0 "£SOTN_SOTN_Reform Reform Progress: $RIGHT|+=1$"

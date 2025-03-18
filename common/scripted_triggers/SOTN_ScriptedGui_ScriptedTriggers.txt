@@ -52,14 +52,21 @@ SOTN_HasNeighSer_Vizier_trigger = { #Trigger to check that Neigh Ser is the curr
 
 #Scripted triggers for diet-related matters
 SOTN_RoyalDietMajority_trigger = {
-	has_completed_focus = SOTN_RoyalDiet
-	custom_trigger_tooltip = {
-		tooltip = SOTN_MajorityInDiet_tt
-		check_variable = {
-			SOTN_TotalDietSupport_var > 106
+	OR = {
+		custom_trigger_tooltip = {
+			tooltip = SOTN_MajorityInDiet_tt
+			has_completed_focus = SOTN_RoyalDiet
+			check_variable = {
+				SOTN_TotalDietSupport_var > 106
+			}
+			NOT = {
+				has_country_flag = SOTN_RoyalDietFails_flag
+			}
 		}
-		NOT = {
+		custom_trigger_tooltip = {
+			tooltip = SOTN_DietAbolished_tt
 			has_country_flag = SOTN_RoyalDietFails_flag
+			has_country_flag = SOTN_DietAbolished_flag
 		}
 	}
 }

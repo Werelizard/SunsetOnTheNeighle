@@ -4,11 +4,21 @@ spriteTypes = {
 		name = "GFX_SOTN_VizierBadge"
 		texturefile = "gfx/interface/vizierIcon.dds"
 	}
-
-	# Text Icons
+	
+	# Text Icons 
 	spriteType = {
 		name = "GFX_SOTN_unrest_text_icon"
-		texturefile = "gfx/texticons/Local_Unrest_Text_Icon.dds"
+		texturefile = "gfx/texticons/SOTN_Unrest.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_SOTN_DietAct"
+		texturefile = "gfx/texticons/SOTN_DietAct.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_SOTN_SOTN_Reform"
+		texturefile = "gfx/texticons/SOTN_Reform.dds"
 		legacy_lazy_load = no
 	}
 

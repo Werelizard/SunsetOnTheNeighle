@@ -57,3 +57,11 @@ SOTN_RoyalDiet_Category = {
 		original_tag = MGY
 	}
 }
+
+SOTN_EconomyReform_Category = {
+	priority = 800
+	visible = {
+		original_tag = MGY
+	}
+	visible_when_empty = no
+}

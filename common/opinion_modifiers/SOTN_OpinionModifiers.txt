@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	SOTN_AdoptedBit = {
+		trade = yes
+		value = 25
+	}
+}

@@ -126,6 +126,13 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.05
 			}
 		}
+		# Economy-Related Ideas
+		# SOTN_GreatWorksOffice = {
+		# 	modifier = {
+		# 		production_speed_buildings_factor = 0.05
+		# 		local_building_slots_factor = 0.1
+		# 	}
+		# }
 	}
 	# Industrial Conern
 	industrial_concern = {
@@ -181,6 +188,11 @@ ideas = {
 			# 		build_cost_ic = -0.05
 			# 	}
 			# }
+			visible = {
+				NOT = {
+					has_completed_focus = SOTN_SubsidiseHeavyIndustry
+				}
+			}
 			allowed = {
 				original_tag = MGY
 			}
@@ -233,6 +245,37 @@ ideas = {
 				original_tag = MGY
 			}
 			available = {
+				NOT = {
+					has_completed_focus = SOTN_SomnambulaDockyards
+				}
+				733 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		SOTN_Dockyards_Improved = {
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.1
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.05
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05
+				}
+			}
+			allowed = {
+				original_tag = MGY
+			}
+			available = {
+				has_completed_focus = SOTN_SomnambulaDockyards
 				733 = {
 					is_owned_and_controlled_by = ROOT
 				}
@@ -241,10 +284,9 @@ ideas = {
 		SOTN_Bank = {
 			modifier = {
 				consumer_goods_factor = -0.15
-				political_power_factor = 0.05
 			}
 			available = {
-				has_completed_focus = SOTN_EconomyNationalBank
+				has_completed_focus = SOTN_MaregyptBank
 			}
 			allowed = {
 				original_tag = MGY
@@ -277,7 +319,103 @@ ideas = {
 				
 			}
 			research_bonus = {
+				electronics = 0.1
+			}
+			allowed = {
+				original_tag = MGY
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = SOTN_ShezuRadio
+				}
+			}
+		}
+		SOTN_SomRadio_Improved = {
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+				static_anti_air_hit_chance_factor = 0.1
+			}
+			research_bonus = {
 				electronics = 0.15
+			}
+			allowed = {
+				original_tag = MGY
+			}
+			visible = {
+				has_completed_focus = SOTN_ShezuRadio
+			}
+		}
+		SOTN_MetalWorks = {
+			modifier = {
+				country_resource_tungsten = 4
+				country_resource_aluminium = 10
+				local_resources_factor = 0.1
+			}
+			visible = {
+				has_completed_focus = SOTN_RataphetMetalworks
+			}
+			allowed = {
+				original_tag = MGY
+			}
+		}
+		SOTN_RailWorks = {
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				repair_speed_rail_way_factor = 0.2
+				mobilization_speed = 0.05
+			}
+			equipment_bonus = {
+				train = {
+					build_cost_ic = -0.2
+					reliability_factor = 0.1
+				}
+			}
+			visible = {
+				has_completed_focus = SOTN_NationalRail
+			}
+			allowed = {
+				original_tag = MGY
+			}
+		}
+		SOTN_Shaaty_improved = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+			equipment_bonus = {
+				motorized = {
+					build_cost_ic = -0.075
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.075
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.075
+				}
+			}
+			visible = {
+				has_completed_focus = SOTN_SubsidiseHeavyIndustry
+			}
+			allowed = {
+				original_tag = MGY
+			}
+		}
+		SOTN_WorkponiesVillageCommission = {
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					reliability_factor = 0.05
+				}
+			}
+			visible = {
+				has_completed_focus = SOTN_TraditionalEconomy
 			}
 			allowed = {
 				original_tag = MGY

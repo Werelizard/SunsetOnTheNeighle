@@ -196,13 +196,15 @@ if = {
 
 #Shadow on the Neighle Setup
 log = "[GetDateText] Begin Shadow on the Neighle Setup for [ROOT.GetName]."
+##Economy setup
+SOTN_SetupEconomy = yes
 ## Unrest setup
 SOTN_UnrestStartup_effect = yes
 set_country_flag = has_custom_advisors
 set_country_flag = has_custom_spymaster
 #Vizier setup
 SOTN_VizierMechanicSetup_effect = yes
-#Reform setuo
+#Reform setup
 set_variable = {
 	SOTN_ReformProgress_var = 0
 }

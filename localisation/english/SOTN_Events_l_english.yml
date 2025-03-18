@@ -23,3 +23,10 @@
  SOTN_MgyFlavour.6.title:0 "A Neigh and then Silence"
  SOTN_MgyFlavour.6.desc:0 "The last few days were stressful for the King to say the least. Unrest spread outwards and into the provinces, as local Nomarchs implored the crown for help. In response, the King ordered the Maredjay to stand down and let local authorities handle this as he prepared a second speech - all the while concerting with his cabinet on how best to help his people and smooth the situation over. It seems however that the Maredjay's Lady-Captain - Ahhotep - opted to disobey the King's direct orders as she organised a nation-wide crackdown and placed Narmare Redet under house arrest. Throught the country, the Maredjay moved in the dark, arresting or intimidating perceived sympathisers to the socialist cause. Whilst this had the intended effect of eroding the Maregyptian People's Party's popular base, it also served to vindicate the people's anger and radicalise those that remain. When ordered to return to the capital to justify herself before the King, the Lady-Captain declined, stating that she was doing her duty to crown and country."
  SOTN_MgyFlavour.6.a:0 "Ahhotep, what have you done?"
+
+ # Economy Event
+ SOTN_MgyEconomy.1.title:0 "Of Ponies and Currencies"
+ SOTN_MgyEconomy.1.desc:0 ""
+ SOTN_MgyEconomy.1.a:0 "Fully adopt the Bit as our currency!"
+ SOTN_MgyEconomy.1.b:0 "Allow the Stater to be used alongside the Bit"
+ 

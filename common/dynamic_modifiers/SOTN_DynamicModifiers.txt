@@ -8,6 +8,30 @@ SOTN_PoliticalUnrest_Dynmod = { #Hidden dynamic modifier to handle the effects o
 	war_support_factor = SOTN_UnrestImpact_var
 }
 
+SOTN_MaregyptEconomy_Dynmod = {
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		
+	}
+	consumer_goods_factor = SOTN_MaregyptEconomy_ConsumerFac_var
+	production_speed_buildings_factor = SOTN_MaregyptEconomy_BuildAll_var
+	local_building_slots_factor = SOTN_MaregyptEconomy_BuildSlots_var
+	production_factory_efficiency_gain_factor = SOTN_MaregyptEconomy_ProdGain_var
+	production_factory_max_efficiency_factor = SOTN_MaregyptEconomy_ProdMax_var
+	production_factory_start_efficiency_factor = SOTN_MaregyptEconomy_ProdBase_var
+	production_speed_industrial_complex_factor = SOTN_MaregyptEconomy_BuildCiv_var
+	local_resources_factor = SOTN_MaregyptEconomy_ResourceGain_var
+	production_speed_infrastructure_factor = SOTN_MaregyptEconomy_BuildInfrastructure_var
+	production_lack_of_resource_penalty_factor = SOTN_MaregyptEconomy_ResourcePenalty_var
+	industrial_capacity_factory = SOTN_MaregyptEconomy_MilOut_var
+	industrial_capacity_dockyard = SOTN_MaregyptEconomy_DockOut_var
+	resource_trade_cost_bonus_per_factory = SOTN_MaregyptEconomy_TradeFactory_var
+}
+
+# STATE DYNAMIC MODIFIERS
+
 SOTN_MODIFIER_LocalUnrest_Dynmod = { #State modifier for the local unrest
 	icon = GFX_SOTN_unrestModifier_icon
     enable = { always = yes }
@@ -40,3 +64,17 @@ SOTN_MODIFIER_FamineEffects_mod = { #State modifier for bad infrastructure
 	recruitable_population_factor = -0.33
 	local_building_slots = -1
 }
+
+SOTN_MODIFIER_IndustrialZone_mod = { #State modifier for new workponies' villages
+	# icon = GFX_SOTN_BadInfrastructure_icon
+    enable = { always = yes }
+    remove_trigger = {
+       
+    }
+	local_building_slots_factor = 0.1
+	state_production_speed_buildings_factor = 0.2
+	state_resources_factor = 0.2
+	recruitable_population_factor = -0.2
+}
+
+

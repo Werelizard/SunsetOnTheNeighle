@@ -10,7 +10,6 @@
  SOTN_Debug_GetAverageUnrest:0 "Average unrest is [?SOTN_Unrest_Average_var], the total unrest being [?SOTN_TotalUnrest_var]"
 
  SOTN_Debug_CheckNumberOfStates:0 "The current number of owned states is: §Y[?MGY.SOTN_OwnedStates_var]§!"
-
 #  SOTN_RoyalDiet_AddIndependentLoyalty_tt:0 "Increase loyalty by [?SOTN_LoyaltyChange_tempvar|+]"
 #  SOTN_RoyalDiet_LowerIndependentLoyalty_tt:0 "Lower loyalty by [?SOTN_LoyaltyChange_tempvar|+]"
 
@@ -53,10 +52,25 @@
  SOTN_RoyalDiet_Setup:0 "Debug: setup initial seats"
 
  #Economy Decision
+ SOTN_EconomyReform_Category:0 "Modernising Maregypt"
+ SOTN_ExpandSomnambula:0 "The Somnambula Steelworks"
+ SOTN_OasisAgriculture:0 "Wadi Exploitation"
+ SOTN_FundDjoser:0 "Fund Djoser Construction"
  SOTN_ImportCrops:0 "Import Equestrian Crops"
  SOTN_FixIrrigation_dummy:0 "Modernise the Waterways"
  SOTN_DiversifyEconomy:0 "Purchase Farming Equipment"
  SOTN_FixIrrigation:0 "Modernise the Waterways"
+ SOTN_IndustrialZone:0 "Establish Workponies' Village in [FROM.GetName]"
+ SOTN_IndustrialZone_dummy:0 "Establish Workponies' Village"
+ SOTN_IndustrialZone_trigger_tt:0 "We can designate up to §Y[?SOTN_IndustrialZonesMax_var]§! workponies' villages."
+ SOTN_ManephisPOwerStation:0 "Construct the Manephis Power Station"
+ SOTN_BuildDamAssyut:0 "Build the Assyut Dam"
+ SOTN_BuildDamDahshoof:0 "Build the Dahshoof Dam"
+ SOTN_DevelopProvince:0 "Develop Infrastructure in [FROM.GetName]"
+ SOTN_DevelopProvince_dummy:0 "Develop Infrastructure in [THIS.GetName]"
+ SOTN_SomnambulaToTimbucktu:0 "From the Delta to Timbucktu"
+ SOTN_SomnambulaToPanthera:0 "An Iron Road to Panthera"
+ SOTN_SomnambulaToTobuck:0 "Around the Green Bay"
 
  #Famine decisions
  SOTN_FamineScrapExports:0 "Scrap Agricultural Exports"
@@ -66,5 +80,7 @@
  SOTN_FamineEquestrianFood:0 "Buy Equestrian Apples"
  SOTN_FamineHippogrifFish:0 "Purchase Hippogriffian Fish"
 
- #Misc
- SOTN_UnlockStateWideDecision_tt:0 "Unlocks State Decision: £decision_icon_small §Y$DECISION$§!"
+ #Royal Diet Decision
+ SOTN_RoyalDiet_AppointOverseer:0 "Reinstate the Overseer of State Works"
+ SOTN_RoyalDiet_RailFundingBill:0 "Nationalise the Railway Companies"
+ SOTN_RoyalDiet_EducationReforms:0 "Repeal the Collegial Decree"

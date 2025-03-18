@@ -14,7 +14,21 @@
  SOTN_EventCompletion_tt:0 "This focus will be §Yautomatically§! completed through an §Yevent§!."
  SOTN_UnlockNationalFocus_tt:0 "[ROOT.GetName] unlocks the §Y"$FOCUS$"§! national focus."
  SOTN_DietIsOngoing_tt:0 "The §YRoyal Reforms§! are ongoing."
- 
+
+ SOTN_ModifyEconomy_tt:0 "Modify §Y$SOTN_MaregyptEconomy_Dynmod$§! by:"
+
+ SOTN_MajorityInDiet_tt:0 "Completed the §Y$SOTN_RoyalDiet$§! focus and holds a majority in the diet"
+ SOTN_DietAbolished_tt:0 "The §YRoyal Diet§! was dissolved"
+ SOTN_PovertyDecisions_tt:0 "Completing these decisions will reduce our §CPoverty§!!"
+ SOTN_IlliteracyDecisions_tt:0 "Completing these decisions will reduce our §CIlliteracy§!!"
+
+ #Override tooltips for decisions
+ SOTN_UnlockStateWideDecision_tt:0 "Unlocks State Decision: £decision_icon_small §Y$DECISION$§!"
+ SOTN_UnlockDecision_tt:0 "Unlocks Decision: £decision_icon_small §Y$DECISION$§!"
+ SOTN_StateWideDecisionEffect_tt:0 "Unlocks State Decision: £decision_icon_small §Y$DECISION$§!, which would have the following effect:\n"
+ SOTN_HasPassedBill:0 "The £SOTN_DietAct §Y$BILL$§! bill has been ratified by the Diet"
+ SOTN_UnlockBill:0 "The Diet can now vote on the £SOTN_DietAct §Y$BILL$§! bill"
+
  #Focuses - Political
  SOTN_KingSpeech:0 "A Long-Expected Address"
  SOTN_KingSpeech_desc:0 ""
@@ -70,7 +84,6 @@
 
  SOTN_StrongArmAristocrats:0 "Ensure Bureaucratic Loyalty"
  SOTN_StrongArmAristocrats_desc:0 ""
- SOTN_MajorityInDiet_tt:0 "Holds a Majority in the Diet"
 
  SOTN_HarmonySociety:0 "Renew the Crack-Down"
  SOTN_HarmonySociety_desc:0 ""
@@ -78,8 +91,8 @@
  SOTN_OpenSociety:0 "Work with the Opposition"
  SOTN_OpenSociety_desc:0 ""
 
- SOTN_StabiliseTheRealm:0 "Assuage Popular Concerns"
- SOTN_StabiliseTheRealm_desc:0 ""
+ SOTN_TribunalsOfOpposition:0 "Operation Neshyt"
+ SOTN_TribunalsOfOpposition_desc:0 ""
 
  SOTN_MaregyptRenaissance:0 "A Maregyptian Renaissance"
  SOTN_MaregyptRenaissance_desc:0 ""
@@ -211,30 +224,37 @@
 
  SOTN_RiverTrade:0 "Exploit Maregypt's Lifeline"
  SOTN_RiverTrade_desc:0 ""
+ SOTN_RiverTrade_effect_tt:0 "Unlocks £decision_icon_small §Ydecisions§! to use £convoy_texticon convoys to establish trade routes via the Neighle with §Y[ALO.GetNameDef]§!, §Y[TIM.GetNameDef]§!, §Y[SON.GetNameDef]§!, §Y[MSH.GetNameDef]§!, §Y[ZWA.GetNameDef]§!, §Y[TIM.GetNameDef]§!, §Y[ZUG.GetNameDef]§! and §Y[ZEL.GetNameDef]§!. Trade routes will grant us £civ_factory factories and £stability_texticon stability."
 
- SOTN_RoyalOfficeOfWorks:0 "Appoint an Overseer of the Great Works"
+ SOTN_RoyalOfficeOfWorks:0 "New Great Works"
  SOTN_RoyalOfficeOfWorks_desc:0 ""
+ SOTN_RoyalOfficeOfWorks_effect_tt:0 "Unlocks State Decision: £decision_icon_small §Y$SOTN_IndustrialZone_dummy$§! to improve the industrial output in selected states. We will initially be able to only designate up to §Y3§! Workponies' Villages."
 
  SOTN_Electrification:0 "A Light in Every Home"
  SOTN_Electrification_desc:0 ""
 
- SOTN_IndustrialGrants:0 "Fund Industrial Programs"
+ SOTN_IndustrialGrants:0 "Expand [ROOT.GetAdjective] Light Industry"
  SOTN_IndustrialGrants_desc:0 ""
 
- SOTN_CashCrops:0 "Golden Crops"
- SOTN_CashCrops_desc:0 ""
+ SOTN_ShezuRadio:0 "Mobilise the Airwaves"
+ SOTN_ShezuRadio_desc:0 ""
 
- SOTN_LightIndustry:0 "Light Industrial Developments"
- SOTN_LightIndustry_desc:0 ""
+ SOTN_WorkersNotPeasants:0 "Workers, not Peasants"
+ SOTN_WorkersNotPeasants_desc:0 ""
+ SOTN_WorkersNotPeasants_effects:0 "Increases the maximum ammount of §YWorkponies' Villages§! by §Y3§!"
 
- SOTN_SubsidiesArtisans:0 "Rescue the Artisanal Sector"
- SOTN_SubsidiesArtisans_desc:0 ""
+ SOTN_TraditionalEconomy:0 "Continue Light Industry Prioritisation"
+ SOTN_TraditionalEconomy_desc:0 ""
 
- SOTN_SubsidiseHeavyIndustry:0 "The Great Trot Forward"
+ SOTN_SubsidiseHeavyIndustry:0 "Heavy Industry Investments"
  SOTN_SubsidiseHeavyIndustry_desc:0 ""
 
- SOTN_MaregyptianMiracle:0 "A [ROOT.GetAdjective] Miracle"
- SOTN_MaregyptianMiracle_desc:0 ""
+ SOTN_ExploitTheNeighle:0 "Harness the Neighle"
+ SOTN_ExploitTheNeighle_desc:0 ""
+
+ SOTN_ProsperousUrbanisation:0 "Zebrica's Workshop"
+ SOTN_ProsperousUrbanisation_desc:0 ""
+ SOTN_ProsperousUrbanisation_effect_tt:0 "Every owned state with the §Y$SOTN_MODIFIER_IndustrialZone_mod$§! modifier will gain §Y2§! building slots and §Y2§! civilian factories."
 
  SOTN_DevelopProvinces:0 "Develop the Provinces"
  SOTN_DevelopProvinces_desc:0 ""
@@ -244,6 +264,7 @@
 
  SOTN_BroadEducationCampaign:0 "Abolish Scribal Privileges"
  SOTN_BroadEducationCampaign_desc:0 ""
+ SOTN_BroadEducationCampaign_effect_tt:0 "This will gradually improve our §Cilliteracy§!. This process will go twice as fast if we took the §Y$SOTN_ClassicRevival$§! focus!"
 
  SOTN_ModernScience:0 "A Great Library for the Modern Age"
  SOTN_ModernScience_desc:0 ""
