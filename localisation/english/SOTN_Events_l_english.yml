@@ -30,3 +30,8 @@
  SOTN_MgyEconomy.1.a:0 "Fully adopt the Bit as our currency!"
  SOTN_MgyEconomy.1.b:0 "Allow the Stater to be used alongside the Bit"
  
+ # DEvt Events
+ SOTN_MgyDebts.1.title:0 "A Meeting with Apple Seed"
+ SOTN_MgyDebts.1.desc:0 ""
+ SOTN_MgyDebts.1.a:0 "Nationalise the commission, and agree to the proposed payment scheme."
+ SOTN_MgyDebts.1.b:0 "These terms are outrageous!"

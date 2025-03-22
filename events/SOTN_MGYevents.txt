@@ -2,6 +2,7 @@ add_namespace = SOTN_MgyFlavour #General Flavour Events
 add_namespace = SOTN_MgyRoyalDiet #Royal Diet Events
 add_namespace = SOTN_MgyUnrest #Political Unrest Events
 add_namespace = SOTN_MgyEconomy #Economy Events
+add_namespace = SOTN_MgyDebts # Debt Events
 
 ## Flavour events for introducing Maregypt, and follow-up events triggered by "The King's Speech" focus
 
@@ -262,7 +263,7 @@ unit_leader_event = { #Event for "Flight of Narmare"
 country_event = {
 	id = SOTN_MgyEconomy.1
 	title = SOTN_MgyEconomy.1.title
-	desc = SOTN_MgyEconomy.1.title
+	desc = SOTN_MgyEconomy.1.desc
 
 	is_triggered_only = yes
 
@@ -305,5 +306,91 @@ country_event = {
 		#
 		add_stability = 0.02
 		add_political_power = 25
+	}
+}
+
+# Debt events
+
+country_event = { #Fate of the Equestrian Commission
+	id = SOTN_MgyDebts.1
+	title = SOTN_MgyDebts.1.title
+	desc = SOTN_MgyDebts.1.desc 
+
+	timeout_days = 14
+	is_triggered_only = yes
+
+	option = { # Vow to work with the commission. Locks defaulting on debts
+		name = SOTN_MgyDebts.1.a
+		log = "[GetLogInfo]: event SOTN_MgyDebts.1 option SOTN_MgyDebts.1.a"
+
+		custom_override_tooltip = { #Locks you out of the focus
+			tooltip = {
+				localization_key = SOTN_LockNationalFocus_tt
+				FOCUS = SOTN_AbolishCommission
+			}
+			hidden_effect = {
+				set_country_flag = SOTN_AbolishCommission_locked_flag
+			}
+		}
+		custom_effect_tooltip = SOTN_doublespace
+		swap_ideas = {
+			remove_idea = SOTN_EquestrianInvestment
+			add_idea = SOTN_EquestrianInvestment_Improved
+		}
+	}
+
+	option = { #Default on debts.
+		name = SOTN_MgyDebts.1.b
+		log = "[GetLogInfo]: event SOTN_MgyDebts.1 option SOTN_MgyDebts.1.b"
+
+		trigger = {
+			NOT = { #Checks that the focus hasn't been completed
+				has_completed_focus = SOTN_FriendshipMission
+			}
+		}
+
+		if = {
+			limit = {
+				AND = { #To check wheteher or not the friendship with Equestria focus can be taken in the first place
+					OR = {
+						has_government = democratic
+						has_country_leader = {
+							character = SOTN_character_KingKhefer
+							ruling_only = yes
+						}
+					}
+					EQS = {
+						exists = yes
+						NOT = {
+							is_subject = yes
+						}
+						has_government = democratic
+					}
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_LockNationalFocus_tt
+					FOCUS = SOTN_FriendshipMission
+				}
+				hidden_effect = {
+					set_country_flag = SOTN_FriendshipMission_locked_flag
+				}
+			}
+		}
+
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = SOTN_LockNationalFocus_tt
+				FOCUS =  SOTN_PayDebts
+			}
+			hidden_effect = {
+				set_country_flag = SOTN_PayDebts_locked_flag
+			}
+		}
+		custom_effect_tooltip = SOTN_doublespace
+		remove_ideas = {
+			SOTN_EquestrianInvestment
+		}
 	}
 }

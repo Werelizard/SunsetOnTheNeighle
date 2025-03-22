@@ -41,7 +41,8 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.3
 				stability_factor = -0.1
-				production_speed_buildings_factor = -0.1
+				political_power_factor = -0.1
+				production_speed_buildings_factor = -0.2
 			}
 		}
 		SOTN_PoliticalUnrest = {
@@ -59,11 +60,6 @@ ideas = {
 			}
 		}
 		# Country ideas - after start
-		SOTN_IncreasedTaxes = {
-			modifier = {
-				political_power_factor = 0.1
-			}
-		}
 		SOTN_FamineInTheNeighle = {
 			modifier = {
 				stability_factor = -0.1
@@ -127,12 +123,57 @@ ideas = {
 			}
 		}
 		# Economy-Related Ideas
-		# SOTN_GreatWorksOffice = {
-		# 	modifier = {
-		# 		production_speed_buildings_factor = 0.05
-		# 		local_building_slots_factor = 0.1
-		# 	}
-		# }
+		SOTN_EconomicMeltdown = {
+			modifier = {
+				stability_factor = -0.25
+				political_power_factor = -0.1
+				production_speed_buildings_factor = -0.5
+			}
+		}
+		SOTN_EconomicConcessions = {
+			modifier = {
+				political_power_factor = -0.1
+				trade_opinion_factor = 0.1
+				min_export = 0.5
+			}
+			targeted_modifier = {
+				tag = EQS
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = HIP
+				cic_to_target_factor = 0.2
+			}
+		}
+		SOTN_FlightOfknowHow = {
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		SOTN_SubsidisedBuisnesses = {
+			modifier = {
+				consumer_goods_factor = 0.25
+				political_power_cost = 0.1
+			}
+		}
+		SOTN_InternalMarket = {
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				local_resources_factor = 0.05
+			}
+		}
+		SOTN_IncreasedTaxes = {
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		SOTN_LandownerCompensation = {
+			modifier = {
+				political_power_factor = -0.5
+			}
+		}
 	}
 	# Industrial Conern
 	industrial_concern = {
@@ -156,10 +197,34 @@ ideas = {
 				has_idea = SOTN_EquestrianInvestment
 			}
 		}
+		SOTN_EquestrianInvestment_Improved = {
+			modifier = {
+				trade_opinion_factor = 0.5
+				local_resources_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+			allowed = {
+				original_tag = MGY
+				has_government = democratic
+			}
+			allowed_to_remove = {
+				has_completed_focus = SOTN_FateOfCommission
+			}
+			visible = {
+				has_completed_focus = SOTN_FateOfCommission
+				NOT = {
+					has_country_flag = SOTN_PayDebts_locked_flag
+				}
+			}
+		}
 		SOTN_Djoser = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
-				production_speed_infrastructure_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.05
 			}
 			research_bonus = {
@@ -274,6 +339,9 @@ ideas = {
 			allowed = {
 				original_tag = MGY
 			}
+			visible = {
+				has_completed_focus = SOTN_SomnambulaDockyards
+			}
 			available = {
 				has_completed_focus = SOTN_SomnambulaDockyards
 				733 = {
@@ -336,7 +404,7 @@ ideas = {
 				static_anti_air_hit_chance_factor = 0.1
 			}
 			research_bonus = {
-				electronics = 0.15
+				electronics = 0.1
 			}
 			allowed = {
 				original_tag = MGY
@@ -403,24 +471,6 @@ ideas = {
 				original_tag = MGY
 			}
 		}
-		SOTN_WorkponiesVillageCommission = {
-			modifier = {
-				production_factory_max_efficiency_factor = 0.1
-				local_resources_factor = 0.15
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1
-					reliability_factor = 0.05
-				}
-			}
-			visible = {
-				has_completed_focus = SOTN_TraditionalEconomy
-			}
-			allowed = {
-				original_tag = MGY
-			}
-		}
 	}
 	#Army Spirits
 	academy_spirit = {
@@ -454,6 +504,12 @@ ideas = {
 			}
 			on_remove = {
 				clr_country_flag = SOTN_ShaaDoofVizier_flag
+			}
+		}
+		SOTN_NewMaregyptEconomy = {
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.1
 			}
 		}
 	}

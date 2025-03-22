@@ -28,6 +28,10 @@ SOTN_MaregyptEconomy_Dynmod = {
 	industrial_capacity_factory = SOTN_MaregyptEconomy_MilOut_var
 	industrial_capacity_dockyard = SOTN_MaregyptEconomy_DockOut_var
 	resource_trade_cost_bonus_per_factory = SOTN_MaregyptEconomy_TradeFactory_var
+	research_speed_factor = SOTN_MaregyptEconomy_ResearchSpeed_var
+	recruitable_population_factor = SOTN_MaregyptEconomy_RecruitablePop_var
+	SOTN_IndustrialResearchSpeed = SOTN_MaregyptEconomy_Industry_var
+	SOTN_ElectronicsResearchSpeed = SOTN_MaregyptEconomy_Electronics_var
 }
 
 # STATE DYNAMIC MODIFIERS

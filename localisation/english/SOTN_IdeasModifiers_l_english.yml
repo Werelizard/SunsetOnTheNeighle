@@ -48,6 +48,27 @@
  SOTN_GreatWorksOffice:0 "Overseer of the Great Works"
  SOTN_GreatWorksOffice_desc:0 ""
 
+ SOTN_EconomicMeltdown:0 "Financial Crisis"
+ SOTN_EconomicMeltdown_desc:0 ""
+
+ SOTN_EconomicConcessions:0 "Economic Concessions"
+ SOTN_EconomicConcessions_desc:0 ""
+
+ SOTN_FlightOfknowHow:0 "Flight of Foreign Know-How"
+ SOTN_FlightOfknowHow_desc:0 ""
+
+ SOTN_SubsidisedBuisnesses:0 "Emergency Governmental Aid"
+ SOTN_SubsidisedBuisnesses_desc:0 ""
+
+ SOTN_InternalMarket:0 "Strengthened Internal Market"
+ SOTN_InternalMarket_desc:0 ""
+
+ SOTN_IncreasedTaxes:0 "Increased Tax Income"
+ SOTN_IncreasedTaxes_desc:0 ""
+
+ SOTN_LandownerCompensation:0 "Blatant Embezzlements"
+ SOTN_LandownerCompensation_desc:0 ""
+
  #Hidden Ideas
  SOTN_Vizier_ShaaDoof:0 "Shaa Doof"
 
@@ -62,6 +83,7 @@
  SOTN_PoliticalUnrest_AverageUnrest_tt:0 "\nCurrent average £SOTN_unrest_text_icon unrest is: §R[?SOTN_Unrest_Average_var|%%]§!"
 
  SOTN_MaregyptEconomy_Dynmod:0 "The New Maregyptian Economy"
+ SOTN_NewMaregyptEconomy:0 "$SOTN_MaregyptEconomy_Dynmod$"
 
  #Dynamic Modifiers - States
  SOTN_MODIFIER_LocalUnrest_Dynmod:0 "Provincial Unrest"
@@ -84,6 +106,7 @@
  SOTN_SomRadio:0 "Radio Shezu"
  SOTN_SomRadio_Improved:0 "$SOTN_SomRadio$"
  SOTN_EquestrianInvestment:0 "Friendship Commission"
+ SOTN_EquestrianInvestment_Improved:0 "$SOTN_EquestrianInvestment$"
  SOTN_MetalWorks:0 "R'ataphet Metalworks"
  SOTN_RailWorks:0 "Blue Neighle Rail"
  SOTN_WorkponiesVillageCommission:0 "National Workponies Commission"
@@ -96,3 +119,4 @@
 
  #Opinion Modifiers
  SOTN_AdoptedBit: "Adopted Bits as Currency"
+ SOTN_Tarriffs:0 "Imposed Tarriffs"

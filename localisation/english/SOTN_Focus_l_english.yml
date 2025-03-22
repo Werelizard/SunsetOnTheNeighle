@@ -10,9 +10,8 @@
  SOTN_AhhotepIsVizier_tt_NOT:0 "NOT: $SOTN_AhhotepIsVizier_tt$"
  SOTN_NeighktIsVizier_tt_NOT:0 "NOT: $SOTN_NeighktIsVizier_tt$"
 
- SOTN_AccessToThisFocus_tt:0 "We have access to this branch of the focus tree"
+ SOTN_AccessToThisFocus_tt:0 "NOT: this focus is locked"
  SOTN_EventCompletion_tt:0 "This focus will be §Yautomatically§! completed through an §Yevent§!."
- SOTN_UnlockNationalFocus_tt:0 "[ROOT.GetName] unlocks the §Y"$FOCUS$"§! national focus."
  SOTN_DietIsOngoing_tt:0 "The §YRoyal Reforms§! are ongoing."
 
  SOTN_ModifyEconomy_tt:0 "Modify §Y$SOTN_MaregyptEconomy_Dynmod$§! by:"
@@ -22,12 +21,19 @@
  SOTN_PovertyDecisions_tt:0 "Completing these decisions will reduce our §CPoverty§!!"
  SOTN_IlliteracyDecisions_tt:0 "Completing these decisions will reduce our §CIlliteracy§!!"
 
- #Override tooltips for decisions
- SOTN_UnlockStateWideDecision_tt:0 "Unlocks State Decision: £decision_icon_small §Y$DECISION$§!"
- SOTN_UnlockDecision_tt:0 "Unlocks Decision: £decision_icon_small §Y$DECISION$§!"
+ #Override tooltips
+ SOTN_UnlockStateWideDecision_tt:0 "Unlocks State Decision: £decision_icon_small §Y$DECISION$§!."
+ SOTN_UnlockDecision_tt:0 "Unlocks Decision: £decision_icon_small §Y$DECISION$§!."
  SOTN_StateWideDecisionEffect_tt:0 "Unlocks State Decision: £decision_icon_small §Y$DECISION$§!, which would have the following effect:\n"
- SOTN_HasPassedBill:0 "The £SOTN_DietAct §Y$BILL$§! bill has been ratified by the Diet"
- SOTN_UnlockBill:0 "The Diet can now vote on the £SOTN_DietAct §Y$BILL$§! bill"
+ SOTN_HasPassedBill_tt:0 "The £SOTN_DietAct §Y$BILL$§! bill has been ratified by the Diet."
+ SOTN_UnlockBill_tt:0 "The Diet can now vote on the £SOTN_DietAct §Y$BILL$§! bill."
+ SOTN_TookDecision_tt:0 "Has completed the £decision_icon_small §Y$DECISION$§! decision"
+ SOTN_SetTimedIdea_tt:0 "The §Y$IDEA$§! national spirit will have a duration of §Y$DAYS$§! days."
+ SOTN_ShortenTimedIdea_tt:0 "The §Y$IDEA$§! national spirit will be shortened by §Y$DAYS$§! days."
+ SOTN_IncreaseTimedIdea_tt:0 "The §Y$IDEA$§! national spirit will be increased by §Y$DAYS$§! days."
+ SOTN_UnlockNationalFocus_tt:0 "[ROOT.GetName] unlocks the §Y"$FOCUS$"§! national focus."
+ SOTN_LockNationalFocus_tt:0 "[ROOT.GetName] will §Rno longer§! be able to complete the §Y"$FOCUS$"§! national focus."
+ SONT_IncreaseDecisionCost_tt:0 "Increases the cost of the £decision_icon_small §Y$DECISION$§! decision by £pol_power §R$COST$§!."
 
  #Focuses - Political
  SOTN_KingSpeech:0 "A Long-Expected Address"
@@ -233,8 +239,11 @@
  SOTN_Electrification:0 "A Light in Every Home"
  SOTN_Electrification_desc:0 ""
 
- SOTN_IndustrialGrants:0 "Expand [ROOT.GetAdjective] Light Industry"
+ SOTN_IndustrialGrants:0 "Develop Maregypt's Light Industry"
  SOTN_IndustrialGrants_desc:0 ""
+
+ SOTN_ModernTools:0 "Modern Tools for Ancient Trades"
+ SOTN_ModernTools_desc:0 ""
 
  SOTN_ShezuRadio:0 "Mobilise the Airwaves"
  SOTN_ShezuRadio_desc:0 ""
@@ -264,7 +273,7 @@
 
  SOTN_BroadEducationCampaign:0 "Abolish Scribal Privileges"
  SOTN_BroadEducationCampaign_desc:0 ""
- SOTN_BroadEducationCampaign_effect_tt:0 "This will gradually improve our §Cilliteracy§!. This process will go twice as fast if we took the §Y$SOTN_ClassicRevival$§! focus!"
+ SOTN_BroadEducationCampaign_effect_tt:0 "This will gradually improve our §CIlliteracy§!. This process will go twice as fast if we took the §Y$SOTN_ClassicRevival$§! focus!"
 
  SOTN_ModernScience:0 "A Great Library for the Modern Age"
  SOTN_ModernScience_desc:0 ""

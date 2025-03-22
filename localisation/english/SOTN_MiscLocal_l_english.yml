@@ -27,4 +27,9 @@
  SOTN_UnrestChange_modifier:0 "Weekly Global Unrest Change"
 
  #Variable tooltips
- SOTN_Reform_tt:0 "£SOTN_SOTN_Reform Reform Progress: $RIGHT|+=1$"
+ SOTN_ReformIncrease_tt:0 "£SOTN_SOTN_Reform Increases Reform Progress by: $RIGHT|+=1$"
+ SOTN_DecreaseIncrease_tt:0 "£SOTN_SOTN_Reform Decreases Reform Progress by: $RIGHT|+=1$"
+ SOTN_IndustrialResearchSpeed_tt:0 "Industrial Research Speed: $RIGHT|+=%1$"
+ SOTN_ElectronicsResearchSpeed_tt:0 "Electronics Research Speed: $RIGHT|+=%1$"
+ SOTN_IndustrialResearchSpeed:0 "Industrial Research Speed"
+ SOTN_ElectronicsResearchSpeed:0 "Electronics Research Speed"

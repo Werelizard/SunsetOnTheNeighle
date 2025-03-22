@@ -55,7 +55,8 @@
  SOTN_EconomyReform_Category:0 "Modernising Maregypt"
  SOTN_ExpandSomnambula:0 "The Somnambula Steelworks"
  SOTN_OasisAgriculture:0 "Wadi Exploitation"
- SOTN_FundDjoser:0 "Fund Djoser Construction"
+ SOTN_FishingIndustry:0 "Bucksiris Fisheries"
+ SOTN_TractorFactories:0 "Manephis Tractor Factories"
  SOTN_ImportCrops:0 "Import Equestrian Crops"
  SOTN_FixIrrigation_dummy:0 "Modernise the Waterways"
  SOTN_DiversifyEconomy:0 "Purchase Farming Equipment"
@@ -71,6 +72,15 @@
  SOTN_SomnambulaToTimbucktu:0 "From the Delta to Timbucktu"
  SOTN_SomnambulaToPanthera:0 "An Iron Road to Panthera"
  SOTN_SomnambulaToTobuck:0 "Around the Green Bay"
+ SOTN_DeltaIndustry:0 "Build the Trotanis Papyrus Mills"
+ SOTN_MiddleMaregyptIndustry:0 "Cash Crops Development"
+ SOTN_SouthernIndustry:0 "The Neihpata Textile Industry"
+ SOTN_SouthQuaries:0 "Expand the Koltnak Quaries"
+ SOTN_InviteInvestors_dummy:0 "Invite Investors"
+ SOTN_PayDebtsEquestria:0 "Repay [EQS.GetAdjective] Creditors"
+ SOTN_PayDebtsHippogrifia:0 "Repay the [HIP.GetAdjective] Creditors"
+ SOTN_PayDebtsPrivate:0 "Negotiate with [ROOT.GetAdjective] Creditors"
+ SOTN_ClearDebt:0 "Clear our Debt"
 
  #Famine decisions
  SOTN_FamineScrapExports:0 "Scrap Agricultural Exports"
@@ -79,8 +89,13 @@
  SOTN_FamineZebricanGrain:0 "Import Zebrican Grain"
  SOTN_FamineEquestrianFood:0 "Buy Equestrian Apples"
  SOTN_FamineHippogrifFish:0 "Purchase Hippogriffian Fish"
+ SOTN_ImproveIrrigation:0 "Improve Irrigation in [FROM.GetName]"
+ SOTN_ImproveIrrigation_dummy:0 "Improve Irrigation in [THIS.GetName]"
 
- #Royal Diet Decision
+ #Royal Diet Bills
  SOTN_RoyalDiet_AppointOverseer:0 "Reinstate the Overseer of State Works"
  SOTN_RoyalDiet_RailFundingBill:0 "Nationalise the Railway Companies"
  SOTN_RoyalDiet_EducationReforms:0 "Repeal the Collegial Decree"
+ SOTN_RoyalDiet_IndustrialGrants:0 "Issue Industrial Investment Grants"
+ SOTN_RoyalDiet_TechnicalEducation:0 "Fund Technical Education"
+ SOTN_RoyalDiet_LandReform:0 "The Great Land Reform"

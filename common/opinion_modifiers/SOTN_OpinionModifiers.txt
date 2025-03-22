@@ -4,3 +4,10 @@ opinion_modifiers = {
 		value = 25
 	}
 }
+
+opinion_modifiers = {
+	SOTN_Tarriffs = {
+		trade = yes
+		value = -50
+	}
+}

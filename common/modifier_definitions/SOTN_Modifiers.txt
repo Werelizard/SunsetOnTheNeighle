@@ -5,3 +5,19 @@ SOTN_UnrestChange_modifier = {
 	
 	category = country
 }
+
+SOTN_IndustrialResearchSpeed = {
+	color_type = good
+	value_type = percentage
+	precision = 1
+
+	category = country
+}
+
+SOTN_ElectronicsResearchSpeed = {
+	color_type = good
+	value_type = percentage
+	precision = 1
+
+	category = country
+}

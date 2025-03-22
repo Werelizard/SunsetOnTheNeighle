@@ -1821,7 +1821,6 @@ focus_tree = {
 			focus = SOTN_EconomyBudget
 		}
 		available = {
-			
 		}
 		bypass = {
 			has_idea = SOTN_FamineInTheNeighle
@@ -1831,9 +1830,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_YearOfTheLocust"
-			unlock_decision_tooltip = SOTN_ImportCrops
-			unlock_decision_tooltip = SOTN_DiversifyEconomy
-			#TO DO: event
+			add_days_mission_timeout = {
+				mission = SOTN_LoomingFamine
+				days = 30
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			every_owned_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+					}
+					has_dynamic_modifier = {
+						modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+					}
+				}
+				SOTN_DecreaseStateUnrest_small_effect = yes
+			}
 		}
 	}
 	
@@ -1861,6 +1873,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PurchaseGrain"
 			#TO DO: event
+			unlock_decision_tooltip = SOTN_ImportCrops
+			unlock_decision_tooltip = SOTN_DiversifyEconomy
 		}
 	}
 	focus = { 
@@ -1889,6 +1903,32 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_IrrigationWorks"
+			custom_effect_tooltip = SOTN_ModifyEconomy_tt
+			add_to_variable = {
+				SOTN_MaregyptEconomy_BuildInfrastructure_var = 0.1
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			every_owned_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SOTN_MODIFIER_BadInfrastructure_mod
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOTN_UnlockStateWideDecision_tt
+						DECISION = SOTN_ImproveIrrigation_dummy
+					}
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockBill_tt
+					BILL = SOTN_RoyalDiet_LandReform
+				}
+			}
 		}
 		allow_branch = {
 			NOT = {
@@ -1910,6 +1950,13 @@ focus_tree = {
 			NOT = {
 				has_idea = SOTN_FamineInTheNeighle
 			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasPassedBill_tt
+					BILL = SOTN_RoyalDiet_LandReform
+				}
+				has_country_flag = SOTN_RoyalDiet_LandReform_flag
+			}
 		}
 		bypass = {
 			
@@ -1919,6 +1966,50 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ForcefulDistribution"
+			add_stability = -0.05	
+			if = {
+				limit = {
+					has_idea = SOTN_PoliticalUnrest
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 737
+							state = 734
+							state = 735
+							state = 736
+							state = 759
+							state = 758
+						}
+					}
+					random_select_amount = 4
+					SOTN_IncreaseStateUnrest_large_effect = yes
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			random_owned_state = {
+				limit = {
+					OR = {
+						state = 737
+						state = 734
+						state = 735
+						state = 736
+						state = 759
+						state = 758
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_days_mission_timeout = {
+				mission = SOTN_LoomingFamine
+				days = 120
+			}
 		}
 		mutually_exclusive = {
 			focus = SOTN_LandCompensation
@@ -1943,6 +2034,13 @@ focus_tree = {
 			NOT = {
 				has_idea = SOTN_FamineInTheNeighle
 			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasPassedBill_tt
+					BILL = SOTN_RoyalDiet_LandReform
+				}
+				has_country_flag = SOTN_RoyalDiet_LandReform_flag
+			}
 		}
 		bypass = {
 			
@@ -1952,6 +2050,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_LandCompensation"
+			add_timed_idea = {
+				idea = SOTN_LandownerCompensation
+				days = 180
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_days_mission_timeout = {
+				mission = SOTN_LoomingFamine
+				days = 90
+			}
 		}
 		mutually_exclusive = {
 			focus = SOTN_ForcefulDistribution
@@ -2061,6 +2168,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_LandReform"
+			remove_mission = SOTN_LoomingFamine
+			custom_effect_tooltip = SOTN_doublespace
+			remove_ideas = SOTN_FamineRisk
+			if = {
+				limit = {
+					has_idea = SOTN_PoliticalUnrest
+				}
+				custom_effect_tooltip = SOTN_doublespace
+				every_owned_state = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+						}
+					}
+					SOTN_DecreaseStateUnrest_large_effect = yes
+				}
+			}
 		}
 		allow_branch = {
 			NOT = {
@@ -2456,8 +2580,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = SOTN_EconomyDevelopment
 				category = industry
-				uses = 1
-				bonus = 1
+				uses = 2
+				bonus = 0.5
 			}
 			custom_effect_tooltip = SOTN_doublespace
 			custom_override_tooltip = {
@@ -2472,11 +2596,30 @@ focus_tree = {
 					DECISION = SOTN_OasisAgriculture
 				}
 			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_FishingIndustry
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_TractorFactories
+				}
+			}
 			custom_effect_tooltip = SOTN_doublespace
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = SOTN_UnlockBill
+					localization_key = SOTN_UnlockBill_tt
 					BILL = SOTN_RoyalDiet_AppointOverseer
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockNationalFocus_tt
+					FOCUS = SOTN_KickstartMilitary
 				}
 			}
 		}
@@ -2543,10 +2686,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SomnambulaDockyards"
 			#
 			733 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
 					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2581,6 +2729,7 @@ focus_tree = {
 			focus = SOTN_SomnambulaDockyards
 		}
 		available = {
+
 		}
 		bypass = {
 			
@@ -2595,13 +2744,6 @@ focus_tree = {
 				SOTN_MaregyptEconomy_TradeFactory_var = 1
 				tooltip = resource_trade_cost_bonus_per_factory_tt
 			}
-			custom_effect_tooltip = SOTN_doublespace
-			add_equipment_to_stockpile = {
-				type = convoy
-				amount = 50
-			}
-			custom_effect_tooltip = SOTN_doublespace
-			custom_effect_tooltip = SOTN_RiverTrade_effect_tt
 		}
 	}
 	focus = {
@@ -2617,7 +2759,7 @@ focus_tree = {
 		available = {
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = SOTN_HasPassedBill
+					localization_key = SOTN_HasPassedBill_tt
 					BILL = SOTN_RoyalDiet_AppointOverseer
 				}
 				has_country_flag = SOTN_SOTN_RoyalDiet_AppointOverseer_flag
@@ -2633,12 +2775,16 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_RoyalOfficeOfWorks"
 			custom_effect_tooltip = SOTN_ModifyEconomy_tt
 			add_to_variable = { 
-				SOTN_MaregyptEconomy_BuildAll_var = 0.05
+				SOTN_MaregyptEconomy_BuildAll_var = 0.15
 				tooltip = production_speed_buildings_factor_tt
 			}
 			add_to_variable = {
 				SOTN_MaregyptEconomy_BuildSlots_var = 0.1
 				tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
+			}
+			add_to_variable = {
+				SOTN_MaregyptEconomy_RecruitablePop_var = -0.1
+				tooltip = recruitable_population_factor_tt
 			}
 			custom_effect_tooltip = SOTN_doublespace
 			custom_effect_tooltip = SOTN_RoyalOfficeOfWorks_effect_tt
@@ -2655,13 +2801,39 @@ focus_tree = {
 		id = SOTN_Electrification
 		icon = GFX_SOTN_Electrification
 		cost = 1
-		x = -1
-		y = 2
+		x = 4
+		y = 3
 		relative_position_id = SOTN_RoyalOfficeOfWorks
 		prerequisite = {
-			focus = SOTN_IndustrialGrants
+			focus = SOTN_ExploitTheNeighle
 		}
 		available = {
+			OR = {
+				AND = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = SOTN_TookDecision_tt
+							DECISION = SOTN_BuildDamAssyut
+						}
+						has_country_flag = SOTN_BuildDamAssyut_flag
+					}
+					761 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				AND = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = SOTN_TookDecision_tt
+							DECISION = SOTN_BuildDamDahshoof
+						}
+						has_country_flag = SOTN_BuildDamDahshoof_flag
+					}
+					758 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+			}
 		}
 		bypass = {
 			
@@ -2671,10 +2843,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_Electrification"
+			custom_effect_tooltip = SOTN_ModifyEconomy_tt
+			add_to_variable = { 
+				SOTN_MaregyptEconomy_ProdGain_var = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_to_variable = {
+				SOTN_ReformProgress_var = 10
+				tooltip = SOTN_ReformIncrease_tt
+			}
 			add_tech_bonus = {
 				name = SOTN_Electrification
-				uses = 2
-				bonus = 1
+				uses = 1
+				bonus = 0.5
 				category = electronics
 			}
 			custom_effect_tooltip = SOTN_doublespace
@@ -2683,11 +2865,6 @@ focus_tree = {
 					localization_key = SOTN_UnlockDecision_tt
 					DECISION = SOTN_ManephisPOwerStation
 				}
-			}
-			custom_effect_tooltip = SOTN_doublespace
-			add_to_variable = {
-				SOTN_ReformProgress_var = 10
-				tooltip = SOTN_Reform_tt
 			}
 		}
 	}
@@ -2710,42 +2887,99 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_IndustrialGrants"
-			custom_effect_tooltip = SOTN_ModifyEconomy_tt
-			add_to_variable = { 
-				SOTN_MaregyptEconomy_BuildAll_var = 0.05
-				tooltip = production_speed_buildings_factor_tt
+			add_tech_bonus = {
+				name = SOTN_IndustrialGrants
+				category = cat_production
+				uses = 2
+				bonus = 0.75
+			}
+			add_tech_bonus = {
+				name = SOTN_IndustrialGrants
+				category = construction_tech
+				uses = 2
+				bonus = 0.75
 			}
 			custom_effect_tooltip = SOTN_doublespace
-			every_owned_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					OR = { #Favour states with free slots FIRST
-						free_building_slots = {
-							building = industrial_complex 
-							size > 1
-						}
-						AND = {
-							owner = {
-								NOT = {
-									any_owned_state = {
-										free_building_slots = {
-											building = industrial_complex 
-											size > 1
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-				random_select_amount = 3
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
+			add_to_variable = {
+				SOTN_ReformProgress_var = 10
+				tooltip = SOTN_ReformIncrease_tt
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockBill_tt
+					BILL = SOTN_RoyalDiet_IndustrialGrants
 				}
 			}
+		}
+	}
+	focus = {
+		id = SOTN_ModernTools
+		icon = GFX_SOTN_ModernTools
+		cost = 1
+		x = -1
+		y = 2
+		relative_position_id = SOTN_RoyalOfficeOfWorks
+		prerequisite = {
+			focus = SOTN_IndustrialGrants
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasPassedBill_tt
+					BILL = SOTN_RoyalDiet_IndustrialGrants
+				}
+				has_country_flag = SOTN_RoyalDiet_IndustrialGrants_flag
+			}
+		}
+		bypass = {
 			
+		}
+		select_effect = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ModernTools"
+			custom_effect_tooltip = SOTN_ModifyEconomy_tt
+			add_to_variable = { 
+				SOTN_MaregyptEconomy_ProdGain_var = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = { 
+				SOTN_MaregyptEconomy_Industry_var = 0.1
+				tooltip = SOTN_IndustrialResearchSpeed_tt
+			}
+			add_to_variable = { 
+				SOTN_MaregyptEconomy_Electronics_var = 0.1
+				tooltip = SOTN_ElectronicsResearchSpeed_tt
+			}
+			hidden_effect = { #Hiding this because you can't have research bonuses in a dynamic modifier
+				add_ideas = SOTN_NewMaregyptEconomy
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_DeltaIndustry
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_MiddleMaregyptIndustry
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_SouthernIndustry
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_SouthQuaries
+				}
+			}
 		}
 	}
 	focus = {
@@ -2808,7 +3042,13 @@ focus_tree = {
 			focus = SOTN_BroadEducationCampaign
 		}
 		available = {
-			num_of_owned_factories > 45
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasPassedBill_tt
+					BILL = SOTN_RoyalDiet_TechnicalEducation
+				}
+				has_country_flag = SOTN_RoyalDiet_TechnicalEducation_flag
+			}
 		}
 		bypass = {
 			
@@ -2818,7 +3058,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_WorkersNotPeasants"
-			add_stability = 0.05
+			custom_effect_tooltip = SOTN_ModifyEconomy_tt
+			add_to_variable = {
+				SOTN_MaregyptEconomy_RecruitablePop_var = 0.1
+				tooltip = recruitable_population_factor_tt
+			}
 			custom_effect_tooltip = SOTN_doublespace
 			swap_ideas = {
 				remove_idea = outdated_industry
@@ -2862,8 +3106,15 @@ focus_tree = {
 				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
 			custom_effect_tooltip = SOTN_doublespace
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = SOTN_WorkponiesVillageCommission
+			every_owned_state = {
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		mutually_exclusive = {
 			focus = SOTN_SubsidiseHeavyIndustry
@@ -2880,6 +3131,11 @@ focus_tree = {
 			focus = SOTN_WorkersNotPeasants
 		}
 		available = {
+			if = {
+				limit = {
+					
+				}
+			}
 		}
 		bypass = {
 			
@@ -2889,10 +3145,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SubsidiseHeavyIndustry"
+			custom_effect_tooltip = SOTN_ModifyEconomy_tt
 			add_to_variable = {
-				SOTN_MaregyptEconomy_ProdGain_var = 0.1
-				tooltip = production_factory_efficiency_gain_factor_tt
+				SOTN_MaregyptEconomy_ProdMax_var = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
 			}
+			custom_effect_tooltip = SOTN_doublespace
 			random_owned_state = {
 				prioritize = {
 					733
@@ -2955,7 +3213,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ProsperousUrbanisation"
-			add_political_power = 100
 			custom_effect_tooltip = SOTN_ModifyEconomy_tt
 			add_to_variable = { 
 				SOTN_MaregyptEconomy_MilOut_var = 0.05
@@ -2966,9 +3223,12 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
-				SOTN_MaregyptEconomy_ProdMax_var = 0.1
+				SOTN_MaregyptEconomy_ProdMax_var = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_political_power = 100
+			add_stability = 0.05
 			custom_effect_tooltip = SOTN_doublespace
 			custom_effect_tooltip = SOTN_ProsperousUrbanisation_effect_tt
 			if = {
@@ -3038,16 +3298,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ExploitTheNeighle"
-			custom_effect_tooltip = SOTN_ModifyEconomy_tt
-			add_to_variable = { 
-				SOTN_MaregyptEconomy_ProdGain_var = 0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
-			}
-			custom_effect_tooltip = SOTN_doublespace
-			add_to_variable = {
-				SOTN_ReformProgress_var = 15
-				tooltip = SOTN_Reform_tt
-			}
 			custom_effect_tooltip = SOTN_doublespace
 			custom_override_tooltip = {
 				tooltip = {
@@ -3060,6 +3310,11 @@ focus_tree = {
 					localization_key = SOTN_UnlockDecision_tt
 					DECISION = SOTN_BuildDamDahshoof
 				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_to_variable = {
+				SOTN_ReformProgress_var = 5
+				tooltip = SOTN_ReformIncrease_tt
 			}
 			hidden_effect = {
 				# TO DO: add event for protests
@@ -3092,7 +3347,7 @@ focus_tree = {
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = { 
-				SOTN_MaregyptEconomy_ResourceGain_var = 0.05
+				SOTN_MaregyptEconomy_ResourceGain_var = 0.1
 				tooltip = local_resources_factor_tt
 			}
 			add_to_variable = {
@@ -3116,13 +3371,13 @@ focus_tree = {
 			custom_effect_tooltip = SOTN_doublespace
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = SOTN_UnlockBill
+					localization_key = SOTN_UnlockBill_tt
 					BILL = SOTN_RoyalDiet_RailFundingBill
 				}
 			}
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = SOTN_UnlockBill
+					localization_key = SOTN_UnlockBill_tt
 					BILL = SOTN_RoyalDiet_EducationReforms
 				}
 			}
@@ -3141,7 +3396,7 @@ focus_tree = {
 		available = {		
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = SOTN_HasPassedBill
+					localization_key = SOTN_HasPassedBill_tt
 					BILL = SOTN_RoyalDiet_RailFundingBill
 				}
 				has_country_flag = SOTN_RoyalDiet_RailFundingBill_flag
@@ -3157,7 +3412,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationalRail"
 			add_to_variable = {
 				SOTN_ReformProgress_var = 15
-				tooltip = SOTN_Reform_tt
+				tooltip = SOTN_ReformIncrease_tt
 			}
 			add_tech_bonus = {
 				name = SOTN_NationalRail
@@ -3202,7 +3457,7 @@ focus_tree = {
 		available = {
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = SOTN_HasPassedBill
+					localization_key = SOTN_HasPassedBill_tt
 					BILL = SOTN_RoyalDiet_EducationReforms
 				}
 				has_country_flag = SOTN_RoyalDiet_EducationReforms_flag
@@ -3221,7 +3476,14 @@ focus_tree = {
 			add_political_power = 100
 			add_to_variable = {
 				SOTN_ReformProgress_var = 5
-				tooltip = SOTN_Reform_tt
+				tooltip = SOTN_ReformIncrease_tt
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockBill_tt
+					BILL = SOTN_RoyalDiet_TechnicalEducation
+				}
 			}
 		}
 	}
@@ -3245,9 +3507,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_ModernScience"
-			add_research_slot = 1
-			hidden_effect = {
-				# TO DO
+			add_research_slot = 1 	
+			add_to_variable = {
+				SOTN_ReformProgress_var = 10
+				tooltip = SOTN_ReformIncrease_tt
 			}
 		}
 	}
@@ -3273,9 +3536,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_FateOfCommission"
+			country_event = SOTN_MgyDebts.1
 		}
 		mutually_exclusive = {
-			focus = SOTN_PayDebts
 		}
 	}
 	focus = {
@@ -3289,7 +3552,12 @@ focus_tree = {
 			focus = SOTN_FateOfCommission
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = SOTN_AccessToThisFocus_tt
+				NOT = {
+					has_country_flag = SOTN_AbolishCommission_locked_flag
+				}
+			}
 		}
 		bypass = {
 			
@@ -3299,6 +3567,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AbolishCommission"
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SOTN_EndebtedEconomy
+					add_idea = SOTN_EconomicMeltdown
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_SetTimedIdea_tt
+					IDEA = SOTN_EconomicMeltdown
+					DAYS = "400"
+				}
+			}
+			hidden_effect = {
+				remove_ideas = SOTN_EndebtedEconomy
+				add_timed_idea = {
+					idea = SOTN_EconomicMeltdown
+					days = 400
+				}
+			}
 		}
 		mutually_exclusive = {
 			focus = SOTN_PayDebts
@@ -3315,7 +3603,7 @@ focus_tree = {
 			focus = SOTN_AbolishCommission
 		}
 		available = {
-			
+			has_idea = SOTN_EconomicMeltdown
 		}
 		bypass = {
 			
@@ -3325,6 +3613,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_NationaliseForeignInterests"
+			add_political_power = 50
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_ShortenTimedIdea_tt
+					IDEA = SOTN_EconomicMeltdown
+					DAYS = "90"
+				}
+				hidden_effect = {
+					modify_timed_idea = {
+						idea = SOTN_EconomicMeltdown
+						days = -90
+					}
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_timed_idea = {
+				idea = SOTN_FlightOfknowHow
+				days = 90
+			}
 		}
 	}
 	focus = {
@@ -3338,7 +3646,7 @@ focus_tree = {
 			focus = SOTN_AbolishCommission
 		}
 		available = {
-			
+			has_idea = SOTN_EconomicMeltdown
 		}
 		bypass = {
 			
@@ -3348,6 +3656,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_SubsidiseNationalIndustries"
+			add_stability = 0.05
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_ShortenTimedIdea_tt
+					IDEA = SOTN_EconomicMeltdown
+					DAYS = "90"
+				}
+				hidden_effect = {
+					modify_timed_idea = {
+						idea = SOTN_EconomicMeltdown
+						days = -90
+					}
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_timed_idea = {
+				idea = SOTN_SubsidisedBuisnesses
+				days = 90
+			}
 		}
 	}
 	focus = {
@@ -3364,7 +3692,7 @@ focus_tree = {
 			focus = SOTN_NationaliseForeignInterests
 		}
 		available = {
-			
+			has_idea = SOTN_EconomicMeltdown
 		}
 		bypass = {
 			
@@ -3374,6 +3702,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_DevelopInternalMarket"
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_ShortenTimedIdea_tt
+					IDEA = SOTN_EconomicMeltdown
+					DAYS = "90"
+				}
+				hidden_effect = {
+					modify_timed_idea = {
+						idea = SOTN_EconomicMeltdown
+						days = -90
+					}
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_ideas = SOTN_InternalMarket
 		}
 	}
 	focus = {
@@ -3387,7 +3730,7 @@ focus_tree = {
 			focus = SOTN_DevelopInternalMarket
 		}
 		available = {
-			
+			has_idea = SOTN_EconomicMeltdown
 		}
 		bypass = {
 			
@@ -3397,6 +3740,50 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TarriffWall"
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_ShortenTimedIdea_tt
+					IDEA = SOTN_EconomicMeltdown
+					DAYS = "90"
+				}
+				hidden_effect = {
+					modify_timed_idea = {
+						idea = SOTN_EconomicMeltdown
+						days = -90
+					}
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			every_country = {
+				limit = {
+					OR = {
+						tag = HIP
+						tag = EQS
+						tag = CTH
+						tag = WNG
+						tag = EQC
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SOTN_Tarriffs
+				}
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SONT_IncreaseDecisionCost_tt
+					DECISION = SOTN_ImportCrops
+					COST = "25"
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SONT_IncreaseDecisionCost_tt
+					DECISION = SOTN_DiversifyEconomy
+					COST = "25"
+				}
+			}
 		}
 	}
 	focus = {
@@ -3411,7 +3798,12 @@ focus_tree = {
 			focus = SOTN_AbolishCommission
 		}
 		available = {
-			
+			NOT = {
+				has_idea = SOTN_EconomicMeltdown
+			}
+			NOT = {
+				has_idea = SOTN_EconomicConcessions
+			}
 		}
 		bypass = {
 			
@@ -3421,6 +3813,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_MaregyptBank"
+			add_political_power = 150
+			add_stability = 0.05
+			custom_effect_tooltip = SOTN_doublespace
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SOTN_Bank
+			custom_effect_tooltip = SOTN_doublespace
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_InviteInvestors_dummy
+				}
+			}
 		}
 	}
 	focus = {
@@ -3434,7 +3838,12 @@ focus_tree = {
 			focus = SOTN_FateOfCommission
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = SOTN_AccessToThisFocus_tt
+				NOT = {
+					has_country_flag = SOTN_PayDebts_locked_flag
+				}
+			}
 		}
 		bypass = {
 			
@@ -3444,6 +3853,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PayDebts"
+			swap_ideas = {
+				remove_idea = SOTN_EndebtedEconomy
+				add_idea = SOTN_EconomicConcessions
+			}
 		}
 		mutually_exclusive = {
 			focus = SOTN_AbolishCommission
@@ -3460,7 +3873,7 @@ focus_tree = {
 			focus = SOTN_PayDebts
 		}
 		available = {
-			
+			has_idea = SOTN_EconomicConcessions
 		}
 		bypass = {
 			
@@ -3470,6 +3883,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_LiquidateAssets"
+			add_political_power = 200
+			custom_effect_tooltip = SOTN_doublespace
+			every_owned_state = {
+				limit = {
+					industrial_complex > 0
+				}
+				random_select_amount = 3
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 		}
 		mutually_exclusive = {
 		}
@@ -3485,7 +3910,7 @@ focus_tree = {
 			focus = SOTN_PayDebts
 		}
 		available = {
-			
+			has_idea = SOTN_EconomicConcessions
 		}
 		bypass = {
 			
@@ -3495,6 +3920,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_IncreaseTaxes"
+			if = {
+				limit = {
+					has_idea = SOTN_PoliticalUnrest
+				}
+				every_owned_state = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SOTN_MODIFIER_LocalUnrest_Dynmod
+						}
+					}
+					random_select_amount = 6
+					SOTN_IncreaseStateUnrest_medium_effect = yes
+				}
+			}
+			else = {
+				add_stability = -0.05
+			}
+			custom_effect_tooltip = SOTN_doublespace
+			add_timed_idea = {
+				idea = SOTN_IncreasedTaxes
+				days = 730
+			}
 		}
 		mutually_exclusive = {
 		}
@@ -3511,7 +3958,7 @@ focus_tree = {
 			focus = SOTN_LiquidateAssets
 		}
 		available = {
-			
+			has_idea = SOTN_EconomicConcessions
 		}
 		bypass = {
 			
@@ -3521,6 +3968,30 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_TackleInterest"
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_PayDebtsEquestria
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_PayDebtsHippogrifia
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_PayDebtsPrivate
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_ClearDebt
+				}
+			}
 		}
 		mutually_exclusive = {
 		}
@@ -3949,6 +4420,12 @@ focus_tree = {
 			focus = SOTN_MaregyptSphereStart
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOTN_AccessToThisFocus_tt
+				NOT = {
+					has_country_flag = SOTN_FriendshipMission_locked_flag
+				}
+			}
 		}
 		bypass = {
 			
@@ -3958,6 +4435,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_MaregyptSphereStart"	
+			custom_override_tooltip = { #Locks you out of the focus
+				tooltip = {
+					localization_key = SOTN_LockNationalFocus_tt
+					FOCUS = SOTN_AbolishCommission
+				}
+				hidden_effect = {
+					set_country_flag = SOTN_AbolishCommission_locked_flag
+				}
+			}
 		}
 	}
 	focus = {
@@ -5006,10 +5492,7 @@ focus_tree = {
 			focus = SOTN_MilitaryBegin
 		}
 		available = {
-			OR = {
-				has_completed_focus = SOTN_SelfSufficientEconomy
-				has_completed_focus = SOTN_TackleInterest
-			}
+			has_completed_focus = SOTN_EconomyDevelopment
 		}
 		bypass = {
 			
