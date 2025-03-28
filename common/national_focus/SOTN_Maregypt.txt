@@ -1873,8 +1873,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PurchaseGrain"
 			#TO DO: event
-			unlock_decision_tooltip = SOTN_ImportCrops
-			unlock_decision_tooltip = SOTN_DiversifyEconomy
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_ImportCrops_dummy
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UnlockDecision_tt
+					DECISION = SOTN_DiversifyEconomy_dummy
+				}
+			}
 		}
 	}
 	focus = { 
@@ -2587,7 +2597,7 @@ focus_tree = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = SOTN_UnlockDecision_tt
-					DECISION = SOTN_ExpandSomnambula
+					DECISION = SOTN_SomnambulaSteelworks
 				}
 			}
 			custom_override_tooltip = {
@@ -2791,7 +2801,7 @@ focus_tree = {
 			
 			hidden_effect = {
 				set_variable = {
-					SOTN_IndustrialZonesMax_var = 3
+					SOTN_WorkerVillagessMax_var = 3
 				}
 				# TO DO: add event to discuss establishing overseer
 			}
@@ -3071,7 +3081,7 @@ focus_tree = {
 			custom_effect_tooltip = SOTN_WorkersNotPeasants_effects
 			hidden_effect = {
 				add_to_variable = {
-					SOTN_IndustrialZonesMax_var = 3
+					SOTN_WorkerVillagessMax_var = 3
 				}
 			}
 		}
@@ -3773,14 +3783,14 @@ focus_tree = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = SONT_IncreaseDecisionCost_tt
-					DECISION = SOTN_ImportCrops
+					DECISION = SOTN_ImportCrops_dummy
 					COST = "25"
 				}
 			}
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = SONT_IncreaseDecisionCost_tt
-					DECISION = SOTN_DiversifyEconomy
+					DECISION = SOTN_DiversifyEconomy_dummy
 					COST = "25"
 				}
 			}

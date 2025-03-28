@@ -26,6 +26,31 @@
  #Modifier
  SOTN_UnrestChange_modifier:0 "Weekly Global Unrest Change"
 
+ #MIOS
+ SOTN_UniqueTrait_tt:0 "Has not already assigned this trait to any other designers"
+
+ SOTN_RoyalArsenal_MIO:0 "Somnambula Royal Armory"
+ SOTN_QualityManufacturer:0 "High-Quality Weapons Manufacturer"
+ SOTN_HighQualitySteel:0 "Tampered Steel"
+ SOTN_FundRnD_MIO:0 "Appoint Overseer to Designer"
+ SOTN_Specialisation_MIO:0 "Specialised Production"
+ SOTN_ArtisanalProduction_MIO:0 "Favour the Maredjay War-Smiths"
+ SOTN_ReinforcedBayonets_MIO:0 "Reinforced Bayonets"
+ SOTN_HighQualityLeather_MIO:0 "High Quality Leather"
+ SOTN_PersonalisedGear_MIO:0 "Personalised Gear"
+ SOTN_MagicalAmmo_MIO:0 "Quartz-Tipped Bullets"
+ SOTN_StreamlinedSmithy_MIO:0 "Favour the Guild Steel-Smiths"
+ SOTN_MountedBelts_MIO:0 "Saddle-Rifles"
+ SOTN_FasterReloadingSprings_MIO:0 "Spring-Loaded Chambers"
+ SOTN_MachineGuns_MIO:0 "Suppressive Magazines"
+ SOTN_BattalionPatterns_MIO:0 "Standardised Patterns"
+ SOTN_ExpandedArsenal_MIO:0 "Expand the Royal Arsenals"
+ SOTN_MilCommission_MIO:0 "Engineered Production Lines"
+ SOTN_GeneralGear_MIO:0 "Mass-Produced Gear"
+ SOTN_TraditionalGear_MIO:0 "Mana-Scoped Rifles"
+ SOTN_HighQualityLeather_MIO_tt:0 "All §YSupport Companies§!:\n    Supply Consumption: §G-10%§!"
+ 
+
  #Variable tooltips
  SOTN_ReformIncrease_tt:0 "£SOTN_SOTN_Reform Increases Reform Progress by: $RIGHT|+=1$"
  SOTN_DecreaseIncrease_tt:0 "£SOTN_SOTN_Reform Decreases Reform Progress by: $RIGHT|+=1$"

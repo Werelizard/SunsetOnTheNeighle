@@ -234,7 +234,7 @@
 
  SOTN_RoyalOfficeOfWorks:0 "New Great Works"
  SOTN_RoyalOfficeOfWorks_desc:0 ""
- SOTN_RoyalOfficeOfWorks_effect_tt:0 "Unlocks State Decision: £decision_icon_small §Y$SOTN_IndustrialZone_dummy$§! to improve the industrial output in selected states. We will initially be able to only designate up to §Y3§! Workponies' Villages."
+ SOTN_RoyalOfficeOfWorks_effect_tt:0 "Unlocks State Decision: £decision_icon_small §Y$SOTN_WorkerVillages_dummy$§! to improve the industrial output in selected states. We will initially be able to only designate up to §Y3§! Workponies' Villages."
 
  SOTN_Electrification:0 "A Light in Every Home"
  SOTN_Electrification_desc:0 ""

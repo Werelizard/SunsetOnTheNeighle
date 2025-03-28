@@ -1,6 +1,7 @@
 ﻿l_english:
 
- #Debug Decisions
+ #Debug Decisions$
+ SOTN_Debug_Category:0 "Sunset on the Neighle Debugging"
  SOTN_Debug_CycleVizier:0 "Appoint / Remove $SOTN_ShaaDoof$ as Vizier"
  SOTN_Debug_RemoveShaaDoof_tt:0 "Remove $SOTN_character_ShaaDoof$ as Vizier"
  SOTN_Debug_AppointShaaDoof_tt:0 "Appoint $SOTN_character_ShaaDoof$ as Vizier"
@@ -53,17 +54,17 @@
 
  #Economy Decision
  SOTN_EconomyReform_Category:0 "Modernising Maregypt"
- SOTN_ExpandSomnambula:0 "The Somnambula Steelworks"
+ SOTN_SomnambulaSteelworks:0 "The Somnambula Steelworks"
  SOTN_OasisAgriculture:0 "Wadi Exploitation"
  SOTN_FishingIndustry:0 "Bucksiris Fisheries"
  SOTN_TractorFactories:0 "Manephis Tractor Factories"
- SOTN_ImportCrops:0 "Import Equestrian Crops"
+ SOTN_ImportCrops_dummy:0 "Import Equestrian Crops"
  SOTN_FixIrrigation_dummy:0 "Modernise the Waterways"
- SOTN_DiversifyEconomy:0 "Purchase Farming Equipment"
+ SOTN_DiversifyEconomy_dummy:0 "Purchase Farming Equipment"
  SOTN_FixIrrigation:0 "Modernise the Waterways"
- SOTN_IndustrialZone:0 "Establish Workponies' Village in [FROM.GetName]"
- SOTN_IndustrialZone_dummy:0 "Establish Workponies' Village"
- SOTN_IndustrialZone_trigger_tt:0 "We can designate up to §Y[?SOTN_IndustrialZonesMax_var]§! workponies' villages."
+ SOTN_WorkerVillages:0 "Establish Workponies' Village in [FROM.GetName]"
+ SOTN_WorkerVillages_dummy:0 "Establish Workponies' Village"
+ SOTN_WorkerVillages_trigger_tt:0 "We can designate up to §Y[?SOTN_WorkerVillagessMax_var]§! workponies' villages."
  SOTN_ManephisPOwerStation:0 "Construct the Manephis Power Station"
  SOTN_BuildDamAssyut:0 "Build the Assyut Dam"
  SOTN_BuildDamDahshoof:0 "Build the Dahshoof Dam"

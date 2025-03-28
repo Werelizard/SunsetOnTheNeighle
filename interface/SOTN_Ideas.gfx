@@ -92,4 +92,18 @@ spriteTypes = {
 		name = "GFX_idea_SOTN_MaredjayArmy"
 		texturefile = "gfx/interface/officer_corp/spirits/spirit_idea_SOTN_MaredjayArmy.dds"
 	}
+	# MIOS
+	spriteType = {
+		name = "GFX_idea_SOTN_RoyalArsenal_MIO"
+		texturefile = "gfx/interface/ideas/SOTN_RoyalArsenal_MIO.dds"
+	}
+	# MIO Traits
+	spriteType = {
+		name = "GFX_SOTN_Overseer_MIO"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/SOTN_OversseerTrait_MIO.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_Specialisation_MIO"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/SOTN_SpecialisationTrait_MIO.dds"
+	}
 }

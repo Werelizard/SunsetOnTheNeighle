@@ -5,4 +5,34 @@ technologies = {
 			SOTN_MaredjayUnit
 	    }
     }
+
+	SOTN_HighQualityLeather = {
+		allow = {
+			always = no
+		}
+		field_hospital = {
+			supply_consumption_factor = -0.1
+		}
+		logistics_company = {
+			supply_consumption_factor = -0.1
+		}
+		recon = {
+			supply_consumption_factor = -0.1
+		}
+		mot_recon = {
+			supply_consumption_factor = -0.1
+		}
+		armored_car_recon = {
+			supply_consumption_factor = -0.1
+		}
+		light_tank_recon = {
+			supply_consumption_factor = -0.1
+		}
+		maintenance_company = {
+			supply_consumption_factor = -0.1
+		}
+		signal_company = {
+			supply_consumption_factor = -0.1
+		}
+	}
 }

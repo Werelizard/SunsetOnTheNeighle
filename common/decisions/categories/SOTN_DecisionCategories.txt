@@ -36,13 +36,13 @@ SOTN_EquestrianDebts_Category = {
 		original_tag = MGY
 		has_idea = SOTN_EndebtedEconomy
 	}
-	visible_when_empty = yes
+	# visible_when_empty = yes
 }
 
 SOTN_MaregyptianSphere_Category = {
 	# Category for Mareygpt's relations and diplomacy
 	visible = {
-		always = yes
+		# always = yes
 		original_tag = MGY
 	}
 }
@@ -51,7 +51,7 @@ SOTN_RoyalDiet_Category = {
 	priority = 900
 	visible = {
 		OR = {
-			is_debug = yes
+			# is_debug = yes
 			has_country_flag = SOTN_DietActive_flag
 		}
 		original_tag = MGY
@@ -61,7 +61,10 @@ SOTN_RoyalDiet_Category = {
 SOTN_EconomyReform_Category = {
 	priority = 800
 	visible = {
+		OR = {
+			has_completed_focus = SOTN_EconomyDevelopment
+			is_debug = yes
+		}
 		original_tag = MGY
 	}
-	visible_when_empty = no
 }
