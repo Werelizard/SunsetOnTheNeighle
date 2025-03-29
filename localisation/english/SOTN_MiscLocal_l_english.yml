@@ -26,7 +26,7 @@
  #Modifier
  SOTN_UnrestChange_modifier:0 "Weekly Global Unrest Change"
 
- #MIOS
+ #MIOS 
  SOTN_HasCompletedFocus_tt:0 "Has completed focus §Y$FOCUS$§!"
  SOTN_UniqueTrait_tt:0 "Has not already assigned this trait to any other designers"
  SOTN_MilCommission_MIO:0 "Favoured Designer"
@@ -64,11 +64,36 @@
  SOTN_QuickScaleUp_MIO:0 "Assign Additional Funds to Production Lines"
  SOTN_AdditionalResearch_MIO:0 "Expand R&D Department"
  SOTN_CheapRifles_MIO:0 "Three-Stepped Assembly"
+ SOTN_SmallerGuns_MIO:0 "Narrow Calibers"
  SOTN_LightEquipment_MIO:0 "Optimisation Tests"
  SOTN_SaddleRifles_MIO:0 "Saddle Rifles"
  SOTN_SmallerCalibers_MIO:0 "Standardised Small Calibers"
  SOTN_RifleProduction_MIO:0 "Small Arms Prioritisation"
  SOTN_ImproveQuality_MIO:0 "Improved Materials"
+
+ SOTN_Shaaty_MIO:0 "Shaaty Industries"
+ SOTN_ShaatyIndustries:0 "Military Equipment Conglomerate"
+ SOTN_BulkSupport_MIO:0 "Satchel Pattern Standardisation"
+ SOTN_BulkTrucks_MIO:0 "Tractor Retooling Plants"
+ SOTN_FundingExpansion:0 "Increased Funding"
+ SOTN_ConsolidatedLines:0 "Merged Production Plants"
+ SOTN_RapidUpgrades_MIO:0 "Focus on Rapid Upgrades"
+ SOTN_MaterialProcessing_MIO:0 "Focus on Equipment Reliability"
+ SOTN_ResearchEquipment_MIO:0 "Invest in Additional R&D Initiatives"
+ SOTN_AdditionalFunding_MIO:0 "Expand Existing Facilities"
+ SOTN_SupportCapacity_MIO:0 "Enhanced Auxiliary Production"
+ SOTN_SequencedSupportAssembly_MIO:0 "Sequenced Assembly"
+ SOTN_CheaperTextilesSupport_MIO:0 "Cheaper Materials"
+ SOTN_BetterSupportMaterials_MIO:0 "Sturdier Materials"
+ SOTN_ReliableMateriel_MIO:0 "Weather-Proof Covers"
+ SOTN_TrucksProcurement_MIO:0 "Improved Truck Production"
+ SOTN_TrucksReinforced_MIO:0 "Reinforced Frames"
+ SOTN_EfficientTrucks_MIO:0 "Reliable Engines"
+ SOTN_FasterTrucks_MIO:0 "Powerful Engines"
+ SOTN_FullProduction_MIO:0 "Bolstered Production"
+ SOTN_HelicoptersLines_MIO:0 "Dedicated Helicopter Lines"
+ SOTN_HelicoptersSafety_MIO:0 "On-Board Fire Command"
+ SOTN_HelicoptersGun_MIO:0 "Retro-Fitted Anti-Tank Guns"
 
  #Variable tooltips
  SOTN_ReformIncrease_tt:0 "£SOTN_SOTN_Reform Increases Reform Progress by: $RIGHT|+=1$"

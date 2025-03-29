@@ -34,6 +34,7 @@
  SOTN_UnlockNationalFocus_tt:0 "[ROOT.GetName] unlocks the §Y"$FOCUS$"§! national focus."
  SOTN_LockNationalFocus_tt:0 "[ROOT.GetName] will §Rno longer§! be able to complete the §Y"$FOCUS$"§! national focus."
  SONT_IncreaseDecisionCost_tt:0 "Increases the cost of the £decision_icon_small §Y$DECISION$§! decision by £pol_power §R$COST$§!."
+ SOTN_SpecialProjectComplete_tt:0 "Has completed the §Y$SPROJECT$§! special project"
 
  #Focuses - Political
  SOTN_KingSpeech:0 "A Long-Expected Address"

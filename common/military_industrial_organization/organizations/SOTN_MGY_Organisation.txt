@@ -27,25 +27,15 @@ SOTN_RoyalArsenal_MIO = {
 		magical_equipment
 	}
 
-	tree_header_text = {
-		text = mio_header_design_and_production
-		x = 4
-	}
-	
-
 	initial_trait = {
 		name = SOTN_QualityManufacturer
 
 		organization_modifier = {
-			military_industrial_organization_size_up_requirement = -0.1
-		}
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.03
+			military_industrial_organization_funds_gain = 0.1
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.03
+			reliability_factor = 0.03
 		}
 	}
 
@@ -705,7 +695,7 @@ SOTN_Hayxor_MIO = {
 
 		production_bonus = {
 			production_efficiency_gain_factor = 0.03
-			production_cost_factor = -0.03
+			production_resource_need_factor = -0.1
 		}
 
 		on_complete = {
@@ -861,7 +851,39 @@ SOTN_Hayxor_MIO = {
 
 		production_bonus = {
 			production_efficiency_gain_factor = 0.03
-			production_cost_factor = -0.03
+			production_resource_need_factor = -0.1
+		}
+	}
+	trait = {
+		token = SOTN_SmallerGuns_MIO
+		name = SOTN_SmallerGuns_MIO
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x=7 y=1 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			infantry_equipment
+			magical_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		equipment_bonus = {
+			soft_attack = -0.03
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		all_parents = {
+			SOTN_CheapRifles_MIO
 		}
 	}
 	trait = {
@@ -921,8 +943,8 @@ SOTN_Hayxor_MIO = {
 		}
 
 		equipment_bonus = {
-			reliability_factor = -0.05
-			maximum_speed = 0.15
+			reliability_factor = -0.08
+			maximum_speed = 0.1
 		}
 
 		all_parents = {
@@ -1016,7 +1038,7 @@ SOTN_Hayxor_MIO = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_size_up_requirement = 0.25
+			
 		}
 
 		production_bonus = {
@@ -1043,7 +1065,7 @@ SOTN_Hayxor_MIO = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_size_up_requirement = 0.25
+			
 		}
 
 		production_bonus = {
@@ -1059,7 +1081,7 @@ SOTN_Hayxor_MIO = {
 	trait = {
 		token = SOTN_AdditionalResearch_MIO
 		name = SOTN_AdditionalResearch_MIO
-		icon = GFX_generic_mio_department_icon_facilities
+		icon = GFX_SOTN_Specialisation_MIO
 
 		position = { x=4 y=2 }
 
@@ -1068,8 +1090,8 @@ SOTN_Hayxor_MIO = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_size_up_requirement = 0.25
-			military_industrial_organization_research_bonus = 0.05
+			
+			military_industrial_organization_research_bonus = 0.1
 		}
 
 		on_complete = {
@@ -1159,7 +1181,22 @@ SOTN_Hayxor_MIO = {
 		}
 
 		available = {
-			
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_PriorityFunding_MIO_tt
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_mio_trait_completed = SOTN_MilCommission_MIO
+						}
+						has_mio_number_of_completed_traits > 5
+					}
+				}
+				else = {
+					has_mio_number_of_completed_traits > 4
+				}
+			}
 		}
 
 		organization_modifier = {
@@ -1167,12 +1204,12 @@ SOTN_Hayxor_MIO = {
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.05
-			defense = 0.04
+			soft_attack = 0.03
+			breakthrough = 0.05
 		}
 
 		production_bonus = {
-			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
 		}
 
 		on_complete = {
@@ -1232,6 +1269,594 @@ SOTN_Hayxor_MIO = {
 		production_bonus = {
 			production_cost_factor = -0.05
 			production_efficiency_gain_factor = 0.05
+		}
+	}
+}
+
+SOTN_Shaaty_MIO = {
+	icon = GFX_idea_SOTN_Shaaty
+
+	allowed = {
+		tag = MGY
+	}
+
+	available = {
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = SOTN_TookDecision_tt
+				DECISION = SOTN_TractorFactories
+			}
+			owner =  {
+				has_country_flag = SOTN_TractorFactories_flag
+			}
+		}
+	}
+
+	equipment_type = {
+		support_equipment
+		motorized_equipment
+		helicopter_equipment
+	}
+	research_categories = {
+		support_equipment
+		motorized_equipment
+		helicopter_tech
+	}
+	initial_trait = {
+		name = SOTN_ShaatyIndustries
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.02
+		}
+	}
+
+	#Support Equipment Traits
+	trait = {
+		token = SOTN_BulkSupport_MIO
+		name = SOTN_BulkSupport_MIO
+		icon = GFX_generic_mio_department_icon_support_line_efficiency
+
+		position = { x=2 y=0 }
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_capacity_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = SOTN_SupportCapacity_MIO
+		name = SOTN_SupportCapacity_MIO
+		icon = GFX_generic_mio_department_icon_support_production
+
+		position = { x=2 y=2 }
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.02
+			production_resource_penalty_factor = -0.1
+		}
+
+		all_parents = {
+			SOTN_ConsolidatedLines
+		}
+	}
+
+	trait = {
+		token = SOTN_SequencedSupportAssembly_MIO
+		name = SOTN_SequencedSupportAssembly_MIO
+		icon = GFX_generic_mio_department_icon_support_technology
+
+		position = { x=2 y=3 }
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		equipment_bonus = {
+			
+		}
+
+		all_parents = {
+			SOTN_SupportCapacity_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_CheaperTextilesSupport_MIO
+		name = SOTN_CheaperTextilesSupport_MIO
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x=1 y=4 }
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+			production_cost_factor = -0.05
+		}
+
+		equipment_bonus = {
+			reliability_factor = -0.1
+		}
+
+		all_parents = {
+			SOTN_SequencedSupportAssembly_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_BetterSupportMaterials_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_BetterSupportMaterials_MIO
+		name = SOTN_BetterSupportMaterials_MIO
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x=3 y=4 }
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		equipment_bonus = {
+			reliability_factor = 0.05
+		}
+
+		all_parents = {
+			SOTN_SequencedSupportAssembly_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_CheaperTextilesSupport_MIO
+		}
+	}
+
+	#Truck Traits
+	trait = {
+		token = SOTN_BulkTrucks_MIO
+		name = SOTN_BulkTrucks_MIO
+		icon = GFX_generic_mio_department_icon_motorized_line_efficiency
+
+		position = { x=6 y=0 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_capacity_factor = 0.03
+		}
+	}
+
+	trait = {
+		token = SOTN_TrucksProcurement_MIO
+		name = SOTN_TrucksProcurement_MIO
+		icon = GFX_generic_mio_department_icon_motorized_production
+
+		position = { x=6 y=2 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.02
+			production_resource_penalty_factor = -0.1
+		}
+
+		all_parents = {
+			SOTN_ConsolidatedLines
+		}
+	}
+
+	trait = {
+		token = SOTN_TrucksReinforced_MIO
+		name = SOTN_TrucksReinforced_MIO
+		icon = GFX_generic_mio_department_icon_motorized
+
+		position = { x=6 y=3 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.1
+			max_strength = 0.1
+		}
+
+		all_parents = {
+			SOTN_TrucksProcurement_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_FasterTrucks_MIO
+		name = SOTN_FasterTrucks_MIO
+		icon = GFX_generic_mio_department_icon_motorized
+
+		position = { x=5 y=4 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.15
+			breakthrough = 0.1
+			reliability_factor = -0.05
+		}
+
+		all_parents = {
+			SOTN_TrucksReinforced_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_EfficientTrucks_MIO	
+		}
+	}
+
+	trait = {
+		token = SOTN_EfficientTrucks_MIO
+		name = SOTN_EfficientTrucks_MIO
+		icon = GFX_generic_mio_department_icon_motorized
+
+		position = { x=7 y=4 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+		}
+
+		equipment_bonus = {
+			reliability_factor = 0.1
+			fuel_consumption_factor = -0.15
+		}
+
+		all_parents = {
+			SOTN_TrucksReinforced_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_FasterTrucks_MIO
+		}
+	}
+
+	#Common traits
+	trait = {
+		token = SOTN_FundingExpansion
+		name = SOTN_FundingExpansion
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x=4 y=0 }
+
+		limit_to_equipment_type = {
+			
+		}
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+	}
+
+	trait = {
+		token = SOTN_ConsolidatedLines
+		name = SOTN_ConsolidatedLines
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x=4 y=1 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			support_equipment
+		}
+
+		production_bonus = {
+			production_resource_need_factor = -0.1
+		}
+
+		all_parents = {
+			SOTN_BulkSupport_MIO
+			SOTN_FundingExpansion
+			SOTN_BulkTrucks_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_RapidUpgrades_MIO
+		name = SOTN_RapidUpgrades_MIO
+		icon = GFX_generic_mio_trait_icon_conversion_speed
+
+		position = { x=3 y=3 }
+
+		limit_to_equipment_type = {
+			support_equipment
+			motorized_equipment
+		}
+
+		production_bonus = {
+			production_conversion_speed_factor = 0.2
+			production_cost_factor = -0.05
+		}
+
+		any_parent = {
+			SOTN_ResearchEquipment_MIO
+			SOTN_AdditionalFunding_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_ReliableMateriel_MIO
+		name = SOTN_ReliableMateriel_MIO
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x=5 y=3 }
+
+		limit_to_equipment_type = {
+			support_equipment
+			motorized_equipment
+		}
+
+		equipment_bonus = {
+			reliability_factor = 0.05
+		}
+
+		any_parent = {
+			SOTN_ResearchEquipment_MIO
+			SOTN_AdditionalFunding_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_ResearchEquipment_MIO
+		name = SOTN_ResearchEquipment_MIO
+		icon = GFX_SOTN_Specialisation_MIO
+
+		position = { x=3 y=2 }
+
+		limit_to_equipment_type = {
+			
+		}
+
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		parent = {
+			traits = {
+				SOTN_ConsolidatedLines
+			}
+		}
+
+		mutually_exclusive = {
+			SOTN_AdditionalFunding_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_AdditionalFunding_MIO
+		name = SOTN_AdditionalFunding_MIO
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x=5 y=2 }
+
+		limit_to_equipment_type = {
+			support_equipment
+			motorized_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+
+		on_complete = {
+			owner = {
+				random_owned_state = {
+					prioritize = {
+						735
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+					}
+				}
+			}
+		}
+
+		parent = {
+			traits = {
+				SOTN_ConsolidatedLines
+			}
+		}
+
+		mutually_exclusive = {
+			SOTN_ResearchEquipment_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_FullProduction_MIO
+		name = SOTN_FullProduction_MIO
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		position = { x=4 y=4 }
+
+		limit_to_equipment_type = {
+			
+		}
+
+		organization_modifier = {
+			
+		}
+
+		available = {
+			OR = {
+				is_mio_trait_completed = SOTN_HelicoptersLines_MIO
+				AND = {
+					is_mio_trait_completed = SOTN_SupportCapacity_MIO
+					is_mio_trait_completed = SOTN_TrucksProcurement_MIO
+				}
+			}
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.02
+			production_capacity_factor = 0.05
+		}
+
+		on_complete = {
+			
+		}
+
+		any_parent = {
+			SOTN_AdditionalFunding_MIO
+			SOTN_ResearchEquipment_MIO
+		}
+	}
+
+	#Helicopters
+	trait = {
+		token = SOTN_HelicoptersLines_MIO
+		name = SOTN_HelicoptersLines_MIO
+		icon = GFX_generic_mio_department_icon_helicopter
+
+		position = { x=8 y=0 }
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_SpecialProjectComplete_tt
+					SPROJECT = sp_air_helicopter
+				}
+				owner = {
+					is_special_project_completed = sp:sp_air_helicopter
+				}
+			}
+		}
+
+		limit_to_equipment_type = {
+			helicopter_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+
+		organization_modifier = {
+			
+		}
+	}
+
+	trait = {
+		token = SOTN_HelicoptersSafety_MIO
+		name = SOTN_HelicoptersSafety_MIO
+		icon = GFX_generic_mio_trait_icon_reliability
+		
+		position = { x=8 y=2 }
+
+		limit_to_equipment_type = {
+			helicopter_equipment
+		}
+
+		equipment_bonus = {
+			reliability_factor = 0.1
+		}
+
+		all_parents = {
+			SOTN_HelicoptersLines_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_HelicoptersGun_MIO
+		name = SOTN_HelicoptersGun_MIO
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		
+		position = { x=8 y=4 }
+
+		limit_to_equipment_type = {
+			helicopter_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+		}
+
+		all_parents = {
+			SOTN_HelicoptersSafety_MIO
+		}
+	}
+
+	#Special Traits 
+	trait = {
+		token = SOTN_MilCommission_MIO
+		name = SOTN_MilCommission_MIO
+		icon = GFX_SOTN_Overseer_MIO
+		special_trait_background = yes
+
+		position = { x=0 y=0 }
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasCompletedFocus_tt
+					FOCUS = SOTN_MilProduction
+				}
+				owner = {
+					has_completed_focus = SOTN_MilProduction
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UniqueTrait_tt
+				}
+				owner = {
+					NOT = {
+						has_country_flag = SOTN_NotSelectedMilCommission_flag
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+			military_industrial_organization_design_team_assign_cost = -0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		on_complete = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = SOTN_NotSelectedMilCommission_flag
+				}
+			}
 		}
 	}
 }

@@ -261,6 +261,15 @@ ideas = {
 			allowed = {
 				original_tag = MGY
 			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOTN_TookDecision_tt
+						DECISION = SOTN_TractorFactories
+					}
+					has_country_flag = SOTN_TractorFactories_flag
+				}
+			}
 		}
 		SOTN_ManephisArms = {
 			modifier = {
@@ -469,6 +478,15 @@ ideas = {
 			}
 			allowed = {
 				original_tag = MGY
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOTN_TookDecision_tt
+						DECISION = SOTN_TractorFactories
+					}
+					has_country_flag = SOTN_TractorFactories_flag
+				}
 			}
 		}
 	}
