@@ -97,6 +97,10 @@ spriteTypes = {
 		name = "GFX_idea_SOTN_RoyalArsenal_MIO"
 		texturefile = "gfx/interface/ideas/SOTN_RoyalArsenal_MIO.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_SOTN_Hayxor_MIO"
+		texturefile = "gfx/interface/ideas/SOTN_Hayxor_MIO.dds"
+	}
 	# MIO Traits
 	spriteType = {
 		name = "GFX_SOTN_Overseer_MIO"

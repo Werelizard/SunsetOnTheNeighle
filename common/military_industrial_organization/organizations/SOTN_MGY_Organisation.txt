@@ -6,14 +6,24 @@ SOTN_RoyalArsenal_MIO = {
 		tag = MGY
 	}
 
+	# available = {
+	# 	custom_override_tooltip = {
+	# 		tooltip = {
+	# 			localization_key = SOTN_HasCompletedFocus_tt
+	# 			FOCUS = SOTN_KickstartMilitary
+	# 		}
+	# 		owner = {
+	# 			has_completed_focus = SOTN_KickstartMilitary
+	# 		}
+	# 	}
+	# }
+
 	equipment_type = {
 		infantry_equipment
-		support_equipment
 		magical_equipment
 	}
 	research_categories = {
 		infantry_weapons
-		support_equipment
 		magical_equipment
 	}
 
@@ -35,83 +45,29 @@ SOTN_RoyalArsenal_MIO = {
 		}
 
 		equipment_bonus = {
-			reliability_factor = 0.05
+			soft_attack = 0.03
 		}
 	}
 
-	#General Special Traits - top
+	#Starting Traits
 	trait = {
-		token = SOTN_FundRnD_MIO
-		name = SOTN_FundRnD_MIO
-		icon = GFX_SOTN_Overseer_MIO
-		special_trait_background = yes
+		token = SOTN_Inspectors_MIO
+		name = SOTN_Inspectors_MIO
+		icon = GFX_generic_mio_trait_icon_reliability
 
-		position = { x=-4 y=1 }
+		position = { x=2 y=0 }
 
-		relative_position_id = SOTN_HighQualitySteel
-
-		available = {
-			owner = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = SOTN_UniqueTrait_tt
-					}
-					NOT = {
-						has_country_flag = SOTN_FundRnD_MIO_flag
-					}
-				}
-			}
+		equipment_bonus = {
+			reliability_factor = 0.03
 		}
-
-		organization_modifier = {
-			research_speed_factor = 0.03
-			military_industrial_organization_policy_cost = -0.25
-		}
-
-		on_complete = {
-			hidden_effect = {
-				owner = {
-					set_country_flag = SOTN_FundRnD_MIO_flag
-				}
-			}
-		}
-		
-		all_parents = {
-			SOTN_HighQualitySteel
-		}
-
 	}
 
 	trait = {
-		token = SOTN_Specialisation_MIO
-		name = SOTN_Specialisation_MIO
-		icon = GFX_SOTN_Specialisation_MIO
-
-		position = { x=4 y=1 }
-
-		relative_position_id = SOTN_HighQualitySteel
-
-		available = {
-			has_mio_number_of_completed_traits > 4
-		}
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.05
-		}
-		
-		all_parents = {
-			SOTN_HighQualitySteel
-		}
-
-	}
-
-	#Starting Trait
-	trait = {
-		token = SOTN_HighQualitySteel
-		name = SOTN_HighQualitySteel
+		token = SOTN_QualityMaterials_MIO
+		name = SOTN_QualityMaterials_MIO
 		icon = GFX_generic_mio_trait_icon_efficiency_cap
 
-		position = { x=4 y=0 }
+		position = { x=6 y=0 }
 
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
@@ -120,30 +76,29 @@ SOTN_RoyalArsenal_MIO = {
 
 	#Left-side: keep the artisanal production 
 	trait = {
-		token = SOTN_ArtisanalProduction_MIO
-		name = SOTN_ArtisanalProduction_MIO
+		token = SOTN_StandardProduction_MIO
+		name = SOTN_StandardProduction_MIO
 		icon = GFX_generic_mio_department_icon_infantry_quality
 
-		position = { x=-2 y=1 }
+		position = { x=-1 y=1 }
 
-		relative_position_id = SOTN_HighQualitySteel
+		relative_position_id = SOTN_Inspectors_MIO
 
 		limit_to_equipment_type = {
 			infantry_equipment
-			magical_equipment
 		}
 
-		production_bonus = {
-			production_cost_factor = 0.05
-			production_efficiency_cap_factor = 0.05
+		equipment_bonus = {
+			soft_attack = 0.03
 		}
 
 		all_parents = {
-			SOTN_HighQualitySteel
+			SOTN_Inspectors_MIO
+			SOTN_QualityMaterials_MIO
 		}
 
 		mutually_exclusive = {
-			SOTN_StreamlinedSmithy_MIO
+			SOTN_MagicalSmithy_MIO
 		}
 	}
 
@@ -152,77 +107,81 @@ SOTN_RoyalArsenal_MIO = {
 		name = SOTN_ReinforcedBayonets_MIO
 		icon = GFX_generic_mio_trait_icon_breakthrough
 
-		position = { x=-2 y=2 }
+		position = { x=0 y=2 }
 
-		relative_position_id = SOTN_HighQualitySteel
+		relative_position_id = SOTN_Inspectors_MIO
 
 		limit_to_equipment_type = {
 			infantry_equipment
-			magical_equipment
 		}
-
-		equipment_bonus = {
-			breakthrough = 0.05
-			soft_attack = 0.05
-		}
-
-		all_parents = {
-			SOTN_ArtisanalProduction_MIO
-		}
-	}
-
-	trait = {
-		token = SOTN_HighQualityLeather_MIO
-		name = SOTN_HighQualityLeather_MIO
-		icon = GFX_generic_mio_department_icon_support_equipment
-
-		position = { x=-4 y=2 }
-
-		relative_position_id = SOTN_HighQualitySteel
-
-		limit_to_equipment_type = {
-			support_equipment
-		}
-
-		production_bonus = {
-			production_resource_need_factor = 0.15
-		}
-
-		equipment_bonus = {
-			reliability_factor = 0.1
-		}
-
-		on_complete = {
-			custom_effect_tooltip = SOTN_HighQualityLeather_MIO_tt
-			hidden_effect = { #Add hidden tech to reduce supply use
-					owner = {
-					set_technology = {
-						SOTN_HighQualityLeather = 1
-					}
-				}
-			}
-		}
-
-		all_parents = {
-			SOTN_ArtisanalProduction_MIO
-		}
-	}
-
-	trait = {
-		token = SOTN_PersonalisedGear_MIO
-		name = SOTN_PersonalisedGear_MIO
-		icon = GFX_generic_mio_department_icon_infantry_offense
-
-		position = { x=-3 y=3 }
-
-		relative_position_id = SOTN_HighQualitySteel
 
 		production_bonus = {
 			production_resource_penalty_factor = 0.1
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.05
+			breakthrough = 0.1
+		}
+
+		all_parents = {
+			SOTN_StandardProduction_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_ProductionStandards_MIO
+		name = SOTN_ProductionStandards_MIO
+		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+
+		position = { x=-2 y=2 }
+
+		relative_position_id = SOTN_Inspectors_MIO
+
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.1
+			production_efficiency_gain_factor = 0.05
+		}
+
+		equipment_bonus = {
+			reliability_factor = 0.02
+		}
+
+		on_complete = {
+			
+		}
+
+		all_parents = {
+			SOTN_StandardProduction_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_ExpandedMagazines_MIO
+		name = SOTN_ExpandedMagazines_MIO
+		icon = GFX_generic_mio_department_icon_infantry_offense
+
+		position = { x=-1 y=3 }
+
+		relative_position_id = SOTN_Inspectors_MIO
+
+		available = {
+			is_mio_trait_completed = SOTN_ExpandedArsenal_MIO
+		}
+
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+
+		production_bonus = {
+			
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.02
 			hard_attack = 0.05
 		}
 
@@ -231,40 +190,35 @@ SOTN_RoyalArsenal_MIO = {
 		}
 
 		all_parents = {
-			SOTN_HighQualityLeather_MIO
+			SOTN_ProductionStandards_MIO
 			SOTN_ReinforcedBayonets_MIO
 		}
 
 		mutually_exclusive = {
-			SOTN_GeneralGear_MIO
+			SOTN_ReinforcedGuard_MIO
 		}
 	}
 
 	trait = {
-		token = SOTN_MagicalAmmo_MIO
-		name = SOTN_MagicalAmmo_MIO
-		icon = GFX_military_industrial_organization_magical_equipment
+		token = SOTN_ArmourPiercing_MIO
+		name = SOTN_ArmourPiercing_MIO
+		icon = GFX_generic_mio_trait_icon_hard_attack
 
-		position = { x=-3 y=4 }
+		position = { x=-1 y=4 }
 
-		relative_position_id = SOTN_HighQualitySteel
-
-		production_bonus = {
-			production_resource_penalty_factor = 0.1
-		}
-
-		available = {
-			is_mio_trait_completed = SOTN_ExpandedArsenal_MIO
-		}
+		relative_position_id = SOTN_Inspectors_MIO
 
 		limit_to_equipment_type = {
 			infantry_equipment
-			magical_equipment
+		}
+
+		production_bonus = {
+			
 		}
 
 		equipment_bonus = {
-			ap_attack = 0.15
-			breakthrough = 0.1
+			soft_attack = 0.03
+			hard_attack = 0.05
 		}
 
 		on_complete = {
@@ -272,22 +226,21 @@ SOTN_RoyalArsenal_MIO = {
 		}
 
 		all_parents = {
-			SOTN_PersonalisedGear_MIO
+			SOTN_ExpandedMagazines_MIO
 		}
 	}
 
-	#Right-side: modernise the methods
+	#Right-side: magical guns
 	trait = {
-		token = SOTN_StreamlinedSmithy_MIO
-		name = SOTN_StreamlinedSmithy_MIO
-		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+		token = SOTN_MagicalSmithy_MIO
+		name = SOTN_MagicalSmithy_MIO
+		icon = GFX_military_industrial_organization_magical_equipment
 
-		position = { x=2 y=1 }
+		position = { x=5 y=1 }
 
-		relative_position_id = SOTN_HighQualitySteel
+		relative_position_id = SOTN_Inspectors_MIO
 
 		limit_to_equipment_type = {
-			infantry_equipment
 			magical_equipment
 		}
 
@@ -295,110 +248,124 @@ SOTN_RoyalArsenal_MIO = {
 			production_cost_factor = -0.05
 		}
 
+		equipment_bonus = {
+			reliability_factor = 0.02
+		}
+
 		all_parents = {
-			SOTN_HighQualitySteel
+			SOTN_Inspectors_MIO
+			SOTN_QualityMaterials_MIO
 		}
 
 		mutually_exclusive = {
-			SOTN_ArtisanalProduction_MIO
+			SOTN_StandardProduction_MIO
 		}
 	}
 
 	trait = {
-		token = SOTN_MountedBelts_MIO
-		name = SOTN_MountedBelts_MIO
-		icon = GFX_generic_mio_trait_icon_maximum_speed
-
-		position = { x=2 y=2 }
-
-		relative_position_id = SOTN_HighQualitySteel
-
-		limit_to_equipment_type = {
-			infantry_equipment
-			magical_equipment
-		}
-
-		equipment_bonus = {
-			maximum_speed = 0.1
-			defense = 0.05
-		}
-
-		all_parents = {
-			SOTN_StreamlinedSmithy_MIO
-		}
-	}
-
-	trait = {
-		token = SOTN_FasterReloadingSprings_MIO
-		name = SOTN_FasterReloadingSprings_MIO
-		icon = GFX_generic_mio_department_icon_tank_general_weapons
+		token = SOTN_SafetyFirst_MIO
+		name = SOTN_SafetyFirst_MIO
+		icon = GFX_generic_mio_trait_icon_reliability
 
 		position = { x=4 y=2 }
 
-		relative_position_id = SOTN_HighQualitySteel
+		relative_position_id = SOTN_Inspectors_MIO
 
 		limit_to_equipment_type = {
-			infantry_equipment
 			magical_equipment
-		}
-
-		equipment_bonus = {
-			soft_attack = 0.1
-		}
-
-		all_parents = {
-			SOTN_StreamlinedSmithy_MIO
-		}
-	}
-
-	trait = {
-		token = SOTN_MachineGuns_MIO
-		name = SOTN_MachineGuns_MIO
-		icon = GFX_generic_mio_trait_icon_defense
-
-		position = { x=3 y=3 }
-
-		relative_position_id = SOTN_HighQualitySteel
-
-		limit_to_equipment_type = {
-			infantry_equipment
-			magical_equipment
-		}
-
-		equipment_bonus = {
-			suppression_factor = 0.1
-			defense = 0.05
-		}
-
-		all_parents = {
-			SOTN_FasterReloadingSprings_MIO
-			SOTN_MountedBelts_MIO
-		}
-
-		mutually_exclusive = {
-			SOTN_TraditionalGear_MIO
-		}
-	}
-
-	trait = {
-		token = SOTN_BattalionPatterns_MIO
-		name = SOTN_BattalionPatterns_MIO
-		icon = GFX_generic_mio_department_icon_support_line_efficiency
-
-		position = { x=3 y=4 }
-
-		relative_position_id = SOTN_HighQualitySteel
-
-		limit_to_equipment_type = {
-			support_equipment
 		}
 
 		production_bonus = {
-			production_resource_penalty_factor = -0.15
+			production_resource_need_factor = 0.1
+		}
+
+		equipment_bonus = {
+			reliability_factor = 0.05
 		}
 
 		all_parents = {
-			SOTN_MachineGuns_MIO
+			SOTN_MagicalSmithy_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_EnchantmentReinforcement_MIO
+		name = SOTN_EnchantmentReinforcement_MIO
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x=6 y=2 }
+
+		relative_position_id = SOTN_Inspectors_MIO
+
+		limit_to_equipment_type = {
+			magical_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.02
+		}
+
+		all_parents = {
+			SOTN_MagicalSmithy_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_AttunedEnchanters_MIO
+		name = SOTN_AttunedEnchanters_MIO
+		icon = GFX_generic_mio_department_icon_infantry_technology
+
+		position = { x=5 y=3 }
+
+		available = {
+			is_mio_trait_completed = SOTN_ExpandedArsenal_MIO
+		}
+
+		relative_position_id = SOTN_Inspectors_MIO
+
+		limit_to_equipment_type = {
+			magical_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			reliability_factor = 0.03
+		}
+
+		all_parents = {
+			SOTN_EnchantmentReinforcement_MIO
+			SOTN_SafetyFirst_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_SafetiesOff_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_TrueStrike_MIO
+		name = SOTN_TrueStrike_MIO
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		position = { x=5 y=4 }
+
+		relative_position_id = SOTN_Inspectors_MIO
+
+		limit_to_equipment_type = {
+			magical_equipment
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.1
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.3
+		}
+
+		all_parents = {
+			SOTN_AttunedEnchanters_MIO
 		}
 	}
 
@@ -409,95 +376,64 @@ SOTN_RoyalArsenal_MIO = {
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		position = { x=0 y=2 }
+		position = { x=2 y=2 }
 
-		relative_position_id = SOTN_HighQualitySteel
+		relative_position_id = SOTN_Inspectors_MIO
 
 		available = {
-			owner = {
-				has_completed_focus = SOTN_RoyalArsenal
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasCompletedFocus_tt
+					FOCUS = SOTN_RoyalArsenal
+				}
+				owner = {
+					has_completed_focus = SOTN_RoyalArsenal
+				}
 			}
 		}
 
 		organization_modifier = {
-			military_industrial_organization_funds_gain = 0.1
+			military_industrial_organization_funds_gain = 0.15
 		}
 
 		on_complete = {
-			733 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+			owner = {
+				random_owned_state = {
+					prioritize = {
+						733
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
 		}
 
 		any_parent = {
-			SOTN_ArtisanalProduction_MIO
-			SOTN_StreamlinedSmithy_MIO
-		}
-	}
-	
-	trait = {
-		token = SOTN_MilCommission_MIO
-		name = SOTN_MilCommission_MIO
-		icon = GFX_generic_mio_trait_icon_unique
-		special_trait_background = yes
-
-		position = { x=0 y=4 }
-
-		relative_position_id = SOTN_HighQualitySteel
-
-		available = {
-			owner = {
-				has_completed_focus = SOTN_MilProduction
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = SOTN_UniqueTrait_tt
-					}
-					NOT = {
-						has_country_flag = SOTN_NotSelectedMilCommission_flag
-					}
-				}
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_funds_gain = 0.1
-			military_industrial_organization_size_up_requirement = -0.1
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		on_complete = {
-			hidden_effect = {
-				owner = {
-					set_country_flag = SOTN_NotSelectedMilCommission_flag
-				}
-			}
-		}
-
-		all_parents  = {
-			SOTN_ExpandedArsenal_MIO
+			SOTN_StandardProduction_MIO
+			SOTN_MagicalSmithy_MIO
 		}
 	}
 
 	trait = {
-		token = SOTN_GeneralGear_MIO
-		name = SOTN_GeneralGear_MIO
-		icon = GFX_generic_mio_trait_icon_soft_attack
+		token = SOTN_ReinforcedGuard_MIO
+		name = SOTN_ReinforcedGuard_MIO
+		icon = GFX_generic_mio_trait_icon_defense
 
-		position = { x=-1 y=3 }
+		position = { x=1 y=3 }
 
-		relative_position_id = SOTN_HighQualitySteel
+		relative_position_id = SOTN_Inspectors_MIO
 
-		production_bonus = {
-			production_capacity_factor = 0.05
-			production_resource_penalty_factor = -0.1
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+
+		equipment_bonus = {
+			defense = 0.04
+			breakthrough = 0.05
 		}
 
 		on_complete = {
@@ -509,30 +445,29 @@ SOTN_RoyalArsenal_MIO = {
 		}
 
 		mutually_exclusive = {
-			SOTN_PersonalisedGear_MIO
+			SOTN_ExpandedMagazines_MIO
 		}
 	}
 
 	trait = {
-		token = SOTN_TraditionalGear_MIO
-		name = SOTN_TraditionalGear_MIO
-		icon = GFX_military_industrial_organization_magical_equipment
+		token = SOTN_SafetiesOff_MIO
+		name = SOTN_SafetiesOff_MIO
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
 
-		position = { x=1 y=3 }
+		position = { x=3 y=3 }
 
-		relative_position_id = SOTN_HighQualitySteel
+		relative_position_id = SOTN_Inspectors_MIO
 
 		limit_to_equipment_type = {
 			magical_equipment
 		}
 
 		production_bonus = {
-			production_cost_factor = -0.05
+			production_cost_factor = -0.1
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.05
-			defense = 0.05
+			
 		}
 
 		all_parents = {
@@ -540,7 +475,763 @@ SOTN_RoyalArsenal_MIO = {
 		}
 
 		mutually_exclusive = {
-			SOTN_MachineGuns_MIO
+			SOTN_AttunedEnchanters_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_SpecialisedProduction
+		name = SOTN_SpecialisedProduction
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		position = {
+			x = 0
+			y = 4
+		}
+
+		relative_position_id = SOTN_Inspectors_MIO
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_conversion_speed_factor = 0.1
+		}
+
+		any_parent = {
+			SOTN_ExpandedMagazines_MIO
+			SOTN_ReinforcedGuard_MIO
+			SOTN_SafetiesOff_MIO
+			SOTN_AttunedEnchanters_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_OptimisedProduction
+		}
+	}
+
+	trait = {
+		token = SOTN_OptimisedProduction
+		name = SOTN_OptimisedProduction
+		icon = GFX_generic_mio_department_icon_infantry_materials
+
+		position = {
+			x = 4
+			y = 4
+		}
+
+		relative_position_id = SOTN_Inspectors_MIO
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.1
+			production_resource_need_factor = -0.1
+		}
+
+		any_parent = {
+			SOTN_ExpandedMagazines_MIO
+			SOTN_ReinforcedGuard_MIO
+			SOTN_SafetiesOff_MIO
+			SOTN_AttunedEnchanters_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_SpecialisedProduction
+		}
+	}
+	
+
+	trait = {
+		token = SOTN_MilCommission_MIO
+		name = SOTN_MilCommission_MIO
+		icon = GFX_SOTN_Overseer_MIO
+		special_trait_background = yes
+
+		position = { x=0 y=0 }
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasCompletedFocus_tt
+					FOCUS = SOTN_MilProduction
+				}
+				owner = {
+					has_completed_focus = SOTN_MilProduction
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UniqueTrait_tt
+				}
+				owner = {
+					NOT = {
+						has_country_flag = SOTN_NotSelectedMilCommission_flag
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+			military_industrial_organization_design_team_assign_cost = -0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		on_complete = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = SOTN_NotSelectedMilCommission_flag
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = SOTN_PriorityFunding_MIO
+		name = SOTN_PriorityFunding_MIO
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_PriorityFunding_MIO_tt
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_mio_trait_completed = SOTN_MilCommission_MIO
+						}
+						has_mio_number_of_completed_traits > 5
+					}
+				}
+				else = {
+					has_mio_number_of_completed_traits > 4
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasCompletedFocus_tt
+					FOCUS = SOTN_GunProduction
+				}
+				owner = {
+					has_completed_focus = SOTN_GunProduction
+				}
+			}
+		}
+
+		organization_modifier = {
+
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+}
+
+#Haxyor Armourers - Cheaper Alternative
+SOTN_Hayxor_MIO = {
+	icon = GFX_idea_SOTN_Hayxor_MIO
+
+	allowed = {
+		tag = MGY
+	}
+
+	# available = {
+	# 	custom_override_tooltip = {
+	# 		tooltip = {
+	# 			localization_key = SOTN_HasCompletedFocus_tt
+	# 			FOCUS = SOTN_KickstartMilitary
+	# 		}
+	# 		owner = {
+	# 			has_completed_focus = SOTN_KickstartMilitary
+	# 		}
+	# 	}
+	# }
+
+	equipment_type = {
+		infantry_equipment
+		magical_equipment
+		support_equipment
+	}
+	research_categories = {
+		infantry_weapons
+		magical_equipment
+		support_equipment
+	}
+
+	# tree_header_text = {
+	# 	text = mio_header_design_and_production
+	# 	x = 4
+	# }
+
+	initial_trait = {
+		name = SOTN_MassProducedRifles
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+
+		equipment_bonus = {
+			defense = 0.03
+		}
+	}
+
+	#Production traits
+
+	#Left-side: support equipment
+	trait = {
+		token = SOTN_ExpandSupportProduction_MIO
+		name = SOTN_ExpandSupportProduction_MIO
+		icon = GFX_generic_mio_department_icon_support_line_efficiency
+
+		position = { x=2 y=0 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_cost_factor = -0.03
+		}
+
+		on_complete = {
+			
+		}
+	}
+
+	trait = {
+		token = SOTN_MassProducedSupport_MIO
+		name = SOTN_MassProducedSupport_MIO
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x=2 y=2 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.02
+			production_efficiency_cap_factor = 0.03
+		}
+
+		all_parents = {
+			SOTN_ExpandSupportProduction_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_FlexibleDesigns_MIO
+		name = SOTN_FlexibleDesigns_MIO
+		icon = GFX_generic_mio_department_icon_support_materials
+
+		position = { x=1 y=3 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.1
+		}
+
+		all_parents = {
+			SOTN_MassProducedSupport_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_LessReliableMaterials_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_LessReliableMaterials_MIO
+		name = SOTN_LessReliableMaterials_MIO
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x=3 y=3 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_resource_need_factor = -0.1
+		}
+
+		equipment_bonus = {
+			reliability_factor = -0.05
+		}
+
+		all_parents = {
+			SOTN_MassProducedSupport_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_FlexibleDesigns_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_StandardisedSupport_MIO
+		name = SOTN_StandardisedSupport_MIO
+		icon = GFX_generic_mio_department_icon_support_technology
+		position = { x=2 y=4 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			support_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		any_parent = {
+			SOTN_FlexibleDesigns_MIO
+			SOTN_LessReliableMaterials_MIO
+		}
+		
+		mutually_exclusive = {
+			SOTN_RifleProduction_MIO
+		}
+	}
+
+	#Right-Side: guns
+	trait = {
+		token = SOTN_CheapRifles_MIO
+		name = SOTN_CheapRifles_MIO
+		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+
+		position = { x=6 y=0 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			infantry_equipment
+			magical_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_cost_factor = -0.03
+		}
+	}
+	trait = {
+		token = SOTN_LightEquipment_MIO
+		name = SOTN_LightEquipment_MIO
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		position = { x=6 y=2 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			infantry_equipment
+			magical_equipment
+		}
+
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.02
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.04
+		}
+
+		all_parents = {
+			SOTN_CheapRifles_MIO
+		}
+	}
+	trait = {
+		token = SOTN_SaddleRifles_MIO
+		name = SOTN_SaddleRifles_MIO
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=5 y=3 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			infantry_equipment
+			magical_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+
+		equipment_bonus = {
+			reliability_factor = -0.05
+			maximum_speed = 0.15
+		}
+
+		all_parents = {
+			SOTN_LightEquipment_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_SmallerCalibers_MIO
+		}
+	}
+	trait = {
+		token = SOTN_SmallerCalibers_MIO
+		name = SOTN_SmallerCalibers_MIO
+		icon = GFX_generic_mio_department_icon_infantry_offense
+
+		position = { x=7 y=3 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			infantry_equipment
+			magical_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.1
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+
+		all_parents = {
+			SOTN_LightEquipment_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_SaddleRifles_MIO
+		}
+	}
+	trait = {
+		token = SOTN_RifleProduction_MIO
+		name = SOTN_RifleProduction_MIO
+		icon = GFX_generic_mio_department_icon_infantry_technology
+
+		position = { x=6 y=4 }
+
+		available = {
+			
+		}
+
+		limit_to_equipment_type = {
+			infantry_equipment
+			magical_equipment
+		}
+
+		organization_modifier = {
+			
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		any_parent = {
+			SOTN_SmallerCalibers_MIO
+			SOTN_SaddleRifles_MIO
+		}
+
+		mutually_exclusive = {
+			SOTN_StandardisedSupport_MIO
+		}
+	}
+
+	#Middle Traits
+	trait = {
+		token = SOTN_CutCornersOnGunsmiths_MIO
+		name = SOTN_CutCornersOnGunsmiths_MIO
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x=3 y=1 }
+
+		available = {
+			
+		}
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.25
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+
+		equipment_bonus = {
+		}
+
+		any_parent = {
+			SOTN_ExpandSupportProduction_MIO
+			SOTN_CheapRifles_MIO
+		}
+	}
+	trait = {
+		token = SOTN_QuickScaleUp_MIO
+		name = SOTN_QuickScaleUp_MIO
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x=5 y=1 }
+
+		available = {
+			
+		}
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.25
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+
+		any_parent = {
+			SOTN_ExpandSupportProduction_MIO
+			SOTN_CheapRifles_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_AdditionalResearch_MIO
+		name = SOTN_AdditionalResearch_MIO
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x=4 y=2 }
+
+		available = {
+			
+		}
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = 0.25
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		on_complete = {
+			owner = {
+				add_tech_bonus = {
+					name = SOTN_AdditionalResearch_MIO
+					category = support_tech
+					ahead_reduction = 1
+					bonus = 0.5
+					uses = 1
+				}
+				add_tech_bonus = {
+					name = SOTN_AdditionalResearch_MIO
+					category = infantry_weapons
+					ahead_reduction = 1
+					bonus = 0.5
+					uses = 1
+				}
+			}
+		}
+
+		any_parent = {
+			SOTN_ExpandSupportProduction_MIO
+			SOTN_CheapRifles_MIO
+		}
+	}
+
+	#Special Traits 
+	trait = {
+		token = SOTN_MilCommission_MIO
+		name = SOTN_MilCommission_MIO
+		icon = GFX_SOTN_Overseer_MIO
+		special_trait_background = yes
+
+		position = { x=0 y=0 }
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasCompletedFocus_tt
+					FOCUS = SOTN_MilProduction
+				}
+				owner = {
+					has_completed_focus = SOTN_MilProduction
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_UniqueTrait_tt
+				}
+				owner = {
+					NOT = {
+						has_country_flag = SOTN_NotSelectedMilCommission_flag
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.1
+			military_industrial_organization_design_team_assign_cost = -0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		on_complete = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = SOTN_NotSelectedMilCommission_flag
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = SOTN_ImproveQuality_MIO
+		name = SOTN_ImproveQuality_MIO
+		icon = GFX_generic_mio_department_icon_infantry_quality
+
+		position = { x=1 y=1 }
+
+		limit_to_equipment_type = {
+			infantry_equipment
+			magical_equipment
+		}
+
+		available = {
+			
+		}
+
+		organization_modifier = {
+			
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			defense = 0.04
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+
+		on_complete = {
+			
+		}
+
+		all_parents = {
+			SOTN_MilCommission_MIO
+		}
+	}
+
+	trait = {
+		token = SOTN_PriorityFunding_MIO
+		name = SOTN_PriorityFunding_MIO
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_PriorityFunding_MIO_tt
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_mio_trait_completed = SOTN_MilCommission_MIO
+						}
+						has_mio_number_of_completed_traits > 5
+					}
+				}
+				else = {
+					has_mio_number_of_completed_traits > 4
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = SOTN_HasCompletedFocus_tt
+					FOCUS = SOTN_GunProduction
+				}
+				owner = {
+					has_completed_focus = SOTN_GunProduction
+				}
+			}
+		}
+
+		limit_to_equipment_type = {
+			infantry_equipment
+			magical_equipment
+		}
+
+		organization_modifier = {
+
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_efficiency_gain_factor = 0.05
 		}
 	}
 }
