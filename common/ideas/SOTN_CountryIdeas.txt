@@ -428,7 +428,7 @@ ideas = {
 				country_resource_aluminium = 10
 				local_resources_factor = 0.1
 			}
-			visible = {
+			available = {
 				has_completed_focus = SOTN_RataphetMetalworks
 			}
 			allowed = {
@@ -447,7 +447,7 @@ ideas = {
 					reliability_factor = 0.1
 				}
 			}
-			visible = {
+			available = {
 				has_completed_focus = SOTN_NationalRail
 			}
 			allowed = {

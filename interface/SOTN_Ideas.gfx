@@ -95,13 +95,17 @@ spriteTypes = {
 	# MIOS
 	spriteType = {
 		name = "GFX_idea_SOTN_RoyalArsenal_MIO"
-		texturefile = "gfx/interface/ideas/SOTN_RoyalArsenal_MIO.dds"
+		texturefile = "gfx/interface/designers/SOTN_RoyalArsenal_MIO.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SOTN_Hayxor_MIO"
-		texturefile = "gfx/interface/ideas/SOTN_Hayxor_MIO.dds"
+		texturefile = "gfx/interface/designers/SOTN_Hayxor_MIO.dds"
 	}
-	# MIO Traits
+	spriteType = {
+		name = "GFX_idea_SOTN_Hyksos_MIO"
+		texturefile = "gfx/interface/designers/SOTN_Hyksos_MIO.dds"
+	}
+	# MIO Traits .dds
 	spriteType = {
 		name = "GFX_SOTN_Overseer_MIO"
 		texturefile = "gfx/interface/military_industrial_organization/trait_icons/SOTN_OversseerTrait_MIO.dds"
@@ -109,5 +113,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_SOTN_Specialisation_MIO"
 		texturefile = "gfx/interface/military_industrial_organization/trait_icons/SOTN_SpecialisationTrait_MIO.dds"
+	}
+	spriteType = {
+		name = "GFX_SOTN_AllMotorised_MIO"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/SOTN_AllMotorised_MIO.dds"
 	}
 }
