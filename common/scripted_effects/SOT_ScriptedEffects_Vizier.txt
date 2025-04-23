@@ -1,11 +1,6 @@
 #Effect to setup at the start
 SOTN_VizierMechanicSetup_effect = {
-	set_country_flag = SOTN_ShaaDoofVizier_flag
-	##Power Balance Setup
-	# set_power_balance = {
-	# 	id = SOTN_VizierPharaoh_BOP
-	# 	left_side = SOTN_BOP_Vizier_side
-	# 	right_side = SOTN_BOP_King_side
-	# 	set_value = -0.65
-	# }
+	SOTN_character_ShaaDoof = {
+		set_character_flag = SOTN_isVizier_flag
+	}
 }

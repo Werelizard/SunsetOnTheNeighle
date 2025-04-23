@@ -11,7 +11,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = SOTN_harmonic_pharaonism
+			ideology = conservatism
 			desc = SOTN_character_KingKhefer_Bio
 			expire = "1111.1.1.1"
 			id=-1
@@ -21,7 +21,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = SOTN_traditional_pharaonism
+			ideology = despotism
 			desc = SOTN_character_KingKhefer_Bio
 			expire = "1111.1.1.1"
 			id=-1
@@ -44,22 +44,22 @@ characters = {
 		}
 	}
 	
-	SOTN_character_FerukIntef = {
-		name = SOTN_character_FerukIntef
+	SOTN_character_FarHook = {
+		name = SOTN_character_FarHook
 		portraits = {
 			civilian = {
-				large = "GFX_SOTN_character_FerukIntef"
-				small = "GFX_SOTN_character_FerukIntef_Advisor"
+				large = "GFX_SOTN_character_FarHook"
+				small = "GFX_SOTN_character_FarHook_Advisor"
 			}
 			army = {
-				large = "GFX_SOTN_character_FerukIntef"
-				small = "GFX_SOTN_character_FerukIntef_Advisor"
+				large = "GFX_SOTN_character_FarHook"
+				small = "GFX_SOTN_character_FarHook_Advisor"
 			}
 		}
 		country_leader = {
 			ideology = ultranationalism
 			expire = "1111.1.1.1"
-			desc = SOTN_character_FerukInteft_Bio
+			desc = SOTN_character_FarHookt_Bio
 			id=-1
 			traits = {
 				
@@ -67,8 +67,8 @@ characters = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = SOTN_character_FerukIntef
-			desc = SOTN_character_FerukInteft_Bio
+			idea_token = SOTN_character_FarHook
+			desc = SOTN_character_FarHookt_Bio
 			traits = {
 				army_infantry_2
 			}
@@ -124,6 +124,15 @@ characters = {
 				small = "GFX_SOTN_ShaaDoof_Advisor"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOTN_character_ShaaDoof
+			desc = SOTN_character_ShaaDoof_Bio
+			traits = {
+				SOTN_OldVizier_Trait
+			}
+			can_be_fired = no
+		}
 		corps_commander = {
 			skill = 1
 			attack_skill = 1
@@ -135,7 +144,7 @@ characters = {
 			}
 		}
 	}
-	SOTN_character_Ahhotep = { #Sabni Neferet - the Maredjay leader
+	SOTN_character_Ahhotep = { #Ahhotep - the Maredjay leader
 		name = SOTN_character_Ahhotep
 		portraits = {
 			civilian = {
@@ -698,7 +707,7 @@ characters = {
 				SOTN_EquestrianCommission_Trait
 			}
 			available = {
-				has_idea = SOTN_EndebtedEconomy
+				has_idea = SOTN_IndebtedEconomy
 			}
 		}
 	}

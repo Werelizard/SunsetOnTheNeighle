@@ -232,31 +232,32 @@ log = "[GetDateText] Shadow on the Neighle Setup end for [ROOT.GetName]."
 #Characters - leaders
 recruit_character = SOTN_character_KingKhefer
 recruit_character = SOTN_character_Narmare
-recruit_character = SOTN_character_FerukIntef
+recruit_character = SOTN_character_FarHook
 #Characters - advisors
 recruit_character = SOTN_character_Ahhotep
 recruit_character = SOTN_character_ShaaDoof
 recruit_character = SOTN_Character_Somnambula
-recruit_character = SOTN_Character_Meritamen
-recruit_character = SOTN_Character_Meketrotre
-recruit_character = SOTN_Character_Neighbamun
-recruit_character = SOTN_Character_Wadjhoof
-recruit_character = SOTN_Character_Maneighra
-recruit_character = SOTN_Character_ImaruOfManephis
-recruit_character = SOTN_Character_Sennedjem
 recruit_character = SOTN_Character_Neighkt
-recruit_character = SOTN_Character_IbiWarmhoof
-recruit_character = SOTN_Character_Huneighfer
-recruit_character = SOTN_Character_Imhotep
-recruit_character = SOTN_Character_Imenmose
-recruit_character = SOTN_Character_Seshat
-recruit_character = SOTN_Character_Khoofu
-recruit_character = SOTN_Character_Maretmaaet
-recruit_character = SOTN_Character_Appleseed
 recruit_character = SOTN_character_NeighSer
+# recruit_character = SOTN_Character_Meritamen
+# recruit_character = SOTN_Character_Meketrotre
+# recruit_character = SOTN_Character_Neighbamun
+# recruit_character = SOTN_Character_Wadjhoof
+# recruit_character = SOTN_Character_Maneighra
+# recruit_character = SOTN_Character_ImaruOfManephis
+# recruit_character = SOTN_Character_Sennedjem
+# recruit_character = SOTN_Character_IbiWarmhoof
+# recruit_character = SOTN_Character_Huneighfer
+# recruit_character = SOTN_Character_Imhotep
+# recruit_character = SOTN_Character_Imenmose
+# recruit_character = SOTN_Character_Seshat
+# recruit_character = SOTN_Character_Khoofu
+# recruit_character = SOTN_Character_Maretmaaet
+# recruit_character = SOTN_Character_Appleseed
 
 #Advisors
-activate_advisor = SOTN_character_Narmare
+activate_advisor = SOTN_character_ShaaDoof
+activate_advisor = SOTN_character_Ahhotep
 
 #Tech
 # set_technology = {	
@@ -266,7 +267,7 @@ activate_advisor = SOTN_character_Narmare
 ##New Ideas + EaW specs
 add_ideas = {
 	SOTN_PoliticalUnrest
-	SOTN_EndebtedEconomy
+	SOTN_IndebtedEconomy
 	SOTN_EquestrianInvestment
 	SOTN_FamineRisk
 	SOTN_Maredjay
@@ -276,7 +277,6 @@ add_ideas = {
 	lack_of_scientists2
 	outdated_industry
 	poverty
-	SOTN_Vizier_ShaaDoof
 	SOTN_MaredjayArmy
 	SOTN_ScarsOfTheJulyUprising
 }

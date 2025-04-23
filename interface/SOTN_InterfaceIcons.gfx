@@ -1,10 +1,4 @@
 spriteTypes = {
-	# Vizier Icons
-	spriteType = {
-		name = "GFX_SOTN_VizierBadge"
-		texturefile = "gfx/interface/vizierIcon.dds"
-	}
-	
 	# Text Icons 
 	spriteType = {
 		name = "GFX_SOTN_unrest_text_icon"
@@ -34,7 +28,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	#Ideology
+	#Ideology - Old, flag for removal
 	spriteType = {
 		name = "GFX_ideology_SOTN_harmonic_pharaonism"
 		textureFile = "gfx/interface/ideology/SOTN_harmonic_pharaonism.dds"
@@ -43,11 +37,5 @@ spriteTypes = {
 		name = "GFX_ideology_SOTN_traditional_pharaonism"
 		textureFile = "gfx/interface/ideology/SOTN_traditional_pharaonism.dds"
 	}
-
-	#Politics
-	# spriteType = {
-	# 	name = "	"
-	# 	texturefile = "gfx/interface/idea_categories.dds"
-	# 	noOfFrames = 7
-	# }
+	
 }

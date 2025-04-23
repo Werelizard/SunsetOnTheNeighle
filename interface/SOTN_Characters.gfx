@@ -9,7 +9,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/advisors/Ahhotep_PortraitSmall.dds"
 	}
 	spriteType = {
-		name = "GFX_SOTN_character_FerukIntef_Advisor"
+		name = "GFX_SOTN_character_FarHook_Advisor"
 		texturefile = "gfx/interface/advisors/FaarIntef_PortraitSmall.dds"
 	}
 	spriteType = {
@@ -39,8 +39,8 @@ spriteTypes = {
 		texturefile = "gfx/leaders/SOTN_ShaaDoof.tga"
 	}
 	spriteType = {
-		name = "GFX_SOTN_character_FerukIntef"
-		texturefile = "gfx/leaders/SOTN_FaarIntef.tga"
+		name = "GFX_SOTN_character_FarHook"
+		texturefile = "gfx/leaders/SOTN_FarHook.tga"
 	}
 	spriteType = {
 		name = "GFX_SOTN_Somnambula"

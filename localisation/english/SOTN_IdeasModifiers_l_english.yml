@@ -1,14 +1,14 @@
 ﻿l_english:
  # Country Ideas
 
- SOTN_EndebtedEconomy:0 "Endebted Economy"
- SOTN_EndebtedEconomy_desc:0 "In the wake of the Storm King's rise and fall, King Khefer - pressured by Shaa Doof - negotiated an unpopular agreement with princess Celestia in order to salvage the country's economy. While this proved somewhat successfull in avoiding an immediate collapse of the Maregyptian economy, the payments for this assistance has now come due, driving the Maregyptian economy further towards bankruptcy."
+ SOTN_IndebtedEconomy:0 "Indebted Economy"
+ SOTN_IndebtedEconomy_desc:0 "In the wake of the Storm King's rise and fall, King Khefer - pressured by Shaa Doof - negotiated an unpopular agreement with princess Celestia in order to salvage the country's economy. While this proved somewhat successfull in avoiding an immediate collapse of the Maregyptian economy, the payments for this assistance has now come due, driving the Maregyptian economy further towards bankruptcy."
  
  SOTN_FamineRisk:0 "The Long Drought"
  SOTN_FamineRisk_desc:0 "Whilst the bounty of the Neighle has proved miraculous in its own, the river remains as unpredictable as it is capricious. The recent flood was dire, leaving many farms deserted and innumerable fields left to whither under the blazing sun. Many amongst the administration fear that we may be staring down the barrel of a potential famine..."
 
  SOTN_Maredjay:0 "The Maredjay"
- SOTN_Maredjay_desc:0 "The Maredjay - the King's all-female royal elite - have long been granted a near-total dominance of the military, dictating its tactics, training regimens, selection process and even choosing the army's leadership. This has come at a great cost however, as their recent political entrenchment has trapped our armed forces in the past."
+ SOTN_Maredjay_desc:0 "The Maredjay - the King's all-female royal elite - have been granted a near-total dominance of the military, dictating its tactics, training regimens, selection process and even choosing the army's leadership. This has come at a great cost however, as their recent political entrenchment has trapped our armed forces in the past."
  SOTN_CanRecruitMaredjay_yes:0 "Can train and recruit Maredjay battalions: §GYes§!"
  SOTN_CanSelectAcademySpirit_no:0 "Can change the spirit of the academy: §RNo§!"
 
@@ -69,11 +69,8 @@
  SOTN_LandownerCompensation:0 "Blatant Embezzlements"
  SOTN_LandownerCompensation_desc:0 ""
 
- #Hidden Ideas
- SOTN_Vizier_ShaaDoof:0 "Shaa Doof"
-
  #Dynamic Modifiers - Countries
- SOTN_EndebtedEconomy_Dynmod:0 "$SOTN_EndebtedEconomy$"
+ SOTN_IndebtedEconomy_Dynmod:0 "$SOTN_IndebtedEconomy$"
 
  SOTN_PoliticalUnrest_Dynmod:0 "$SOTN_PoliticalUnrest$"
 

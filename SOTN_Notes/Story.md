@@ -1,6 +1,6 @@
 # Setup and quick history check
 
-Maregypt was a bastion of Pony culture in Zebrica. The Kingdom's influence could once be felt from the tip of the Neighle Delta down the southernmost reaches of the Neighle. However, a combination of factors - a shaky succession, war and later the devastation of the Storm King - led to the kingdom's complte decline and fall into utter poverty. King Snefru the Shy died, leaving only his youngest son, Khefer, to assume the throne. 
+Maregypt was a bastion of Pony culture in Zebrica. The Kingdom's influence could once be felt from the tip of the Neighle Delta down the southernmost reaches of the Neighle. However, a combination of factors - a shaky succession, war and later the devastation of the Storm King - led to the kingdom's complte decline and fall into utter poverty. King Sneighfru the Shy died, leaving only his youngest son, Khefer, to assume the throne. 
 
 # Main Characters
 
@@ -9,7 +9,7 @@ Maregypt was a bastion of Pony culture in Zebrica. The Kingdom's influence could
 - Narmare
 - Neigh Ser
 - Ahhotep: a staunch traditionalist
-- Feruk Intef: a historian, military opfficer, supremacist ultranationalist
+- Far Hook: a historian, military opfficer, supremacist ultranationalist
 - Neighkt: young, a pupil of Shaa Doof though they very often disagree. Potential Vizier Candidate.
 - Shesper: khefer's cousin. An advisor, and a potential leader.
 - Somnambula: 

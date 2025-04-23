@@ -25,8 +25,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/MGY/SOTN_Maredjay.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_SOTN_EndebtedEconomy"
-		texturefile = "gfx/interface/ideas/MGY/SOTN_EndebtedEconomy.dds"
+		name = "GFX_idea_SOTN_IndebtedEconomy"
+		texturefile = "gfx/interface/ideas/MGY/SOTN_IndebtedEconomy.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_SOTN_PoliticalUnrest"
@@ -48,10 +48,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_SOTN_BadInfrastructure_icon"
 		texturefile = "gfx/interface/BadInfrastructure.dds"
-	}
-	spriteType = {
-		name = "GFX_SOTN_FamineEffects_icon"
-		texturefile = "gfx/interface/LocalFamine.dds"
 	}
 	# Industrial Concernts
 	spriteType = {

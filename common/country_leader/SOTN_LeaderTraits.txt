@@ -12,6 +12,11 @@ leader_traits = {
         stability_factor = 0.05
 		party_popularity_stability_factor = 0.1
     }
+    SOTN_OldVizier_Trait = {
+        stability_factor = 0.1
+        political_power_factor = -0.05
+        power_balance_weekly = -0.01
+    }
     SOTN_YoungKingGood_Trait = {
         random = no
         offensive_war_stability_factor = 0.05

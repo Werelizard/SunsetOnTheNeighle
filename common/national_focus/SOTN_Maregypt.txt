@@ -3579,7 +3579,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_AbolishCommission"
 			effect_tooltip = {
 				swap_ideas = {
-					remove_idea = SOTN_EndebtedEconomy
+					remove_idea = SOTN_IndebtedEconomy
 					add_idea = SOTN_EconomicMeltdown
 				}
 			}
@@ -3591,7 +3591,7 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				remove_ideas = SOTN_EndebtedEconomy
+				remove_ideas = SOTN_IndebtedEconomy
 				add_timed_idea = {
 					idea = SOTN_EconomicMeltdown
 					days = 400
@@ -3864,7 +3864,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOTN_PayDebts"
 			swap_ideas = {
-				remove_idea = SOTN_EndebtedEconomy
+				remove_idea = SOTN_IndebtedEconomy
 				add_idea = SOTN_EconomicConcessions
 			}
 		}
